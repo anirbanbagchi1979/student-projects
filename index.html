@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Legionary: Command</title>
+    <!-- Fonts & Effects -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        :root {
+            --bg: #0f1011;
+            --card: #1E1E1E;
+            --gold: #FFD700;
+            --gold-dim: #b39700;
+            --cyan: #00E5FF;
+            --cyan-dim: #008fa1;
+            --gray: #424242;
+            --text: #E0E0E0;
+            --green: #00E676;
+            --red: #CF2F2F;
+        }
+
+        * {
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 500px;
+            height: 100%;
+            background: var(--card);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        @media (min-width: 501px) {
+            .app-container {
+                height: 90vh;
+                border-radius: 20px;
+                border: 1px solid #333;
+                box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        /* --- LOGIN --- */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: var(--bg);
+            z-index: 200;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .google-btn {
+            background: white;
+            color: #333;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- HOME DASHBOARD --- */
+        #home-view {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* Profile Area */
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+        }
+
+        .user-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rank-title {
+            font-family: 'Cinzel';
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .user-name {
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .ranks-btn {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Stats Section */
+        .section-title {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .stats-grid {
+            background: #161616;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            border: 1px solid #252525;
+        }
+
+        .stat-row {
+            margin-bottom: 15px;
+        }
+
+        .stat-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        .stat-bar-bg {
+            height: 8px;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .stat-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Mode Selectors */
+        .mode-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .mode-card {
+            background: #252525;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #333;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
+        }
+
+        .mode-card:active {
+            transform: scale(0.95);
+        }
+
+        .mode-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .mode-title {
+            font-weight: 900;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .mode-desc {
+            font-size: 0.75rem;
+            color: #888;
+            line-height: 1.3;
+        }
+
+        /* Study Style */
+        .card-study {
+            border-color: #333;
+        }
+
+        .card-study:hover {
+            border-color: var(--cyan);
+            background: rgba(0, 229, 255, 0.05);
+        }
+
+        .card-study .mode-title {
+            color: var(--cyan);
+        }
+
+        /* Battle Style */
+        .card-battle {
+            border-color: #333;
+        }
+
+        .card-battle:hover {
+            border-color: var(--gold);
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        .card-battle .mode-title {
+            color: var(--gold);
+        }
+
+        /* --- RANKS MODAL --- */
+        .ranks-modal {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 150;
+            display: none;
+            flex-direction: column;
+            padding: 20px;
+            animation: fadeIn 0.2s;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            font-family: 'Cinzel';
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: #888;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .rank-list {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #333;
+            opacity: 0.5;
+            transition: 0.3s;
+        }
+
+        .rank-item.active {
+            opacity: 1;
+            background: rgba(255, 215, 0, 0.05);
+            border-left: 4px solid var(--gold);
+        }
+
+        .rank-item.future {
+            opacity: 0.3;
+        }
+
+        .rank-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+            margin-right: 15px;
+        }
+
+        .rank-info h4 {
+            margin: 0;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .rank-info p {
+            margin: 5px 0 0;
+            font-size: 0.7rem;
+            color: #888;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* --- QUIZ VIEW (Same as before) --- */
+        #quiz-view {
+            flex: 1;
+            display: none;
+            flex-direction: column;
+            background: var(--bg);
+        }
+
+        .quiz-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1a1a1a;
+            border-bottom: 1px solid #333;
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            color: #888;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: bold;
+        }
+
+        .quiz-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .q-cat {
+            font-size: 0.7rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .pips {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+
+        .pip {
+            width: 20px;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+        }
+
+        .pip.filled {
+            background: var(--gold);
+            box-shadow: 0 0 5px var(--gold);
+        }
+
+        .flashcard {
+            perspective: 1000px;
+            width: 100%;
+            min-height: 250px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .fc-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .fc-inner.flipped {
+            transform: rotateY(180deg);
+            border-color: var(--cyan);
+        }
+
+        .front,
+        .back {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+        }
+
+        .hint {
+            margin-top: 15px;
+            font-size: 0.7rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .opt-btn {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 10px;
+            background: #222;
+            border: 1px solid #333;
+            color: #eee;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .opt-btn.correct {
+            background: rgba(0, 230, 118, 0.15);
+            border-color: var(--green);
+            color: var(--green);
+        }
+
+        .opt-btn.wrong {
+            background: rgba(207, 47, 47, 0.15);
+            border-color: var(--red);
+            color: var(--red);
+        }
+
+        .explanation {
+            background: rgba(33, 150, 243, 0.1);
+            border-left: 3px solid #2196F3;
+            padding: 15px;
+            color: #90CAF9;
+            font-size: 0.9rem;
+            display: none;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            padding: 15px;
+            border-top: 1px solid #333;
+            background: #1a1a1a;
+        }
+
+        .main-btn {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: none;
+        }
+
+        .empty-ui {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        /* Floating Feedback */
+        .floating-feedback {
+            position: absolute;
+            pointer-events: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--gold);
+            animation: floatUp 1s ease-out forwards;
+            z-index: 1000;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-50px) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Login -->
+    <div id="login-overlay" class="overlay">
+        <h1 style="font-family:'Cinzel'; font-size:3rem; color:var(--gold);">LEGION</h1>
+        <button id="btn-login" class="google-btn">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20"> Login
+        </button>
+    </div>
+
+    <!-- Ranks Modal -->
+    <div id="ranks-overlay" class="ranks-modal">
+        <div class="modal-header">
+            <h2 class="modal-title">Cursus Honorum</h2>
+            <button class="close-btn" id="close-ranks">✕</button>
+        </div>
+        <div class="rank-list" id="rank-list-container">
+            <!-- JS Injected -->
+        </div>
+    </div>
+
+    <div class="app-container">
+
+        <!-- HOME DASHBOARD VIEW -->
+        <div id="home-view">
+            <!-- Header Row -->
+            <div class="header-row">
+                <div class="profile-card" id="profile-card">
+                    <img id="u-pic" class="avatar" src="">
+                    <div class="user-details">
+                        <span id="u-rank" class="rank-title">RECRUIT</span>
+                        <span id="u-name" class="user-name">Guest</span>
+                    </div>
+                </div>
+                <button class="ranks-btn" id="view-ranks">VIEW RANKS</button>
+            </div>
+
+            <!-- Stats -->
+            <div class="section-title">Field Report</div>
+            <div class="stats-grid">
+                <!-- New Questions -->
+                <div class="stat-row">
+                    <div class="stat-header">
+                        <span style="color:#aaa;">Yet to Practice</span>
+                        <span id="count-new">0</span>
+                    </div>
+                    <div class="stat-bar-bg">
+                        <div id="bar-new" class="stat-bar-fill" style="background:#666;"></div>
+                    </div>
+                </div>
+                <!-- Learning -->
+                <div class="stat-row">
+                    <div class="stat-header">
+                        <span style="color:var(--cyan);">Practicing</span>
+                        <span id="count-learn">0</span>
+                    </div>
+                    <div class="stat-bar-bg">
+                        <div id="bar-learn" class="stat-bar-fill" style="background:var(--cyan);"></div>
+                    </div>
+                </div>
+                <!-- Mastered -->
+                <div class="stat-row">
+                    <div class="stat-header">
+                        <span style="color:var(--gold);">Mastered (x3)</span>
+                        <span id="count-master">0</span>
+                    </div>
+                    <div class="stat-bar-bg">
+                        <div id="bar-master" class="stat-bar-fill" style="background:var(--gold);"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mode Selection -->
+            <div class="section-title">Deploy</div>
+            <div class="mode-grid">
+                <div class="mode-card card-study" id="btn-study">
+                    <div class="mode-icon">📖</div>
+                    <div class="mode-title">STUDY</div>
+                    <div class="mode-desc">Flashcards. No pressure. Review all content.</div>
+                </div>
+                <div class="mode-card card-battle" id="btn-battle">
+                    <div class="mode-icon">⚔️</div>
+                    <div class="mode-title">BATTLE</div>
+                    <div class="mode-desc">Test your knowledge. Gain Rank. Master items.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUIZ VIEW -->
+        <div id="quiz-view">
+            <div class="quiz-header">
+                <button class="back-btn" id="btn-back">← BASE</button>
+                <div id="mode-badge"
+                    style="font-size:0.7rem; font-weight:bold; color:#666; border:1px solid #333; padding:2px 6px; border-radius:4px;">
+                    STUDY</div>
+            </div>
+
+            <div class="quiz-content">
+                <div id="quiz-container">
+                    <div id="q-cat" class="q-cat">...</div>
+                    <div id="pips" class="pips">
+                        <div class="pip"></div>
+                        <div class="pip"></div>
+                        <div class="pip"></div>
+                    </div>
+
+                    <!-- Flashcard (Study) -->
+                    <div id="ui-study" style="display:none;">
+                        <div class="flashcard" id="flashcard">
+                            <div class="fc-inner">
+                                <div class="front">
+                                    <div id="q-text-study" style="font-size:1.2rem; font-weight:bold;">...</div>
+                                    <div class="hint" style="color:var(--cyan);">TAP TO REVEAL</div>
+                                </div>
+                                <div class="back">
+                                    <div id="a-text-study"
+                                        style="font-size:1.3rem; color:var(--cyan); font-weight:900;">...</div>
+                                    <div class="hint">TAP TO HIDE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Battle (Test) -->
+                    <div id="ui-battle" style="display:none;">
+                        <div id="q-text-battle"
+                            style="font-size:1.2rem; font-weight:bold; margin-bottom:20px; color:white;">...</div>
+                        <div id="battle-opts"></div>
+                    </div>
+
+                    <div id="expl-box" class="explanation"></div>
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-state" class="empty-ui">
+                    <div style="font-size:4rem;">🏆</div>
+                    <h2 style="color:var(--gold); font-family:'Cinzel';">COMPLETE</h2>
+                    <p style="color:#888;">No questions left in this category!</p>
+                </div>
+            </div>
+
+            <div class="footer">
+                <button id="next-btn" class="main-btn">CONTINUE</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Logic -->
+    <script type="module" src="game.js"></script>
+
+</body>
+
+</html>

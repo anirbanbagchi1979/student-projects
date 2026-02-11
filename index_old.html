@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NLE Cloud Master</title>
+    <script src="questions.js"></script>
+    <style>
+        :root { --roman-red: #8E1B1B; --roman-gold: #D4AF37; --bg: #f4f4f9; }
+        body { font-family: -apple-system, sans-serif; background: var(--bg); margin: 0; padding: 10px; height: 100vh; display: flex; justify-content: center; align-items: center; }
+        
+        .container { background: white; width: 100%; max-width: 600px; height: 95vh; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: flex; flex-direction: column; overflow: hidden; border-top: 6px solid var(--roman-gold); position: relative; }
+        
+        /* Header & Login */
+        .header { padding: 15px; background: var(--roman-red); color: white; display: flex; justify-content: space-between; align-items: center; }
+        .user-info { font-size: 0.8rem; display: flex; gap: 10px; align-items: center; }
+        .logout-btn { background: rgba(0,0,0,0.2); border: none; color: white; padding: 4px 8px; border-radius: 4px; cursor: pointer; }
+        
+        /* Login Screen */
+        #login-screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--roman-red); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 100; color: white; }
+        .google-btn { background: white; color: #444; border: none; padding: 12px 24px; border-radius: 4px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+        /* Quiz UI */
+        .quiz-body { flex-grow: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; }
+        .question { font-size: 1.2rem; margin-bottom: 20px; font-weight: 500; }
+        .option-btn { width: 100%; background: white; border: 2px solid #eee; padding: 15px; text-align: left; border-radius: 8px; margin-bottom: 10px; cursor: pointer; }
+        .option-btn.correct { background: #e8f5e9; border-color: #28a745; color: #155724; font-weight: bold; }
+        .option-btn.wrong { background: #ffebee; border-color: #dc3545; color: #721c24; }
+        
+        .explanation { background: #e3f2fd; padding: 15px; border-left: 4px solid #2196f3; margin-top: 10px; display: none; }
+        
+        .footer { padding: 15px; border-top: 1px solid #eee; }
+        .next-btn { width: 100%; padding: 14px; background: var(--roman-red); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Login Overlay -->
+    <div id="login-screen">
+        <h1 style="margin-bottom: 10px;">NLE Cloud Prep</h1>
+        <p style="margin-bottom: 30px; opacity: 0.9;">Sync your mastery across devices</p>
+        <button class="google-btn" onclick="googleLogin()">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20"> 
+            Sign in with Google
+        </button>
+    </div>
+
+    <!-- App Header -->
+    <div class="header">
+        <div style="font-weight:bold;">NLE Prep</div>
+        <div class="user-info">
+            <span id="mastery-display">Loading...</span>
+            <button class="logout-btn" onclick="appLogout()">Exit</button>
+        </div>
+    </div>
+
+    <!-- Quiz Content -->
+    <div class="quiz-body" id="quiz-ui" style="display:none">
+        <div style="font-size:0.8rem; color:#888; text-transform:uppercase; margin-bottom:5px;" id="cat-label"></div>
+        <div class="question" id="q-text"></div>
+        <div id="options-container"></div>
+        <div class="explanation" id="explanation-box"></div>
+    </div>
+    
+    <!-- Empty State -->
+    <div id="empty-ui" style="display:none; text-align:center; padding:40px; flex-direction:column; align-items:center;">
+        <div style="font-size:3rem;">🏆</div>
+        <h2>All Sync Complete!</h2>
+        <p>You have mastered every question.</p>
+        <button class="logout-btn" style="background:#333; margin-top:20px; padding:10px 20px;" onclick="resetCloudData()">Reset Cloud Data</button>
+    </div>
+
+    <div class="footer">
+        <button class="next-btn" id="main-btn" onclick="handleNext()">Next</button>
+    </div>
+</div>
+
+<!-- FIREBASE SDKs -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { getFirestore, doc, getDoc, setDoc, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    // --- PASTE YOUR FIREBASE CONFIG HERE ---
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBAJBsRZymDV5NttmQZbH5DXTw5TXzXxOQ",
+      authDomain: "nle-quiz-fa27d.firebaseapp.com",
+      projectId: "nle-quiz-fa27d",
+      storageBucket: "nle-quiz-fa27d.firebasestorage.app",
+      messagingSenderId: "633822308205",
+      appId: "1:633822308205:web:8b8054a998f97cce9fdc64"
+    };
+    // ----------------------------------------
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    const provider = new GoogleAuthProvider();
+
+    let currentUser = null;
+    let masteredIds = [];
+    let activeQueue = [];
+    let currentIndex = 0;
+
+    // 1. Auth Listener
+    onAuthStateChanged(auth, async (user) => {
+        if (user) {
+            currentUser = user;
+            document.getElementById("login-screen").style.display = "none";
+            document.getElementById("quiz-ui").style.display = "flex";
+            await loadUserProgress();
+        } else {
+            document.getElementById("login-screen").style.display = "flex";
+            document.getElementById("quiz-ui").style.display = "none";
+        }
+    });
+
+    // 2. Load Data from Cloud
+    async function loadUserProgress() {
+        if (!currentUser) return;
+        document.getElementById("mastery-display").textContent = "Syncing...";
+        
+        const userRef = doc(db, "users", currentUser.uid);
+        const docSnap = await getDoc(userRef);
+
+        if (docSnap.exists()) {
+            masteredIds = docSnap.data().mastered || [];
+        } else {
+            // New user, create doc
+            await setDoc(userRef, { mastered: [] });
+            masteredIds = [];
+        }
+
+        initializeQuiz();
+    }
+
+    // 3. Quiz Logic
+    function initializeQuiz() {
+        if (typeof QUESTION_DATA === 'undefined') { alert("Error: questions.js missing"); return; }
+
+        // Filter out mastered questions
+        activeQueue = QUESTION_DATA.filter(q => !masteredIds.includes(q.id));
+        activeQueue.sort(() => Math.random() - 0.5); // Shuffle
+
+        updateUIStats();
+
+        if (activeQueue.length === 0) {
+            showEmptyState();
+        } else {
+            currentIndex = 0;
+            renderQuestion();
+        }
+    }
+
+    function renderQuestion() {
+        const qData = activeQueue[currentIndex];
+        document.getElementById("cat-label").textContent = qData.cat;
+        document.getElementById("q-text").textContent = qData.q;
+        document.getElementById("explanation-box").style.display = "none";
+        document.getElementById("main-btn").style.display = "none";
+        
+        const optsDiv = document.getElementById("options-container");
+        optsDiv.innerHTML = "";
+
+        qData.o.forEach((opt, idx) => {
+            const btn = document.createElement("button");
+            btn.className = "option-btn";
+            btn.textContent = opt;
+            btn.onclick = () => handleAnswer(idx, btn, qData);
+            optsDiv.appendChild(btn);
+        });
+    }
+
+    // 4. Handle Answer & Save to Cloud
+    window.handleAnswer = async (idx, btn, qData) => {
+        const allBtns = document.querySelectorAll(".option-btn");
+        allBtns.forEach(b => b.disabled = true);
+        const nextBtn = document.getElementById("main-btn");
+
+        if (idx === qData.a) {
+            btn.classList.add("correct");
+            
+            // SAVE TO CLOUD
+            if (!masteredIds.includes(qData.id)) {
+                masteredIds.push(qData.id);
+                const userRef = doc(db, "users", currentUser.uid);
+                // Fire and forget (don't await, makes UI snappier)
+                updateDoc(userRef, {
+                    mastered: arrayUnion(qData.id)
+                });
+                updateUIStats();
+            }
+
+            nextBtn.textContent = "Continue";
+            nextBtn.onclick = () => nextQuestion();
+        } else {
+            btn.classList.add("wrong");
+            allBtns[qData.a].classList.add("correct");
+            
+            // Add back to queue (local session only)
+            activeQueue.push(qData);
+            
+            nextBtn.textContent = "Review Later";
+            nextBtn.onclick = () => nextQuestion();
+        }
+
+        document.getElementById("explanation-box").innerHTML = `<strong>Explanation:</strong> ${qData.expl}`;
+        document.getElementById("explanation-box").style.display = "block";
+        nextBtn.style.display = "block";
+        
+        // Scroll
+        const quizBody = document.getElementById("quiz-ui");
+        quizBody.scrollTop = quizBody.scrollHeight;
+    };
+
+    window.nextQuestion = () => {
+        currentIndex++;
+        if (currentIndex >= activeQueue.length) {
+            initializeQuiz(); // Re-filter and restart
+        } else {
+            renderQuestion();
+        }
+    };
+
+    function updateUIStats() {
+        document.getElementById("mastery-display").textContent = 
+            `${masteredIds.length} / ${QUESTION_DATA.length} Mastered`;
+    }
+
+    function showEmptyState() {
+        document.getElementById("quiz-ui").style.display = "none";
+        document.getElementById("empty-ui").style.display = "flex";
+        document.getElementById("main-btn").style.display = "none";
+    }
+
+    // 5. Global Functions
+    window.googleLogin = () => signInWithPopup(auth, provider);
+    window.appLogout = () => signOut(auth);
+    
+    window.resetCloudData = async () => {
+        if(confirm("Reset all cloud progress?")) {
+            const userRef = doc(db, "users", currentUser.uid);
+            await setDoc(userRef, { mastered: [] });
+            masteredIds = [];
+            initializeQuiz();
+            document.getElementById("empty-ui").style.display = "none";
+            document.getElementById("quiz-ui").style.display = "flex";
+        }
+    }
+</script>
+</body>
+</html>
