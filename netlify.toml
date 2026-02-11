@@ -1,4 +1,5 @@
 [build]
+  command = "node nle-app/generate-config.js"
   publish = "nle-app"
 
 [[redirects]]
