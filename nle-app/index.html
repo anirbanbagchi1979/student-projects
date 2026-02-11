@@ -22,6 +22,8 @@
             --text: #E0E0E0;
             --green: #00E676;
             --red: #CF2F2F;
+            --stone-dark: #2a2a2a;
+            --stone-light: #3d3d3d;
         }
 
         * {
@@ -32,7 +34,11 @@
 
         body {
             font-family: 'Lato', sans-serif;
-            background: var(--bg);
+            background-color: #0c0c0c;
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                url('https://www.transparenttextures.com/patterns/black-scales.png'); 
+            background-size: cover;
             color: var(--text);
             margin: 0;
             height: 100vh;
@@ -43,23 +49,73 @@
         }
 
         .app-container {
-            width: 100%;
-            max-width: 500px;
-            height: 100%;
-            background: var(--card);
-            display: flex;
-            flex-direction: column;
-            position: relative;
+            width: 100%; max-width: 500px; height: 100%;
+            background: rgba(30, 30, 30, 0.95);
+            display: flex; flex-direction: column; position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            border-left: 2px solid #333;
+            border-right: 2px solid #333;
         }
 
-        @media (min-width: 501px) {
-            .app-container {
-                height: 90vh;
-                border-radius: 20px;
-                border: 1px solid #333;
-                box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
-            }
+        @media (min-width: 501px) { 
+            .app-container { 
+                height: 90vh; 
+                border-radius: 20px; 
+                border: 4px solid #444;
+                border-image: linear-gradient(to bottom, #555, #222) 1;
+            } 
         }
+
+        /* --- BUTTON STYLES (Gamified) --- */
+        .ranks-btn, .google-btn, .opt-btn, .main-btn {
+            font-family: 'Cinzel', serif; /* Roman font for buttons */
+            letter-spacing: 1px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+
+        .ranks-btn {
+            background: linear-gradient(180deg, #2b2b2b, #1a1a1a);
+            border: 1px solid var(--gold-dim);
+            color: var(--gold);
+            box-shadow: 0 2px 0 #000;
+            text-shadow: 0 1px 2px black;
+        }
+        .ranks-btn:active { transform: translateY(2px); box-shadow: none; }
+
+        .opt-btn {
+            background: linear-gradient(to bottom, #3a3a3a, #222);
+            border: 2px solid #444;
+            border-bottom: 4px solid #333;
+            color: #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+        }
+        .opt-btn:active:not(:disabled) {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+        .opt-btn.correct {
+            background: linear-gradient(to bottom, #1b3a2b, #0f241a);
+            border-color: var(--green);
+            color: var(--green);
+            box-shadow: 0 0 15px rgba(0, 230, 118, 0.3);
+        }
+        .opt-btn.wrong {
+            background: linear-gradient(to bottom, #3a1b1b, #240f0f);
+            border-color: var(--red);
+            color: var(--red);
+        }
+
+        .main-btn {
+             background: linear-gradient(to bottom, var(--gold), var(--gold-dim));
+             color: #1a0f00;
+             border: 1px solid #ffeeba;
+             box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+        .main-btn:active { transform: scale(0.98); }
 
         /* --- LOGIN --- */
         .overlay {
@@ -414,10 +470,11 @@
             box-shadow: 0 0 5px var(--gold);
         }
 
+        /* --- FLASHCARD IMPROVEMENTS --- */
         .flashcard {
             perspective: 1000px;
             width: 100%;
-            min-height: 250px;
+            min-height: 400px; /* INCREASED HEIGHT */
             cursor: pointer;
             margin-bottom: 20px;
         }
@@ -429,8 +486,9 @@
             text-align: center;
             transition: transform 0.6s;
             transform-style: preserve-3d;
-            background: #222;
-            border: 1px solid #444;
+            background: #2b2b2b;
+            background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png'); /* Stone texture */
+            border: 2px solid #555;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -453,41 +511,46 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 30px;
+            overflow-y: auto; /* Handle overflow */
         }
 
         .back {
             transform: rotateY(180deg);
+            background: rgba(0,0,0,0.2); /* Slight darken for back */
         }
 
         .hint {
-            margin-top: 15px;
-            font-size: 0.7rem;
-            color: #666;
+            margin-top: 25px;
+            font-size: 0.8rem;
+            color: #888;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .opt-btn {
             width: 100%;
-            padding: 16px;
-            margin-bottom: 10px;
-            background: #222;
-            border: 1px solid #333;
+            padding: 18px;
+            margin-bottom: 12px;
+            background: linear-gradient(to bottom, #3a3a3a, #222);
+            border: 2px solid #444;
+            border-bottom: 4px solid #333;
             color: #eee;
             border-radius: 8px;
             text-align: left;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
 
         .opt-btn.correct {
-            background: rgba(0, 230, 118, 0.15);
+            background: linear-gradient(to bottom, #1b3a2b, #0f241a);
             border-color: var(--green);
             color: var(--green);
         }
 
         .opt-btn.wrong {
-            background: rgba(207, 47, 47, 0.15);
+            background: linear-gradient(to bottom, #3a1b1b, #240f0f);
             border-color: var(--red);
             color: var(--red);
         }
@@ -495,30 +558,32 @@
         .explanation {
             background: rgba(33, 150, 243, 0.1);
             border-left: 3px solid #2196F3;
-            padding: 15px;
+            padding: 20px;
             color: #90CAF9;
-            font-size: 0.9rem;
+            font-size: 1rem;
             display: none;
-            margin-top: 10px;
-            line-height: 1.5;
+            margin-top: 20px;
+            line-height: 1.6;
+            border-radius: 4px;
         }
 
         .footer {
-            padding: 15px;
+            padding: 20px;
             border-top: 1px solid #333;
             background: #1a1a1a;
         }
 
         .main-btn {
             width: 100%;
-            padding: 15px;
-            border-radius: 10px;
+            padding: 18px;
+            border-radius: 12px;
             border: none;
-            font-weight: bold;
-            font-size: 1rem;
+            font-weight: 900;
+            font-size: 1.2rem;
             text-transform: uppercase;
             cursor: pointer;
             display: none;
+            letter-spacing: 1px;
         }
 
         .empty-ui {
