@@ -548,10 +548,17 @@
                 opacity: 1;
             }
 
-            100% {
-                transform: translateY(-50px) scale(1.5);
-                opacity: 0;
-            }
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
+        }
+
+        /* Shake Animation */
+        .shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
         }
     </style>
 </head>
@@ -578,20 +585,21 @@
     </div>
 
     <div class="app-container">
+        
+        <!-- GLOBAL HEADER (Moved from home-view) -->
+        <div class="header-row" style="padding: 20px 20px 0 20px;">
+            <div class="profile-card" id="profile-card">
+                <img id="u-pic" class="avatar" src="">
+                <div class="user-details">
+                    <span id="u-rank" class="rank-title">RECRUIT</span>
+                    <span id="u-name" class="user-name">Guest</span>
+                </div>
+            </div>
+            <button class="ranks-btn" id="view-ranks">VIEW RANKS</button>
+        </div>
 
         <!-- HOME DASHBOARD VIEW -->
         <div id="home-view">
-            <!-- Header Row -->
-            <div class="header-row">
-                <div class="profile-card" id="profile-card">
-                    <img id="u-pic" class="avatar" src="">
-                    <div class="user-details">
-                        <span id="u-rank" class="rank-title">RECRUIT</span>
-                        <span id="u-name" class="user-name">Guest</span>
-                    </div>
-                </div>
-                <button class="ranks-btn" id="view-ranks">VIEW RANKS</button>
-            </div>
 
             <!-- Stats -->
             <div class="section-title">Field Report</div>

@@ -221,6 +221,13 @@ function handleBattle(idx, btn, q) {
         nextBtn.textContent = 'CONTINUE';
     } else {
         btn.classList.add('wrong');
+        btn.classList.add('shake');
+
+        // Negative Feedback
+        showFloatingFeedback(btn, "❌ DO NOT FALTER!", true);
+
+        setTimeout(() => btn.classList.remove('shake'), 500);
+
         all[q.a].classList.add('correct');
         queue.push(q);
         nextBtn.style.background = '#444';
@@ -251,10 +258,10 @@ function showEmpty() {
     document.getElementById('next-btn').style.display = 'none';
 }
 
-function showFloatingFeedback(element, text) {
+function showFloatingFeedback(element, text, isNegative = false) {
     const rect = element.getBoundingClientRect();
     const feedback = document.createElement('div');
-    feedback.className = 'floating-feedback';
+    feedback.className = isNegative ? 'floating-feedback negative' : 'floating-feedback';
     feedback.textContent = text;
 
     // Calculate center of button
