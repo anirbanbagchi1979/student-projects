@@ -26,6 +26,48 @@
             --stone-light: #3d3d3d;
         }
 
+        /* SENTENCE COMPLETION THEME (Crimson/Violet) */
+        body.theme-1330 {
+            --gold: #FF5252; /* Crimson for Battle/Mastered */
+            --gold-dim: #b71c1c;
+            --cyan: #E040FB; /* Violet for Study/Learning */
+            --cyan-dim: #aa00ff;
+        }
+
+        /* LIGHT MODE */
+        body.light-mode {
+            --bg: #f0f2f5;
+            --card: #ffffff;
+            --stone-dark: #e4e6eb;
+            --stone-light: #ffffff;
+            --text: #1c1e21;
+            --gray: #b0b3b8;
+        }
+        
+        body.light-mode .app-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: #ddd;
+        }
+        
+        body.light-mode .stats-grid, 
+        body.light-mode .quiz-header,
+        body.light-mode .footer {
+            background: #fff;
+            border-color: #eee;
+        }
+        
+        body.light-mode .rank-item {
+            border-color: #eee;
+        }
+        
+        body.light-mode .rank-info h4 {
+            color: #000;
+        }
+        
+        body.light-mode .section-title {
+            color: #555;
+        }
+
         * {
             box-sizing: border-box;
             user-select: none;
@@ -660,11 +702,22 @@
                     <span id="u-name" class="user-name">Guest</span>
                 </div>
             </div>
-            <button class="ranks-btn" id="view-ranks">VIEW RANKS</button>
+            <div style="display:flex; gap:10px;">
+                <button class="ranks-btn" id="btn-theme" style="width:40px;">☀</button>
+                <button class="ranks-btn" id="view-ranks">RANKS</button>
+            </div>
         </div>
 
         <!-- HOME DASHBOARD VIEW -->
         <div id="home-view">
+
+            <!-- Mission Select -->
+            <div class="section-title">Mission</div>
+            <select id="bank-selector" class="opt-btn"
+                style="text-align:center; text-align-last:center; appearance:none; margin-bottom:25px; font-family:'Cinzel';">
+                <option value="myth">⚔️ MYTH</option>
+                <option value="1330">📜 SENTENCE COMPLETIONS</option>
+            </select>
 
             <!-- Stats -->
             <div class="section-title">Field Report</div>

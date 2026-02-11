@@ -1,4 +1,5 @@
-import { QUESTION_DATA } from './questions.js';
+import { QUESTION_DATA as DATA_MYTH } from './questions.js';
+import { QUESTION_DATA_1330 as DATA_1330 } from './questions1330.js';
 import { auth, db, provider, signInWithPopup, signOut, onAuthStateChanged, doc, getDoc, setDoc, updateDoc } from './firebase-config.js';
 
 // STATE
@@ -7,6 +8,7 @@ let progress = {};
 let queue = [];
 let currentIdx = 0;
 let mode = 'study';
+let currentBank = 'myth'; // 'myth' or '1330'
 
 const RANKS = [
     { n: "TIRO", req: 0, desc: "The Recruit. Your journey begins." },
@@ -37,23 +39,82 @@ window.onload = () => {
     document.getElementById('flashcard').onclick = flipCard;
     document.getElementById('view-ranks').onclick = openRanks;
     document.getElementById('close-ranks').onclick = () => document.getElementById('ranks-overlay').style.display = 'none';
+
+    // Bank Switcher
+    const selector = document.getElementById('bank-selector');
+    if (selector) selector.onchange = (e) => switchBank(e.target.value);
+
+    // Theme Toggle
+    document.getElementById('btn-theme').onclick = toggleTheme;
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-mode');
+        document.getElementById('btn-theme').textContent = '☾';
+    }
 };
+
+function toggleTheme() {
+    document.body.classList.toggle('light-mode');
+    const isLight = document.body.classList.contains('light-mode');
+    document.getElementById('btn-theme').textContent = isLight ? '☾' : '☀';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+}
+
+function getActiveData() {
+    return currentBank === '1330' ? DATA_1330 : DATA_MYTH;
+}
+
+function getProgressKey(id) {
+    return `${currentBank}_${id}`;
+}
+
+async function switchBank(newBank) {
+    currentBank = newBank;
+
+    // Toggle Theme
+    if (newBank === '1330') {
+        document.body.classList.add('theme-1330');
+    } else {
+        document.body.classList.remove('theme-1330');
+    }
+
+    // Reset queue and UI for the new bank
+    calcStats();
+}
 
 async function loadData() {
     if (!currentUser) return;
     const ref = doc(db, 'users', currentUser.uid);
     const snap = await getDoc(ref);
-    if (snap.exists()) progress = snap.data().progress || {};
-    else { await setDoc(ref, { progress: {} }); progress = {}; }
+    if (snap.exists()) {
+        progress = snap.data().progress || {};
+        // Migration: If we have old keys (integers/numeric strings), assume they are 'myth'
+        // This is a simple rigorous check once
+        let changed = false;
+        Object.keys(progress).forEach(k => {
+            if (!k.includes('_')) {
+                progress[`myth_${k}`] = progress[k];
+                delete progress[k];
+                changed = true;
+            }
+        });
+        if (changed) updateDoc(ref, { progress });
+    } else {
+        await setDoc(ref, { progress: {} });
+        progress = {};
+    }
     calcStats();
 }
 
 function calcStats() {
-    const total = QUESTION_DATA.length;
+    const data = getActiveData();
+    const total = data.length;
     let nNew = 0, nLearn = 0, nMaster = 0;
 
-    QUESTION_DATA.forEach(q => {
-        const m = progress[q.id] || 0;
+    data.forEach(q => {
+        const key = getProgressKey(q.id);
+        const m = progress[key] || 0;
         if (m === 0) nNew++;
         else if (m < 3) nLearn++;
         else nMaster++;
@@ -63,13 +124,21 @@ function calcStats() {
     document.getElementById('count-learn').textContent = nLearn;
     document.getElementById('count-master').textContent = nMaster;
 
-    document.getElementById('bar-new').style.width = (nNew / total * 100) + '%';
-    document.getElementById('bar-learn').style.width = (nLearn / total * 100) + '%';
-    document.getElementById('bar-master').style.width = (nMaster / total * 100) + '%';
+    document.getElementById('bar-new').style.width = (total ? (nNew / total * 100) : 0) + '%';
+    document.getElementById('bar-learn').style.width = (total ? (nLearn / total * 100) : 0) + '%';
+    document.getElementById('bar-master').style.width = (total ? (nMaster / total * 100) : 0) + '%';
+
+    // Ranks based on TOTAL masteries across ALL banks? Or just current?
+    // Let's do current bank for now, or maybe sum of all?
+    // User requested switching banks, usually separate progress is better for clarity.
+    // We already count 'nMaster' for current bank. Let's base rank on that for now.
 
     let rank = RANKS[0].n;
     for (let r of RANKS) if (nMaster >= r.req) rank = r.n;
-    document.getElementById('u-rank').textContent = rank;
+
+    // Add icon/prefix
+    const icon = currentBank === '1330' ? '📜' : '⚔️';
+    document.getElementById('u-rank').textContent = `${icon} ${rank}`;
 }
 
 // --- RANKS MODAL LOGIC ---
@@ -96,6 +165,10 @@ function openRanks() {
         </div>`;
     });
 
+    const modalTitle = document.querySelector('.modal-title');
+    modalTitle.textContent = currentBank === '1330' ? "Sentences: Cursus Honorum" : "Myth: Cursus Honorum";
+    modalTitle.style.color = currentBank === '1330' ? "var(--gold)" : "var(--gold)"; // uses theme color
+
     document.getElementById('ranks-overlay').style.display = 'flex';
 }
 
@@ -119,17 +192,22 @@ function launchQuiz(selectedMode) {
     document.getElementById('home-view').style.display = 'none';
     document.getElementById('quiz-view').style.display = 'flex';
 
+    const data = getActiveData();
     const badge = document.getElementById('mode-badge');
+
+    // Update badge with bank info
+    const bankLabel = currentBank === '1330' ? 'SENTENCES' : 'MYTH';
+
     if (mode === 'battle') {
-        badge.textContent = "BATTLE MODE";
+        badge.textContent = `${bankLabel} • BATTLE`;
         badge.style.color = "var(--gold)";
         badge.style.borderColor = "var(--gold)";
-        queue = QUESTION_DATA.filter(q => (progress[q.id] || 0) < 3);
+        queue = data.filter(q => (progress[getProgressKey(q.id)] || 0) < 3);
     } else {
-        badge.textContent = "STUDY MODE";
+        badge.textContent = `${bankLabel} • STUDY`;
         badge.style.color = "var(--cyan)";
         badge.style.borderColor = "var(--cyan)";
-        queue = [...QUESTION_DATA];
+        queue = [...data];
     }
 
     queue.sort(() => Math.random() - 0.5);
@@ -150,9 +228,14 @@ function renderCard() {
     }
 
     const q = queue[currentIdx];
-    const m = progress[q.id] || 0;
+    const key = getProgressKey(q.id);
+    const m = progress[key] || 0;
 
-    document.getElementById('q-cat').textContent = q.cat;
+    // Fallback for missing category/explanation
+    const cat = q.cat || (currentBank === '1330' ? 'Sentence Completions' : 'General');
+    const expl = q.expl || "No extra notes for this question.";
+
+    document.getElementById('q-cat').textContent = cat;
     const pips = document.getElementById('pips').children;
     for (let i = 0; i < 3; i++) pips[i].className = i < m ? 'pip filled' : 'pip';
 
@@ -167,7 +250,7 @@ function renderCard() {
         document.getElementById('flashcard').classList.remove('flipped');
         document.getElementById('q-text-study').textContent = q.q;
         document.getElementById('a-text-study').textContent = q.o[q.a];
-        document.getElementById('expl-box').innerHTML = `<strong>Fact:</strong> ${q.expl}`;
+        document.getElementById('expl-box').innerHTML = `<strong>Fact:</strong> ${expl}`;
 
         nextBtn.style.display = 'block';
         nextBtn.style.background = 'var(--cyan)';
@@ -198,21 +281,23 @@ function handleBattle(idx, btn, q) {
     all.forEach(b => b.disabled = true);
     const nextBtn = document.getElementById('next-btn');
 
+    const key = getProgressKey(q.id);
+    const expl = q.expl || "Correct!";
+
     if (idx === q.a) {
         btn.classList.add('correct');
-        let m = progress[q.id] || 0;
+        let m = progress[key] || 0;
         if (m < 3) {
             m++;
-            progress[q.id] = m;
+            progress[key] = m;
             updateDoc(doc(db, 'users', currentUser.uid), { progress: progress });
 
             const pips = document.getElementById('pips').children;
             if (m <= 3) pips[m - 1].classList.add('filled');
 
-            if (m === 3) confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 }, colors: ['#FFD700', '#FFA500'] }); // Mastered specific celebration
+            if (m === 3) confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 }, colors: ['#FFD700', '#FFA500'] }); 
         }
 
-        // Immediate celebration for EVERY correct answer
         confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 }, colors: ['#00E676', '#FFD700'] });
         showFloatingFeedback(btn, "⚔️ VICTORIA!");
 
@@ -222,10 +307,7 @@ function handleBattle(idx, btn, q) {
     } else {
         btn.classList.add('wrong');
         btn.classList.add('shake');
-
-        // Negative Feedback
         showFloatingFeedback(btn, "❌ DO NOT FALTER!", true);
-
         setTimeout(() => btn.classList.remove('shake'), 500);
 
         all[q.a].classList.add('correct');
@@ -235,7 +317,7 @@ function handleBattle(idx, btn, q) {
         nextBtn.textContent = 'REVIEW LATER';
     }
 
-    document.getElementById('expl-box').innerHTML = `<strong>Fact:</strong> ${q.expl}`;
+    document.getElementById('expl-box').innerHTML = `<strong>Fact:</strong> ${expl}`;
     document.getElementById('expl-box').style.display = 'block';
     nextBtn.style.display = 'block';
     nextBtn.onclick = () => { currentIdx++; renderCard(); };
@@ -263,19 +345,10 @@ function showFloatingFeedback(element, text, isNegative = false) {
     const feedback = document.createElement('div');
     feedback.className = isNegative ? 'floating-feedback negative' : 'floating-feedback';
     feedback.textContent = text;
-
-    // Calculate center of button
-    const left = rect.left + (rect.width / 2) - 50; // Approximating centering, better to use CSS transform translate if width varies
+    const left = rect.left + (rect.width / 2) - 50; 
     const top = rect.top;
-
     feedback.style.left = `${left}px`;
     feedback.style.top = `${top}px`;
-
-    // Append to body to avoid clipping or relative positioning issues within container
     document.body.appendChild(feedback);
-
-    // Remove after animation
-    setTimeout(() => {
-        feedback.remove();
-    }, 1000);
+    setTimeout(() => { feedback.remove(); }, 1000);
 }
