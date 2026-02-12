@@ -1,5 +1,6 @@
-import { QUESTION_DATA as DATA_MYTH } from './questions.js';
-import { QUESTION_DATA_1330 as DATA_1330 } from './questions1330.js';
+import { QUESTION_DATA as DATA_MYTH } from '../data/questions.js';
+import { QUESTION_DATA_1330 as DATA_1330 } from '../data/questions1330.js';
+import { initUI } from './ui-loader.js';
 import { auth, db, provider, signInWithPopup, signOut, onAuthStateChanged, doc, getDoc, setDoc, updateDoc } from './firebase-config.js';
 
 // STATE
@@ -19,7 +20,9 @@ const RANKS = [
     { n: "IMPERATOR", req: 100, desc: "Emperor. Master of Rome." }
 ];
 
-window.onload = () => {
+window.onload = async () => {
+    await initUI();
+
     onAuthStateChanged(auth, async (user) => {
         if (user) {
             currentUser = user;
@@ -52,6 +55,19 @@ window.onload = () => {
         document.body.classList.add('light-mode');
         document.getElementById('btn-theme').textContent = '☾';
     }
+
+    // Browse Listeners
+    const btnBrowse = document.getElementById('btn-browse');
+    if (btnBrowse) btnBrowse.onclick = openBrowser;
+
+    const btnBrowseBack = document.getElementById('btn-browse-back');
+    if (btnBrowseBack) btnBrowseBack.onclick = closeBrowser;
+
+    const inpSearch = document.getElementById('browse-search');
+    if (inpSearch) inpSearch.oninput = (e) => renderBrowseList(e.target.value);
+
+    const inpJump = document.getElementById('browse-jump');
+    if (inpJump) inpJump.onchange = (e) => jumpToQuestion(e.target.value);
 };
 
 function toggleTheme() {
@@ -248,7 +264,7 @@ function renderCard() {
         document.getElementById('ui-study').style.display = 'block';
 
         document.getElementById('flashcard').classList.remove('flipped');
-        document.getElementById('q-text-study').textContent = q.q;
+        document.getElementById('q-text-study').textContent = `${q.id}. ${q.q}`;
         document.getElementById('a-text-study').textContent = q.o[q.a];
         document.getElementById('expl-box').innerHTML = `<strong>Fact:</strong> ${expl}`;
 
@@ -262,7 +278,7 @@ function renderCard() {
         document.getElementById('ui-study').style.display = 'none';
         document.getElementById('ui-battle').style.display = 'block';
 
-        document.getElementById('q-text-battle').textContent = q.q;
+        document.getElementById('q-text-battle').textContent = `${q.id}. ${q.q}`;
         const div = document.getElementById('battle-opts');
         div.innerHTML = '';
 
@@ -295,7 +311,7 @@ function handleBattle(idx, btn, q) {
             const pips = document.getElementById('pips').children;
             if (m <= 3) pips[m - 1].classList.add('filled');
 
-            if (m === 3) confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 }, colors: ['#FFD700', '#FFA500'] }); 
+            if (m === 3) confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 }, colors: ['#FFD700', '#FFA500'] });
         }
 
         confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 }, colors: ['#00E676', '#FFD700'] });
@@ -345,10 +361,80 @@ function showFloatingFeedback(element, text, isNegative = false) {
     const feedback = document.createElement('div');
     feedback.className = isNegative ? 'floating-feedback negative' : 'floating-feedback';
     feedback.textContent = text;
-    const left = rect.left + (rect.width / 2) - 50; 
+    const left = rect.left + (rect.width / 2) - 50;
     const top = rect.top;
     feedback.style.left = `${left}px`;
     feedback.style.top = `${top}px`;
     document.body.appendChild(feedback);
     setTimeout(() => { feedback.remove(); }, 1000);
+}
+
+// --- BROWSE FEATURE ---
+function openBrowser() {
+    document.getElementById('home-view').style.display = 'none';
+    document.getElementById('browse-view').style.display = 'flex';
+    renderBrowseList();
+}
+
+function closeBrowser() {
+    document.getElementById('browse-view').style.display = 'none';
+    document.getElementById('home-view').style.display = 'flex';
+}
+
+function renderBrowseList(filter = '') {
+    const list = document.getElementById('browse-list');
+    list.innerHTML = '';
+    const data = getActiveData();
+
+    // Sort by ID
+    const sorted = [...data].sort((a, b) => a.id - b.id);
+
+    sorted.forEach(q => {
+        if (filter) {
+            const text = `${q.id} ${q.q}`.toLowerCase();
+            if (!text.includes(filter.toLowerCase())) return;
+        }
+
+        const div = document.createElement('div');
+        div.className = 'browse-item';
+        div.onclick = () => jumpToQuestion(q.id);
+        div.innerHTML = `
+            <div class="browse-id">#${q.id}</div>
+            <div class="browse-text">${q.q}</div>
+        `;
+        list.appendChild(div);
+    });
+}
+
+function jumpToQuestion(id) {
+    const data = getActiveData();
+    const idx = data.findIndex(q => q.id === parseInt(id));
+
+    if (idx !== -1) {
+        document.getElementById('browse-view').style.display = 'none';
+
+        // Launch in Battle mode as requested
+        mode = 'battle';
+        document.getElementById('home-view').style.display = 'none';
+        document.getElementById('quiz-view').style.display = 'flex';
+
+        const badge = document.getElementById('mode-badge');
+        const bankLabel = currentBank === '1330' ? 'SENTENCES' : 'MYTH';
+        badge.textContent = `${bankLabel} • BATTLE`;
+        badge.style.color = "var(--gold)";
+        badge.style.borderColor = "var(--gold)";
+
+        // Set queue to start from this index, in ID order
+        queue = [...data].sort((a, b) => a.id - b.id);
+
+        // Find NEW index in sorted queue
+        const newIdx = queue.findIndex(q => q.id === parseInt(id));
+        currentIdx = newIdx !== -1 ? newIdx : 0;
+
+        document.getElementById('quiz-container').style.display = 'block';
+        document.getElementById('empty-state').style.display = 'none';
+        renderCard();
+    } else {
+        alert("Question ID not found in current bank!");
+    }
 }

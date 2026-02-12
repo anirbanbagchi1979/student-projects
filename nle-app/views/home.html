@@ -1,0 +1,64 @@
+<div id="home-view">
+
+    <!-- Mission Select -->
+    <div class="section-title">Mission</div>
+    <select id="bank-selector" class="opt-btn"
+        style="text-align:center; text-align-last:center; appearance:none; margin-bottom:25px; font-family:'Cinzel';">
+        <option value="myth">⚔️ MYTH</option>
+        <option value="1330">📜 SENTENCE COMPLETIONS</option>
+    </select>
+
+    <!-- Stats -->
+    <div class="section-title">Field Report</div>
+    <div class="stats-grid">
+        <!-- New Questions -->
+        <div class="stat-row">
+            <div class="stat-header">
+                <span style="color:#aaa;">Yet to Practice</span>
+                <span id="count-new">0</span>
+            </div>
+            <div class="stat-bar-bg">
+                <div id="bar-new" class="stat-bar-fill" style="background:#666;"></div>
+            </div>
+        </div>
+        <!-- Learning -->
+        <div class="stat-row">
+            <div class="stat-header">
+                <span style="color:var(--cyan);">Practicing</span>
+                <span id="count-learn">0</span>
+            </div>
+            <div class="stat-bar-bg">
+                <div id="bar-learn" class="stat-bar-fill" style="background:var(--cyan);"></div>
+            </div>
+        </div>
+        <!-- Mastered -->
+        <div class="stat-row">
+            <div class="stat-header">
+                <span style="color:var(--gold);">Mastered (x3)</span>
+                <span id="count-master">0</span>
+            </div>
+            <div class="stat-bar-bg">
+                <div id="bar-master" class="stat-bar-fill" style="background:var(--gold);"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mode Selection -->
+    <div class="section-title">Deploy</div>
+    <div class="mode-grid">
+        <div class="mode-card card-study" id="btn-study">
+            <div class="mode-icon">📖</div>
+            <div class="mode-title">STUDY</div>
+            <div class="mode-desc">Flashcards. No pressure. Review all content.</div>
+        </div>
+        <div class="mode-card card-battle" id="btn-battle">
+            <div class="mode-icon">⚔️</div>
+            <div class="mode-title">BATTLE</div>
+            <div class="mode-desc">Test your knowledge. Gain Rank. Master items.</div>
+        </div>
+    </div>
+<div style="margin-top:20px;">
+    <button id="btn-browse" class="opt-btn" style="width:100%; text-align:center; justify-content:center;">BROWSE
+        QUESTIONS</button>
+</div>
+</div>

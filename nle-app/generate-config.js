@@ -26,6 +26,6 @@ const provider = new GoogleAuthProvider();
 export { auth, db, provider, signInWithPopup, signOut, onAuthStateChanged, doc, getDoc, setDoc, updateDoc };
 `;
 
-const outputPath = path.join(__dirname, 'firebase-config.js');
+const outputPath = path.join(__dirname, 'js/firebase-config.js');
 fs.writeFileSync(outputPath, configContent);
 console.log(`Generated firebase-config.js at ${outputPath}`);

@@ -1,0 +1,56 @@
+<div id="quiz-view">
+    <div class="quiz-header">
+        <button class="back-btn" id="btn-back">← BASE</button>
+        <div id="mode-badge"
+            style="font-size:0.7rem; font-weight:bold; color:#666; border:1px solid #333; padding:2px 6px; border-radius:4px;">
+            STUDY</div>
+    </div>
+
+    <div class="quiz-content">
+        <div id="quiz-container">
+            <div id="q-cat" class="q-cat">...</div>
+            <div id="pips" class="pips">
+                <div class="pip"></div>
+                <div class="pip"></div>
+                <div class="pip"></div>
+            </div>
+
+            <!-- Flashcard (Study) -->
+            <div id="ui-study" style="display:none;">
+                <div class="flashcard" id="flashcard">
+                    <div class="fc-inner">
+                        <div class="front">
+                            <div id="q-text-study" style="font-size:1.2rem; font-weight:bold;">...</div>
+                            <div class="hint" style="color:var(--cyan);">TAP TO REVEAL</div>
+                        </div>
+                        <div class="back">
+                            <div id="a-text-study"
+                                style="font-size:1.3rem; color:var(--cyan); font-weight:900;">...</div>
+                            <div class="hint">TAP TO HIDE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Battle (Test) -->
+            <div id="ui-battle" style="display:none;">
+                <div id="q-text-battle"
+                    style="font-size:1.2rem; font-weight:bold; margin-bottom:20px; color:white;">...</div>
+                <div id="battle-opts"></div>
+            </div>
+
+            <div id="expl-box" class="explanation"></div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-ui">
+            <div style="font-size:4rem;">🏆</div>
+            <h2 style="color:var(--gold); font-family:'Cinzel';">COMPLETE</h2>
+            <p style="color:#888;">No questions left in this category!</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button id="next-btn" class="main-btn">CONTINUE</button>
+    </div>
+</div>
