@@ -293,7 +293,8 @@ function renderCard() {
 }
 
 function handleBattle(idx, btn, q) {
-    const all = document.querySelectorAll('.opt-btn');
+    const div = document.getElementById('battle-opts');
+    const all = div.querySelectorAll('.opt-btn');
     all.forEach(b => b.disabled = true);
     const nextBtn = document.getElementById('next-btn');
 
