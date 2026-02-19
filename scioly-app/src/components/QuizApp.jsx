@@ -35,6 +35,7 @@ export default function QuizApp() {
                 const q = query(collection(db, 'questions'), orderBy('number'))
                 const snap = await getDocs(q)
                 const data = snap.docs.map(d => d.data())
+                console.log('Loaded', data.length, 'questions from Firestore')
                 setAllQuestions(data)
             } catch (err) {
                 console.error('Error loading questions:', err)
@@ -59,6 +60,7 @@ export default function QuizApp() {
                             decayed[k] = applyDecay(v)
                         }
                         setMasteryMap(decayed)
+                        console.log('Loaded mastery for', Object.keys(decayed).length, 'questions')
                     }
                 }
             } catch (err) {
