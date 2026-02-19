@@ -2,6 +2,12 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer })
     const isLocked = answer !== undefined || mode === 'review'
     const correctLetters = question.answer.split(',').map(s => s.trim())
 
+    // Detect Gemini mismatch for MC questions
+    const geminiAnswer = question.gemini_answer?.trim().toUpperCase()
+    const providedAnswer = question.answer?.trim().toUpperCase()
+    const isMC = question.type === 'MC'
+    const hasMismatch = isMC && geminiAnswer && providedAnswer && geminiAnswer !== providedAnswer
+
     return (
         <div className="question-card">
             <div className="q-number">Question {question.number}</div>
@@ -36,6 +42,18 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer })
                 <div className="explanation-box">
                     <strong>Correct Answer:</strong> {question.answer}
                     {question.explanation && <><br /><br />{question.explanation}</>}
+                </div>
+            )}
+
+            {(answer || mode === 'review') && hasMismatch && (
+                <div className="gemini-mismatch">
+                    <div className="gemini-mismatch-header">⚠️ Gemini Disagrees</div>
+                    <p>
+                        Gemini's answer: <strong>{question.gemini_answer}</strong>
+                        <span className="mismatch-vs">vs</span>
+                        Provided answer: <strong>{question.answer}</strong>
+                    </p>
+                    <p className="mismatch-note">Please verify the correct answer manually.</p>
                 </div>
             )}
         </div>
