@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import { db } from '../lib/firebase'
 import { useAuth } from '../contexts/AuthContext'
@@ -7,13 +7,14 @@ import ResultsScreen from './ResultsScreen'
 
 export default function QuizApp() {
     const { user, signOut } = useAuth()
-    const [questions, setQuestions] = useState([])
+    const [allQuestions, setAllQuestions] = useState([])
     const [loading, setLoading] = useState(true)
     const [currentIdx, setCurrentIdx] = useState(0)
     const [answers, setAnswers] = useState({})
     const [mode, setModeState] = useState('practice')
     const [filter, setFilterState] = useState('all')
     const [showResults, setShowResults] = useState(false)
+    const [source, setSource] = useState('all')
 
     // Load questions from Firestore
     useEffect(() => {
@@ -22,7 +23,7 @@ export default function QuizApp() {
                 const q = query(collection(db, 'questions'), orderBy('number'))
                 const snap = await getDocs(q)
                 const data = snap.docs.map(d => d.data())
-                setQuestions(data)
+                setAllQuestions(data)
             } catch (err) {
                 console.error('Error loading questions:', err)
             }
@@ -31,7 +32,19 @@ export default function QuizApp() {
         load()
     }, [])
 
-    // Compute filtered indices
+    // Derive unique sources
+    const sources = useMemo(() => {
+        const s = new Set(allQuestions.map(q => q.source).filter(Boolean))
+        return ['all', ...Array.from(s).sort()]
+    }, [allQuestions])
+
+    // Filter questions by source
+    const questions = useMemo(() => {
+        if (source === 'all') return allQuestions
+        return allQuestions.filter(q => q.source === source)
+    }, [allQuestions, source])
+
+    // Compute filtered indices (for review mode filters)
     const filteredIndices = questions
         .map((_, i) => i)
         .filter(i => {
@@ -52,6 +65,15 @@ export default function QuizApp() {
         setCurrentIdx(0)
         setShowResults(false)
         if (m === 'test') setAnswers({})
+    }
+
+    function changeSource(s) {
+        setSource(s)
+        setAnswers({})
+        setCurrentIdx(0)
+        setFilterState('all')
+        setShowResults(false)
+        setModeState('practice')
     }
 
     function setFilter(f) {
@@ -125,6 +147,23 @@ export default function QuizApp() {
                 </div>
                 <h1 className="app-title">Designer Genes C</h1>
                 <p className="app-subtitle">{questions.length} Questions · Multiple Choice</p>
+            </div>
+
+            {/* Source selector */}
+            <div className="source-bar">
+                <label className="source-label" htmlFor="source-select">📚 Source</label>
+                <select
+                    id="source-select"
+                    className="source-select"
+                    value={source}
+                    onChange={e => changeSource(e.target.value)}
+                >
+                    {sources.map(s => (
+                        <option key={s} value={s}>
+                            {s === 'all' ? 'All Sources' : s}
+                        </option>
+                    ))}
+                </select>
             </div>
 
             {/* Mode bar */}
