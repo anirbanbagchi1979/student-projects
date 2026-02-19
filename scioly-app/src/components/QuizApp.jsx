@@ -4,6 +4,7 @@ import { db } from '../lib/firebase'
 import { useAuth } from '../contexts/AuthContext'
 import QuestionCard from './QuestionCard'
 import ResultsScreen from './ResultsScreen'
+import Dashboard from './Dashboard'
 
 export default function QuizApp() {
     const { user, signOut } = useAuth()
@@ -192,18 +193,20 @@ export default function QuizApp() {
 
             {/* Mode bar */}
             <div className="mode-bar">
-                {['practice', 'test', 'review'].map(m => (
+                {['practice', 'test', 'review', 'dashboard'].map(m => (
                     <button
                         key={m}
                         className={`mode-btn ${mode === m ? 'active' : ''}`}
                         onClick={() => setMode(m)}
                     >
-                        {m === 'practice' ? '📝 Practice' : m === 'test' ? '⏱ Test' : '📖 Review'}
+                        {m === 'practice' ? '📝 Practice' : m === 'test' ? '⏱ Test' : m === 'review' ? '📖 Review' : '📊 Dashboard'}
                     </button>
                 ))}
             </div>
 
-            {showResults ? (
+            {mode === 'dashboard' ? (
+                <Dashboard questions={questions} answers={answers} />
+            ) : showResults ? (
                 <ResultsScreen
                     questions={questions}
                     answers={answers}
