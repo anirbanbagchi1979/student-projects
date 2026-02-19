@@ -1,5 +1,6 @@
 export default function QuestionCard({ question, answer, mode, onSelectAnswer }) {
-    const isLocked = answer !== undefined || mode === 'review'
+    const showFeedback = mode !== 'test'
+    const isLocked = (answer !== undefined && showFeedback) || mode === 'review'
     const correctLetters = question.answer.split(',').map(s => s.trim())
 
     // Detect Gemini mismatch for MC questions
@@ -19,10 +20,14 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer })
                     const text = opt.substring(3)
 
                     let cls = ''
-                    if (answer) {
+                    if (answer && showFeedback) {
+                        // Practice/Review: show correct/wrong colors
                         if (correctLetters.includes(letter)) cls = 'correct'
                         if (answer.selected === letter && !answer.correct && !correctLetters.includes(letter)) cls = 'wrong'
                         if (answer.selected === letter && answer.correct) cls = 'correct'
+                    } else if (answer && !showFeedback) {
+                        // Test: only highlight the selected option, no correct/wrong
+                        if (answer.selected === letter) cls = 'selected'
                     }
 
                     return (
@@ -38,14 +43,14 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer })
                 })}
             </div>
 
-            {(answer || mode === 'review') && (
+            {showFeedback && (answer || mode === 'review') && (
                 <div className="explanation-box">
                     <strong>Correct Answer:</strong> {question.answer}
                     {question.explanation && <><br /><br />{question.explanation}</>}
                 </div>
             )}
 
-            {(answer || mode === 'review') && hasMismatch && (
+            {showFeedback && (answer || mode === 'review') && hasMismatch && (
                 <div className="gemini-mismatch">
                     <div className="gemini-mismatch-header">⚠️ Gemini Disagrees</div>
                     <p>

@@ -578,6 +578,17 @@ body::before {
   border-color: var(--wrong);
 }
 
+.option-btn.selected {
+  border-color: var(--primary);
+  background: rgba(108, 92, 231, 0.1);
+}
+
+.option-btn.selected .option-letter {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
 .option-btn.locked {
   cursor: default;
 }
