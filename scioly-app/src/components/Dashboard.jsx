@@ -70,7 +70,7 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
                     />
                 </svg>
                 <div className="mastery-pct">{masteryPct}%</div>
-                <div className="mastery-label">{mastered} / {total} Mastered</div>
+                <div className="mastery-label">{mastered} / {total} Locked In 🔒</div>
             </div>
 
             {/* Mastery level breakdown */}
@@ -88,7 +88,7 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
             {sessionAnswered > 0 && (
                 <div className="dash-progress">
                     <div className="dash-progress-label">
-                        <span>This Session</span>
+                        <span>This Sesh 🎮</span>
                         <span>{sessionCorrect}/{sessionAnswered} correct</span>
                     </div>
                     <div className="dash-progress-bar">
@@ -101,7 +101,7 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
             {/* Overall progress bar */}
             <div className="dash-progress">
                 <div className="dash-progress-label">
-                    <span>Overall Progress</span>
+                    <span>Your Grind 💪</span>
                     <span>{attempted} / {total} attempted</span>
                 </div>
                 <div className="dash-progress-bar">
@@ -115,12 +115,12 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
                 <div className="stat-card" style={{ borderColor: '#ff6b35' + '50' }}>
                     <div className="stat-icon">🔥</div>
                     <div className="stat-value">{streakData.currentStreak || 0}</div>
-                    <div className="stat-name">Day Streak</div>
+                    <div className="stat-name">Streak</div>
                 </div>
                 <div className="stat-card" style={{ borderColor: '#f0a020' + '50' }}>
                     <div className="stat-icon">⭐</div>
                     <div className="stat-value">{streakData.longestStreak || 0}</div>
-                    <div className="stat-name">Best Streak</div>
+                    <div className="stat-name">Record</div>
                 </div>
                 <div className="stat-card" style={{ borderColor: '#4ecdc4' + '50' }}>
                     <div className="stat-icon">🛡️</div>
@@ -131,7 +131,7 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
 
             {/* Achievement Badges */}
             <div className="badges-section">
-                <h3 className="breakdown-title">🏅 Achievements ({earnedBadges.length}/{BADGES.length})</h3>
+                <h3 className="breakdown-title">🏆 Trophies ({earnedBadges.length}/{BADGES.length})</h3>
                 <div className="badges-grid">
                     {BADGES.map(b => {
                         const isEarned = earnedSet.has(b.id)
@@ -149,7 +149,7 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
             {/* Leaderboard */}
             {leaderboard.length > 0 && (
                 <div className="leaderboard">
-                    <h3 className="breakdown-title">🏆 Leaderboard</h3>
+                    <h3 className="breakdown-title">💯 Scoreboard</h3>
                     {leaderboard.map((u, rank) => {
                         const isMe = currentUser && u.uid === currentUser.uid
                         return (
@@ -178,7 +178,7 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
 
             {/* Per-source breakdown */}
             <div className="source-breakdown">
-                <h3 className="breakdown-title">By Source</h3>
+                <h3 className="breakdown-title">🗂 Pack Breakdown</h3>
                 {Object.entries(perSource).sort((a, b) => a[0].localeCompare(b[0])).map(([src, s]) => {
                     const srcMastered = s.levels[4] + s.levels[5]
                     const pct = s.total > 0 ? Math.round((srcMastered / s.total) * 100) : 0

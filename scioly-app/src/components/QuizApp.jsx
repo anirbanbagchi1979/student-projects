@@ -16,7 +16,7 @@ export default function QuizApp() {
     const [sessionAnswers, setSessionAnswers] = useState({}) // current session answers (index → {selected, correct})
     const [masteryMap, setMasteryMap] = useState({}) // persistent mastery (qNumber → mastery data)
     const [allUsersMastery, setAllUsersMastery] = useState([]) // all users' mastery for leaderboard
-    const [mode, setModeState] = useState('practice')
+    const [mode, setModeState] = useState('dashboard')
     const [filter, setFilterState] = useState('all')
     const [showResults, setShowResults] = useState(false)
     const [source, setSource] = useState('all')
@@ -372,15 +372,15 @@ export default function QuizApp() {
             {/* Header */}
             <div className="header">
                 <div className="header-top">
-                    <div className="badge">Science Olympiad</div>
+                    <div className="badge">SciOly Grind 🧬</div>
                     <button className="user-btn" onClick={signOut}>
                         <img src={user.photoURL} alt="" className="user-avatar" />
                         <span className="signout-text">Sign Out</span>
                     </button>
                 </div>
-                <h1 className="app-title">Designer Genes C</h1>
+                <h1 className="app-title">Designer Genes C ⚡</h1>
                 <p className="app-subtitle">
-                    {questions.length} Questions · Multiple Choice
+                    {questions.length} Qs loaded
                     {streakData.currentStreak > 0 && (
                         <span className="streak-display"> · 🔥{streakData.currentStreak}</span>
                     )}
@@ -395,7 +395,7 @@ export default function QuizApp() {
                 <div className="badge-toast">
                     <span className="badge-toast-icon">{badgeToast.icon}</span>
                     <div>
-                        <strong>Badge Earned!</strong>
+                        <strong>Achievement Unlocked! 🎮</strong>
                         <p>{badgeToast.name} — {badgeToast.description}</p>
                     </div>
                 </div>
@@ -403,7 +403,7 @@ export default function QuizApp() {
 
             {/* Source & type selector */}
             <div className="source-bar">
-                <label className="source-label" htmlFor="source-select">📚 Source</label>
+                <label className="source-label" htmlFor="source-select">🗂 Pick Your Pack</label>
                 <select
                     id="source-select"
                     className="source-select"
@@ -412,7 +412,7 @@ export default function QuizApp() {
                 >
                     {sources.map(s => (
                         <option key={s} value={s}>
-                            {s === 'all' ? 'All Sources' : s}
+                            {s === 'all' ? 'All Packs' : s}
                         </option>
                     ))}
                 </select>
@@ -424,7 +424,7 @@ export default function QuizApp() {
                         className={`type-btn ${typeFilter === t ? 'active' : ''}`}
                         onClick={() => changeType(t)}
                     >
-                        {t === 'all' ? 'All Types' : t}
+                        {t === 'all' ? 'Everything' : t === 'MC' ? 'MC Only' : 'Written'}
                     </button>
                 ))}
             </div>
@@ -435,7 +435,7 @@ export default function QuizApp() {
                     className={`context-filter-btn ${hideContextMissing ? 'active' : ''}`}
                     onClick={() => setHideContextMissing(!hideContextMissing)}
                 >
-                    📎 {hideContextMissing ? 'Context-missing hidden' : 'Showing all questions'}
+                    📎 {hideContextMissing ? 'Skipping incomplete Qs' : 'All Qs (even incomplete)'}
                 </button>
             </div>
 
@@ -447,7 +447,7 @@ export default function QuizApp() {
                         className={`mode-btn ${mode === m ? 'active' : ''}`}
                         onClick={() => setMode(m)}
                     >
-                        {m === 'practice' ? '📝 Practice' : m === 'test' ? '⏱ Test' : m === 'review' ? '📖 Review' : '📊 Dashboard'}
+                        {m === 'practice' ? '🧠 Grind' : m === 'test' ? '⏱ Blitz' : m === 'review' ? '📖 Review' : '🏠 Hub'}
                     </button>
                 ))}
             </div>
