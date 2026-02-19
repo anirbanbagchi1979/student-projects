@@ -95,7 +95,7 @@ export default function QuizApp() {
                     if (data.masteryMap) {
                         users.push({
                             uid: d.id,
-                            name: data.displayName || data.email || d.id.slice(0, 8),
+                            name: (data.displayName || data.email || d.id.slice(0, 8)).split(' ')[0],
                             photoURL: data.photoURL || null,
                             masteryMap: data.masteryMap,
                             updatedAt: data.updatedAt
