@@ -207,8 +207,11 @@ export default function QuizApp() {
 
     // Pick next question for spaced repetition using mastery data
     const pickNextPractice = useCallback(() => {
-        return pickNextQuestion(questions, masteryMap)
-    }, [questions, masteryMap])
+        // Random cooldown of 1-4 recent questions to skip
+        const cooldown = Math.floor(Math.random() * 4) + 1
+        const recent = [...practiceHistory.slice(-cooldown), practiceIdx]
+        return pickNextQuestion(questions, masteryMap, recent)
+    }, [questions, masteryMap, practiceHistory, practiceIdx])
 
     function navigate(dir) {
         if (mode === 'practice') {

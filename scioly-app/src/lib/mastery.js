@@ -94,15 +94,23 @@ export function applyDecay(mastery) {
 /**
  * Pick the next question for spaced repetition practice
  * Priority: due/overdue wrong → due/overdue correct → new → not yet due
+ * recentIndices: array of recently-seen question indices to skip (cooldown)
  */
-export function pickNextQuestion(questions, masteryMap) {
+export function pickNextQuestion(questions, masteryMap, recentIndices = []) {
     const now = Date.now()
     const n = questions.length
     if (n === 0) return 0
 
+    const skipSet = new Set(recentIndices)
+
     const scored = questions.map((q, i) => {
         const key = String(q.number)
         const m = masteryMap[key]
+
+        // Skip recently seen questions (cooldown)
+        if (skipSet.has(i)) {
+            return { i, score: 99999 }
+        }
 
         if (!m || m.level === 0) {
             // Never seen: medium priority, ordered by index
