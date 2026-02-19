@@ -380,7 +380,7 @@ export default function QuizApp() {
                 </div>
                 <h1 className="app-title">Designer Genes C ⚡</h1>
                 <p className="app-subtitle">
-                    {questions.length} Qs loaded
+                    Hey {user.displayName?.split(' ')[0] || 'there'}! · {questions.length} Qs loaded
                     {streakData.currentStreak > 0 && (
                         <span className="streak-display"> · 🔥{streakData.currentStreak}</span>
                     )}
