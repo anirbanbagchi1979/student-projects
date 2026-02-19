@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-nle-app/firebase-config.js
-.DS_Store
-node_modules
-=======
 # Dependencies
 node_modules/
-
-# Input PDFs
-input_quiz/
 
 # Build output
 dist/
@@ -28,7 +20,10 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# Old files
-index_old.html
-questions_raw.txt
->>>>>>> afecc57 (Initial commit: mobile-first React quiz app with Firebase Auth + Firestore)
+# SciOly App
+scioly-app/input_quiz/
+scioly-app/index_old.html
+scioly-app/questions_raw.txt
+
+# NLE App
+nle-app/firebase-config.js
