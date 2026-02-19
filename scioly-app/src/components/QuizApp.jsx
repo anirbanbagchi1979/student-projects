@@ -3,6 +3,7 @@ import { collection, getDocs, orderBy, query, doc, setDoc, getDoc } from 'fireba
 import { db } from '../lib/firebase'
 import { useAuth } from '../contexts/AuthContext'
 import { updateMastery, applyDecay, pickNextQuestion, createEmptyMastery } from '../lib/mastery'
+import { updateStreak, createEmptyStreak, computeBadgeStats, checkBadges, BADGES } from '../lib/gamification'
 import QuestionCard from './QuestionCard'
 import ResultsScreen from './ResultsScreen'
 import Dashboard from './Dashboard'
@@ -21,6 +22,14 @@ export default function QuizApp() {
     const [source, setSource] = useState('all')
     const [typeFilter, setTypeFilter] = useState('MC')
     const [hideContextMissing, setHideContextMissing] = useState(true)
+
+    // Gamification state
+    const [streakData, setStreakData] = useState(createEmptyStreak())
+    const [earnedBadges, setEarnedBadges] = useState([])
+    const [sessionCorrectStreak, setSessionCorrectStreak] = useState(0)
+    const [sessionMaxStreak, setSessionMaxStreak] = useState(0)
+    const [sessionMasteries, setSessionMasteries] = useState(0)
+    const [badgeToast, setBadgeToast] = useState(null)
 
     // Spaced repetition state for practice mode
     const [practiceIdx, setPracticeIdx] = useState(0)
@@ -56,7 +65,6 @@ export default function QuizApp() {
                 if (snap.exists()) {
                     const data = snap.data()
                     if (data.masteryMap) {
-                        // Apply time decay on load
                         const decayed = {}
                         for (const [k, v] of Object.entries(data.masteryMap)) {
                             decayed[k] = applyDecay(v)
@@ -64,6 +72,9 @@ export default function QuizApp() {
                         setMasteryMap(decayed)
                         console.log('Loaded mastery for', Object.keys(decayed).length, 'questions')
                     }
+                    // Load gamification data
+                    if (data.streakData) setStreakData(data.streakData)
+                    if (data.earnedBadges) setEarnedBadges(data.earnedBadges)
                 }
             } catch (err) {
                 console.error('Error loading mastery:', err)
@@ -101,13 +112,15 @@ export default function QuizApp() {
 
     // Save mastery to Firestore (debounced)
     const saveTimeoutRef = useRef(null)
-    function saveMasteryToFirestore(newMap) {
+    function saveMasteryToFirestore(newMap, newStreak = streakData, newBadges = earnedBadges) {
         if (!user) return
         clearTimeout(saveTimeoutRef.current)
         saveTimeoutRef.current = setTimeout(async () => {
             try {
                 await setDoc(doc(db, 'mastery', user.uid), {
                     masteryMap: newMap,
+                    streakData: newStreak,
+                    earnedBadges: newBadges,
                     displayName: user.displayName || '',
                     email: user.email || '',
                     photoURL: user.photoURL || '',
@@ -234,8 +247,48 @@ export default function QuizApp() {
         const newMap = { ...masteryMap, [key]: updated }
         setMasteryMap(newMap)
 
+        // Track session correct streak
+        let newSessionStreak = sessionCorrectStreak
+        let newMaxStreak = sessionMaxStreak
+        if (isCorrect) {
+            newSessionStreak++
+            if (newSessionStreak > newMaxStreak) newMaxStreak = newSessionStreak
+        } else {
+            newSessionStreak = 0
+        }
+        setSessionCorrectStreak(newSessionStreak)
+        setSessionMaxStreak(newMaxStreak)
+
+        // Track session masteries for streak shield
+        let newSessionMasteries = sessionMasteries
+        if (updated.level >= 5 && (current.level || 0) < 5) {
+            newSessionMasteries++
+            setSessionMasteries(newSessionMasteries)
+        }
+
+        // Update streak
+        const newStreak = updateStreak(streakData)
+        // Award streak shield every 5 masteries in a session
+        if (newSessionMasteries > 0 && newSessionMasteries % 5 === 0 && newSessionMasteries > sessionMasteries) {
+            newStreak.streakShields = (newStreak.streakShields || 0) + 1
+            newStreak.totalShieldsEarned = (newStreak.totalShieldsEarned || 0) + 1
+        }
+        setStreakData(newStreak)
+
+        // Check badges
+        const stats = computeBadgeStats(newMap, allQuestions, newStreak, { maxCorrectStreak: newMaxStreak })
+        const newlyEarned = checkBadges(stats, earnedBadges)
+        let newBadges = earnedBadges
+        if (newlyEarned.length > 0) {
+            newBadges = [...earnedBadges, ...newlyEarned.map(b => b.id)]
+            setEarnedBadges(newBadges)
+            // Show toast for the first newly earned badge
+            setBadgeToast(newlyEarned[0])
+            setTimeout(() => setBadgeToast(null), 3000)
+        }
+
         // Save to Firestore
-        saveMasteryToFirestore(newMap)
+        saveMasteryToFirestore(newMap, newStreak, newBadges)
     }
 
     // Pick next question for spaced repetition using mastery data
@@ -326,8 +379,27 @@ export default function QuizApp() {
                     </button>
                 </div>
                 <h1 className="app-title">Designer Genes C</h1>
-                <p className="app-subtitle">{questions.length} Questions · Multiple Choice</p>
+                <p className="app-subtitle">
+                    {questions.length} Questions · Multiple Choice
+                    {streakData.currentStreak > 0 && (
+                        <span className="streak-display"> · 🔥{streakData.currentStreak}</span>
+                    )}
+                    {streakData.streakShields > 0 && (
+                        <span className="shield-display"> · 🛡️{streakData.streakShields}</span>
+                    )}
+                </p>
             </div>
+
+            {/* Badge toast */}
+            {badgeToast && (
+                <div className="badge-toast">
+                    <span className="badge-toast-icon">{badgeToast.icon}</span>
+                    <div>
+                        <strong>Badge Earned!</strong>
+                        <p>{badgeToast.name} — {badgeToast.description}</p>
+                    </div>
+                </div>
+            )}
 
             {/* Source & type selector */}
             <div className="source-bar">
@@ -381,7 +453,7 @@ export default function QuizApp() {
             </div>
 
             {mode === 'dashboard' ? (
-                <Dashboard questions={questions} allQuestions={allQuestions} answers={sessionAnswers} masteryMap={masteryMap} allUsersMastery={allUsersMastery} currentUser={user} />
+                <Dashboard questions={questions} allQuestions={allQuestions} answers={sessionAnswers} masteryMap={masteryMap} allUsersMastery={allUsersMastery} currentUser={user} streakData={streakData} earnedBadges={earnedBadges} />
             ) : showResults ? (
                 <ResultsScreen
                     questions={questions}

@@ -1,6 +1,7 @@
 import { MASTERY_LEVELS } from '../lib/mastery'
+import { BADGES } from '../lib/gamification'
 
-export default function Dashboard({ questions, allQuestions, answers, masteryMap, allUsersMastery = [], currentUser }) {
+export default function Dashboard({ questions, allQuestions, answers, masteryMap, allUsersMastery = [], currentUser, streakData = {}, earnedBadges = [] }) {
     // Only count MC + non-context-missing questions toward mastery
     const masteryQuestions = (allQuestions || questions).filter(q =>
         q.type === 'MC' && !q.contextMissing
@@ -50,6 +51,8 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
             pct: total > 0 ? Math.round((userMastered / total) * 100) : 0
         }
     }).sort((a, b) => b.mastered - a.mastered || b.attempted - a.attempted)
+
+    const earnedSet = new Set(earnedBadges)
 
     return (
         <div className="dashboard">
@@ -104,6 +107,42 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
                 <div className="dash-progress-bar">
                     <div className="dash-bar-correct" style={{ width: `${total > 0 ? (mastered / total) * 100 : 0}%` }} />
                     <div className="dash-bar-wrong" style={{ width: `${total > 0 ? ((attempted - mastered) / total) * 100 : 0}%` }} />
+                </div>
+            </div>
+
+            {/* Streak & Shields */}
+            <div className="stat-cards streak-cards">
+                <div className="stat-card" style={{ borderColor: '#ff6b35' + '50' }}>
+                    <div className="stat-icon">🔥</div>
+                    <div className="stat-value">{streakData.currentStreak || 0}</div>
+                    <div className="stat-name">Day Streak</div>
+                </div>
+                <div className="stat-card" style={{ borderColor: '#f0a020' + '50' }}>
+                    <div className="stat-icon">⭐</div>
+                    <div className="stat-value">{streakData.longestStreak || 0}</div>
+                    <div className="stat-name">Best Streak</div>
+                </div>
+                <div className="stat-card" style={{ borderColor: '#4ecdc4' + '50' }}>
+                    <div className="stat-icon">🛡️</div>
+                    <div className="stat-value">{streakData.streakShields || 0}</div>
+                    <div className="stat-name">Shields</div>
+                </div>
+            </div>
+
+            {/* Achievement Badges */}
+            <div className="badges-section">
+                <h3 className="breakdown-title">🏅 Achievements ({earnedBadges.length}/{BADGES.length})</h3>
+                <div className="badges-grid">
+                    {BADGES.map(b => {
+                        const isEarned = earnedSet.has(b.id)
+                        return (
+                            <div key={b.id} className={`badge-card ${isEarned ? 'badge-earned' : 'badge-locked'}`}>
+                                <div className="badge-icon">{b.icon}</div>
+                                <div className="badge-name">{b.name}</div>
+                                <div className="badge-desc">{b.description}</div>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
 
