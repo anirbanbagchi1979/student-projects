@@ -343,7 +343,7 @@ export default function QuizApp() {
                         <div className="progress-stats">
                             <span>
                                 {mode === 'practice'
-                                    ? `Step ${stepRef.current + 1} · Q${activeQuestion?.number ?? '?'}`
+                                    ? `Step ${practiceHistory.length + 1} · Q${activeQuestion?.number ?? '?'}`
                                     : `Question ${currentIdx + 1} of ${filteredIndices.length}`
                                 }
                             </span>
