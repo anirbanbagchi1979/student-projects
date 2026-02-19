@@ -17,12 +17,14 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         const unsub = onAuthStateChanged(auth, async (u) => {
             if (u && !ALLOWED_EMAILS.has(u.email)) {
-                await fbSignOut(auth)
-                setUser(null)
+                // Do NOT set user — sign them out immediately
                 setAuthError('Access restricted. This account is not authorized.')
-            } else {
-                setUser(u)
+                setUser(null)
+                setLoading(false)
+                await fbSignOut(auth)
+                return
             }
+            setUser(u)
             setLoading(false)
         })
         return unsub
