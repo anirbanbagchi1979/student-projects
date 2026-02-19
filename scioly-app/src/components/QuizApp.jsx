@@ -14,6 +14,7 @@ export default function QuizApp() {
     const [currentIdx, setCurrentIdx] = useState(0)
     const [sessionAnswers, setSessionAnswers] = useState({}) // current session answers (index → {selected, correct})
     const [masteryMap, setMasteryMap] = useState({}) // persistent mastery (qNumber → mastery data)
+    const [allUsersMastery, setAllUsersMastery] = useState([]) // all users' mastery for leaderboard
     const [mode, setModeState] = useState('practice')
     const [filter, setFilterState] = useState('all')
     const [showResults, setShowResults] = useState(false)
@@ -71,6 +72,33 @@ export default function QuizApp() {
         loadMastery()
     }, [user, allQuestions])
 
+    // Load all users' mastery data for leaderboard
+    useEffect(() => {
+        if (allQuestions.length === 0) return
+        async function loadAllMastery() {
+            try {
+                const snap = await getDocs(collection(db, 'mastery'))
+                const users = []
+                snap.forEach(d => {
+                    const data = d.data()
+                    if (data.masteryMap) {
+                        users.push({
+                            uid: d.id,
+                            name: data.displayName || data.email || d.id.slice(0, 8),
+                            photoURL: data.photoURL || null,
+                            masteryMap: data.masteryMap,
+                            updatedAt: data.updatedAt
+                        })
+                    }
+                })
+                setAllUsersMastery(users)
+            } catch (err) {
+                console.error('Error loading leaderboard:', err)
+            }
+        }
+        loadAllMastery()
+    }, [allQuestions])
+
     // Save mastery to Firestore (debounced)
     const saveTimeoutRef = useRef(null)
     function saveMasteryToFirestore(newMap) {
@@ -80,6 +108,9 @@ export default function QuizApp() {
             try {
                 await setDoc(doc(db, 'mastery', user.uid), {
                     masteryMap: newMap,
+                    displayName: user.displayName || '',
+                    email: user.email || '',
+                    photoURL: user.photoURL || '',
                     updatedAt: new Date().toISOString()
                 })
             } catch (err) {
@@ -350,7 +381,7 @@ export default function QuizApp() {
             </div>
 
             {mode === 'dashboard' ? (
-                <Dashboard questions={questions} allQuestions={allQuestions} answers={sessionAnswers} masteryMap={masteryMap} />
+                <Dashboard questions={questions} allQuestions={allQuestions} answers={sessionAnswers} masteryMap={masteryMap} allUsersMastery={allUsersMastery} currentUser={user} />
             ) : showResults ? (
                 <ResultsScreen
                     questions={questions}

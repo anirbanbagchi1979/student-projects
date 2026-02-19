@@ -1,6 +1,6 @@
 import { MASTERY_LEVELS } from '../lib/mastery'
 
-export default function Dashboard({ questions, allQuestions, answers, masteryMap }) {
+export default function Dashboard({ questions, allQuestions, answers, masteryMap, allUsersMastery = [], currentUser }) {
     // Only count MC + non-context-missing questions toward mastery
     const masteryQuestions = (allQuestions || questions).filter(q =>
         q.type === 'MC' && !q.contextMissing
@@ -30,6 +30,26 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
     // Session stats
     const sessionAnswered = Object.keys(answers).length
     const sessionCorrect = Object.values(answers).filter(a => a.correct).length
+
+    // Leaderboard: compute stats for each user
+    const leaderboard = allUsersMastery.map(u => {
+        let userMastered = 0
+        let userAttempted = 0
+        masteryQuestions.forEach(q => {
+            const key = String(q.number)
+            const m = u.masteryMap[key]
+            if (m && m.level > 0) userAttempted++
+            if (m && m.level >= 4) userMastered++
+        })
+        return {
+            uid: u.uid,
+            name: u.name,
+            photoURL: u.photoURL,
+            mastered: userMastered,
+            attempted: userAttempted,
+            pct: total > 0 ? Math.round((userMastered / total) * 100) : 0
+        }
+    }).sort((a, b) => b.mastered - a.mastered || b.attempted - a.attempted)
 
     return (
         <div className="dashboard">
@@ -86,6 +106,36 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
                     <div className="dash-bar-wrong" style={{ width: `${total > 0 ? ((attempted - mastered) / total) * 100 : 0}%` }} />
                 </div>
             </div>
+
+            {/* Leaderboard */}
+            {leaderboard.length > 0 && (
+                <div className="leaderboard">
+                    <h3 className="breakdown-title">🏆 Leaderboard</h3>
+                    {leaderboard.map((u, rank) => {
+                        const isMe = currentUser && u.uid === currentUser.uid
+                        return (
+                            <div key={u.uid} className={`leaderboard-row ${isMe ? 'leaderboard-me' : ''}`}>
+                                <div className="lb-rank">{rank === 0 ? '🥇' : rank === 1 ? '🥈' : rank === 2 ? '🥉' : `#${rank + 1}`}</div>
+                                {u.photoURL ? (
+                                    <img src={u.photoURL} alt="" className="lb-avatar" />
+                                ) : (
+                                    <div className="lb-avatar lb-avatar-placeholder">👤</div>
+                                )}
+                                <div className="lb-info">
+                                    <div className="lb-name">{u.name}{isMe ? ' (you)' : ''}</div>
+                                    <div className="dash-progress-bar lb-bar">
+                                        <div className="dash-bar-correct" style={{ width: `${u.pct}%` }} />
+                                    </div>
+                                </div>
+                                <div className="lb-stats">
+                                    <div className="lb-mastered">{u.mastered}/{total}</div>
+                                    <div className="lb-pct">{u.pct}%</div>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+            )}
 
             {/* Per-source breakdown */}
             <div className="source-breakdown">
