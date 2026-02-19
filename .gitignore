@@ -28,3 +28,6 @@ scioly-app/questions_raw.txt
 # NLE App
 nle-app/firebase-config.js
 .vite/
+\n# Encrypted Data
+scioly-app/questions.json
+scioly-app/encryption_password.txt
