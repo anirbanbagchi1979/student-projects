@@ -147,6 +147,12 @@ body::before {
   color: var(--text-muted);
 }
 
+.login-error {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--wrong);
+}
+
 /* ===== Header ===== */
 .header {
   padding: 16px 0 12px;
