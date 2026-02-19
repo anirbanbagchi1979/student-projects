@@ -102,17 +102,21 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
                 </div>
             )}
 
-            {(answer || mode === 'review') && hasMismatch && (
-                <div className="gemini-mismatch">
-                    <div className="gemini-mismatch-header">⚠️ Gemini Disagrees</div>
-                    <p>
-                        Gemini's answer: <strong>{question.gemini_answer}</strong>
-                        <span className="mismatch-vs">vs</span>
-                        Provided answer: <strong>{question.answer}</strong>
-                    </p>
-                    <p className="mismatch-note">Please verify the correct answer manually.</p>
-                </div>
-            )}
+            {(answer || mode === 'review') && hasMismatch && (() => {
+                const geminiOpt = shuffledOptions.find(o => o.originalLetter === question.gemini_answer?.trim().toUpperCase())
+                const providedOpt = shuffledOptions.find(o => o.originalLetter === question.answer?.trim().toUpperCase())
+                return (
+                    <div className="gemini-mismatch">
+                        <div className="gemini-mismatch-header">⚠️ Gemini Disagrees</div>
+                        <p>
+                            Gemini's answer: <strong>{geminiOpt ? `${geminiOpt.letter}) ${geminiOpt.text}` : question.gemini_answer}</strong>
+                            <span className="mismatch-vs">vs</span>
+                            Provided answer: <strong>{providedOpt ? `${providedOpt.letter}) ${providedOpt.text}` : question.answer}</strong>
+                        </p>
+                        <p className="mismatch-note">Please verify the correct answer manually.</p>
+                    </div>
+                )
+            })()}
         </div>
     )
 }
