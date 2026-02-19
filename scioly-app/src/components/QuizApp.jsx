@@ -19,6 +19,7 @@ export default function QuizApp() {
     const [showResults, setShowResults] = useState(false)
     const [source, setSource] = useState('all')
     const [typeFilter, setTypeFilter] = useState('MC')
+    const [hideContextMissing, setHideContextMissing] = useState(true)
 
     // Spaced repetition state for practice mode
     const [practiceIdx, setPracticeIdx] = useState(0)
@@ -121,6 +122,7 @@ export default function QuizApp() {
         const filtered = allQuestions.filter(q => {
             if (source !== 'all' && q.source !== source) return false
             if (typeFilter !== 'all' && q.type !== typeFilter) return false
+            if (hideContextMissing && q.contextMissing) return false
             return true
         })
         // Shuffle questions with a seed based on filter combo
@@ -133,7 +135,7 @@ export default function QuizApp() {
                 ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
         }
         return shuffled
-    }, [allQuestions, source, typeFilter])
+    }, [allQuestions, source, typeFilter, hideContextMissing])
 
     // Compute filtered indices (for review mode filters)
     const filteredIndices = questions
@@ -322,6 +324,16 @@ export default function QuizApp() {
                         {t === 'all' ? 'All Types' : t}
                     </button>
                 ))}
+            </div>
+
+            {/* Context filter toggle */}
+            <div className="context-filter-bar">
+                <button
+                    className={`context-filter-btn ${hideContextMissing ? 'active' : ''}`}
+                    onClick={() => setHideContextMissing(!hideContextMissing)}
+                >
+                    📎 {hideContextMissing ? 'Context-missing hidden' : 'Showing all questions'}
+                </button>
             </div>
 
             {/* Mode bar */}

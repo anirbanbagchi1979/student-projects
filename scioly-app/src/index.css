@@ -217,6 +217,30 @@ body::before {
   margin-bottom: 12px;
 }
 
+.context-filter-bar {
+  margin-bottom: 12px;
+}
+
+.context-filter-btn {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.context-filter-btn.active {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: rgba(255, 193, 7, 0.4);
+  color: #f0a020;
+}
+
 .type-btn {
   flex: 1;
   background: var(--surface);
