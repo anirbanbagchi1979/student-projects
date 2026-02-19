@@ -1,65 +1,56 @@
-# Legionary: Command (NLE Quiz App)
+# Student Projects
 
+## Projects
+
+### 1. Legionary: Command (NLE Quiz App)
 A gamified Latin learning application designed for National Latin Exam preparation.
+- **Location:** `nle-app/`
+- **Stack:** Vanilla HTML/CSS/JS, Firebase
+- [Setup Instructions →](nle-app/README.md)
 
-## Features
+### 2. SciOly Quiz – Designer Genes C
+Practice quiz for Science Olympiad Designer Genes event.
+- **Location:** Root (`src/`, `index.html`)
+- **Stack:** React + Vite, Firebase Auth + Firestore
+- **Run:** `npm run dev` → `http://localhost:3000`
 
-### 🎮 Game Modes
--   **⚔️ Myth & Culture:** Test your knowledge of Roman gods, geography, and daily life.
--   **📜 Sentence Completions:** Practice Latin sentences (based on NLE 1330 syllabus).
+#### Firestore Rules
+See [README section](README.md#firestore-rules) or copy from below:
 
-### 🛡️ Core Mechanics
--   **Study Mode:** Flip flashcards to learn at your own pace.
--   **Battle Mode:** Test your skills to earn ranks.
--   **Cursus Honorum:** Rank up from *Tiro* (Recruit) to *Imperator* (Emperor).
--   **Separate Progress:** Ranks and mastery are tracked separately for each mission.
+<details>
+<summary>🔓 Temporary Open (for uploading data)</summary>
 
-### 🎨 Visuals
--   **Dynamic Themes:**
-    -   *Myth:* Gold & Cyan theme.
-    -   *Sentences:* Crimson & Violet theme.
--   **Dark/Light Mode:** Toggle between day and night modes.
--   **Responsive Design:** Works on mobile and desktop.
+```
+rules_version = '2';
 
-## Setup & Installation
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+```
+</details>
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/anirbanbagchi1979/student-projects.git
-    cd student-projects/nle-app
-    ```
+<details>
+<summary>🔒 Production (restricted to authorized users)</summary>
 
-2.  **Firebase Configuration:**
-    -   Copy `nle-app/firebase-config.example.js` to `nle-app/firebase-config.js`.
-    -   Replace the placeholder values with your actual Firebase project keys.
+```
+rules_version = '2';
 
-3.  **Run Locally:**
-    You need a local server to serve modules correctly.
-    ```bash
-    # using python
-    python3 -m http.server 8080
-    
-    # or using npm/vite if configured
-    # npx vite
-    ```
-    Open `http://localhost:8080/nle-app/index.html`.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth != null
+        && request.auth.token.email in [
+          'anirban.bagchi@gmail.com',
+          'aarush.bagchi@gmail.com'
+        ];
+    }
+  }
+}
+```
+</details>
 
-## Deployment (Netlify)
-
-This project is configured for Netlify deployment.
-
-**Environment Variables Required:**
-Go to **Site Settings > Environment Variables** and add:
--   `FIREBASE_API_KEY`
--   `FIREBASE_AUTH_DOMAIN`
--   `FIREBASE_PROJECT_ID`
--   `FIREBASE_STORAGE_BUCKET`
--   `FIREBASE_MESSAGING_SENDER_ID`
--   `FIREBASE_APP_ID`
-
-The `generate-config.js` script automatically creates the configuration file during the build process.
-
-## Tech Stack
--   **Frontend:** Vanilla HTML, CSS, JavaScript (ES6 Modules).
--   **Backend:** Firebase (Authentication & Cloud Firestore).
--   **Effects:** Canvas Confetti.
+> ⚠️ Remember to switch back to **Production** rules after uploading data!
