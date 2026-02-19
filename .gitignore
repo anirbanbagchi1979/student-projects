@@ -27,3 +27,4 @@ scioly-app/questions_raw.txt
 
 # NLE App
 nle-app/firebase-config.js
+.vite/
