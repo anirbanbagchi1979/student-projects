@@ -11,7 +11,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 2,
@@ -25,7 +26,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 3,
@@ -39,7 +41,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 4,
@@ -53,7 +56,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 5,
@@ -67,7 +71,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 6,
@@ -81,7 +86,8 @@
     ],
     "answer": "E",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 7,
@@ -95,7 +101,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 8,
@@ -109,7 +116,8 @@
     ],
     "answer": "E",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 9,
@@ -123,7 +131,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 10,
@@ -137,7 +146,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 11,
@@ -151,7 +161,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 12,
@@ -165,7 +176,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 13,
@@ -173,7 +185,8 @@
     "options": [],
     "answer": "Equation: (A + B + i)² = 1 OR A² + B² + i² + 2AB + 2Ai + 2Bi = 1\nPhenotype | Hardy-Weinberg Terms\n---|---\nBlood Type A | A² + 2Ai\nBlood Type B | B² + 2Bi\nBlood Type AB | 2AB\nBlood Type O | i²",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "Free Response"
   },
   {
     "number": 14,
@@ -187,7 +200,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 15,
@@ -201,7 +215,8 @@
     ],
     "answer": "E",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 16,
@@ -215,7 +230,8 @@
     ],
     "answer": "A, B, D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 17,
@@ -229,7 +245,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 18,
@@ -243,7 +260,8 @@
     ],
     "answer": "A, B, C, D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 19,
@@ -257,7 +275,8 @@
     ],
     "answer": "A, C",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 20,
@@ -271,7 +290,8 @@
     ],
     "answer": "B, D, E",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 21,
@@ -285,7 +305,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 22,
@@ -299,7 +320,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 23,
@@ -313,7 +335,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 24,
@@ -327,7 +350,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 25,
@@ -341,7 +365,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 26,
@@ -355,7 +380,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 27,
@@ -363,7 +389,8 @@
     "options": [],
     "answer": "Phase of Mitosis: Prophase (# Chromosomes: 6, # Chromatids: 12), Metaphase (# Chromosomes: 6, # Chromatids: 12), Anaphase (# Chromosomes: 12, # Chromatids: 12), Telophase (# Chromosomes: 12, # Chromatids: 12), End of Mitosis (# Chromosomes: 6, # Chromatids: 6)\nPhase of Meiosis I: Prophase I (# Chromosomes: 6, # Chromatids: 12), Metaphase I (# Chromosomes: 6, # Chromatids: 12), Anaphase I (# Chromosomes: 6, # Chromatids: 12), Telophase I (# Chromosomes: 6, # Chromatids: 12), End of Meiosis I (# Chromosomes: 3, # Chromatids: 6)\nPhase of Meiosis II: Prophase II (# Chromosomes: 3, # Chromatids: 6), Metaphase II (# Chromosomes: 3, # Chromatids: 6), Anaphase II (# Chromosomes: 6, # Chromatids: 6), Telophase II (# Chromosomes: 6, # Chromatids: 6), End of Meiosis II (# Chromosomes: 3, # Chromatids: 3)",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "Free Response"
   },
   {
     "number": 28,
@@ -377,7 +404,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 29,
@@ -391,7 +419,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 30,
@@ -405,7 +434,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 31,
@@ -419,7 +449,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 32,
@@ -433,7 +464,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 33,
@@ -447,7 +479,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 34,
@@ -461,7 +494,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 35,
@@ -475,7 +509,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 36,
@@ -489,7 +524,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 37,
@@ -503,7 +539,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 38,
@@ -517,7 +554,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 39,
@@ -531,7 +569,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 40,
@@ -545,7 +584,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 41,
@@ -559,7 +599,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 42,
@@ -573,7 +614,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 43,
@@ -587,7 +629,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 44,
@@ -601,7 +644,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 45,
@@ -615,7 +659,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 46,
@@ -623,7 +668,8 @@
     "options": [],
     "answer": "No, bacteria do not export their mRNA [+0.5] because they do not have a nucleus OR 5' cap [+0.5]\nViable evolutionary explanation such as any of the following [+2]\n• Allows for faster response to environmental stimuli\n• Allows for coupled transcription and translation (polysomes)\n• No selective pressure or benefit from adding increased complexity\n• Bacterial mRNA is short lived\n• Eukaryotes gained mRNA export only after internal membranes developed",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "Free Response"
   },
   {
     "number": 47,
@@ -637,7 +683,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 48,
@@ -651,7 +698,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 49,
@@ -665,7 +713,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 50,
@@ -679,7 +728,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 51,
@@ -692,7 +742,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "MC"
   },
   {
     "number": 52,
@@ -700,7 +751,8 @@
     "options": [],
     "answer": "A consistent majority OR 60% of aligned reads contain A at position 15 OR 40% contain G [+1]\nConsistent majority indicates same mismatch, unlikely to be random error [+1]",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "Free Response"
   },
   {
     "number": 53,
@@ -708,7 +760,8 @@
     "options": [],
     "answer": "indel/mutation [+1.5]",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "Free Response"
   },
   {
     "number": 54,
@@ -716,7 +769,8 @@
     "options": [],
     "answer": "Fragment A is BamHI and HindIII [+1], and is the ideal choice because it orients Gene X in the correct position about the promoter AND allows for overhang overlap with plasmid for ligation [+2].\nFragment B is HindIII and EcoRI [+1], but incorrectly orients the Gene about the plasmid [+0.5].\nFragment C is PvuII and SmaI [+1], but blunt end digestion prevents overlap or poor insertion efficiency [+0.5].\nMisidentifications cancel out a correct answer",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "Free Response"
   },
   {
     "number": 55,
@@ -724,7 +778,8 @@
     "options": [],
     "answer": "In gel electrophoresis, negative charges flow towards the positive end of the gel [+0.5] and smaller sizes travel faster [+0.5]\nFragment D [+1] because it is the cut insert [+0.5]\nFragment E [+1] because it is the plasmid backbone [+0.5]\nMisidentifications cancel out a correct answer",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "Free Response"
   },
   {
     "number": 56,
@@ -732,7 +787,8 @@
     "options": [],
     "answer": "Blue-white colony screening [+1]\nLB is the media that bacteria grow on [+1]\nAmpicillin is an antibiotic, bacteria with ampicillin resistance gene can grow [+1]\nX-gal is cleaved by B-galactosidase, producing a blue color [+1]\nIPTG binds to and inhibits LacI repressor, allowing transcription of downstream genes [+1]",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "Free Response"
   },
   {
     "number": 57,
@@ -740,7 +796,8 @@
     "options": [],
     "answer": "Blue colonies indicate successful uptake of an (ampR) plasmid working lacZ [+0.5]\nWhite colonies indicate successful uptake of an (ampR) plasmid without lacZ [+0.5]\nTransformation was successful in allowing growth compared to the control [+1.5]\nOur cloning successfully interrupted LacZ gene [+0.75], but we do not know how well we inserted the DNA fragment into the plasmid. [+0.75]\nViable explanation to validate our results [+1]\nPCR and Gel electrophoresis to confirm size of the plasmid\nDNA sequencing\nAny other reasonable answer",
     "explanation": "",
-    "source": "Designer Genes C"
+    "source": "Designer Genes C",
+    "type": "Free Response"
   },
   {
     "number": 58,
@@ -753,7 +810,8 @@
     ],
     "answer": "b",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 59,
@@ -766,7 +824,8 @@
     ],
     "answer": "b",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 60,
@@ -779,7 +838,8 @@
     ],
     "answer": "d",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 61,
@@ -792,7 +852,8 @@
     ],
     "answer": "b",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 62,
@@ -805,7 +866,8 @@
     ],
     "answer": "c",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 63,
@@ -818,7 +880,8 @@
     ],
     "answer": "d",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 64,
@@ -831,7 +894,8 @@
     ],
     "answer": "a",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 65,
@@ -844,7 +908,8 @@
     ],
     "answer": "c",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 66,
@@ -857,7 +922,8 @@
     ],
     "answer": "b",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 67,
@@ -870,7 +936,8 @@
     ],
     "answer": "d",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 68,
@@ -883,7 +950,8 @@
     ],
     "answer": "b",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 69,
@@ -896,7 +964,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 70,
@@ -909,7 +978,8 @@
     ],
     "answer": "a",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 71,
@@ -922,7 +992,8 @@
     ],
     "answer": "b",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 72,
@@ -935,7 +1006,8 @@
     ],
     "answer": "d",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 73,
@@ -947,7 +1019,8 @@
     ],
     "answer": "b",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 74,
@@ -960,7 +1033,8 @@
     ],
     "answer": "d",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 75,
@@ -973,7 +1047,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 76,
@@ -986,7 +1061,8 @@
     ],
     "answer": "d",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 77,
@@ -999,7 +1075,8 @@
     ],
     "answer": "a",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 78,
@@ -1012,7 +1089,8 @@
     ],
     "answer": "b",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 79,
@@ -1025,7 +1103,8 @@
     ],
     "answer": "d",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 80,
@@ -1038,7 +1117,8 @@
     ],
     "answer": "d",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 81,
@@ -1051,7 +1131,8 @@
     ],
     "answer": "b",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 82,
@@ -1064,7 +1145,8 @@
     ],
     "answer": "d",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 83,
@@ -1077,7 +1159,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 84,
@@ -1090,7 +1173,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "MC"
   },
   {
     "number": 85,
@@ -1098,7 +1182,8 @@
     "options": [],
     "answer": "No mutation, Random mating, No natural selection, No genetic drift/large population size, No gene flow/no migration",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 86,
@@ -1106,7 +1191,8 @@
     "options": [],
     "answer": "Epistatic genes are genes that inhibit or suppress the expression of another/different genes.",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 87,
@@ -1114,7 +1200,8 @@
     "options": [],
     "answer": "4/16 or 1/4",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 88,
@@ -1122,7 +1209,8 @@
     "options": [],
     "answer": "6/16 or 3/8",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 89,
@@ -1130,7 +1218,8 @@
     "options": [],
     "answer": "1-c, 2-h, 3-f, 4-b, 5-g, 6-e, 7-d, 8-a",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 90,
@@ -1138,7 +1227,8 @@
     "options": [],
     "answer": "The DNA sequence codes for a \"hairpin” in the mRNA that encourages the RNA polymerase to detach; A specific sequence in the DNA is recognized by the RNA polymerase, encouraging it to be removed from the DNA; (in the case of RNA polymerase II), the remaining (unused) RNA is cleaved and degraded from the main strand; (in the case of RNA polymerase I and III), termination factors bind to the enzyme and signal termination",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 91,
@@ -1146,7 +1236,8 @@
     "options": [],
     "answer": "",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 92,
@@ -1154,7 +1245,8 @@
     "options": [],
     "answer": "Prophase 1",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 93,
@@ -1162,7 +1254,8 @@
     "options": [],
     "answer": "MiSeq – lower throughput; ideal for small genomes, amplicon sequencing, targeted panels. NextSeq – mid-range throughput for RNA-seq, exomes, and medium-scale projects. NovaSeq – ultra-high throughput used for large-scale whole-genome sequencing and population studies. The core workflow involves DNA fragmentation and ligation to adapters, binding to a flow cell, bridge amplification to form clusters, and cyclic reversible terminator chemistry with fluorescently labeled nucleotides.",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 94,
@@ -1170,7 +1263,8 @@
     "options": [],
     "answer": "DNA is fragmented and ligated to adapters. Fragments bind to a flow cell and undergo bridge amplification, forming dense clusters of identical DNA copies. Sequencing occurs through cyclic reversible terminator chemistry: fluorescently labeled nucleotides are added one base at a time.",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 95,
@@ -1178,7 +1272,8 @@
     "options": [],
     "answer": "Illumina: Uses sequencing-by-synthesis, requires DNA fragmentation and amplification, generates short reads through fluorescent imaging. Nanopore: Single long DNA molecules pass through biological nanopores, changes in electrical current are measured, no amplification required, real-time sequencing. Illumina produces short reads (75-300 bp) with extremely high accuracy (>99.9%), outputting massive quantities of precise sequences. Nanopore produces ultra-long reads (10 kb-100 kb+, some >1 Mb) with lower raw accuracy (90-98%), outputting long stretches of DNA. Illumina is best for variant calling (SNPs, small indels), RNA-seq, exome sequencing, microbiome sequencing, and high-accuracy population genomics. Nanopore is best for de novo genome assembly, detecting structural variants and repeat regions, full-length transcript sequencing, rapid field sequencing or clinical diagnostics, and methylation detection directly from raw signal.",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 96,
@@ -1186,7 +1281,8 @@
     "options": [],
     "answer": "Oxford Nanopore is the better choice. Repetitive plant genomes contain long repeat elements that are extremely difficult to assemble using Illumina's short reads. Nanopore's long-read sequencing can span entire repeat regions, producing more contiguous assemblies. It resolves structural variants and complex genome architecture better than short-read NGS.",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 97,
@@ -1194,7 +1290,8 @@
     "options": [],
     "answer": "Bb",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 98,
@@ -1202,7 +1299,8 @@
     "options": [],
     "answer": "BB or Bb",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 99,
@@ -1210,7 +1308,8 @@
     "options": [],
     "answer": "0% chance",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 100,
@@ -1218,7 +1317,8 @@
     "options": [],
     "answer": "4/16 or 1/4",
     "explanation": "",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 101,
@@ -1226,7 +1326,8 @@
     "options": [],
     "answer": "",
     "explanation": "Partial Credit: +0.5 point for every phase(prophase 1-telaphase 2) drawn correctly(4 points total) +1 point for showing 4 haploid cells at the end(last column of cells) +3 points for correct labeling(3 points total) -2 points for correct names but incorrect order.",
-    "source": "Purdue2026"
+    "source": "Purdue2026",
+    "type": "Free Response"
   },
   {
     "number": 102,
@@ -1240,7 +1341,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 103,
@@ -1254,7 +1356,8 @@
     ],
     "answer": "E",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 104,
@@ -1267,7 +1370,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 105,
@@ -1281,7 +1385,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 106,
@@ -1294,7 +1399,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 107,
@@ -1308,7 +1414,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 108,
@@ -1321,7 +1428,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 109,
@@ -1334,7 +1442,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 110,
@@ -1347,7 +1456,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 111,
@@ -1360,7 +1470,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 112,
@@ -1373,7 +1484,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 113,
@@ -1387,7 +1499,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 114,
@@ -1401,7 +1514,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 115,
@@ -1414,7 +1528,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 116,
@@ -1427,7 +1542,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 117,
@@ -1440,7 +1556,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 118,
@@ -1454,7 +1571,8 @@
     ],
     "answer": "E",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 119,
@@ -1467,7 +1585,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 120,
@@ -1480,7 +1599,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 121,
@@ -1488,7 +1608,8 @@
     "options": [],
     "answer": "a. aaBbCc: white, AAbbCc: blue\nb. Gene B is epistatic to Gene A, Gene C is epistatic to Gene B\nc. 1/8 or 0.125",
     "explanation": "a. (1 pt for each phenotype) aaBbCc: white, AAbbCc: blue\nb. (1 pt) Genes A and C (1 pt) no other genes\nc. (1 pt for work, 1 pt for answer) 1/8 or 0.125 (Aabbcc is red)",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 122,
@@ -1496,7 +1617,8 @@
     "options": [],
     "answer": "a. Anaphase I\nb. In mitosis, sister chromatids separate during anaphase\nc. Crossing over and independent assortment create unique allele combinations",
     "explanation": "a. (1 pt for anaphase, 1 pt for meiosis I) Anaphase I\nb. (2 pts) In mitosis, sister chromatids separate during anaphase\nc. (2 pts) Crossing over and independent assortment create unique allele combinations",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 123,
@@ -1504,7 +1626,8 @@
     "options": [],
     "answer": "a. X-linked recessive\nb. X chromosome",
     "explanation": "a. (2 pts) X-linked recessive\nb. (2 pts) X chromosome",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 124,
@@ -1512,7 +1635,8 @@
     "options": [],
     "answer": "a. A: recessive (autosomal or X-linked), B+C: autosomal recessive\nb. The mutations are in different genes. III-1 is homozygous recessive in one gene that causes BS, III-2 has at least one functional allele of both genes that cause BS\nc. 2",
     "explanation": "a. (3 pts - 1 pt each family) A: recessive (autosomal or X-linked), B+C: autosomal recessive\nb. (2 pts) TIEBREAKER #2 The mutations are in different genes. III-1 is homozygous recessive in one gene that causes BS, III-2 has at least one functional allele of both genes that cause BS\nc. (1 pt) 2",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 125,
@@ -1520,7 +1644,8 @@
     "options": [],
     "answer": "a. Tightly linked on the same chromosome\nb. AB/ab x Ab/aB OR Ab/aB x Ab/aB (parents are interchangeable)\nc. AB/ab x AB/ab (parents are interchangeable)",
     "explanation": "TIEBREAKER #1: ALL PARTS\na. (2 pts) Tightly linked on the same chromosome\nb. (3 pts) AB/ab x Ab/aB OR Ab/aB x Ab/aB (parents are interchangeable)\nc. (2 pts) AB/ab x AB/ab (parents are interchangeable)",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 126,
@@ -1528,7 +1653,8 @@
     "options": [],
     "answer": "a. 3 copies = trisomy, 1 copy = monosomy\nb. Caused by nondisjunction, which occurs during anaphase I or II of meiosis\nc. Both are a failure chromosome separation, it just depends on which gamete is fertilized",
     "explanation": "a. (2 pts) 3 copies = trisomy, 1 copy = monosomy\nb. (2 pts) Caused by nondisjunction, which occurs during anaphase I or II of meiosis\nc. (2 pts) Both are a failure chromosome separation, it just depends on which gamete is fertilized",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 127,
@@ -1536,7 +1662,8 @@
     "options": [],
     "answer": "a. Cis - DNA sequences on the same DNA molecule that is being regulated Trans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T",
     "explanation": "a. (2 pts) Cis - DNA sequences on the same DNA molecule that is being regulated Trans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. (1 pt per correct answer) TIEBREAKER #4 T, B, C, C, T",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 128,
@@ -1544,7 +1671,8 @@
     "options": [],
     "answer": "DNA Pol I: 5' to 3' to remove RNA primers on lagging strand of replication AND 3' to 5' for proofreading\nDNA Pol III: 3' to 5' for proofreading",
     "explanation": "TIEBREAKER #5: ALL PARTS\n(2 pts) DNA Pol I - 5' to 3' to remove RNA primers on lagging strand of replication AND 3' to 5' for proofreading\n(2 pts) DNA Pol III - 3' to 5' for proofreading",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 129,
@@ -1552,7 +1680,8 @@
     "options": [],
     "answer": "a. C\nb. T\nc. ddNTPs (dideoxynucleotides)\nd. 5'- CTG TAT CGC AGA TGC AGTG -3'",
     "explanation": "a. (1 pt) C\nb. (1 pt) T\nc. (1 pt) ddNTPs (dideoxynucleotides)\nd. (3 pts) 5'- CTG TAT CGC AGA TGC AGTG -3'",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 130,
@@ -1560,7 +1689,8 @@
     "options": [],
     "answer": "a. Top - T\nBottom - C\nb. 5'- CGA AUG CUC GAU CGC AUC GCA UCG AUC UAA -3'\nc. Met - Leu - Asp - Arg - Ile - Ala - Ser - Ile",
     "explanation": "a. (2 pts) Top - T\nBottom - C\nb. (3 pts) 5'- CGA AUG CUC GAU CGC AUC GCA UCG AUC UAA -3'\nc. (3 pts)\nMet - Leu - Asp - Arg - Ile - Ala - Ser - Ile",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 131,
@@ -1568,7 +1698,8 @@
     "options": [],
     "answer": "a. G\nb. F\nc. B\nd. F\ne. B\nf. B",
     "explanation": "(6 pts total, 1 pt per correct answer) TIEBREAKER #3 G, F, B, F, B, B",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 132,
@@ -1576,7 +1707,8 @@
     "options": [],
     "answer": "a) double, b) circular, c) nucleoid, d) linear, e) double, f) nucleus, g) plasmids",
     "explanation": "(7 pts total, 1 pt per correct answer) a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) plasmids",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 133,
@@ -1584,7 +1716,8 @@
     "options": [],
     "answer": "a. Nhel\nb. Agel, White",
     "explanation": "a. (1 pt) Nhel\nb. (2 pts) Agel, White",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 134,
@@ -1598,7 +1731,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 135,
@@ -1612,7 +1746,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 136,
@@ -1625,7 +1760,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "MC"
   },
   {
     "number": 137,
@@ -1633,7 +1769,8 @@
     "options": [],
     "answer": "a. Cis - DNA sequences on the same DNA molecule that is being regulated\nTrans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T",
     "explanation": "a. Cis - DNA sequences on the same DNA molecule that is being regulated\nTrans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 138,
@@ -1641,7 +1778,8 @@
     "options": [],
     "answer": "a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) nucleolus, h) plasmids",
     "explanation": "a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) nucleolus, h) plasmids",
-    "source": "DubSO 2025"
+    "source": "DubSO 2025",
+    "type": "Free Response"
   },
   {
     "number": 139,
@@ -1649,7 +1787,8 @@
     "options": [],
     "answer": "Golden: 0/16, Chocolate: 9/16, Black: 7/16",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 140,
@@ -1657,7 +1796,8 @@
     "options": [],
     "answer": "Epistasis",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 141,
@@ -1665,7 +1805,8 @@
     "options": [],
     "answer": "MC1R: Heterozygous (Ee). If it were homozygous recessive (ee), all offspring would be golden. TYR1: Unable to tell. It could be BB or Bb.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 142,
@@ -1673,7 +1814,8 @@
     "options": [],
     "answer": "15:1:0",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 143,
@@ -1681,7 +1823,8 @@
     "options": [],
     "answer": "Black. The tyrosinase inhibitor would block the function of TYR1, preventing the deposition of eumelanin. However, the MC1R gene (Ee) would still allow for the production of eumelanin. Since the dog has at least one dominant B allele, it would be able to deposit the eumelanin, resulting in a black phenotype.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 144,
@@ -1689,7 +1832,8 @@
     "options": [],
     "answer": "The X chromosome.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 145,
@@ -1697,7 +1841,8 @@
     "options": [],
     "answer": "MC1R. The presence of stripes (black and yellow) indicates that the gene controlling pigment production (MC1R) is on the X chromosome, and the dog is heterozygous for this gene. The TYR1 gene (BB) is not on the X chromosome and is homozygous dominant, so it does not contribute to the striped phenotype.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 146,
@@ -1705,7 +1850,8 @@
     "options": [],
     "answer": "The genotype would be XbY or XBY, depending on whether the gene is dominant or recessive. If the gene is on the X chromosome, the male would only have one copy of the gene, and its phenotype would be determined by that single allele.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 147,
@@ -1713,7 +1859,8 @@
     "options": [],
     "answer": "No. If TYR1 is on the X chromosome, then the inhibitor would affect males and females differently due to sex-linked inheritance. If MC1R is on the X chromosome, then the inhibitor would affect males and females differently.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 148,
@@ -1726,7 +1873,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 149,
@@ -1739,7 +1887,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 150,
@@ -1752,7 +1901,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 151,
@@ -1765,7 +1915,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 152,
@@ -1773,7 +1924,8 @@
     "options": [],
     "answer": "Denaturation, Annealing, Extension",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 153,
@@ -1781,7 +1933,8 @@
     "options": [],
     "answer": "Taq polymerase is heat-stable and can withstand the high temperatures required for DNA denaturation during PCR.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 154,
@@ -1789,7 +1942,8 @@
     "options": [],
     "answer": "Reverse transcriptase. It generates complementary DNA (cDNA).",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 155,
@@ -1797,7 +1951,8 @@
     "options": [],
     "answer": "Yes. RT-qPCR combines reverse transcription with quantitative PCR to measure the amount of a specific RNA molecule.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 156,
@@ -1805,7 +1960,8 @@
     "options": [],
     "answer": "Yes, introns. RT-PCR amplifies cDNA, which is synthesized from mRNA. mRNA is processed and introns are removed, so the resulting cDNA will not contain intronic sequences.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 157,
@@ -1813,7 +1969,8 @@
     "options": [],
     "answer": "5'-GG(U/C)GA(U/C)UGG(U/C)G(U/C)G(U/C)GA(U/C)GA(U/C)-3'",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 158,
@@ -1821,7 +1978,8 @@
     "options": [],
     "answer": "3'-CC(A/G)CT(A/G)ACC(A/G)C(A/G)CT(A/G)CT(A/G)-5'",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 159,
@@ -1834,7 +1992,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 160,
@@ -1847,7 +2006,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 161,
@@ -1860,7 +2020,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 162,
@@ -1873,7 +2034,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 163,
@@ -1886,7 +2048,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 164,
@@ -1899,7 +2062,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 165,
@@ -1912,7 +2076,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 166,
@@ -1925,7 +2090,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 167,
@@ -1933,7 +2099,8 @@
     "options": [],
     "answer": "Initiation, Elongation, Termination",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 168,
@@ -1946,7 +2113,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 169,
@@ -1954,7 +2122,8 @@
     "options": [],
     "answer": "A, P, E",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 170,
@@ -1962,7 +2131,8 @@
     "options": [],
     "answer": "rRNA",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 171,
@@ -1975,7 +2145,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 172,
@@ -1988,7 +2159,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 173,
@@ -2001,7 +2173,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 174,
@@ -2014,7 +2187,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 175,
@@ -2027,7 +2201,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 176,
@@ -2040,7 +2215,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 177,
@@ -2053,7 +2229,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 178,
@@ -2066,7 +2243,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 179,
@@ -2079,7 +2257,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 180,
@@ -2092,7 +2271,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 181,
@@ -2105,7 +2285,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 182,
@@ -2118,7 +2299,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 183,
@@ -2131,7 +2313,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 184,
@@ -2145,7 +2328,8 @@
     ],
     "answer": "E",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 185,
@@ -2160,7 +2344,8 @@
     ],
     "answer": "F",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 186,
@@ -2174,7 +2359,8 @@
     ],
     "answer": "E",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 187,
@@ -2187,7 +2373,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 188,
@@ -2202,7 +2389,8 @@
     ],
     "answer": "F",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 189,
@@ -2210,7 +2398,8 @@
     "options": [],
     "answer": "",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 190,
@@ -2218,7 +2407,8 @@
     "options": [],
     "answer": "No, you would not expect to get the same result. In question 5, the tyrosinase inhibitor affected the production of eumelanin (controlled by MC1R). If the Marquette retriever in this question has the opposite gene (TYR1) on the X chromosome, and the tyrosinase inhibitor is administered, it would still inhibit tyrosinase, which is the enzyme encoded by TYR1. This would prevent the deposition of eumelanin. Therefore, regardless of whether TYR1 is on an autosome or the X chromosome, the tyrosinase inhibitor would prevent eumelanin deposition, leading to a golden or yellow phenotype, assuming the MC1R gene allows for eumelanin production. The previous question focused on the genetic basis of striping, while this question focuses on the effect of an inhibitor on a specific enzyme.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 191,
@@ -2226,7 +2416,8 @@
     "options": [],
     "answer": "The lane with only the plasmid would travel farther. Gel electrophoresis separates DNA fragments based on size, with smaller fragments traveling faster and farther through the gel matrix. In the second lane, the plasmid is bound by multiple proteins (DnaA, DnaB, DnaC, and IHF). These proteins increase the overall mass and potentially alter the conformation of the DNA, making the complex larger and thus slower moving. Since the proteins themselves do not significantly affect travel distance when bound to DNA (as stated in the problem), the presence of these proteins will effectively increase the size of the DNA complex, causing it to migrate slower and therefore travel less distance compared to the naked plasmid.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 192,
@@ -2234,7 +2425,8 @@
     "options": [],
     "answer": "Given: DNA length = 6360 bp, bp/turn = 12, underwindings = 27.\n\n1.  **Twist (T):** The number of base pairs per turn is 12. So, T = Total bp / bp/turn = 6360 / 12 = 530 turns.\n\n2.  **Underwinding:** The DNA is underwound by 27 turns. This means the actual number of turns is less than the theoretical number of turns if it were in B-DNA form. However, the question states 'underwindings', which usually refers to a negative change in linking number. In the context of Z-DNA, it's a specific conformation. Let's interpret 'underwindings' as a reduction in the number of turns from a standard B-DNA form. If we assume a standard B-DNA has 10.5 bp/turn, then the number of turns in B-DNA would be 6360/10.5 ≈ 605.7. However, the problem states to assume 12 bp/turn for calculation. So, let's use that for the base calculation.\n\nLet's re-evaluate 'underwindings'. In topology, underwinding typically refers to a decrease in the linking number (L) from a relaxed state. If we consider the relaxed state to have a certain number of turns based on the given bp/turn, then underwinding means fewer turns. However, Z-DNA itself has a different helical structure. The question might be implying a deviation from a relaxed state. Let's assume the 'underwindings' refers to a change in the linking number. If we consider the number of turns in a relaxed state to be T = 530 (based on 12 bp/turn), and there are 27 underwindings, this means the linking number is reduced by 27.\n\nLet's assume the question implies that the DNA is underwound by 27 turns relative to a relaxed state with 12 bp/turn. So, the actual number of turns is 530 - 27 = 503 turns.\n\n3.  **Linking Number (L):** L = Number of turns. So, L = 503.\n\n4.  **Writhe (W):** The change in linking number due to supercoiling is the sum of twist and writhe. L = T + W.  If we consider the 'underwindings' as a change in the linking number, then L = T - 27.  However, the question asks for L, AL, W, and T.  Let's assume T is the number of turns in the relaxed state (530).  Then L = T + W.  If there are 27 underwindings, it means the DNA is more tightly coiled or has undergone some topological change.  Let's assume 'underwindings' refers to a negative change in the linking number relative to a relaxed state.  So, L = 530 - 27 = 503.\n\n5.  **Twist (T):** The twist is the number of helical turns.  If we assume the 12 bp/turn is the intrinsic twist, then T = 530.\n\n6.  **Writhe (W):**  W = L - T = 503 - 530 = -27.\n\n7.  **Actual Linking Number (AL):** This is the same as L, which is 503.\n\nLet's re-read the question carefully. '27 underwindings'. This usually implies a negative change in the linking number. If we consider the relaxed state to have a certain number of turns, then underwinding means fewer turns. If we assume the relaxed state has 530 turns (based on 12 bp/turn), then underwinding by 27 means the linking number is 530 - 27 = 503.\n\nSo, the values are:\n*   **L (Linking Number):** 503\n*   **AL (Actual Linking Number):** 503\n*   **W (Writhe):** L - T.  If T is the number of turns in the relaxed state (530), then W = 503 - 530 = -27.\n*   **T (Twist):** This is the number of helical turns.  If we assume the 12 bp/turn is the intrinsic twist, then T = 530.\n\nHowever, Z-DNA itself has a different twist per base pair. Z-DNA has about 12 bp per turn and a left-handed helix. The term 'underwinding' might be used loosely here. If we strictly follow the formula L = T + W, and assume T is the number of turns in the relaxed state (530), and 'underwinding' means W = -27, then L = 530 - 27 = 503.\n\nLet's consider another interpretation: 'underwinding' refers to the change in linking number. If the DNA is relaxed, L = T. If it's underwound, L < T. If it's overwound, L > T.  The problem states '27 underwindings'.  This implies that the linking number is 27 less than it would be in a relaxed state.  If we assume the relaxed state has 530 turns (based on 12 bp/turn), then L = 530 - 27 = 503.\n\nLet's assume the question is asking for the topological parameters of this specific Z-DNA molecule.\n\n*   **Twist (T):** The number of helical turns.  Given 12 bp/turn, T = 6360 bp / 12 bp/turn = 530 turns.\n*   **Linking Number (L):**  The linking number is the number of times one strand of DNA winds around the other.  It is related to the twist and writhe by L = T + W.  The problem states '27 underwindings'.  This implies that the linking number is reduced.  If we consider the relaxed state to have T turns, then underwinding by 27 means L = T - 27.  So, L = 530 - 27 = 503.\n*   **Writhe (W):**  W = L - T = 503 - 530 = -27.\n*   **AL (Actual Linking Number):** This is the same as L, so AL = 503.\n\nTherefore, the topology is:\n*   **L = 503**\n*   **AL = 503**\n*   **W = -27**\n*   **T = 530**",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 193,
@@ -2242,7 +2434,8 @@
     "options": [],
     "answer": "If the DNA was nicked (a break in one strand), the DNA would become relaxed, and the writhe (W) would become zero. The linking number (L) would become equal to the twist (T) of the relaxed DNA. The twist (T) would remain the same as the number of helical turns in the relaxed state (530 turns, assuming 12 bp/turn). The actual linking number (AL) would also become equal to the twist.\n\nSo, if the DNA was nicked:\n*   **L:** Would become equal to T (530).\n*   **AL:** Would become equal to T (530).\n*   **W:** Would become 0.\n*   **T:** Would remain 530 (assuming the nick allows it to relax to this state).",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 194,
@@ -2255,7 +2448,8 @@
     ],
     "answer": "B",
     "explanation": "The question refers to a karyotype, but the karyotype itself is not provided in the text. However, the options are genetic disorders. Turner syndrome is a genetic disorder in females caused by the absence of one X chromosome (karyotype XO). The other options are not typically associated with a specific karyotype abnormality in this context.",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "MC"
   },
   {
     "number": 195,
@@ -2263,7 +2457,8 @@
     "options": [],
     "answer": "Assuming the karyotype refers to Turner syndrome (XO), there would be no Barr bodies present. Barr bodies are inactivated X chromosomes. In females with a normal karyotype (XX), one X chromosome is inactivated to form a Barr body. In Turner syndrome (XO), there is only one X chromosome, and it is active, so no Barr body is formed.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 196,
@@ -2271,7 +2466,8 @@
     "options": [],
     "answer": "The genetic disorder is Triple X syndrome (also known as Trisomy X or XXX syndrome). In cells with three X chromosomes, the number of Barr bodies present is typically two. The rule is that the number of Barr bodies is one less than the number of X chromosomes (n-1, where n is the number of X chromosomes).",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 197,
@@ -2279,7 +2475,8 @@
     "options": [],
     "answer": "An embryo with one Y chromosome and no X chromosomes (karyotype YO) would not be viable and would likely result in a miscarriage. The X chromosome contains essential genes for embryonic development that are not present on the Y chromosome. Without at least one X chromosome, the embryo cannot survive.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 198,
@@ -2287,7 +2484,8 @@
     "options": [],
     "answer": "Giemsa staining is used to visualize chromosomes and identify banding patterns, which are crucial for detecting chromosomal abnormalities. Euchromatin is loosely packed DNA that is transcriptionally active, while heterochromatin is densely packed and transcriptionally inactive. If all genetic material were euchromatin, the chromosomes would appear uniformly stained and would lack the distinct banding patterns that are normally visible with Giemsa staining. This would make it very difficult, if not impossible, to identify specific chromosomes, detect translocations, deletions, or other structural abnormalities. The karyotype would likely appear as a uniform, undifferentiated mass of genetic material, rendering it largely uninterpretable for diagnostic purposes.",
     "explanation": "",
-    "source": "Unity Invite"
+    "source": "Unity Invite",
+    "type": "Free Response"
   },
   {
     "number": 199,
@@ -2300,7 +2498,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 200,
@@ -2313,7 +2512,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 201,
@@ -2326,7 +2526,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 202,
@@ -2339,7 +2540,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 203,
@@ -2352,7 +2554,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 204,
@@ -2365,7 +2568,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 205,
@@ -2378,7 +2582,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 206,
@@ -2391,7 +2596,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 207,
@@ -2404,7 +2610,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 208,
@@ -2417,7 +2624,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 209,
@@ -2430,7 +2638,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 210,
@@ -2443,7 +2652,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 211,
@@ -2456,7 +2666,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 212,
@@ -2469,7 +2680,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 213,
@@ -2482,7 +2694,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 214,
@@ -2495,7 +2708,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 215,
@@ -2508,7 +2722,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 216,
@@ -2516,7 +2731,8 @@
     "options": [],
     "answer": "Maturation-Promoting Factor (MPF)",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 217,
@@ -2529,7 +2745,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 218,
@@ -2542,7 +2759,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 219,
@@ -2555,7 +2773,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 220,
@@ -2568,7 +2787,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 221,
@@ -2581,7 +2801,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 222,
@@ -2594,7 +2815,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 223,
@@ -2607,7 +2829,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 224,
@@ -2620,7 +2843,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 225,
@@ -2633,7 +2857,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 226,
@@ -2646,7 +2871,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 227,
@@ -2659,7 +2885,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 228,
@@ -2672,7 +2899,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 229,
@@ -2685,7 +2913,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 230,
@@ -2698,7 +2927,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 231,
@@ -2711,7 +2941,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 232,
@@ -2724,7 +2955,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 233,
@@ -2737,7 +2969,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 234,
@@ -2750,7 +2983,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 235,
@@ -2763,7 +2997,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 236,
@@ -2776,7 +3011,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 237,
@@ -2789,7 +3025,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 238,
@@ -2802,7 +3039,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 239,
@@ -2815,7 +3053,8 @@
     ],
     "answer": "D",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 240,
@@ -2828,7 +3067,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 241,
@@ -2841,7 +3081,8 @@
     ],
     "answer": "A",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 242,
@@ -2854,7 +3095,8 @@
     ],
     "answer": "B",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 243,
@@ -2867,7 +3109,8 @@
     ],
     "answer": "C",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 244,
@@ -2875,7 +3118,8 @@
     "options": [],
     "answer": "G+/g x G+/g\nG+/g x g/g",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 245,
@@ -2883,7 +3127,8 @@
     "options": [],
     "answer": "G+/g x G+/g",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 246,
@@ -2891,7 +3136,8 @@
     "options": [],
     "answer": "Cross the green Ralts sibling with a blue tester (g/g).\nIf green parent = G+/G+: all progeny will be green.\nIf green parent = G+/g: half of the progeny will be green and half of the progeny will be blue. If any blue offspring are created, the parent was heterozygous.",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 247,
@@ -2899,7 +3145,8 @@
     "options": [],
     "answer": "Cross a blue individual from line 1 to a blue individual from line 2. If the mutations are on different genes (non-allelic), each parent supplies the wild-type allele for the other gene. Phenotype will be green if mutations are recessive and in different genes. Successful Complementation. If the mutations are on the same gene (allelic), the F₁ inherits 2 different mutant alleles at the same locus. If both are loss-of-function recessives, F₁ remains blue. Failure to Complement.",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 248,
@@ -2907,7 +3154,8 @@
     "options": [],
     "answer": "1. Both mutations are loss-of-function alleles in the same gene OR production of nonfunctional protein.\n2. The mutations affect the same regulatory element/promoter required in cis.",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 249,
@@ -2915,7 +3163,8 @@
     "options": [],
     "answer": "Let locus E control pigment synthesis with E+ being functional/dominant and e being loss of function, recessive. Let locus T control pigment color with T+ being wild type and t changing pigment color when homozygous. E+_T+_ will be green (The 9 in the 9:3:4). E+_t/t will be blue (The 3 in 9:3:4). e/e will always result in a white phenotype (The 4 in 9:3:4).",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 250,
@@ -2923,7 +3172,8 @@
     "options": [],
     "answer": "recessive epistasis",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 251,
@@ -2931,7 +3181,8 @@
     "options": [],
     "answer": "E+/T+ | E+/T+ | E+/t | e/T+ | E+/T+ | E+E+/T+T+ | E+E+/T+t | E+e/T+T+ | E+e/T+t | E+/t | E+E+/T+t | E+E+/tt | E+e/T+t | E+e/tt | e/T+ | E+e/T+T+ | E+e/T+t | ee/T+T+ | ee/T+t | e/t | E+e/T+t | E+e/tt | ee/T+t | ee/tt",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 252,
@@ -2939,7 +3190,8 @@
     "options": [],
     "answer": "complementary epistasis",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 253,
@@ -2947,7 +3199,8 @@
     "options": [],
     "answer": "350",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 254,
@@ -2955,7 +3208,8 @@
     "options": [],
     "answer": "all offspring would be able to Mega Evolve",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 255,
@@ -2963,7 +3217,8 @@
     "options": [],
     "answer": "locus E is X-linked",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 256,
@@ -2971,7 +3226,8 @@
     "options": [],
     "answer": "diploid, 2 copies of each loci in each gamete",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 257,
@@ -2979,7 +3235,8 @@
     "options": [],
     "answer": "sterile. fertilization would leave to triploid offspring, fertile failure, meiotic instability, or aneuploidy",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 258,
@@ -2990,7 +3247,8 @@
     ],
     "answer": "A",
     "explanation": "The biological consequences of mutations are identical regardless of which strand they occur on. A single point mutation, once fixed in the genome, has the same potential to disrupt gene function or regulation whether it originated on the leading or lagging template.",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 259,
@@ -2998,7 +3256,8 @@
     "options": [],
     "answer": "The functional 5' → 3' exonuclease activity would successfully remove the RNA primers from the 5' ends of the Okazaki fragments, making the enzyme unable to synthesize new DNA to fill the resulting single-strand gaps between the Okazaki fragments. Instead of a continuous DNA strand, the lagging strand would consist of adjacent Okazaki fragments separated by persistent single-stranded gaps (nicks) in the sugar-phosphate backbone. The specific structure that would accumulate and ultimately prevent cell division, leading to cell death (apoptosis) or inability to do mitosis.",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 260,
@@ -3006,7 +3265,8 @@
     "options": [],
     "answer": "The core molecular mechanism responsible for the silencing of the Form-Shift gene in the pericentromeric region is position effect variegation (PEV), driven by the spreading of constitutive heterochromatin. As the heterochromatin spreads, the Form-Shift gene is incorporated into a physically dense structure which blocks the access of transcription factors and the transcriptional machinery (like RNA polymerase) to the gene's promoter, turning off gene expression. Treatment with a histone acetyltransferase (HAT) inhibitor would exacerbate the silencing effect.",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 261,
@@ -3017,7 +3277,8 @@
     ],
     "answer": "A",
     "explanation": "base excision repair (BER)",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "MC"
   },
   {
     "number": 262,
@@ -3025,7 +3286,8 @@
     "options": [],
     "answer": "Self-replicating, Easy to insert foreign DNA, Possess selectable markers, High copy number, Small and stable",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 263,
@@ -3033,7 +3295,8 @@
     "options": [],
     "answer": "origin of replication (ori)",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 264,
@@ -3041,7 +3304,8 @@
     "options": [],
     "answer": "False",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 265,
@@ -3049,7 +3313,8 @@
     "options": [],
     "answer": "cDNA lacks introns → amplified sequence will be contiguous coding sequence suitable for expression in heterologous cells",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 266,
@@ -3057,7 +3322,8 @@
     "options": [],
     "answer": "Omitting the stop allows translation to continue into the GFP coding sequence, producing an in-frame C-terminal GFP fusion rather than terminating before GFP.",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 267,
@@ -3065,7 +3331,8 @@
     "options": [],
     "answer": "Gel Electrophoresis",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   },
   {
     "number": 268,
@@ -3073,6 +3340,7 @@
     "options": [],
     "answer": "5' - TTTTTAACCCTCCAATTATTGCTCG - 3'",
     "explanation": "",
-    "source": "GullSO 2026"
+    "source": "GullSO 2026",
+    "type": "Free Response"
   }
 ]

@@ -210,6 +210,35 @@ body::before {
   color: var(--text);
 }
 
+/* ===== Type Filter ===== */
+.type-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.type-btn {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.type-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 20px var(--primary-glow);
+}
+
 /* ===== Header ===== */
 .header {
   padding: 16px 0 12px;

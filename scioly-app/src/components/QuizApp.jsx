@@ -15,6 +15,7 @@ export default function QuizApp() {
     const [filter, setFilterState] = useState('all')
     const [showResults, setShowResults] = useState(false)
     const [source, setSource] = useState('all')
+    const [typeFilter, setTypeFilter] = useState('MC')
 
     // Load questions from Firestore
     useEffect(() => {
@@ -38,11 +39,14 @@ export default function QuizApp() {
         return ['all', ...Array.from(s).sort()]
     }, [allQuestions])
 
-    // Filter questions by source
+    // Filter questions by source and type
     const questions = useMemo(() => {
-        if (source === 'all') return allQuestions
-        return allQuestions.filter(q => q.source === source)
-    }, [allQuestions, source])
+        return allQuestions.filter(q => {
+            if (source !== 'all' && q.source !== source) return false
+            if (typeFilter !== 'all' && q.type !== typeFilter) return false
+            return true
+        })
+    }, [allQuestions, source, typeFilter])
 
     // Compute filtered indices (for review mode filters)
     const filteredIndices = questions
@@ -69,6 +73,15 @@ export default function QuizApp() {
 
     function changeSource(s) {
         setSource(s)
+        setAnswers({})
+        setCurrentIdx(0)
+        setFilterState('all')
+        setShowResults(false)
+        setModeState('practice')
+    }
+
+    function changeType(t) {
+        setTypeFilter(t)
         setAnswers({})
         setCurrentIdx(0)
         setFilterState('all')
@@ -149,7 +162,7 @@ export default function QuizApp() {
                 <p className="app-subtitle">{questions.length} Questions · Multiple Choice</p>
             </div>
 
-            {/* Source selector */}
+            {/* Source & type selector */}
             <div className="source-bar">
                 <label className="source-label" htmlFor="source-select">📚 Source</label>
                 <select
@@ -164,6 +177,17 @@ export default function QuizApp() {
                         </option>
                     ))}
                 </select>
+            </div>
+            <div className="type-bar">
+                {['MC', 'Free Response', 'all'].map(t => (
+                    <button
+                        key={t}
+                        className={`type-btn ${typeFilter === t ? 'active' : ''}`}
+                        onClick={() => changeType(t)}
+                    >
+                        {t === 'all' ? 'All Types' : t}
+                    </button>
+                ))}
             </div>
 
             {/* Mode bar */}
