@@ -52,3 +52,24 @@ service cloud.firestore {
 ```
 
 > ⚠️ Remember to switch back to **Production** rules after uploading data!
+
+## Data Encryption
+
+To protect the contents of `questions.json`, it is encrypted and sent to the repository as `questions.json.enc`. The plaintext file is ignored by `.gitignore`.
+
+You will need the password, which should be placed in a file named `encryption_password.txt`.
+
+### Decrypting
+
+```bash
+node decrypt.mjs
+```
+This will generate `questions.json.decrypted`, which can be renamed or copied to `questions.json` for local development.
+
+### Encrypting
+
+If you modify `questions.json`, you must re-encrypt it before pushing:
+```bash
+node encrypt.mjs
+```
+This will overwrite `questions.json.enc` with the new encrypted content.
