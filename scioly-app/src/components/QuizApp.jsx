@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
-import { collection, getDocs, orderBy, query } from 'firebase/firestore'
+import { collection, getDocs, orderBy, query, doc, setDoc, getDoc } from 'firebase/firestore'
 import { db } from '../lib/firebase'
 import { useAuth } from '../contexts/AuthContext'
 import QuestionCard from './QuestionCard'
@@ -19,10 +19,14 @@ export default function QuizApp() {
     const [typeFilter, setTypeFilter] = useState('MC')
 
     // Spaced repetition state for practice mode
-    const [practiceIdx, setPracticeIdx] = useState(0) // current question index in questions[]
-    const [practiceHistory, setPracticeHistory] = useState([]) // stack of visited indices
-    const stepRef = useRef(0) // global step counter
-    const repRef = useRef({}) // per-question: { correctStreak, lastSeenStep }
+    const [practiceIdx, setPracticeIdx] = useState(0)
+    const [practiceHistory, setPracticeHistory] = useState([])
+    const stepRef = useRef(0)
+    const repRef = useRef({})
+
+    // Test mode timer
+    const [timeLeft, setTimeLeft] = useState(60)
+    const timerRef = useRef(null)
 
     // Load questions from Firestore
     useEffect(() => {
@@ -39,6 +43,67 @@ export default function QuizApp() {
         }
         load()
     }, [])
+
+    // Load mastery data from Firestore when user and questions are ready
+    useEffect(() => {
+        if (!user || allQuestions.length === 0) return
+        async function loadMastery() {
+            try {
+                const snap = await getDoc(doc(db, 'mastery', user.uid))
+                if (snap.exists()) {
+                    const data = snap.data()
+                    if (data.answers) setAnswers(data.answers)
+                    if (data.repData) repRef.current = data.repData
+                    if (data.step) stepRef.current = data.step
+                }
+            } catch (err) {
+                console.error('Error loading mastery:', err)
+            }
+        }
+        loadMastery()
+    }, [user, allQuestions])
+
+    // Save mastery to Firestore (debounced)
+    const saveTimeoutRef = useRef(null)
+    function saveMastery(newAnswers) {
+        if (!user) return
+        clearTimeout(saveTimeoutRef.current)
+        saveTimeoutRef.current = setTimeout(async () => {
+            try {
+                await setDoc(doc(db, 'mastery', user.uid), {
+                    answers: newAnswers,
+                    repData: repRef.current,
+                    step: stepRef.current,
+                    updatedAt: new Date().toISOString()
+                })
+            } catch (err) {
+                console.error('Error saving mastery:', err)
+            }
+        }, 1000)
+    }
+
+    // Timer for test mode
+    useEffect(() => {
+        if (mode !== 'test') {
+            clearInterval(timerRef.current)
+            return
+        }
+        // Reset timer on question change
+        setTimeLeft(60)
+        clearInterval(timerRef.current)
+        timerRef.current = setInterval(() => {
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timerRef.current)
+                    // Auto-advance when time runs out
+                    navigate(1)
+                    return 60
+                }
+                return prev - 1
+            })
+        }, 1000)
+        return () => clearInterval(timerRef.current)
+    }, [mode, currentIdx])
 
     // Derive unique sources
     const sources = useMemo(() => {
@@ -115,7 +180,8 @@ export default function QuizApp() {
         const q = questions[idx]
         const correctLetters = q.answer.split(',').map(s => s.trim())
         const isCorrect = correctLetters.length === 1 && correctLetters.includes(letter)
-        setAnswers(prev => ({ ...prev, [idx]: { selected: letter, correct: isCorrect } }))
+        const newAnswers = { ...answers, [idx]: { selected: letter, correct: isCorrect } }
+        setAnswers(newAnswers)
 
         // Update spaced repetition data in practice mode
         if (mode === 'practice') {
@@ -128,6 +194,9 @@ export default function QuizApp() {
             rep.lastSeenStep = stepRef.current
             repRef.current[idx] = rep
         }
+
+        // Save to Firestore
+        saveMastery(newAnswers)
     }
 
     // Pick next question for spaced repetition
@@ -368,6 +437,7 @@ export default function QuizApp() {
                             answer={answers[activeIdx]}
                             mode={mode}
                             onSelectAnswer={selectAnswer}
+                            timeLeft={mode === 'test' ? timeLeft : undefined}
                         />
                     )}
 

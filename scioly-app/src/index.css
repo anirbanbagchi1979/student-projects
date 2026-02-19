@@ -496,6 +496,51 @@ body::before {
   margin-bottom: 8px;
 }
 
+.q-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.q-header-row .q-number {
+  margin-bottom: 0;
+}
+
+.timer-badge {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: rgba(0, 206, 158, 0.12);
+  color: var(--correct);
+  font-variant-numeric: tabular-nums;
+  transition: all 0.3s;
+}
+
+.timer-badge.timer-warn {
+  background: rgba(255, 165, 0, 0.12);
+  color: #f0a020;
+}
+
+.timer-badge.timer-danger {
+  background: rgba(255, 107, 107, 0.15);
+  color: var(--wrong);
+  animation: timerPulse 1s ease-in-out infinite;
+}
+
+@keyframes timerPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
 .q-text {
   font-size: 1rem;
   font-weight: 500;

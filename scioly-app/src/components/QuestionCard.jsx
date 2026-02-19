@@ -1,6 +1,5 @@
-export default function QuestionCard({ question, answer, mode, onSelectAnswer }) {
-    const showFeedback = mode !== 'test'
-    const isLocked = (answer !== undefined && showFeedback) || mode === 'review'
+export default function QuestionCard({ question, answer, mode, onSelectAnswer, timeLeft }) {
+    const isLocked = answer !== undefined || mode === 'review'
     const correctLetters = question.answer.split(',').map(s => s.trim())
 
     // Detect Gemini mismatch for MC questions
@@ -11,7 +10,14 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer })
 
     return (
         <div className="question-card">
-            <div className="q-number">Question {question.number}</div>
+            <div className="q-header-row">
+                <div className="q-number">Question {question.number}</div>
+                {mode === 'test' && timeLeft !== undefined && (
+                    <div className={`timer-badge ${timeLeft <= 10 ? 'timer-danger' : timeLeft <= 30 ? 'timer-warn' : ''}`}>
+                        ⏱ {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, '0')}
+                    </div>
+                )}
+            </div>
             <div className="q-text">{question.question}</div>
 
             <div className="options">
@@ -20,14 +26,10 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer })
                     const text = opt.substring(3)
 
                     let cls = ''
-                    if (answer && showFeedback) {
-                        // Practice/Review: show correct/wrong colors
+                    if (answer) {
                         if (correctLetters.includes(letter)) cls = 'correct'
                         if (answer.selected === letter && !answer.correct && !correctLetters.includes(letter)) cls = 'wrong'
                         if (answer.selected === letter && answer.correct) cls = 'correct'
-                    } else if (answer && !showFeedback) {
-                        // Test: only highlight the selected option, no correct/wrong
-                        if (answer.selected === letter) cls = 'selected'
                     }
 
                     return (
@@ -43,14 +45,14 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer })
                 })}
             </div>
 
-            {showFeedback && (answer || mode === 'review') && (
+            {(answer || mode === 'review') && (
                 <div className="explanation-box">
                     <strong>Correct Answer:</strong> {question.answer}
                     {question.explanation && <><br /><br />{question.explanation}</>}
                 </div>
             )}
 
-            {showFeedback && (answer || mode === 'review') && hasMismatch && (
+            {(answer || mode === 'review') && hasMismatch && (
                 <div className="gemini-mismatch">
                     <div className="gemini-mismatch-header">⚠️ Gemini Disagrees</div>
                     <p>
