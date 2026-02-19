@@ -1,13 +1,17 @@
 import { MASTERY_LEVELS } from '../lib/mastery'
 
-export default function Dashboard({ questions, answers, masteryMap }) {
-    const total = questions.length
+export default function Dashboard({ questions, allQuestions, answers, masteryMap }) {
+    // Only count MC + non-context-missing questions toward mastery
+    const masteryQuestions = (allQuestions || questions).filter(q =>
+        q.type === 'MC' && !q.contextMissing
+    )
+    const total = masteryQuestions.length
 
     // Count by mastery level (from persistent masteryMap)
     const levelCounts = MASTERY_LEVELS.map(() => 0)
     const perSource = {}
 
-    questions.forEach(q => {
+    masteryQuestions.forEach(q => {
         const key = String(q.number)
         const m = masteryMap[key]
         const level = m?.level ?? 0
@@ -21,6 +25,7 @@ export default function Dashboard({ questions, answers, masteryMap }) {
 
     const mastered = levelCounts[4] + levelCounts[5] // Strong + Mastered
     const masteryPct = total > 0 ? Math.round((mastered / total) * 100) : 0
+    const attempted = total - levelCounts[0]
 
     // Session stats
     const sessionAnswered = Object.keys(answers).length
@@ -42,7 +47,7 @@ export default function Dashboard({ questions, answers, masteryMap }) {
                     />
                 </svg>
                 <div className="mastery-pct">{masteryPct}%</div>
-                <div className="mastery-label">Mastered</div>
+                <div className="mastery-label">{mastered} / {total} Mastered</div>
             </div>
 
             {/* Mastery level breakdown */}
@@ -74,11 +79,11 @@ export default function Dashboard({ questions, answers, masteryMap }) {
             <div className="dash-progress">
                 <div className="dash-progress-label">
                     <span>Overall Progress</span>
-                    <span>{total - levelCounts[0]} / {total} attempted</span>
+                    <span>{attempted} / {total} attempted</span>
                 </div>
                 <div className="dash-progress-bar">
                     <div className="dash-bar-correct" style={{ width: `${total > 0 ? (mastered / total) * 100 : 0}%` }} />
-                    <div className="dash-bar-wrong" style={{ width: `${total > 0 ? ((total - levelCounts[0] - mastered) / total) * 100 : 0}%` }} />
+                    <div className="dash-bar-wrong" style={{ width: `${total > 0 ? ((attempted - mastered) / total) * 100 : 0}%` }} />
                 </div>
             </div>
 
@@ -92,7 +97,7 @@ export default function Dashboard({ questions, answers, masteryMap }) {
                         <div key={src} className="source-row">
                             <div className="source-row-header">
                                 <span className="source-row-name">{src}</span>
-                                <span className="source-row-pct">{pct}%</span>
+                                <span className="source-row-pct">{srcMastered}/{s.total} · {pct}%</span>
                             </div>
                             <div className="dash-progress-bar">
                                 <div className="dash-bar-correct" style={{ width: `${pct}%` }} />

@@ -350,7 +350,7 @@ export default function QuizApp() {
             </div>
 
             {mode === 'dashboard' ? (
-                <Dashboard questions={questions} answers={sessionAnswers} masteryMap={masteryMap} />
+                <Dashboard questions={questions} allQuestions={allQuestions} answers={sessionAnswers} masteryMap={masteryMap} />
             ) : showResults ? (
                 <ResultsScreen
                     questions={questions}
