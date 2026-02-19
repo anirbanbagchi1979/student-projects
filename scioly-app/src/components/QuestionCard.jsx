@@ -1,8 +1,22 @@
+import { useMemo } from 'react'
 import { MASTERY_LEVELS } from '../lib/mastery'
+
+// Seeded shuffle using question number for stability across re-renders
+function seededShuffle(arr, seed) {
+    const shuffled = [...arr]
+    let s = seed
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        s = (s * 16807 + 0) % 2147483647
+        const j = s % (i + 1)
+            ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    return shuffled
+}
+
+const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
 export default function QuestionCard({ question, answer, mode, onSelectAnswer, timeLeft, masteryLevel }) {
     const isLocked = answer !== undefined || mode === 'review'
-    const correctLetters = question.answer.split(',').map(s => s.trim())
 
     // Detect Gemini mismatch for MC questions
     const geminiAnswer = question.gemini_answer?.trim().toUpperCase()
@@ -11,6 +25,38 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
     const hasMismatch = isMC && geminiAnswer && providedAnswer && geminiAnswer !== providedAnswer
 
     const lvl = MASTERY_LEVELS[masteryLevel ?? 0]
+
+    // Shuffle options with a stable seed based on question number
+    const { shuffledOptions, correctNewLetters, originalCorrectLetters } = useMemo(() => {
+        const origOptions = question.options
+        const origCorrectLetters = question.answer.split(',').map(s => s.trim())
+
+        // Extract text content from each option
+        const optionTexts = origOptions.map(opt => ({
+            originalLetter: opt.charAt(0),
+            text: opt.substring(3),
+            isCorrect: origCorrectLetters.includes(opt.charAt(0))
+        }))
+
+        // Shuffle
+        const shuffled = seededShuffle(optionTexts, question.number * 7919)
+
+        // Assign new letters
+        const newOptions = shuffled.map((opt, i) => ({
+            letter: LETTERS[i],
+            text: opt.text,
+            isCorrect: opt.isCorrect,
+            originalLetter: opt.originalLetter
+        }))
+
+        const correctNew = newOptions.filter(o => o.isCorrect).map(o => o.letter)
+
+        return {
+            shuffledOptions: newOptions,
+            correctNewLetters: correctNew,
+            originalCorrectLetters: origCorrectLetters
+        }
+    }, [question.number, question.options, question.answer])
 
     return (
         <div className="question-card">
@@ -28,25 +74,22 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
             <div className="q-text">{question.question}</div>
 
             <div className="options">
-                {question.options.map((opt, i) => {
-                    const letter = opt.charAt(0)
-                    const text = opt.substring(3)
-
+                {shuffledOptions.map((opt, i) => {
                     let cls = ''
                     if (answer) {
-                        if (correctLetters.includes(letter)) cls = 'correct'
-                        if (answer.selected === letter && !answer.correct && !correctLetters.includes(letter)) cls = 'wrong'
-                        if (answer.selected === letter && answer.correct) cls = 'correct'
+                        if (opt.isCorrect) cls = 'correct'
+                        if (answer.selected === opt.letter && !answer.correct) cls = 'wrong'
+                        if (answer.selected === opt.letter && answer.correct) cls = 'correct'
                     }
 
                     return (
                         <button
                             key={i}
                             className={`option-btn ${cls} ${isLocked ? 'locked' : ''}`}
-                            onClick={() => !isLocked && onSelectAnswer(letter)}
+                            onClick={() => !isLocked && onSelectAnswer(opt.letter, opt.isCorrect)}
                         >
-                            <span className="option-letter">{letter}</span>
-                            <span className="option-text">{text}</span>
+                            <span className="option-letter">{opt.letter}</span>
+                            <span className="option-text">{opt.text}</span>
                         </button>
                     )
                 })}
@@ -54,7 +97,7 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
 
             {(answer || mode === 'review') && (
                 <div className="explanation-box">
-                    <strong>Correct Answer:</strong> {question.answer}
+                    <strong>Correct Answer:</strong> {correctNewLetters.join(', ')}
                     {question.explanation && <><br /><br />{question.explanation}</>}
                 </div>
             )}

@@ -116,13 +116,23 @@ export default function QuizApp() {
         return ['all', ...Array.from(s).sort()]
     }, [allQuestions])
 
-    // Filter questions by source and type
+    // Filter and shuffle questions by source and type
     const questions = useMemo(() => {
-        return allQuestions.filter(q => {
+        const filtered = allQuestions.filter(q => {
             if (source !== 'all' && q.source !== source) return false
             if (typeFilter !== 'all' && q.type !== typeFilter) return false
             return true
         })
+        // Shuffle questions with a seed based on filter combo
+        const seed = (source + typeFilter).split('').reduce((a, c) => a + c.charCodeAt(0), 0) * 31
+        const shuffled = [...filtered]
+        let s = seed || 1
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            s = (s * 16807 + 0) % 2147483647
+            const j = s % (i + 1)
+                ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+        }
+        return shuffled
     }, [allQuestions, source, typeFilter])
 
     // Compute filtered indices (for review mode filters)
@@ -177,11 +187,9 @@ export default function QuizApp() {
         setCurrentIdx(0)
     }
 
-    function selectAnswer(letter) {
+    function selectAnswer(letter, isCorrect) {
         const idx = mode === 'practice' ? practiceIdx : realIdx
         const q = questions[idx]
-        const correctLetters = q.answer.split(',').map(s => s.trim())
-        const isCorrect = correctLetters.length === 1 && correctLetters.includes(letter)
 
         // Update session answers
         setSessionAnswers(prev => ({ ...prev, [idx]: { selected: letter, correct: isCorrect } }))
