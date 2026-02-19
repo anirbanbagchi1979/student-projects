@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import { db } from '../lib/firebase'
 import { useAuth } from '../contexts/AuthContext'
@@ -17,6 +17,12 @@ export default function QuizApp() {
     const [showResults, setShowResults] = useState(false)
     const [source, setSource] = useState('all')
     const [typeFilter, setTypeFilter] = useState('MC')
+
+    // Spaced repetition state for practice mode
+    const [practiceIdx, setPracticeIdx] = useState(0) // current question index in questions[]
+    const [practiceHistory, setPracticeHistory] = useState([]) // stack of visited indices
+    const stepRef = useRef(0) // global step counter
+    const repRef = useRef({}) // per-question: { correctStreak, lastSeenStep }
 
     // Load questions from Firestore
     useEffect(() => {
@@ -60,7 +66,8 @@ export default function QuizApp() {
         })
 
     const realIdx = filteredIndices[currentIdx] ?? 0
-    const currentQuestion = questions[realIdx]
+    const activeIdx = mode === 'practice' ? practiceIdx : realIdx
+    const activeQuestion = questions[activeIdx]
     const answeredCount = Object.keys(answers).length
     const correctCount = Object.values(answers).filter(x => x.correct).length
 
@@ -70,6 +77,14 @@ export default function QuizApp() {
         setCurrentIdx(0)
         setShowResults(false)
         if (m === 'test') setAnswers({})
+        if (m === 'practice') {
+            // Reset practice spaced repetition
+            stepRef.current = 0
+            repRef.current = {}
+            setPracticeIdx(0)
+            setPracticeHistory([])
+            setAnswers({})
+        }
     }
 
     function changeSource(s) {
@@ -96,13 +111,83 @@ export default function QuizApp() {
     }
 
     function selectAnswer(letter) {
-        const q = questions[realIdx]
+        const idx = mode === 'practice' ? practiceIdx : realIdx
+        const q = questions[idx]
         const correctLetters = q.answer.split(',').map(s => s.trim())
         const isCorrect = correctLetters.length === 1 && correctLetters.includes(letter)
-        setAnswers(prev => ({ ...prev, [realIdx]: { selected: letter, correct: isCorrect } }))
+        setAnswers(prev => ({ ...prev, [idx]: { selected: letter, correct: isCorrect } }))
+
+        // Update spaced repetition data in practice mode
+        if (mode === 'practice') {
+            const rep = repRef.current[idx] || { correctStreak: 0, lastSeenStep: 0 }
+            if (isCorrect) {
+                rep.correctStreak++
+            } else {
+                rep.correctStreak = 0
+            }
+            rep.lastSeenStep = stepRef.current
+            repRef.current[idx] = rep
+        }
     }
 
+    // Pick next question for spaced repetition
+    const pickNextPractice = useCallback(() => {
+        const step = stepRef.current
+        const n = questions.length
+        if (n === 0) return 0
+
+        // Score each question: lower = higher priority
+        const scored = questions.map((_, i) => {
+            const rep = repRef.current[i]
+            const ans = answers[i]
+            if (!rep && !ans) {
+                // Never seen: high priority, ordered by index
+                return { i, score: i }
+            }
+            if (ans && !ans.correct) {
+                // Wrong: come back soon (after ~2 steps)
+                const gap = step - (rep?.lastSeenStep || 0)
+                return { i, score: gap >= 2 ? -1000 + i : 5000 + i }
+            }
+            if (rep) {
+                // Correct: push back based on streak
+                const interval = Math.pow(2, rep.correctStreak) * 3
+                const gap = step - rep.lastSeenStep
+                return { i, score: gap >= interval ? 2000 + i : 10000 + (interval - gap) * 100 + i }
+            }
+            return { i, score: i }
+        })
+
+        scored.sort((a, b) => a.score - b.score)
+        return scored[0].i
+    }, [questions, answers])
+
     function navigate(dir) {
+        if (mode === 'practice') {
+            if (dir === -1) {
+                // Go back in practice history
+                if (practiceHistory.length === 0) return
+                const prev = practiceHistory[practiceHistory.length - 1]
+                setPracticeHistory(h => h.slice(0, -1))
+                setPracticeIdx(prev)
+            } else {
+                // Pick next via spaced repetition
+                stepRef.current++
+                setPracticeHistory(h => [...h, practiceIdx])
+                const next = pickNextPractice()
+                setPracticeIdx(next)
+                // Clear previous answer for this question so it can be re-attempted
+                setAnswers(prev => {
+                    const copy = { ...prev }
+                    delete copy[next]
+                    return copy
+                })
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            return
+        }
+
+        // Non-practice modes: sequential navigation
         const next = currentIdx + dir
         if (next < 0) return
         if (next >= filteredIndices.length) {
@@ -219,7 +304,12 @@ export default function QuizApp() {
                     {/* Progress */}
                     <div className="progress-wrap">
                         <div className="progress-stats">
-                            <span>Question {currentIdx + 1} of {filteredIndices.length}</span>
+                            <span>
+                                {mode === 'practice'
+                                    ? `Step ${stepRef.current + 1} · Q${activeQuestion?.number ?? '?'}`
+                                    : `Question ${currentIdx + 1} of ${filteredIndices.length}`
+                                }
+                            </span>
                             <span className="score">Score: {correctCount}/{answeredCount}</span>
                         </div>
                         <div className="progress-bar">
@@ -268,14 +358,14 @@ export default function QuizApp() {
                     )}
 
                     {/* Question */}
-                    {filteredIndices.length === 0 ? (
+                    {(mode !== 'practice' && filteredIndices.length === 0) ? (
                         <div className="question-card" style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
                             <p>No questions match this filter.</p>
                         </div>
-                    ) : currentQuestion && (
+                    ) : activeQuestion && (
                         <QuestionCard
-                            question={currentQuestion}
-                            answer={answers[realIdx]}
+                            question={activeQuestion}
+                            answer={answers[activeIdx]}
                             mode={mode}
                             onSelectAnswer={selectAnswer}
                         />
@@ -285,7 +375,7 @@ export default function QuizApp() {
                     <div className="nav-row">
                         <button
                             className="nav-btn"
-                            disabled={currentIdx === 0}
+                            disabled={mode === 'practice' ? practiceHistory.length === 0 : currentIdx === 0}
                             onClick={() => navigate(-1)}
                         >
                             ← Prev
@@ -294,7 +384,7 @@ export default function QuizApp() {
                             className="nav-btn primary-btn"
                             onClick={() => navigate(1)}
                         >
-                            {currentIdx >= filteredIndices.length - 1 ? '🏁 Finish' : 'Next →'}
+                            {mode === 'practice' ? 'Next →' : (currentIdx >= filteredIndices.length - 1 ? '🏁 Finish' : 'Next →')}
                         </button>
                     </div>
                 </>
