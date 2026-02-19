@@ -73,6 +73,16 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
             </div>
             <div className="q-text">{question.question}</div>
 
+            {question.contextMissing && (
+                <div className="context-missing-banner">
+                    <span className="context-missing-icon">📎</span>
+                    <div>
+                        <strong>Context Missing</strong>
+                        <p>{question.contextReason || 'This question references external material not included here.'}</p>
+                    </div>
+                </div>
+            )}
+
             <div className="options">
                 {shuffledOptions.map((opt, i) => {
                     let cls = ''

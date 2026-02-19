@@ -668,6 +668,39 @@ body::before {
   color: var(--primary);
 }
 
+/* ===== Context Missing Banner ===== */
+.context-missing-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 10px 14px;
+  background: rgba(255, 193, 7, 0.08);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #f0a020;
+  animation: fadeSlideIn 0.3s ease;
+}
+
+.context-missing-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.context-missing-banner strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.context-missing-banner p {
+  margin: 0;
+  opacity: 0.85;
+}
+
 /* ===== Gemini Mismatch Warning ===== */
 .gemini-mismatch {
   margin-top: 10px;

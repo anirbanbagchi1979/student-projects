@@ -13,7 +13,8 @@
     "explanation": "In the ABO blood group system, alleles A and B are codominant, meaning both are expressed if present. The allele 'i' (or O) is recessive to both A and B. Therefore, an individual will only express the O blood type if they are homozygous for the 'i' allele (genotype ii).",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 2,
@@ -29,7 +30,8 @@
     "explanation": "Blood type AB is an example of codominance because both the A and B alleles are expressed equally and distinctly in the phenotype. Individuals with AB blood have both A and B antigens on their red blood cells, demonstrating that neither allele is dominant over the other.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 3,
@@ -45,7 +47,8 @@
     "explanation": "The parents are both heterozygous for their blood type (IAi and IBi). Their possible offspring genotypes are IAIB, IAi, IBi, and ii. The probability of having an O blood type child (genotype ii) is 1/4. Therefore, the probability of NOT having an O blood type child is 3/4. For three children, the probability that none are blood type O is (3/4) * (3/4) * (3/4) = 27/64.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 4,
@@ -61,7 +64,8 @@
     "explanation": "The father is Bb (type B heterozygous, since they had a type O child), mother is OO. Each child has 1/2 chance of B and 1/2 chance of O. Using binomial probability: C(5,3) × (1/2)^3 × (1/2)^2 = 10 × 1/32 = 10/32 = 5/16. Wait - checking again: C(5,3)=10, (1/2)^5=1/32, so 10/32=5/16. But the answer key says D (5/32). This may use C(5,3)×(1/2)^3×(1/2)^2 = 10/32 = 5/16, making C the mathematical answer, but the provided answer is D.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 5,
@@ -77,7 +81,8 @@
     "explanation": "Hardy-Weinberg equilibrium assumes no natural selection. Natural selection favors certain alleles, leading to changes in allele frequencies over generations. This directly violates the equilibrium condition, causing a shift. Options A, B, C, and E are all conditions that *maintain* Hardy-Weinberg equilibrium.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 6,
@@ -93,7 +98,8 @@
     "explanation": "Genetic drift, especially in small populations, can lead to random fluctuations in allele frequencies. This can cause rare recessive alleles to become more common by chance, increasing the frequency of recessive disorders. Geographic and reproductive isolation can also contribute by limiting gene flow, but genetic drift is a direct mechanism for random increases in allele frequency.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 7,
@@ -109,7 +115,8 @@
     "explanation": "In the Hardy-Weinberg equation, p represents the frequency of the dominant allele (A) and q represents the frequency of the recessive allele (a). The term 2pq specifically represents the frequency of individuals who are heterozygous for the trait (Aa) in the population.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 8,
@@ -125,7 +132,9 @@
     "explanation": "The phylogenetic tree shows that the bald eagle shares a most recent common ancestor with the alligator. They are both within the Archosauria clade, which is a sister group to the Lepidosauria (represented by the lizard, though not an option). The other options are more distantly related.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References a phylogenetic tree that is not provided."
   },
   {
     "number": 9,
@@ -141,7 +150,9 @@
     "explanation": "The phylogenetic tree indicates that the antelope and the bald eagle share a more recent common ancestor with each other than either does with the alligator, sea bass, or lamprey. This suggests they are more closely related to each other than to the other listed animals.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": true,
+    "contextReason": "References a phylogenetic tree that is not provided."
   },
   {
     "number": 10,
@@ -157,7 +168,8 @@
     "explanation": "The Hardy-Weinberg principle applies to allele frequencies within a population. Even with multiple alleles (like A, B, and i for blood type), the sum of the frequencies of all alleles for a given gene must equal 1, representing 100% of the alleles in the gene pool.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 11,
@@ -173,7 +185,8 @@
     "explanation": "For blood type O, the genotype is ii. In Hardy-Weinberg equilibrium, the frequency of the recessive allele 'i' is the square root of the frequency of the homozygous recessive genotype (ii). So, if frequency of O is 1/9, then frequency of 'i' is sqrt(1/9) = 1/3.  We are given the frequency of allele B is 1/4.  Since A + B + i = 1, the frequency of allele A is 1 - (1/4 + 1/3) = 1 - (3/12 + 4/12) = 1 - 7/12 = 5/12.  Blood type AB has genotype AB, and its frequency is 2AB = 2 * (5/12) * (1/4) = 10/48 = 5/24.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 12,
@@ -189,7 +202,8 @@
     "explanation": "In Hardy-Weinberg equilibrium, the frequency of the A allele is given as 0.6.  Individuals with type A blood can have genotypes AA or AO.  The frequency of AA is p², and the frequency of AO is 2pq, where p is the frequency of allele A and q is the frequency of allele O.  Therefore, the frequency of type A blood is p² + 2pq = (0.6)² + 2(0.6)(0.2) = 0.36 + 0.24 = 0.60.  However, the question asks for the percentage of individuals with type A blood, and the provided answer is D (0.36). This implies the question might be interpreted as asking for the frequency of the homozygous AA genotype, which is p² = (0.6)² = 0.36.  Given the options and the provided answer, it's likely the question is implicitly asking for the frequency of the AA genotype, or there's a misunderstanding in the question's phrasing or the provided answer's context.  Assuming the provided answer is correct and refers to the homozygous AA genotype, the calculation is (0.6)^2 = 0.36.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 13,
@@ -199,7 +213,9 @@
     "explanation": "The Hardy-Weinberg equation for the ABO blood group system, considering alleles A, B, and i, is derived from the expansion of (A + B + i)².  The terms represent the frequencies of genotypes.  Phenotype A arises from genotypes AA (A²) and AO (2Ai). Phenotype B arises from genotypes BB (B²) and BO (2Bi). Phenotype AB arises from genotype AB (2AB). Phenotype O arises from genotype ii (i²).",
     "source": "Designer Genes C",
     "type": "Free Response",
-    "gemini_answer": "Equation: (A + B + i)² = 1 OR A² + B² + i² + 2AB + 2Ai + 2Bi = 1\nPhenotype | Hardy-Weinberg Terms\n---|---\nBlood Type A | A² + 2Ai\nBlood Type B | B² + 2Bi\nBlood Type AB | 2AB\nBlood Type O | i²"
+    "gemini_answer": "Equation: (A + B + i)² = 1 OR A² + B² + i² + 2AB + 2Ai + 2Bi = 1\nPhenotype | Hardy-Weinberg Terms\n---|---\nBlood Type A | A² + 2Ai\nBlood Type B | B² + 2Bi\nBlood Type AB | 2AB\nBlood Type O | i²",
+    "contextMissing": true,
+    "contextReason": "References a table that is not provided."
   },
   {
     "number": 14,
@@ -215,7 +231,8 @@
     "explanation": "This question likely refers to the Bombay phenotype, where individuals with the hh genotype (homozygous recessive for the H gene) cannot express the ABO antigens, regardless of their ABO genotype. Therefore, the homozygous recessive genotype of Gene H masks the expression of the A blood type (and other ABO blood types).",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 15,
@@ -231,7 +248,8 @@
     "explanation": "Recessive epistasis occurs when the epistatic gene is recessive. In this scenario, the hh genotype (recessive) masks the expression of the ABO genes, leading to a phenotype (like Bombay) that overrides the expected ABO blood type. This is a classic example of recessive epistasis.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "E"
+    "gemini_answer": "E",
+    "contextMissing": false
   },
   {
     "number": 16,
@@ -247,7 +265,8 @@
     "explanation": "The individual has children with genotype iihh. For some children to have blood type A, the F2 individual must have at least one 'A' allele and be able to express it (not ii). For some children to have blood type O, the F2 individual must also have the ability to produce O (ii) or pass on an 'i' allele. The presence of hh indicates the F2 individual must have at least one 'H' allele. Therefore, genotypes AiHh, AiHH, and AAHh are possible as they can produce both A and O blood types and have at least one H allele.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A, B, D"
+    "gemini_answer": "A, B, D",
+    "contextMissing": false
   },
   {
     "number": 17,
@@ -263,7 +282,8 @@
     "explanation": "A standard dihybrid cross involves two individuals heterozygous for two unlinked, non-interacting genes (e.g., AaBb x AaBb). The segregation and independent assortment of these alleles result in four possible genotypes (AABB, AABb, AaBB, AaBb, AAbb, Aabb, aaBB, aaBb, aabb) and a classic phenotypic ratio of 9:3:3:1 for the dominant phenotypes.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 18,
@@ -279,7 +299,9 @@
     "explanation": "The pedigree shows affected individuals in every generation (ruling out only recessive if it were consistently present), but also affected individuals skipping generations (suggesting recessive). Both males and females are affected, and transmission occurs from affected fathers to sons and daughters, and affected mothers to sons and daughters. This pattern is consistent with autosomal dominant, autosomal recessive, X-linked dominant, and X-linked recessive inheritance.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A, B, C, D"
+    "gemini_answer": "A, B, C, D",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 19,
@@ -295,7 +317,9 @@
     "explanation": "If individual IV-1 expresses the disease, and the disease appears in every generation, autosomal dominant and X-linked dominant are possible. Autosomal dominant allows transmission from affected parents to offspring. X-linked dominant allows affected fathers to pass it to all daughters and affected mothers to pass it to half their offspring. Autosomal recessive and X-linked recessive would require unaffected parents to have an affected child, which isn't implied by IV-1 being affected without further context on parents.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A, C"
+    "gemini_answer": "A, C",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 20,
@@ -311,7 +335,9 @@
     "explanation": "If individual IV-1 does not express the disease, autosomal dominant and X-linked dominant are ruled out, as these would require at least one affected parent or specific transmission patterns. Autosomal recessive is possible if IV-1 is a carrier. X-linked recessive is possible if IV-1 is a female carrier or a male who inherited the recessive allele from his mother. Y-linked is possible if the disease is passed from father to son, and IV-1 is male and unaffected.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "B, D, E"
+    "gemini_answer": "B, D, E",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 21,
@@ -327,7 +353,8 @@
     "explanation": "For an X-linked recessive disease, an affected female (X'X') must inherit the recessive allele from both parents. An unaffected female carrier (XRX') has one dominant and one recessive allele. Since individual I-2 is unaffected but has an affected son (II-1, X'Y), she must carry the recessive allele. Therefore, her genotype must be XRX'.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 22,
@@ -343,7 +370,9 @@
     "explanation": "If the disease is autosomal recessive (rr), affected individuals must be rr. Unaffected individuals can be RR or Rr. Individual II-1 is unaffected. If the disease were autosomal recessive, and II-1 had an affected child (III-1, rr), then II-1 must have at least one 'r' allele. However, the provided answer is A (RR). This implies that the pedigree *cannot* follow an autosomal recessive pattern if II-1 is RR and has an affected child. The question asks for possible genotypes of II-1 *if* it followed autosomal recessive. If II-1 is RR, they cannot have an affected child (rr). Therefore, the premise of the question might be flawed given the provided answer.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References a pedigree figure that is not provided."
   },
   {
     "number": 23,
@@ -359,7 +388,9 @@
     "explanation": "Individual III-3 is unaffected but has an affected child (IV-1, rr). This means III-3 must be a carrier (Rr). Since III-3's parents (II-1 and II-2) are both unaffected, and they produced an affected child, both II-1 and II-2 must be carriers (Rr). Therefore, the probability of III-3 being a carrier (Rr) from a cross of Rr x Rr is 1/2.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 24,
@@ -375,7 +406,9 @@
     "explanation": "Individual III-3 is a carrier (Rr) as determined in Q23. Individual III-4 is unaffected and has an affected child (IV-1, rr). Therefore, III-4 must also be a carrier (Rr). The probability of an affected child (rr) from a cross of Rr x Rr is 1/4.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 25,
@@ -391,7 +424,8 @@
     "explanation": "For AaBBCc x AaBbcc: Resembling parent 1 (AaBBCc) requires A_BB_Cc. Probabilities: A_ (1/2) * BB (1) * Cc (1/2) = 1/4. Resembling parent 2 (AaBbcc) requires AaBbcc. Probabilities: Aa (1/2) * Bb (1/2) * cc (1/2) = 1/8. The question asks for resemblance to *either* parent. This implies the sum of probabilities of genotypes matching parent 1 OR parent 2. However, the question is likely asking for the probability of producing a child with the *exact* genotype of either parent. Genotype of parent 1: AaBBCc. Probability: (1/2)*(1)*(1/2) = 1/4. Genotype of parent 2: AaBbcc. Probability: (1/2)*(1/2)*(1/2) = 1/8. The question asks for resemblance to *either* parent. If it means the exact genotype of parent 1 OR the exact genotype of parent 2, and these are mutually exclusive, then it's 1/4 + 1/8 = 3/8. However, if it means the *phenotype* of either parent, or if the question is interpreted as the probability of producing a child with the genotype of parent 1 *or* the genotype of parent 2, and these are distinct, then the probability of matching parent 1's genotype is 1/4, and matching parent 2's genotype is 1/8. The provided answer is D (1/4). This suggests the question is asking for the probability of producing a child with the *exact genotype* of parent 1 (AaBBCc), which is 1/4.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 26,
@@ -407,7 +441,8 @@
     "explanation": "To resemble a parent, the offspring must have the same phenotype. For AaBBCc, the phenotype is dominant for A, dominant for B, and dominant for C. For AaBbcc, the phenotype is dominant for A, dominant for B, and recessive for c. We calculate the probability of each parent's phenotype separately and sum them. The probability of the first parent's phenotype (A_B_C_) is 3/4 * 1 * 1/2 = 3/8. The probability of the second parent's phenotype (A_B_cc) is 3/4 * 1 * 1/2 = 3/8. Since these are mutually exclusive events, we add their probabilities: 3/8 + 3/8 = 6/8 = 3/4.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 27,
@@ -417,7 +452,9 @@
     "explanation": "The question asks for the number of chromosomes in a diploid organism with three pairs of chromosomes (2n=6). This refers to the somatic cell's chromosome number before any cell division begins. Therefore, the organism has 6 chromosomes.",
     "source": "Designer Genes C",
     "type": "Free Response",
-    "gemini_answer": "6"
+    "gemini_answer": "6",
+    "contextMissing": true,
+    "contextReason": "References a table that is not provided."
   },
   {
     "number": 28,
@@ -433,7 +470,8 @@
     "explanation": "Mendel's Law of Segregation states that alleles for each gene segregate from each other during gamete formation. This separation occurs during Anaphase I of meiosis when homologous chromosomes, each carrying one allele, are pulled apart to opposite poles of the cell. This ensures that each gamete receives only one allele for each gene.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 29,
@@ -449,7 +487,8 @@
     "explanation": "Metaphase I is responsible for Mendel's Law of Independent Assortment. During Metaphase I, homologous chromosome pairs align randomly at the metaphase plate. The orientation of each pair is independent of the others, meaning that the maternal or paternal chromosome of one pair can be on the same side as the maternal or paternal chromosome of another pair. This random alignment leads to the independent assortment of alleles for different genes.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 30,
@@ -465,7 +504,8 @@
     "explanation": "Crossing over, the exchange of genetic material between homologous chromosomes, occurs during Prophase I of meiosis. Specifically, it happens during the pachytene substage when homologous chromosomes are tightly paired (synapsed) and form chiasmata, the visible points of crossing over.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 31,
@@ -481,7 +521,8 @@
     "explanation": "Mitosis is a process of cell division that results in two genetically identical daughter cells, each with the same number of chromosomes as the parent cell. If the parent cell is diploid (2n), the daughter cells will also be diploid (2n). Meiosis, on the other hand, produces haploid gametes.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 32,
@@ -497,7 +538,8 @@
     "explanation": "The father has XY chromosomes. For a son to have Klinefelter syndrome (XXY), he must receive an X chromosome from his mother and an XY or XX from his father. Since the mother is XAXB, she can only pass an XA or XB. The child has XBXCY. This means the father must have contributed XBY. Non-disjunction in Meiosis I of the father would result in gametes with XY and no sex chromosome. If the XY gamete fuses with the mother's XB gamete, the child would be XBYY, not XBXCY. However, if non-disjunction occurred in Meiosis I of the father, he would produce gametes with XY and O (no sex chromosome). If the O gamete fused with the mother's XB gamete, the child would be XB. If the XY gamete fused with the mother's XB gamete, the child would be XBY. The provided answer A suggests Meiosis I of the father. Let's re-evaluate. The child is XBXCY. The mother is XAXB. She can contribute XA or XB. The father is XY. He can contribute X or Y. For XBXCY, the mother must have contributed XB. The father must have contributed XCY. This means non-disjunction occurred in the father. If it occurred in Meiosis I of the father, he would produce gametes XY and O. If the XY gamete fused with the mother's XB, the child would be XBY. If non-disjunction occurred in Meiosis II of the father, he would produce gametes X, Y, and YY or XX. If the YY gamete fused with the mother's XB, the child would be XBYY. If the XX gamete fused with the mother's Y, the child would be XXY. The genotype XBXCY indicates the mother contributed XB and the father contributed XCY. This requires non-disjunction of the X and Y chromosomes in Meiosis I of the father, leading to a gamete with XY. This gamete then fuses with the mother's XB gamete, resulting in XBXCY. Therefore, non-disjunction occurred in Meiosis I of the father.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 33,
@@ -513,7 +555,8 @@
     "explanation": "The father contributes a Y chromosome. The child has Klinefelter syndrome (XXY) and inherited XBXBY. This means the mother contributed both XA and XB, and the father contributed Y. For the child to have XBXBY, the mother must have produced an egg with both XB and XB. This could only happen if non-disjunction of the X chromosomes occurred during Meiosis II of the mother's oogenesis, where homologous chromosomes separated normally in Meiosis I, but sister chromatids failed to separate in Meiosis II.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 34,
@@ -529,7 +572,8 @@
     "explanation": "In double-stranded DNA, adenine (A) always pairs with thymine (T), and guanine (G) always pairs with cytosine (C). This is known as Chargaff's rules. Therefore, if adenine makes up 30% of the genome, thymine must also make up 30%. The remaining 40% must be composed of guanine and cytosine. Since guanine and cytosine also pair, they must be present in equal amounts, meaning guanine makes up 20% of the genome.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 35,
@@ -545,7 +589,8 @@
     "explanation": "Both RNA and DNA utilize a phosphate group in their nucleotide structure. RNA differs from DNA in its sugar (ribose vs. deoxyribose), bases (uracil vs. thymine), and typically exists as a single strand, making it less stable than the double-stranded DNA.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 36,
@@ -561,7 +606,8 @@
     "explanation": "The bottom strand of DNA, when read in the 5' to 3' direction, is the template strand for transcription. It is also referred to as the antisense strand because it is complementary to the mRNA sequence (which is similar to the coding strand). The coding strand is the one that resembles the mRNA sequence.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "E"
+    "gemini_answer": "E",
+    "contextMissing": false
   },
   {
     "number": 37,
@@ -577,7 +623,9 @@
     "explanation": "The provided DNA sequence has 3 codons (9 bases). Each codon typically codes for one amino acid. However, translation starts at the start codon (AUG) and ends at a stop codon. Assuming the first three codons are translated and there's a stop codon after, we'd have 3 amino acids. If the question implies the entire transcript is translated into 3 codons, then 3 amino acids would be produced. The provided answer suggests 9 bases result in 9 amino acids, which is incorrect as codons are triplets.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References a DNA transcript that is not provided."
   },
   {
     "number": 38,
@@ -593,7 +641,8 @@
     "explanation": "RNA polymerase reads the template DNA strand in the 3' to 5' direction to synthesize mRNA in the 5' to 3' direction. Therefore, it moves from left to right across the DNA sequence if the template strand is oriented 3' to 5' from left to right.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 39,
@@ -609,7 +658,8 @@
     "explanation": "mRNA codons are read in the 5' to 3' direction. The codon is given as 3' ACU 5'. Reversing this to the standard 5' to 3' direction gives 5' UCA 3'. Looking up UCA on a codon chart, it codes for Serine (Ser).",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "E"
+    "gemini_answer": "E",
+    "contextMissing": false
   },
   {
     "number": 40,
@@ -625,7 +675,9 @@
     "explanation": "Inserting a base pair shifts the reading frame for all subsequent codons, causing a frameshift mutation. This can lead to a premature stop codon (nonsense mutation) or a completely different amino acid sequence. A silent mutation occurs when a base change results in the same amino acid, which is not directly caused by an insertion that shifts the frame.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": true,
+    "contextReason": "References a DNA sequence that is not provided."
   },
   {
     "number": 41,
@@ -641,7 +693,9 @@
     "explanation": "A substitution of a single base pair that changes one amino acid to another is a missense mutation.  The provided example shows a T being replaced by a C at the ninth base pair. This change in the DNA sequence will likely alter the mRNA codon and thus the amino acid incorporated into the protein.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": true,
+    "contextReason": "References a DNA sequence shown below (bolded red at the ninth base pair; T>C substitution) which is not provided."
   },
   {
     "number": 42,
@@ -657,7 +711,8 @@
     "explanation": "The promoter is a region of DNA located upstream of a gene that serves as the binding site for RNA polymerase. This binding is essential for initiating transcription, the process of synthesizing RNA from a DNA template.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 43,
@@ -673,7 +728,8 @@
     "explanation": "In bacteria, translation initiation relies on the Shine-Dalgarno sequence, a purine-rich region on the mRNA that binds to the 16S rRNA of the small ribosomal subunit. This interaction positions the ribosome correctly to begin protein synthesis.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 44,
@@ -689,7 +745,9 @@
     "explanation": "When mRNA hybridizes with denatured DNA, introns are displaced as R-loops, while exons form double-stranded regions with the mRNA. Three R-loops indicate three introns, and four double-stranded regions indicate four exons. Therefore, the gene has three introns and four exons.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": true,
+    "contextReason": "References an image to the right showing a hybridization structure which is not provided."
   },
   {
     "number": 45,
@@ -705,7 +763,9 @@
     "explanation": "Group II intron self-splicing begins with a nucleophilic attack by a 2'-OH group of a branch point adenosine (A) on the 5' splice site, forming a lariat intermediate (B). This is followed by a second attack by the 3'-OH of the upstream exon on the 3' splice site, releasing the intron and ligating the exons (C).",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": true,
+    "contextReason": "References an image below showing self-splicing procedure which is not provided."
   },
   {
     "number": 46,
@@ -715,7 +775,8 @@
     "explanation": "Bacteria are prokaryotes and do not possess a membrane-bound nucleus. Therefore, their genetic material is in the cytoplasm, and transcription and translation occur simultaneously. This coupling is a significant evolutionary advantage, allowing for rapid adaptation to changing environments. The absence of a nucleus also means there's no need for mRNA export, simplifying the gene expression process.",
     "source": "Designer Genes C",
     "type": "Free Response",
-    "gemini_answer": "No, bacteria do not export their mRNA from a nucleus because they lack a nucleus. This allows for coupled transcription and translation, enabling a faster response to environmental changes and efficient gene expression without the added complexity of nuclear export."
+    "gemini_answer": "No, bacteria do not export their mRNA from a nucleus because they lack a nucleus. This allows for coupled transcription and translation, enabling a faster response to environmental changes and efficient gene expression without the added complexity of nuclear export.",
+    "contextMissing": false
   },
   {
     "number": 47,
@@ -731,7 +792,8 @@
     "explanation": "Sanger sequencing uses a single primer to initiate DNA synthesis. PCR, on the other hand, requires two primers (forward and reverse) to flank the target region for amplification. While both use polymerases and involve annealing, the primer requirement is a key distinction.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 48,
@@ -747,7 +809,9 @@
     "explanation": "Mixed peaks in a Sanger chromatogram indicate the presence of more than one DNA sequence at that position. This is most commonly due to heterozygosity, where an individual has two different alleles at a particular locus, leading to two different DNA sequences being present in the sample.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": true,
+    "contextReason": "References a Sanger chromatogram figure which is provided but not included in the text."
   },
   {
     "number": 49,
@@ -763,7 +827,8 @@
     "explanation": "The faint shorter band appearing at a lower annealing temperature and disappearing at a higher temperature suggests it was due to non-specific binding of the primer to unintended sites on the template DNA. Higher annealing temperatures increase primer stringency, preventing such off-target priming.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 50,
@@ -779,7 +844,8 @@
     "explanation": "To test for decreased gene expression, you need to reduce the amount of mRNA or its translation without completely eliminating the gene product. Partial CRISPR interference (CRISPRi) specifically targets the promoter region to block transcription, effectively reducing gene expression without creating a knockout.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 51,
@@ -794,7 +860,9 @@
     "explanation": "With 500,000 total reads, and the provided sample showing a clear majority (60%) with the 'A' allele at position 15, this suggests a consistent mutation rather than random sequencing errors. Random errors are typically distributed more evenly.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References five reads provided and alignments given which are not included in the text."
   },
   {
     "number": 52,
@@ -804,7 +872,9 @@
     "explanation": "The proportion of reads supporting the 'A' allele (60%) significantly outweighs the proportion supporting the 'G' allele (40%). This consistent pattern suggests a genuine genetic variation rather than random sequencing noise, which would typically show a more uniform distribution of mismatches.",
     "source": "Designer Genes C",
     "type": "Free Response",
-    "gemini_answer": "A consistent majority (60%) of aligned reads contain 'A' at position 15, while 40% contain 'G'. This consistent majority indicates a true variant rather than random error, as random errors would likely be more evenly distributed across all reads."
+    "gemini_answer": "A consistent majority (60%) of aligned reads contain 'A' at position 15, while 40% contain 'G'. This consistent majority indicates a true variant rather than random error, as random errors would likely be more evenly distributed across all reads.",
+    "contextMissing": true,
+    "contextReason": "References proportions from the previous question which are not provided."
   },
   {
     "number": 53,
@@ -814,7 +884,9 @@
     "explanation": "Dashes in sequence alignments represent positions where a nucleotide is present in one sequence but absent in the other. In the context of comparing reads to a reference, these dashes signify insertions (in the read compared to the reference) or deletions (in the read compared to the reference).",
     "source": "Designer Genes C",
     "type": "Free Response",
-    "gemini_answer": "The internal gaps (dashes) indicate insertions or deletions (indels) relative to the reference sequence."
+    "gemini_answer": "The internal gaps (dashes) indicate insertions or deletions (indels) relative to the reference sequence.",
+    "contextMissing": true,
+    "contextReason": "References 'the reads and reference' which are not provided."
   },
   {
     "number": 54,
@@ -824,7 +896,9 @@
     "explanation": "Fragment A, cut with BamHI and HindIII, provides directional cloning and compatible sticky ends for ligation into a similarly digested plasmid. Fragment B's enzymes would lead to incorrect gene orientation. Fragment C's blunt ends result in poor ligation efficiency.",
     "source": "Designer Genes C",
     "type": "Free Response",
-    "gemini_answer": "Fragment A is digested by BamHI and HindIII. It is the best choice because it correctly orients Gene X relative to the promoter and its overhangs are compatible with the plasmid for efficient ligation. Fragment B (HindIII and EcoRI) would orient the gene incorrectly. Fragment C (PvuII and SmaI) produces blunt ends, leading to less efficient or no insertion."
+    "gemini_answer": "Fragment A is digested by BamHI and HindIII. It is the best choice because it correctly orients Gene X relative to the promoter and its overhangs are compatible with the plasmid for efficient ligation. Fragment B (HindIII and EcoRI) would orient the gene incorrectly. Fragment C (PvuII and SmaI) produces blunt ends, leading to less efficient or no insertion.",
+    "contextMissing": true,
+    "contextReason": "References three candidate DNA fragments (A-C) and a plasmid which are not provided."
   },
   {
     "number": 55,
@@ -834,7 +908,9 @@
     "explanation": "DNA's negative charge drives it towards the positive electrode, while its size dictates migration speed (smaller moves faster). Fragment D is the insert and Fragment E is the plasmid backbone, both essential and correctly sized for ligation after digestion.",
     "source": "Designer Genes C",
     "type": "Free Response",
-    "gemini_answer": "DNA movement in agarose gel is determined by its negative charge (due to phosphate backbone) and its size; smaller fragments move faster. We should excise and purify Fragment D (the cut insert) and Fragment E (the plasmid backbone) because these represent the correctly digested DNA molecules needed for ligation."
+    "gemini_answer": "DNA movement in agarose gel is determined by its negative charge (due to phosphate backbone) and its size; smaller fragments move faster. We should excise and purify Fragment D (the cut insert) and Fragment E (the plasmid backbone) because these represent the correctly digested DNA molecules needed for ligation.",
+    "contextMissing": true,
+    "contextReason": "References a gel electrophoresis visualization of bands which is not provided."
   },
   {
     "number": 56,
@@ -844,7 +920,9 @@
     "explanation": "This procedure is called blue-white colony screening. It's used to identify bacterial colonies that have successfully taken up a recombinant plasmid. LB is the growth medium. Ampicillin selects for bacteria that have the plasmid (containing the ampicillin resistance gene). X-gal is a substrate that turns blue when cleaved by the enzyme beta-galactosidase. IPTG induces the expression of the lac operon, which is necessary for beta-galactosidase production. In this screening, the plasmid is designed so that insertion of foreign DNA disrupts the lacZ gene, preventing beta-galactosidase production and thus resulting in white colonies.",
     "source": "Designer Genes C",
     "type": "Free Response",
-    "gemini_answer": "Blue-white colony screening"
+    "gemini_answer": "Blue-white colony screening",
+    "contextMissing": true,
+    "contextReason": "References 'this procedure' and 'our plasmid' which are not described or provided."
   },
   {
     "number": 57,
@@ -853,7 +931,9 @@
     "answer": "Blue colonies indicate successful uptake of an (ampR) plasmid working lacZ [+0.5]\nWhite colonies indicate successful uptake of an (ampR) plasmid without lacZ [+0.5]\nTransformation was successful in allowing growth compared to the control [+1.5]\nOur cloning successfully interrupted LacZ gene [+0.75], but we do not know how well we inserted the DNA fragment into the plasmid. [+0.75]\nViable explanation to validate our results [+1]\nPCR and Gel electrophoresis to confirm size of the plasmid\nDNA sequencing\nAny other reasonable answer",
     "source": "Designer Genes C",
     "type": "Free Response",
-    "gemini_answer": "Blue colonies indicate successful uptake of a plasmid with an intact lacZ gene, while white colonies indicate successful uptake of a plasmid where the lacZ gene has been disrupted by an insert. Blue colonies suggest the plasmid was taken up but no foreign DNA was successfully cloned into the lacZ gene. White colonies suggest the plasmid was taken up and foreign DNA was successfully inserted, disrupting lacZ. Transformation was successful as colonies grew. The cloning successfully interrupted lacZ, but we don't know the size or exact sequence of the inserted DNA. PCR and gel electrophoresis can confirm the size of the inserted fragment, and DNA sequencing can verify the exact sequence and successful ligation."
+    "gemini_answer": "Blue colonies indicate successful uptake of a plasmid with an intact lacZ gene, while white colonies indicate successful uptake of a plasmid where the lacZ gene has been disrupted by an insert. Blue colonies suggest the plasmid was taken up but no foreign DNA was successfully cloned into the lacZ gene. White colonies suggest the plasmid was taken up and foreign DNA was successfully inserted, disrupting lacZ. Transformation was successful as colonies grew. The cloning successfully interrupted lacZ, but we don't know the size or exact sequence of the inserted DNA. PCR and gel electrophoresis can confirm the size of the inserted fragment, and DNA sequencing can verify the exact sequence and successful ligation.",
+    "contextMissing": true,
+    "contextReason": "References 'our transformation and/or plasmid cloning' and 'this screening' which are not described or provided."
   },
   {
     "number": 58,
@@ -868,7 +948,8 @@
     "explanation": "The brown-eyed parent has genotype Bb. The green-eyed parent must have genotype bb (assuming green is recessive and only one allele is needed for expression). A Punnett square shows the possible offspring genotypes: Bb, Bb, bb, bb. Therefore, there is a 2/4 (or 1/2) probability of having a child with green eyes (bb).",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 59,
@@ -883,7 +964,8 @@
     "explanation": "Meiosis is a type of cell division that reduces the number of chromosomes by half, creating four genetically distinct haploid cells (gametes). It involves two rounds of division (Meiosis I and Meiosis II) after a single round of DNA replication. This process is essential for sexual reproduction.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 60,
@@ -898,7 +980,8 @@
     "explanation": "Let 'p' be the frequency of the dominant allele (brown eyes) and 'q' be the frequency of the recessive allele (blue eyes). The genotype frequencies are p^2 (homozygous dominant), 2pq (heterozygous), and q^2 (homozygous recessive). If 140 out of 200 people are homozygous for brown eyes, then p^2 = 140/200 = 0.7. This is incorrect as p^2 cannot be this high if Hardy-Weinberg is met and there are heterozygotes. Let's re-evaluate. If 140 people are homozygous for brown eyes (BB), and the total population is 200, then the frequency of BB is 140/200 = 0.7. This implies p = sqrt(0.7) which is approximately 0.837. Then q = 1 - p = 1 - 0.837 = 0.163. The frequency of blue eyes (bb) is q^2 = (0.163)^2 = 0.0266. The number of people with blue eyes would be 0.0266 * 200 = 5.32. This doesn't match any option. Let's assume the question meant 140 people have brown eyes (either BB or Bb). If 140 people have brown eyes, then 200 - 140 = 60 people have blue eyes (bb). This means q^2 = 60/200 = 0.3. Then q = sqrt(0.3) = 0.547. p = 1 - q = 0.453. p^2 = (0.453)^2 = 0.205. 2pq = 2 * 0.453 * 0.547 = 0.496. Total = 0.205 + 0.496 + 0.3 = 1. This interpretation fits the options better. If 60 people have blue eyes, then option D is correct. The initial interpretation of '140 people are homozygous for brown eyes' leads to a contradiction with Hardy-Weinberg if other genotypes exist. Assuming '140 people have brown eyes' (dominant phenotype) is a more plausible interpretation given the options.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 61,
@@ -913,7 +996,8 @@
     "explanation": "Ethidium bromide is a fluorescent intercalating agent that binds to DNA and emits an orange fluorescence when exposed to UV light, making DNA bands visible after gel electrophoresis.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 62,
@@ -928,7 +1012,8 @@
     "explanation": "Mitosis is a type of cell division that results in two daughter cells each having the same number and kind of chromosomes as the parent nucleus, typical of ordinary tissue growth. These daughter cells are diploid if the parent cell was diploid.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 63,
@@ -943,7 +1028,9 @@
     "explanation": "In a phylogenetic tree, the closest common ancestor is found by tracing back from the two taxa (mabeei and laterale) until their lineages converge. Node 4 represents this convergence point.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": true,
+    "contextReason": "References individuals by number without providing a pedigree."
   },
   {
     "number": 64,
@@ -958,7 +1045,9 @@
     "explanation": "In a phylogenetic tree, organisms that share a more recent common ancestor are more closely related. 'Gracile' shares its most recent common ancestor with 'maculatum' and 'talpoideum' at node 5, making them the most related.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References organisms by name without providing a phylogenetic tree or related context."
   },
   {
     "number": 65,
@@ -973,7 +1062,9 @@
     "explanation": "Speciation events in a phylogenetic tree are represented by the branching points (nodes). Counting all the internal nodes where lineages diverge reveals 19 speciation events.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": true,
+    "contextReason": "References a phylogenetic tree that is not provided."
   },
   {
     "number": 66,
@@ -988,7 +1079,8 @@
     "explanation": "Mitosis is for growth and repair in somatic (body) cells, producing genetically identical diploid cells. Meiosis is for sexual reproduction in germline cells, producing genetically diverse haploid gametes.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 67,
@@ -1003,7 +1095,8 @@
     "explanation": "Incomplete dominance occurs when neither allele is completely dominant, resulting in a heterozygous phenotype that is an intermediate blend of the two homozygous phenotypes. A pink flower from a red and white cross is a classic example.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 68,
@@ -1018,7 +1111,8 @@
     "explanation": "Men have one X and one Y chromosome. X-linked traits are carried on the X chromosome. Since men only have one X, any allele present on it will be expressed, unlike women who have two X chromosomes and may have a dominant allele masking a recessive trait.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 69,
@@ -1033,7 +1127,8 @@
     "explanation": "The Hardy-Weinberg equation is a principle that describes the genetic makeup of a population that is not evolving. It predicts that allele and genotype frequencies will remain constant from generation to generation in the absence of evolutionary influences.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 70,
@@ -1048,7 +1143,8 @@
     "explanation": "Homologous chromosomes are pairs of chromosomes in diploid organisms. One chromosome of each pair is inherited from each parent. They carry the same genes in the same order, but may have different alleles (versions) of those genes.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 71,
@@ -1063,7 +1159,8 @@
     "explanation": "Let B be the allele for brown eyes and b for green eyes. Let H be the allele for brown hair and h for red hair. The parents' genotypes are Bbhh and bbHh. The probability of a child having green eyes (bb) is 1/2 (from Bb x bb). The probability of a child having red hair (hh) is 1/2 (from hh x Hh). The combined probability is (1/2) * (1/2) = 1/4 or 4/16.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 72,
@@ -1078,7 +1175,9 @@
     "explanation": "The pedigree shows affected individuals in every generation (suggesting dominant inheritance) and both males and females are affected equally (suggesting autosomal inheritance). It also shows unaffected parents having affected offspring (which would indicate recessive inheritance if it were the only pattern). However, the pattern of affected individuals skipping generations and affecting males more frequently than females in some instances could also point to X-linked recessive. Given the options, 'Two of the above' is the most encompassing if both autosomal dominant and X-linked recessive patterns are plausible or if there's ambiguity.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 73,
@@ -1092,7 +1191,9 @@
     "explanation": "Individual 4 is affected. If the trait is autosomal dominant, an affected individual must have at least one dominant allele. Since the trait is dominant and individual 3 is unaffected (genotype aa), individual 4 must have inherited the dominant allele from individual 2. Therefore, individual 4's genotype is Aa.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": true,
+    "contextReason": "References an individual by number without providing a pedigree."
   },
   {
     "number": 74,
@@ -1107,7 +1208,8 @@
     "explanation": "Incomplete dominance means that the heterozygous phenotype is a blend of the two homozygous phenotypes. With red (RR) and white (rr) as homozygous phenotypes, a heterozygous genotype (Rr) will result in a pink flower, which is an intermediate color.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 75,
@@ -1122,7 +1224,8 @@
     "explanation": "In Hardy-Weinberg equilibrium, the frequency of allele 'a' (q) is 0.3. The frequency of allele 'A' (p) is 1 - q = 1 - 0.3 = 0.7. The frequency of heterozygotes (2pq) is 2 * 0.7 * 0.3 = 0.42.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 76,
@@ -1137,7 +1240,9 @@
     "explanation": "If individual 12 is AA (homozygous dominant), they will always pass on an 'A' allele. A heterozygous partner (Aa) will pass on 'A' or 'a'. Thus, all offspring will be AA or Aa, and none will have the recessive trait (aa). If individual 12 is Aa, then a cross with Aa yields AA, Aa, and aa. The probability of NOT having the trait (AA or Aa) is 3/4. The question asks for the probability of NOT having the trait. If individual 12 is AA, the probability is 4/4 (or 1). If individual 12 is Aa, the probability is 3/4. The provided answer 'd' is incorrect. Re-evaluating the options, option 'a' states '0/4 if individual 12 is Aa, 2/4 if they are AA'. This is also incorrect. Let's assume the question implies the recessive trait is 'aa'. If individual 12 is AA, and the partner is Aa, offspring genotypes are AA and Aa. None have the recessive trait. Probability of NOT having the trait is 4/4. If individual 12 is Aa, and the partner is Aa, offspring genotypes are AA, Aa, aa. Probability of NOT having the trait (AA or Aa) is 3/4. None of the options perfectly match this. However, if we interpret '2/4' as '2 out of 4 possible combinations' and '4/4' as 'all 4 possible combinations', and if the question is asking for the probability of NOT having the trait, and the provided answer is 'd', let's re-examine. If individual 12 is AA, and partner is Aa, offspring are AA, Aa. All do not have the trait (4/4). If individual 12 is Aa, and partner is Aa, offspring are AA, Aa, aa. Those not having the trait are AA, Aa (3/4). The provided answer 'd' is '2/4 if individual 12 is Aa, 4/4 if they are AA'. This implies a specific interpretation of the pedigree or trait that is not fully provided. Assuming the provided answer 'd' is correct, it suggests a scenario where if individual 12 is Aa, the probability of not having the trait is 2/4, and if AA, it's 4/4. This is inconsistent with standard Mendelian inheritance for a simple dominant/recessive trait. Given the constraint to provide the answer based on the provided answer, and acknowledging the discrepancy, I will select 'd' as per the prompt's instruction to use the provided answer. However, based on standard genetics, this is problematic.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References an individual by number without providing a pedigree."
   },
   {
     "number": 77,
@@ -1152,7 +1257,9 @@
     "explanation": "In a pedigree chart, a shaded symbol (square for male, circle for female) indicates that the individual expresses the trait being studied. Unshaded symbols represent individuals who do not express the trait.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 78,
@@ -1167,7 +1274,8 @@
     "explanation": "Gregor Mendel, the father of modern genetics, conducted his foundational experiments on inheritance patterns using pea plants (Pisum sativum). Their easily observable traits and rapid life cycle made them ideal for his studies.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 79,
@@ -1182,7 +1290,8 @@
     "explanation": "Euchromatin is loosely packed DNA that is transcriptionally active. Histone acetylation generally promotes euchromatin formation, making DNA accessible for transcription. Histone methylation can lead to either activation or repression depending on the specific residue and context, but it's not the primary mechanism for converting heterochromatin to euchromatin in the same way acetylation is. Therefore, the statement that DNA can be converted to euchromatin through histone methylation as a general rule is incorrect.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 80,
@@ -1197,7 +1306,9 @@
     "explanation": "The provided answer indicates an abnormality on Chromosome 21. This is famously associated with Down syndrome, a genetic disorder caused by trisomy 21 (an extra copy of chromosome 21).",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": true,
+    "contextReason": "References a set of chromosomes or a karyotype that is not provided."
   },
   {
     "number": 81,
@@ -1212,7 +1323,9 @@
     "explanation": "Nondisjunction is the failure of homologous chromosomes or sister chromatids to separate properly during meiosis or mitosis. This leads to aneuploidy, such as having an extra chromosome (trisomy) or missing a chromosome (monosomy), which is the cause of abnormalities like Down syndrome.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": true,
+    "contextReason": "References an unspecified 'abnormality' which likely refers to a diagram or description not provided."
   },
   {
     "number": 82,
@@ -1227,7 +1340,9 @@
     "explanation": "Down syndrome is a genetic disorder caused by trisomy 21, meaning an individual has three copies of chromosome 21 instead of the usual two. This is a direct result of nondisjunction during gamete formation.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": true,
+    "contextReason": "References an unspecified 'abnormality' which likely refers to a diagram or description not provided."
   },
   {
     "number": 83,
@@ -1242,7 +1357,8 @@
     "explanation": "The founder effect occurs when a new population is established by a small number of individuals from a larger population. This small founding group may not carry all the alleles present in the original population, leading to reduced genetic diversity in the new population.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 84,
@@ -1257,7 +1373,8 @@
     "explanation": "If 36/100 chinchillas have white fur (recessive phenotype), then the frequency of the recessive allele (q) is sqrt(0.36) = 0.6. The frequency of the dominant allele (p) is 1 - q = 1 - 0.6 = 0.4. The frequency of heterozygotes (2pq) is 2 * 0.4 * 0.6 = 0.48, or 48/100, which is closest to 46/100.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 85,
@@ -1267,7 +1384,8 @@
     "explanation": "These five conditions are the fundamental requirements for a population to be in Hardy-Weinberg equilibrium, meaning allele and genotype frequencies remain constant from generation to generation. Any deviation from these conditions will lead to evolutionary change.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "No mutation, Random mating, No natural selection, No genetic drift (large population size), No gene flow (no migration)"
+    "gemini_answer": "No mutation, Random mating, No natural selection, No genetic drift (large population size), No gene flow (no migration)",
+    "contextMissing": false
   },
   {
     "number": 86,
@@ -1277,7 +1395,8 @@
     "explanation": "Epistasis describes a gene interaction where one gene masks the expression of another gene at a different locus. The gene that does the masking is called epistatic, and the gene whose expression is masked is called hypostatic. This is a key concept in understanding complex inheritance patterns beyond simple Mendelian ratios.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "Epistatic genes are genes that mask or modify the phenotypic expression of other, non-allelic genes. One gene's alleles can override the expression of alleles at a different gene locus."
+    "gemini_answer": "Epistatic genes are genes that mask or modify the phenotypic expression of other, non-allelic genes. One gene's alleles can override the expression of alleles at a different gene locus.",
+    "contextMissing": false
   },
   {
     "number": 87,
@@ -1287,7 +1406,8 @@
     "explanation": "For a yellow puppy (bb ee), both the B/b and E/e genes must be homozygous recessive. The cross BbEe x bbEe yields offspring with the following probabilities for each gene: B_ = 1/2, bb = 1/2, E_ = 1/2, ee = 1/2. The probability of bb and ee is (1/2) * (1/2) = 1/4.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "1/4"
+    "gemini_answer": "1/4",
+    "contextMissing": false
   },
   {
     "number": 88,
@@ -1297,7 +1417,8 @@
     "explanation": "Brown labs have the genotype bbE_ (bbEE or bbEe). From the cross BbEe x bbEe, the probability of bb is 1/2. The probability of E_ (EE or Ee) is 3/4. Therefore, the probability of bbE_ is (1/2) * (3/4) = 3/8.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "3/8"
+    "gemini_answer": "3/8",
+    "contextMissing": false
   },
   {
     "number": 89,
@@ -1307,7 +1428,9 @@
     "explanation": "This question requires matching transcription-related terms to their definitions. The provided answer correctly pairs each term with its corresponding function or description, covering aspects like initiation, elongation, termination, and the roles of different molecules involved in the process.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "1-c, 2-h, 3-f, 4-b, 5-g, 6-e, 7-d, 8-a"
+    "gemini_answer": "1-c, 2-h, 3-f, 4-b, 5-g, 6-e, 7-d, 8-a",
+    "contextMissing": true,
+    "contextReason": "References a list of terms (1-8) that are not provided."
   },
   {
     "number": 90,
@@ -1317,7 +1440,8 @@
     "explanation": "Termination of transcription is a crucial step. Rho-dependent termination relies on the Rho protein to actively dislodge RNA polymerase. Rho-independent termination is intrinsic to the DNA sequence, forming a stable hairpin structure that disrupts the transcription complex.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "Rho-dependent termination involves a Rho protein binding to the nascent mRNA and moving towards the polymerase, causing dissociation. Rho-independent termination occurs when the transcribed DNA sequence forms a hairpin loop in the mRNA, followed by a string of uracils, destabilizing the polymerase-DNA-RNA complex."
+    "gemini_answer": "Rho-dependent termination involves a Rho protein binding to the nascent mRNA and moving towards the polymerase, causing dissociation. Rho-independent termination occurs when the transcribed DNA sequence forms a hairpin loop in the mRNA, followed by a string of uracils, destabilizing the polymerase-DNA-RNA complex.",
+    "contextMissing": false
   },
   {
     "number": 91,
@@ -1327,7 +1451,9 @@
     "explanation": "As a text-based AI, I cannot create visual diagrams. Meiosis I includes Prophase I, Metaphase I, Anaphase I, and Telophase I. Meiosis II includes Prophase II, Metaphase II, Anaphase II, and Telophase II. Each phase involves specific chromosome movements and arrangements.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "Diagram not possible in this format."
+    "gemini_answer": "Diagram not possible in this format.",
+    "contextMissing": true,
+    "contextReason": "Requires drawing a diagram."
   },
   {
     "number": 92,
@@ -1337,7 +1463,9 @@
     "explanation": "Crossing over, the exchange of genetic material between homologous chromosomes, occurs during Prophase I of meiosis. This is a crucial event for generating genetic diversity.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "PROPHASE 1"
+    "gemini_answer": "PROPHASE 1",
+    "contextMissing": true,
+    "contextReason": "Requires drawing a diagram and indicating a phase on it."
   },
   {
     "number": 93,
@@ -1347,7 +1475,8 @@
     "explanation": "This answer details the throughput and typical applications of each platform and concisely explains the fundamental sequencing-by-synthesis process common to them.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "Illumina platforms (MiSeq, NextSeq, NovaSeq) offer scalable throughput for various genomic applications. MiSeq is for low-throughput needs like small genomes or targeted panels. NextSeq provides mid-range throughput for exomes or RNA-seq. NovaSeq delivers ultra-high throughput for large-scale whole-genome sequencing. All share a core workflow: DNA fragmentation and adapter ligation, cluster formation via bridge amplification on a flow cell, and cyclic sequencing using fluorescently labeled nucleotides and reversible terminators."
+    "gemini_answer": "Illumina platforms (MiSeq, NextSeq, NovaSeq) offer scalable throughput for various genomic applications. MiSeq is for low-throughput needs like small genomes or targeted panels. NextSeq provides mid-range throughput for exomes or RNA-seq. NovaSeq delivers ultra-high throughput for large-scale whole-genome sequencing. All share a core workflow: DNA fragmentation and adapter ligation, cluster formation via bridge amplification on a flow cell, and cyclic sequencing using fluorescently labeled nucleotides and reversible terminators.",
+    "contextMissing": false
   },
   {
     "number": 94,
@@ -1357,7 +1486,8 @@
     "explanation": "This answer accurately describes the key steps of the Illumina sequencing-by-synthesis workflow, from sample preparation to the cyclic addition and detection of nucleotides.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "DNA is fragmented and ligated to adapters. These fragments bind to a flow cell and undergo bridge amplification to form dense clusters of identical DNA copies. Sequencing proceeds cyclically, adding one fluorescently labeled nucleotide at a time, which is then detected before being cleaved."
+    "gemini_answer": "DNA is fragmented and ligated to adapters. These fragments bind to a flow cell and undergo bridge amplification to form dense clusters of identical DNA copies. Sequencing proceeds cyclically, adding one fluorescently labeled nucleotide at a time, which is then detected before being cleaved.",
+    "contextMissing": false
   },
   {
     "number": 95,
@@ -1367,7 +1497,8 @@
     "explanation": "This answer directly addresses all three parts of the question, clearly differentiating the mechanisms, data characteristics, and optimal applications of Illumina and Oxford Nanopore sequencing technologies.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "(i) Illumina performs sequencing-by-synthesis using fluorescently labeled nucleotides and reversible terminators on amplified DNA clusters. Oxford Nanopore sequences by passing single DNA molecules through a protein nanopore, measuring changes in electrical current as bases pass. (ii) Illumina produces short reads (75-300 bp) with very high accuracy (>99.9%). Nanopore produces ultra-long reads (10 kb-100 kb+, some >1 Mb) with lower raw accuracy (90-98%). (iii) Illumina is best for accurate variant calling (SNPs, small indels), RNA-seq, and targeted sequencing. Nanopore excels at de novo genome assembly, structural variant detection, full-length transcript sequencing, and rapid field sequencing."
+    "gemini_answer": "(i) Illumina performs sequencing-by-synthesis using fluorescently labeled nucleotides and reversible terminators on amplified DNA clusters. Oxford Nanopore sequences by passing single DNA molecules through a protein nanopore, measuring changes in electrical current as bases pass. (ii) Illumina produces short reads (75-300 bp) with very high accuracy (>99.9%). Nanopore produces ultra-long reads (10 kb-100 kb+, some >1 Mb) with lower raw accuracy (90-98%). (iii) Illumina is best for accurate variant calling (SNPs, small indels), RNA-seq, and targeted sequencing. Nanopore excels at de novo genome assembly, structural variant detection, full-length transcript sequencing, and rapid field sequencing.",
+    "contextMissing": false
   },
   {
     "number": 96,
@@ -1377,7 +1508,8 @@
     "explanation": "Oxford Nanopore's long-read sequencing technology is superior for assembling highly repetitive plant genomes. Its ability to generate reads of tens or hundreds of kilobases allows for the accurate spanning of long repeat elements, which are problematic for short-read technologies like Illumina. This leads to more contiguous and complete genome assemblies.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "Oxford Nanopore"
+    "gemini_answer": "Oxford Nanopore",
+    "contextMissing": false
   },
   {
     "number": 97,
@@ -1387,7 +1519,9 @@
     "explanation": "Assuming 'B' represents the dominant allele for brown hair and 'b' represents the recessive allele for blond hair, and observing that individual 5V has brown hair (dominant phenotype) but has a child with a blond-haired person (bb) who has blond hair, individual 5V must carry the recessive allele. Therefore, their genotype is heterozygous, Bb.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "Bb"
+    "gemini_answer": "Bb",
+    "contextMissing": true,
+    "contextReason": "References 'individual 5V' which implies a pedigree or diagram is missing."
   },
   {
     "number": 98,
@@ -1397,7 +1531,9 @@
     "explanation": "Individual 4V has brown hair, meaning they possess at least one dominant allele 'B'. However, without further information about their parents or offspring, they could be homozygous dominant (BB) or heterozygous (Bb). Both genotypes would result in the brown hair phenotype.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "BB or Bb"
+    "gemini_answer": "BB or Bb",
+    "contextMissing": true,
+    "contextReason": "References 'individual 4V' which implies a pedigree or diagram is missing."
   },
   {
     "number": 99,
@@ -1407,7 +1543,9 @@
     "explanation": "Individual 5V has genotype Bb. A brown-haired person could have genotype BB or Bb. If they have a child with a BB genotype, all offspring will inherit at least one B allele, making a homozygous recessive (bb) child impossible. If they have a child with a Bb genotype, there is a 50% chance of Bb and 50% chance of bb. However, the question asks for the probability of a homozygous recessive child with *a* brown-haired person, implying any brown-haired person. To guarantee 0% chance, we consider the scenario where the brown-haired person is BB.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "0% chance"
+    "gemini_answer": "0% chance",
+    "contextMissing": true,
+    "contextReason": "References 'individual 5V' which implies a pedigree or diagram is missing."
   },
   {
     "number": 100,
@@ -1417,7 +1555,9 @@
     "explanation": "Individual 5V has genotype Bb (blond hair) and pp (widow's peak). The blond-haired person has genotype Pp (brown hair) and pp (widow's peak).  The Punnett square for hair color (Bb x Pp) yields BB, Bb, Bb, bb. The Punnett square for widow's peak (pp x pp) yields pp, pp, pp, pp.  To have blond hair (bb) and a widow's peak (pp), the probability is (1/4 for bb) * (4/4 for pp) = 1/4.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "1/4"
+    "gemini_answer": "1/4",
+    "contextMissing": true,
+    "contextReason": "References a Punnett square that is not provided."
   },
   {
     "number": 101,
@@ -1427,7 +1567,8 @@
     "explanation": "Meiosis I separates homologous chromosomes (Prophase I, Metaphase I, Anaphase I, Telophase I), reducing the chromosome number by half. Meiosis II separates sister chromatids (Prophase II, Metaphase II, Anaphase II, Telophase II), similar to mitosis, resulting in four haploid daughter cells.",
     "source": "Purdue2026",
     "type": "Free Response",
-    "gemini_answer": "Diagram of Meiosis I and II phases (Prophase I, Metaphase I, Anaphase I, Telophase I, Prophase II, Metaphase II, Anaphase II, Telophase II). Each phase shows homologous chromosomes separating in Meiosis I and sister chromatids separating in Meiosis II, with resulting daughter cells."
+    "gemini_answer": "Diagram of Meiosis I and II phases (Prophase I, Metaphase I, Anaphase I, Telophase I, Prophase II, Metaphase II, Anaphase II, Telophase II). Each phase shows homologous chromosomes separating in Meiosis I and sister chromatids separating in Meiosis II, with resulting daughter cells.",
+    "contextMissing": false
   },
   {
     "number": 102,
@@ -1443,7 +1584,8 @@
     "explanation": "The prokaryotic replisome is a complex of enzymes responsible for DNA replication. DNA polymerase III is the main replicative enzyme, primase synthesizes RNA primers, and helicase unwinds the DNA double helix. These are all core components of the replisome.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 103,
@@ -1459,7 +1601,8 @@
     "explanation": "Two dim glowing fish (Bb x Bb) produce offspring with genotypes BB (bright), Bb (dim), and bb (no glow) in a 1:2:1 ratio. The probability of a single offspring having no glow (bb) is 1/4. For 2 out of 4 offspring to have no glow, we use the binomial probability formula: C(4,2) * (1/4)^2 * (3/4)^2 = 6 * (1/16) * (9/16) = 54/256 ≈ 0.21.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "E"
+    "gemini_answer": "E",
+    "contextMissing": false
   },
   {
     "number": 104,
@@ -1474,7 +1617,8 @@
     "explanation": "Mitosis normally produces two diploid daughter cells. If mitosis occurs but cytokinesis (cell division) fails, the cell will retain its duplicated chromosomes, resulting in a single cell with double the normal chromosome number (92 chromosomes) but identical allelic composition to the original cell.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 105,
@@ -1490,7 +1634,8 @@
     "explanation": "Map units represent the percentage of recombination frequency. If genes A and B are 12 map units apart, the recombination frequency is 12%. In a test cross with a heterozygous individual (Ab/aB), the recombinant offspring (Ab and aB) will represent 12% of the total offspring.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 106,
@@ -1505,7 +1650,8 @@
     "explanation": "Okazaki fragments are short segments of DNA synthesized discontinuously on the lagging strand during DNA replication. This is because DNA polymerase can only synthesize DNA in the 5' to 3' direction, and the lagging strand template runs in the opposite direction.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 107,
@@ -1521,7 +1667,8 @@
     "explanation": "In eukaryotes, DNA is packaged into nucleosomes, which are fundamental units of chromatin. Each nucleosome consists of approximately 147 base pairs of DNA wrapped around a histone octamer, a complex of eight histone proteins.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 108,
@@ -1536,7 +1683,8 @@
     "explanation": "A cross between two heterozygous tall plants (Tt x Tt) yields offspring with genotypes TT, Tt, and tt in a 1:2:1 ratio. If an offspring is known to be tall, it can be either TT or Tt. Out of the three possible tall genotypes (TT, Tt, Tt), two are Tt, giving a probability of 2/3.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 109,
@@ -1551,7 +1699,8 @@
     "explanation": "The Shine-Dalgarno sequence is a ribosomal binding site found exclusively in prokaryotic messenger RNA (mRNA). It is crucial for initiating translation by helping the ribosome bind to the mRNA and position itself correctly for protein synthesis.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 110,
@@ -1566,7 +1715,8 @@
     "explanation": "The 'Final Extension' step in PCR is followed by cooling to allow the DNA product to anneal. The next logical step after amplification is to visualize the resulting DNA fragments, which is achieved through gel electrophoresis.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 111,
@@ -1581,7 +1731,8 @@
     "explanation": "Eukaryotic genes contain introns and exons, requiring mRNA splicing to remove introns before translation. Prokaryotic genes lack introns, so their mRNA does not undergo splicing. The other processes listed are fundamental to gene expression in both eukaryotes and prokaryotes.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 112,
@@ -1596,7 +1747,8 @@
     "explanation": "Relative fitness is the reproductive success of an individual compared to the average reproductive success of the population. Ms. Spring had 5 surviving kittens (6 total - 1 deceased). The average litter size for her species is 3 kittens. Therefore, her relative fitness is 5 surviving kittens / 3 average kittens = 1.67, which rounds to 1.6.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 113,
@@ -1612,7 +1764,8 @@
     "explanation": "The trait is rare and appears only in males, suggesting it's likely X-linked recessive. A phenotypically normal female would be a carrier (heterozygous) or not have the allele. If she's a carrier, she has a 50% chance of passing the affected X chromosome to her sons. However, if the trait is *extremely* rare, the probability of her being a carrier is very low, making the chance of an affected son close to 0%.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 114,
@@ -1628,7 +1781,8 @@
     "explanation": "Gene A is epistatic to B, meaning if an individual has the 'aa' genotype, they will be albino regardless of the B/b alleles.  A dihybrid cross of two fully heterozygous parents (AaBb x AaBb) yields a standard 9:3:3:1 genotypic ratio.  However, epistasis modifies this. The 'aa' genotype (which would normally be 3/16 for 'aaB_' and 1/16 for 'aabb') results in albinism.  This combines to 4/16 albino. The remaining 12/16 are pigmented.  Of these, 9/16 are 'A_B_' (black) and 3/16 are 'A_bb' (brown). Thus, the phenotypic ratio is 9 black: 6 brown: 1 albino.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 115,
@@ -1643,7 +1797,9 @@
     "explanation": "Paralogs are genes within the same genome that arose from a gene duplication event. In the provided figure, α-Gene 1 and α-Gene 2 are shown to be derived from a common ancestral gene in species α, indicating they are paralogs. They share a more recent common ancestor compared to genes in species β.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": true,
+    "contextReason": "References a figure that is not provided."
   },
   {
     "number": 116,
@@ -1658,7 +1814,8 @@
     "explanation": "Polyacrylamide gel electrophoresis (PAGE) is the standard technique for separating proteins based on size and charge. The polyacrylamide matrix provides a sieving effect, while the denaturing agents and SDS used in SDS-PAGE ensure separation primarily by molecular weight.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 117,
@@ -1673,7 +1830,8 @@
     "explanation": "Indexes, also known as barcodes, are short DNA sequences added to the ends of DNA fragments during library preparation for next-generation sequencing. This is typically done using PCR. These indexes allow multiple samples to be pooled together and sequenced in a single run, as the sequencer can then identify which reads belong to which original sample.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 118,
@@ -1689,7 +1847,8 @@
     "explanation": "Calico cats are female because the genes for orange and black fur are on the X chromosome. In females, one of the two X chromosomes is randomly inactivated in each cell early in development. This mosaic pattern of X-inactivation leads to patches of fur with different colors.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "E"
+    "gemini_answer": "E",
+    "contextMissing": false
   },
   {
     "number": 119,
@@ -1704,7 +1863,9 @@
     "explanation": "Organism A has the most conserved sequence (sequence 1), suggesting it is the outgroup or diverged earliest. Organisms B and C are more closely related to each other than to A, as they share more similarities in sequences 2 and 3, respectively, compared to sequence 1. Therefore, the most likely arrangement is 1-A, 2-B, 3-C, reflecting increasing divergence from A.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References a figure that is not provided."
   },
   {
     "number": 120,
@@ -1719,7 +1880,8 @@
     "explanation": "Negative selection favors the preservation of existing functional sequences. This means that non-synonymous mutations (dN), which alter amino acids, are generally deleterious and are removed from the population. Synonymous mutations (dS), which do not alter amino acids, are more neutral. Therefore, the rate of non-synonymous mutations will be lower than the rate of synonymous mutations, resulting in a dN/dS ratio less than 1.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 121,
@@ -1729,7 +1891,8 @@
     "explanation": "The provided answer suggests gene interactions. Epistasis describes a situation where one gene masks or modifies the expression of another gene. If Gene B is epistatic to Gene A, it means the alleles of Gene B determine whether the alleles of Gene A are expressed. Similarly, if Gene C is epistatic to Gene B, Gene C controls the expression of Gene B.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 122,
@@ -1739,7 +1902,8 @@
     "explanation": "The description matches Prophase I of meiosis. Homologous chromosomes pair up (synapsis) and exchange segments (crossing over) during this stage. The separation of homologous chromosomes occurs in Anaphase I, and sister chromatids separate in Anaphase II or Anaphase of mitosis.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 123,
@@ -1749,7 +1913,9 @@
     "explanation": "The pattern described, where males are affected more frequently and affected mothers pass the trait to all sons but no daughters, is characteristic of X-linked recessive inheritance. The gene would be located on the X chromosome, and males, having only one X chromosome, would express the trait if they inherit the recessive allele.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 124,
@@ -1759,7 +1925,9 @@
     "explanation": "Family A shows affected individuals in every generation, with unaffected parents having affected offspring, suggesting recessive inheritance. Families B and C also show affected individuals from unaffected parents, consistent with recessive inheritance. The key is that the provided answer suggests different modes for A versus B+C, implying potential genetic heterogeneity or different inheritance patterns within the broader disease.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References pedigrees and a diagram that are not provided."
   },
   {
     "number": 125,
@@ -1769,7 +1937,8 @@
     "explanation": "A phenotypic ratio of 2:1:1:0 from a dihybrid cross of heterozygotes, instead of the expected 9:3:3:1, strongly suggests that genes A and B are linked on the same chromosome. The absence of one phenotypic class (0) and the skewed ratios indicate that certain allele combinations are not being produced or are lethal, which is common with linked genes and recombination.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 126,
@@ -1779,7 +1948,8 @@
     "explanation": "a. Trisomy refers to having three copies of a chromosome, while monosomy refers to having only one copy. b. Nondisjunction is the failure of chromosomes to separate correctly during meiosis. This can happen in anaphase I (homologous chromosomes fail to separate) or anaphase II (sister chromatids fail to separate). c. Both trisomy and monosomy arise from the same fundamental error: nondisjunction. The specific outcome (trisomy or monosomy) depends on which gamete (carrying an extra chromosome or a missing chromosome) is involved in fertilization.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "a. Trisomy 7, Monosomy 7\nb. Nondisjunction, likely occurred during anaphase I or anaphase II of meiosis.\nc. Both conditions result from an error in chromosome segregation during meiosis, specifically nondisjunction, where homologous chromosomes or sister chromatids fail to separate properly."
+    "gemini_answer": "a. Trisomy 7, Monosomy 7\nb. Nondisjunction, likely occurred during anaphase I or anaphase II of meiosis.\nc. Both conditions result from an error in chromosome segregation during meiosis, specifically nondisjunction, where homologous chromosomes or sister chromatids fail to separate properly.",
+    "contextMissing": false
   },
   {
     "number": 127,
@@ -1789,7 +1959,8 @@
     "explanation": "a. The analogy Arthur draws between language and genetics is insightful. In genetics, 'cis' refers to elements on the same DNA molecule (e.g., a promoter and its gene), while 'trans' refers to elements on different molecules (e.g., a transcription factor binding to a promoter). b. This part of the question is likely a multiple-choice or fill-in-the-blank that requires specific genetic context not provided in the prompt. Without the actual options or the context of the question, a definitive answer cannot be given.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "a. Cis-regulatory elements are DNA sequences located on the same DNA molecule that influence the transcription of nearby genes. Trans-regulatory elements are DNA sequences or genes that encode proteins or RNA molecules that can act on DNA sequences located on different DNA molecules to regulate gene expression.\nb. T, B, C, C, T"
+    "gemini_answer": "a. Cis-regulatory elements are DNA sequences located on the same DNA molecule that influence the transcription of nearby genes. Trans-regulatory elements are DNA sequences or genes that encode proteins or RNA molecules that can act on DNA sequences located on different DNA molecules to regulate gene expression.\nb. T, B, C, C, T",
+    "contextMissing": false
   },
   {
     "number": 128,
@@ -1799,7 +1970,8 @@
     "explanation": "DNA Polymerase I has three activities: 5'→3' polymerase activity for synthesis, 5'→3' exonuclease activity to remove RNA primers, and 3'→5' exonuclease activity for proofreading. DNA Polymerase III is the primary replicative polymerase and possesses 3'→5' exonuclease activity for proofreading, but lacks 5'→3' exonuclease activity.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "DNA Pol I: 5' → 3' for RNA primer removal on the lagging strand and 3' → 5' for proofreading.\nDNA Pol III: 3' → 5' for proofreading."
+    "gemini_answer": "DNA Pol I: 5' → 3' for RNA primer removal on the lagging strand and 3' → 5' for proofreading.\nDNA Pol III: 3' → 5' for proofreading.",
+    "contextMissing": false
   },
   {
     "number": 129,
@@ -1809,7 +1981,9 @@
     "explanation": "a. Reading the gel from bottom to top (smallest fragments to largest), the first band corresponds to the first nucleotide. b. The sixth band from the bottom represents the sixth nucleotide. c. Chain-terminating nucleotides used in Sanger sequencing are dideoxynucleotides (ddNTPs). d. The sequence is read from bottom to top, noting the nucleotide at each band's position.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "a. C\nb. T\nc. ddNTPs (dideoxynucleotides)\nd. 5'- CTG TAT CGC AGA TGC AGTG -3'"
+    "gemini_answer": "a. C\nb. T\nc. ddNTPs (dideoxynucleotides)\nd. 5'- CTG TAT CGC AGA TGC AGTG -3'",
+    "contextMissing": true,
+    "contextReason": "References a gel that is not provided."
   },
   {
     "number": 130,
@@ -1819,7 +1993,8 @@
     "explanation": "a. The coding strand has the same sequence as the mRNA (except T instead of U), and transcription occurs by synthesizing an RNA strand complementary to the template strand. b. The mRNA sequence is transcribed from the template strand, with U replacing T. c. The mRNA sequence is then translated into an amino acid sequence using the genetic code, starting from the start codon (AUG).",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "a. Top strand: Template (T), Bottom strand: Coding (C)\nb. 5'- CGA AUG CUC GAU CGC AUC GCA UCG AUC UAA -3'\nc. Met - Leu - Asp - Arg - Ile - Ala - Ser - Ile"
+    "gemini_answer": "a. Top strand: Template (T), Bottom strand: Coding (C)\nb. 5'- CGA AUG CUC GAU CGC AUC GCA UCG AUC UAA -3'\nc. Met - Leu - Asp - Arg - Ile - Ala - Ser - Ile",
+    "contextMissing": false
   },
   {
     "number": 131,
@@ -1829,7 +2004,8 @@
     "explanation": "a. Migration introduces new alleles, characteristic of gene flow. b. The Amish example shows a rare allele becoming common due to isolation and intermarriage, fitting the founders effect. c. A drastic reduction in population size, like a bottleneck, leads to random allele frequency changes. d. Similar to b, a small group establishing a new population leads to the founders effect. e. A population crash (bottleneck) causes random allele loss. f. Another example of a population crash and subsequent random allele frequency shifts.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "a. G\nb. F\nc. B\nd. F\ne. B\nf. B"
+    "gemini_answer": "a. G\nb. F\nc. B\nd. F\ne. B\nf. B",
+    "contextMissing": false
   },
   {
     "number": 132,
@@ -1839,7 +2015,8 @@
     "explanation": "Prokaryotic DNA is typically double-stranded and circular, located in the nucleoid region. Eukaryotic DNA is double-stranded and linear, found within the nucleus. Plasmids are extrachromosomal DNA found in prokaryotes, not typically in eukaryotes.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "a) double, b) circular, c) nucleoid, d) double, e) linear, f) nucleus, g) plasmids"
+    "gemini_answer": "a) double, b) circular, c) nucleoid, d) double, e) linear, f) nucleus, g) plasmids",
+    "contextMissing": false
   },
   {
     "number": 133,
@@ -1849,7 +2026,9 @@
     "explanation": "a. To linearize the plasmid for insertion, a restriction enzyme that cuts at a unique site is needed. Nhel is a common choice for this purpose. b. If the gene of interest is inserted into the Agel site within the lacZ gene, it will disrupt lacZ function. This means X-gal won't be digested, resulting in white colonies. The ampicillin resistance allows selection for transformed cells.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "a. Nhel\nb. Agel, White"
+    "gemini_answer": "a. Nhel\nb. Agel, White",
+    "contextMissing": true,
+    "contextReason": "References a plasmid diagram that is not provided."
   },
   {
     "number": 134,
@@ -1865,7 +2044,8 @@
     "explanation": "Nucleosomes are the fundamental units of DNA packaging in eukaryotes. They consist of approximately 147 base pairs of DNA that are wrapped around a histone octamer, which is composed of two copies each of histones H2A, H2B, H3, and H4.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 135,
@@ -1881,7 +2061,8 @@
     "explanation": "The cross is AaBb x AaBb. Gene A is epistatic to B, meaning if an individual is 'aa', they will be albino regardless of the B/b genotype. The genotypic ratio for AaBb x AaBb is 9 A_B_ : 3 A_bb : 3 aaB_ : 1 aabb. Applying epistasis: A_B_ (9) will be black. A_bb (3) will be brown. aaB_ (3) and aabb (1) will both be albino (4 total). Thus, the phenotypic ratio is 9 black : 3 brown : 4 albino.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 136,
@@ -1896,7 +2077,9 @@
     "explanation": "Paralogs are genes that arise from gene duplication. In the provided figure, α-Gene 2 and α-Gene 1 are located on the same chromosome (indicated by the same Greek letter prefix) and are likely the result of a duplication event within the alpha gene family, making them paralogs.",
     "source": "DubSO 2025",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": true,
+    "contextReason": "References a figure that is not provided."
   },
   {
     "number": 137,
@@ -1906,7 +2089,8 @@
     "explanation": "In genetics, 'cis' refers to regulatory elements located on the same DNA molecule as the gene they regulate. 'Trans' refers to regulatory molecules (like transcription factors) encoded by genes on different DNA molecules that bind to cis-acting elements. The second part likely refers to specific genetic elements or interactions not fully provided.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "a. Cis - DNA sequences on the same DNA molecule that is being regulated\nTrans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T"
+    "gemini_answer": "a. Cis - DNA sequences on the same DNA molecule that is being regulated\nTrans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T",
+    "contextMissing": false
   },
   {
     "number": 138,
@@ -1916,7 +2100,8 @@
     "explanation": "Prokaryotic DNA is typically double-stranded and circular, residing in the nucleoid region. Eukaryotic DNA is double-stranded and linear, organized into chromosomes within the nucleus, with the nucleolus involved in ribosome synthesis. Plasmids are extrachromosomal DNA found in prokaryotes.",
     "source": "DubSO 2025",
     "type": "Free Response",
-    "gemini_answer": "a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) nucleolus, h) plasmids"
+    "gemini_answer": "a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) nucleolus, h) plasmids",
+    "contextMissing": false
   },
   {
     "number": 139,
@@ -1926,7 +2111,8 @@
     "explanation": "This answer implies a scenario with two genes controlling coat color, where one gene (e.g., for pigment production) is epistatic to another (e.g., for pigment deposition). The 9:3:3:1 ratio is modified, suggesting a recessive epistasis or similar interaction, leading to the observed probabilities for golden, chocolate, and black coats.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "Golden: 0/16, Chocolate: 9/16, Black: 7/16"
+    "gemini_answer": "Golden: 0/16, Chocolate: 9/16, Black: 7/16",
+    "contextMissing": false
   },
   {
     "number": 140,
@@ -1936,7 +2122,8 @@
     "explanation": "Epistasis is a form of gene interaction where one gene masks or modifies the expression of another gene at a different locus. The provided answer directly names this phenomenon, which is consistent with the complex inheritance patterns that deviate from simple Mendelian ratios, as suggested by the previous question's answer.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "Epistasis"
+    "gemini_answer": "Epistasis",
+    "contextMissing": false
   },
   {
     "number": 141,
@@ -1946,7 +2133,8 @@
     "explanation": "For MC1R, if the black lab were homozygous recessive (ee), all offspring would be golden. Since some are golden, the black lab must carry at least one dominant E allele, making it heterozygous (Ee). For TYR1, the black lab's genotype (BB or Bb) cannot be determined from the offspring's phenotypes alone, as both genotypes can produce black pigment.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "MC1R: HETEROZYGOUS. TYR1: UNABLE TO TELL."
+    "gemini_answer": "MC1R: HETEROZYGOUS. TYR1: UNABLE TO TELL.",
+    "contextMissing": false
   },
   {
     "number": 142,
@@ -1956,7 +2144,9 @@
     "explanation": "With genetic redundancy, if either TYR1 (B_) or MC1R (E_) is dominant, the dog will be black. Only if both are recessive (bb ee) will the dog be golden. This results in a 15:1 ratio of black to golden. Chocolate is not possible in this scenario as it requires a specific interaction that is bypassed by redundancy.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "15:1:0"
+    "gemini_answer": "15:1:0",
+    "contextMissing": true,
+    "contextReason": "References a prior question (question 2) for context."
   },
   {
     "number": 143,
@@ -1966,7 +2156,8 @@
     "explanation": "The tyrosinase inhibitor blocks TYR1, preventing the production of pigment. However, the MC1R gene (Ee) is still functional and can produce eumelanin. Since the dog has at least one dominant B allele for TYR1, it can deposit this eumelanin, resulting in a black phenotype.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "Black"
+    "gemini_answer": "Black",
+    "contextMissing": false
   },
   {
     "number": 144,
@@ -1976,7 +2167,9 @@
     "explanation": "The Marquette retriever's unique coat pattern, with distinct black and yellow patches, suggests a sex-linked trait. If one of the orthologs is on the X chromosome, it can lead to different expression patterns in males and females due to X-inactivation or differential gene dosage, explaining the observed phenotype.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "The X chromosome"
+    "gemini_answer": "The X chromosome",
+    "contextMissing": true,
+    "contextReason": "References a prior discovery that is not provided."
   },
   {
     "number": 145,
@@ -1986,7 +2179,8 @@
     "explanation": "The black and yellow stripes indicate mosaic expression of pigment genes. This pattern is characteristic of X-inactivation, where one of the X chromosomes is randomly inactivated in each cell. If MC1R is on the X chromosome and the female is heterozygous (Ee), this random inactivation can lead to patches of black and yellow pigment.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "MC1R"
+    "gemini_answer": "MC1R",
+    "contextMissing": false
   },
   {
     "number": 146,
@@ -1996,7 +2190,8 @@
     "explanation": "For a male dog (XY), if a gene is X-linked, it will have only one allele on its X chromosome. Therefore, its genotype will be either XbY (if the allele is recessive 'b') or XBY (if the allele is dominant 'B'). The phenotype is directly determined by this single allele.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "XbY or XBY"
+    "gemini_answer": "XbY or XBY",
+    "contextMissing": false
   },
   {
     "number": 147,
@@ -2006,7 +2201,9 @@
     "explanation": "No, the result would likely differ. If the tyrosinase gene (TYR1 or MC1R) is X-linked, males (XY) have only one copy, while females (XX) have two. This difference in gene dosage and allele expression would lead to different responses to the inhibitor between sexes.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "No"
+    "gemini_answer": "No",
+    "contextMissing": true,
+    "contextReason": "References a prior question (question 5) for context."
   },
   {
     "number": 148,
@@ -2021,7 +2218,8 @@
     "explanation": "To sequence viral RNA, you first need to convert it to cDNA using reverse transcriptase (RT). Then, you can amplify and sequence the cDNA. RT-PCR is used for the initial conversion and amplification, and Illumina sequencing provides high-throughput, accurate sequencing of the resulting fragments.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 149,
@@ -2036,7 +2234,8 @@
     "explanation": "Sanger sequencing is generally the most cost-effective method for sequencing relatively short DNA fragments like a plasmid, especially when budget is a major constraint. While Illumina and Nanopore are powerful, they are typically more expensive for small-scale sequencing projects.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 150,
@@ -2051,7 +2250,8 @@
     "explanation": "The restriction enzyme EcoRI recognizes and cuts at the 'GAATTC' sequence. To recombine DNA fragments using sticky ends, both the plasmid and the gene to be inserted must be cut with the same restriction enzyme, generating complementary sticky ends for ligation.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 151,
@@ -2066,7 +2266,8 @@
     "explanation": "A DNA microarray allows for the simultaneous measurement of the expression levels of thousands of genes. qPCR is gene-specific, Western blot detects protein, and Northern blot detects RNA but is less high-throughput than a microarray for analyzing all expressed genes.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 152,
@@ -2076,7 +2277,8 @@
     "explanation": "PCR involves three cyclical steps: denaturation (separating DNA strands), annealing (primers binding to DNA), and extension (DNA polymerase synthesizing new strands).",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "Denaturation, Annealing, Extension"
+    "gemini_answer": "Denaturation, Annealing, Extension",
+    "contextMissing": false
   },
   {
     "number": 153,
@@ -2086,7 +2288,8 @@
     "explanation": "The high temperatures (around 95°C) needed to separate the DNA strands in PCR would denature most other enzymes. Taq polymerase, isolated from a thermophilic bacterium, is resistant to heat, making it ideal for this process.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "Taq polymerase is heat-stable and can withstand the high temperatures required for DNA denaturation during PCR."
+    "gemini_answer": "Taq polymerase is heat-stable and can withstand the high temperatures required for DNA denaturation during PCR.",
+    "contextMissing": false
   },
   {
     "number": 154,
@@ -2096,7 +2299,8 @@
     "explanation": "RT-PCR starts with RNA. Reverse transcriptase is an enzyme that synthesizes a DNA strand from an RNA template, creating a complementary DNA (cDNA) molecule. This cDNA can then be amplified by PCR.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "Reverse transcriptase. It generates complementary DNA (cDNA)."
+    "gemini_answer": "Reverse transcriptase. It generates complementary DNA (cDNA).",
+    "contextMissing": false
   },
   {
     "number": 155,
@@ -2106,7 +2310,8 @@
     "explanation": "RT-qPCR is a standard technique. First, reverse transcriptase converts RNA to cDNA (RT step). Then, qPCR is used to quantify the amount of this cDNA, which directly correlates to the initial amount of the target RNA.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "Yes. RT-qPCR combines reverse transcription with quantitative PCR to measure the amount of a specific RNA molecule."
+    "gemini_answer": "Yes. RT-qPCR combines reverse transcription with quantitative PCR to measure the amount of a specific RNA molecule.",
+    "contextMissing": false
   },
   {
     "number": 156,
@@ -2116,7 +2321,8 @@
     "explanation": "RT-PCR amplifies cDNA, which is synthesized from mature mRNA. During mRNA processing in eukaryotes, introns are spliced out. Therefore, the resulting cDNA will only represent the exonic regions of the gene and will lack any intronic sequences.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "Yes, introns."
+    "gemini_answer": "Yes, introns.",
+    "contextMissing": false
   },
   {
     "number": 157,
@@ -2126,7 +2332,9 @@
     "explanation": "The provided answer is already the correct representation of all valid mRNA sequences encoding the given protein motif, accounting for the degeneracy of the genetic code at specific codon positions.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "5'-GG(U/C)GA(U/C)UGG(U/C)G(U/C)G(U/C)GA(U/C)GA(U/C)-3'"
+    "gemini_answer": "5'-GG(U/C)GA(U/C)UGG(U/C)G(U/C)G(U/C)GA(U/C)GA(U/C)-3'",
+    "contextMissing": true,
+    "contextReason": "References a protein sequence that is not provided."
   },
   {
     "number": 158,
@@ -2136,7 +2344,9 @@
     "explanation": "The template strand is complementary to the mRNA. For each base in the mRNA (5'-3'), the corresponding base on the template strand (3'-5') is its complement: A pairs with T/U, G pairs with C. Therefore, U/C in mRNA becomes A/G in the template strand.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "3'-CC(G/A)CT(G/A)ACC(G/A)C(G/A)CT(G/A)CT(G/A)-5'"
+    "gemini_answer": "3'-CC(G/A)CT(G/A)ACC(G/A)C(G/A)CT(G/A)CT(G/A)-5'",
+    "contextMissing": true,
+    "contextReason": "References an mRNA strand that is not provided (derived from a missing protein sequence)."
   },
   {
     "number": 159,
@@ -2151,7 +2361,8 @@
     "explanation": "mRNA is composed of ribonucleotides, which contain uracil (U) instead of thymine (T). TMP (thymidine monophosphate) is a component of DNA. Poly(A)-tails and 5' caps are characteristic modifications of eukaryotic mRNA, and UMP is a standard ribonucleotide.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 160,
@@ -2166,7 +2377,8 @@
     "explanation": "In a double-stranded DNA molecule, the amount of adenine (A) equals the amount of thymine (T), and the amount of guanine (G) equals the amount of cytosine (C) (Chargaff's rules). If A is 20%, then T must also be 20%. If G is 30%, then C must also be 30%.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 161,
@@ -2181,7 +2393,9 @@
     "explanation": "The question asks for the nucleotide percentages in the mRNA sequence. The provided information only gives a DNA strand and states it contains a coding region. Without knowing the specific DNA sequence of the coding region or the transcription process details (like which strand is the template), we cannot determine the mRNA sequence and thus its nucleotide percentages.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": true,
+    "contextReason": "The question asks for percentages of nucleotides in an mRNA sequence, but the DNA strand sequence or its composition is not provided."
   },
   {
     "number": 162,
@@ -2196,7 +2410,8 @@
     "explanation": "DnaA is the initiator protein that binds to the origin of replication (oriC) in bacteria. This binding causes a conformational change, leading to the unwinding of the DNA double helix at the AT-rich region of oriC, thus initiating replication.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 163,
@@ -2211,7 +2426,8 @@
     "explanation": "DnaB is a DNA helicase. It is loaded onto the unwound DNA by DnaC and then moves along the DNA, unwinding the double helix ahead of the replication fork, allowing DNA polymerase to synthesize new strands.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 164,
@@ -2226,7 +2442,8 @@
     "explanation": "The Central Dogma of Molecular Biology describes the flow of genetic information. It states that genetic information flows from DNA to RNA through transcription, and then from RNA to protein through translation. Therefore, the correct sequence is DNA → RNA → Protein.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 165,
@@ -2241,7 +2458,8 @@
     "explanation": "Lentiviruses, like HIV, are retroviruses. They possess an enzyme called reverse transcriptase, which allows them to synthesize DNA from an RNA template. This process, known as reverse transcription, is a violation of the classical Central Dogma, which states information flows from DNA to RNA.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 166,
@@ -2256,7 +2474,8 @@
     "explanation": "Translation is the process of synthesizing a protein from an mRNA template. The key stages are initiation (where the ribosome assembles), elongation (where amino acids are added to the growing polypeptide chain), and termination (where the process ends). Propagation is not a recognized stage of translation.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 167,
@@ -2266,7 +2485,9 @@
     "explanation": "Translation begins with initiation, where the ribosome binds to the mRNA and the first tRNA. This is followed by elongation, where successive tRNAs bring amino acids to the ribosome, and the polypeptide chain grows. Finally, termination occurs when a stop codon is reached, signaling the release of the completed polypeptide.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "Initiation, Elongation, Termination"
+    "gemini_answer": "Initiation, Elongation, Termination",
+    "contextMissing": true,
+    "contextReason": "References a prior question ('question 3') for context."
   },
   {
     "number": 168,
@@ -2281,7 +2502,8 @@
     "explanation": "The ribosome has three key binding sites for tRNA: the A (aminoacyl) site, the P (peptidyl) site, and the E (exit) site. These sites facilitate the binding of incoming aminoacyl-tRNAs, the formation of peptide bonds, and the release of deacylated tRNAs, respectively. The R site is not a standard ribosomal site.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 169,
@@ -2291,7 +2513,9 @@
     "explanation": "During translation, a tRNA molecule carrying an amino acid first enters the A site of the ribosome. Then, after the peptide bond forms, the tRNA shifts to the P site. Finally, the now uncharged tRNA moves to the E site, where it is released from the ribosome.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "A, P, E"
+    "gemini_answer": "A, P, E",
+    "contextMissing": true,
+    "contextReason": "References a prior question ('question 5') for context."
   },
   {
     "number": 170,
@@ -2301,7 +2525,8 @@
     "explanation": "Besides tRNA (transfer RNA) and mRNA (messenger RNA), ribosomal RNA (rRNA) is another crucial form of RNA involved in protein synthesis. rRNA is a structural and catalytic component of ribosomes, playing a vital role in peptide bond formation.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "rRNA"
+    "gemini_answer": "rRNA",
+    "contextMissing": false
   },
   {
     "number": 171,
@@ -2316,7 +2541,8 @@
     "explanation": "UV radiation can cause DNA damage, such as pyrimidine dimers, which often triggers the Non-Homologous End Joining (NHEJ) pathway for repair. Methylation and ethylation are chemical modifications, and while they can affect DNA, they don't directly initiate NHEJ. CRISPR/Cas9 is a gene-editing tool that can induce double-strand breaks, which are then repaired by NHEJ, but UV radiation is a direct cause of damage that leads to NHEJ.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 172,
@@ -2331,7 +2557,8 @@
     "explanation": "EcoRI, KpnI, and AccBSI are restriction enzymes that produce sticky ends by creating staggered cuts in the DNA. AfII, however, is a restriction enzyme that makes blunt-ended cuts, meaning it cleaves both strands of the DNA at the same position, leaving no overhangs.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 173,
@@ -2346,7 +2573,8 @@
     "explanation": "Duplication, the process of creating extra copies of a gene or DNA segment, is a major driver of gene evolution. These extra copies can accumulate mutations independently, potentially leading to new functions or altered expression patterns. While insertions, deletions, and translocations can also contribute to genetic variation, duplications provide the raw material for neofunctionalization and subfunctionalization.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 174,
@@ -2361,7 +2589,8 @@
     "explanation": "A knockout completely eliminates the functionality of a gene, typically by deleting or inactivating it. A knockdown, on the other hand, reduces the expression or activity of a gene, making it less effective but not entirely absent. Therefore, knockouts are a complete loss of function, while knockdowns are a partial reduction in function.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 175,
@@ -2376,7 +2605,8 @@
     "explanation": "DNA is composed of a phosphate backbone, nitrogenous bases (adenine, guanine, cytosine, and thymine), and deoxyribose sugar. Ribose sugar is a component of RNA, not DNA. Therefore, ribose is the molecule that does not make up DNA.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 176,
@@ -2391,7 +2621,8 @@
     "explanation": "DNA polymerase synthesizes new DNA strands by adding nucleotides to the 3' hydroxyl end of the growing chain. Therefore, the template strand is read in the 3' to 5' direction, and the new strand is synthesized in the 5' to 3' direction.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 177,
@@ -2406,7 +2637,8 @@
     "explanation": "Mitosis is a continuous process, but it is conventionally divided into distinct phases. Prophase is the first phase, characterized by the condensation of chromosomes and the formation of the mitotic spindle.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 178,
@@ -2421,7 +2653,8 @@
     "explanation": "Meiosis is a type of cell division that reduces the chromosome number by half, creating four haploid cells. In spermatogenesis, one diploid spermatocyte undergoes meiosis to produce four functional sperm cells.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 179,
@@ -2436,7 +2669,8 @@
     "explanation": "Oogenesis, the process of egg cell formation, involves meiosis. However, it is an unequal division. One diploid oocyte undergoes meiosis to produce one large, functional ovum (egg cell) and smaller polar bodies.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 180,
@@ -2451,7 +2685,8 @@
     "explanation": "Telomeres are protective caps at the ends of chromosomes. In most somatic cells, telomeres shorten with each cell division. Cancer cells often exhibit reactivated telomerase, an enzyme that maintains telomere length, allowing them to divide indefinitely.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 181,
@@ -2466,7 +2701,9 @@
     "explanation": "Question 7 likely refers to DNA replication or telomere maintenance. Telomerase is an enzyme that adds repetitive DNA sequences to the ends of eukaryotic chromosomes, counteracting the shortening that occurs during DNA replication. Kinesin and dynein are motor proteins, and RNAPII transcribes RNA.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": true,
+    "contextReason": "References a prior question (question 7) for context."
   },
   {
     "number": 182,
@@ -2481,7 +2718,8 @@
     "explanation": "Histone acetylation, the addition of acetyl groups to lysine residues on histone proteins, neutralizes their positive charge. This loosens the chromatin structure, making DNA more accessible to transcription factors and thus increasing transcription. Methylation of DNA typically leads to gene silencing.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 183,
@@ -2496,7 +2734,9 @@
     "explanation": "The pedigree shows that affected individuals appear in every generation, and affected individuals have at least one affected parent. This pattern is characteristic of autosomal dominant inheritance, where only one copy of the dominant allele is needed to express the trait.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 184,
@@ -2512,7 +2752,9 @@
     "explanation": "Individual II-2 is unaffected. If the inheritance is autosomal dominant (as suggested by Q183), then unaffected individuals must be homozygous recessive (zz). However, without knowing the genotypes of the parents (I-1 and I-2), we cannot definitively determine if II-2 carries the dominant allele but doesn't express it (which is not possible for dominant traits) or is truly homozygous recessive.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "E"
+    "gemini_answer": "E",
+    "contextMissing": true,
+    "contextReason": "References a pedigree and a specific individual (II-2) without providing the pedigree."
   },
   {
     "number": 185,
@@ -2529,7 +2771,9 @@
     "explanation": "Individual II-3 is affected. If the inheritance is autosomal dominant, they must have at least one dominant allele. However, we cannot determine if they are heterozygous (Zz) or homozygous dominant (ZZ) without knowing the genotypes of their parents (I-1 and I-2) and observing their offspring.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "F"
+    "gemini_answer": "F",
+    "contextMissing": true,
+    "contextReason": "References a pedigree and a specific individual (II-3) without providing the pedigree."
   },
   {
     "number": 186,
@@ -2545,7 +2789,9 @@
     "explanation": "To determine the child's genotype, we need the genotypes of individuals III-1 and III-6. The provided pedigree does not offer enough information to definitively assign genotypes to these individuals, especially concerning sex-linked traits. Therefore, the child's genotype cannot be determined.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "E"
+    "gemini_answer": "E",
+    "contextMissing": true,
+    "contextReason": "References a pedigree and specific individuals (III-1, III-6) without providing the pedigree."
   },
   {
     "number": 187,
@@ -2560,7 +2806,9 @@
     "explanation": "The disease appears in both males and females, but skips generations. Affected individuals have unaffected parents, which is characteristic of recessive inheritance. Since it affects both sexes equally, it is likely autosomal recessive, not sex-linked.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": true,
+    "contextReason": "References a disease inheritance pattern that likely requires a pedigree or additional context."
   },
   {
     "number": 188,
@@ -2577,7 +2825,9 @@
     "explanation": "Individual 3 is affected by the disease. However, without knowing the inheritance pattern (autosomal dominant, autosomal recessive, etc.) or the genotypes of their parents, it is impossible to definitively determine their genotype. Multiple genotypes could result in an affected phenotype depending on the mode of inheritance.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "F"
+    "gemini_answer": "F",
+    "contextMissing": true,
+    "contextReason": "References a specific individual (individual 3) without providing the pedigree or context."
   },
   {
     "number": 189,
@@ -2587,7 +2837,8 @@
     "explanation": "The observation that some females have stripes and others do not, while males are not mentioned as having this variation, strongly suggests a sex-linked trait. This means the gene responsible for striping is located on a sex chromosome (X or Z). Different alleles on this chromosome can lead to the phenotypic difference observed in females.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "This phenomenon suggests a sex-linked trait. The presence or absence of stripes in female Marquette retrievers, while not observed in males (implied by the question's focus on females), points to a gene located on the sex chromosomes (X or Z). Different alleles on these chromosomes could lead to the observed variation in striping."
+    "gemini_answer": "This phenomenon suggests a sex-linked trait. The presence or absence of stripes in female Marquette retrievers, while not observed in males (implied by the question's focus on females), points to a gene located on the sex chromosomes (X or Z). Different alleles on these chromosomes could lead to the observed variation in striping.",
+    "contextMissing": false
   },
   {
     "number": 190,
@@ -2597,7 +2848,9 @@
     "explanation": "The key difference is the location and potential function of the gene. If question 5 targeted MC1R (autosomal) for eumelanin, and this question targets TYR1 (X-linked) for striping, the inhibitor's effect might be different or manifest differently. The genetic context is crucial for predicting the outcome of inhibitor administration.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "No, you would not expect to get the same result. The question implies that the Marquette retriever's striping is controlled by a gene on the X chromosome (TYR1), whereas question 5 likely dealt with an autosomal gene (MC1R) controlling eumelanin production. While a tyrosinase inhibitor would still inhibit tyrosinase, the genetic basis and the specific gene being targeted are different, leading to potentially different outcomes or interpretations of the results."
+    "gemini_answer": "No, you would not expect to get the same result. The question implies that the Marquette retriever's striping is controlled by a gene on the X chromosome (TYR1), whereas question 5 likely dealt with an autosomal gene (MC1R) controlling eumelanin production. While a tyrosinase inhibitor would still inhibit tyrosinase, the genetic basis and the specific gene being targeted are different, leading to potentially different outcomes or interpretations of the results.",
+    "contextMissing": true,
+    "contextReason": "References a prior question (question 5) for context."
   },
   {
     "number": 191,
@@ -2607,7 +2860,9 @@
     "explanation": "Gel electrophoresis separates DNA by size. Smaller molecules move faster and farther. The plasmid bound to multiple proteins is a larger complex than the naked plasmid. Therefore, the naked plasmid, being smaller, will migrate further through the gel matrix.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "The lane with only the plasmid would travel farther."
+    "gemini_answer": "The lane with only the plasmid would travel farther.",
+    "contextMissing": true,
+    "contextReason": "References a gel electrophoresis experiment and asks about travel distance, implying a diagram or data is missing."
   },
   {
     "number": 192,
@@ -2617,7 +2872,8 @@
     "explanation": "Given 6360 bp and 12 bp/turn, the theoretical twist (T) is 6360/12 = 530 turns. '27 underwindings' implies a reduction in linking number by 27 from the relaxed state. Thus, the linking number (L) and actual linking number (AL) are 530 - 27 = 503. Writhe (W) is L - T, so 503 - 530 = -27.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "L=503, AL=503, W=-27, T=530"
+    "gemini_answer": "L=503, AL=503, W=-27, T=530",
+    "contextMissing": false
   },
   {
     "number": 193,
@@ -2627,7 +2883,8 @@
     "explanation": "A nick in DNA allows it to relax. The writhe (W) becomes zero as the molecule can no longer supercoil. The linking number (L) and actual linking number (AL) will then equal the twist (T), which is the number of helical turns in the relaxed state (530 turns).",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "L=530, AL=530, W=0, T=530"
+    "gemini_answer": "L=530, AL=530, W=0, T=530",
+    "contextMissing": false
   },
   {
     "number": 194,
@@ -2642,7 +2899,9 @@
     "explanation": "The karyotype described (XO) is characteristic of Turner syndrome, a genetic disorder affecting females, typically resulting in short stature, infertility, and other developmental issues.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": true,
+    "contextReason": "References a karyotype that is not provided."
   },
   {
     "number": 195,
@@ -2652,7 +2911,9 @@
     "explanation": "Barr bodies are inactivated X chromosomes. In Turner syndrome (XO), there is only one X chromosome. This single X chromosome remains active and is not inactivated to form a Barr body. Barr bodies are only formed when there are two or more X chromosomes.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "No, Barr bodies would not be present."
+    "gemini_answer": "No, Barr bodies would not be present.",
+    "contextMissing": true,
+    "contextReason": "References a karyotype that is not provided."
   },
   {
     "number": 196,
@@ -2662,7 +2923,9 @@
     "explanation": "Triple X syndrome (47,XXX) is characterized by the presence of three X chromosomes. In mammals, one X chromosome is inactivated in each somatic cell to form a Barr body. Therefore, with three X chromosomes, two would be inactivated, resulting in two Barr bodies per cell.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "B) 2"
+    "gemini_answer": "B) 2",
+    "contextMissing": true,
+    "contextReason": "References a hypothetical karyotype modification, but the base karyotype is not provided, and the question implies a visual representation."
   },
   {
     "number": 197,
@@ -2672,7 +2935,9 @@
     "explanation": "The Y chromosome primarily determines male sex characteristics. However, the X chromosome carries essential genes for basic cellular functions and embryonic development. An embryo with only a Y chromosome and no X chromosome (karyotype YO) would lack these vital genes, making it non-viable and likely resulting in early embryonic lethality.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "The embryo would not be viable."
+    "gemini_answer": "The embryo would not be viable.",
+    "contextMissing": true,
+    "contextReason": "References a hypothetical embryo development scenario based on a modified karyotype, implying a visual representation is missing."
   },
   {
     "number": 198,
@@ -2682,7 +2947,9 @@
     "explanation": "Giemsa staining reveals banding patterns on chromosomes, which are formed by differential condensation of euchromatin and heterochromatin. If all genetic material were euchromatin (loosely packed and transcriptionally active), the chromosomes would stain uniformly. This lack of banding would prevent the identification of specific chromosomes and the detection of structural aberrations like deletions or translocations.",
     "source": "Unity Invite",
     "type": "Free Response",
-    "gemini_answer": "The karyotype would appear as uniformly stained chromosomes lacking distinct banding patterns, making it difficult to identify abnormalities."
+    "gemini_answer": "The karyotype would appear as uniformly stained chromosomes lacking distinct banding patterns, making it difficult to identify abnormalities.",
+    "contextMissing": true,
+    "contextReason": "References a karyotype that is not provided."
   },
   {
     "number": 199,
@@ -2697,7 +2964,8 @@
     "explanation": "Mendel's First Law describes the segregation of alleles during gamete formation. Lethal alleles can affect the observed genotypic and phenotypic ratios, but they don't inherently violate the segregation of the alleles themselves into gametes. Meiotic drive and nondisjunction events directly interfere with the equal segregation of alleles into gametes.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 200,
@@ -2712,7 +2980,8 @@
     "explanation": "The male has a short beak, meaning his genotype is bb. The female has a long beak, so her genotype could be BB or Bb. Without knowing the female's genotype, we cannot determine the exact percentage of offspring with short beaks. If she is BB, all offspring will be Bb (long beak). If she is Bb, 50% of offspring will be bb (short beak).",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 201,
@@ -2727,7 +2996,8 @@
     "explanation": "Epistasis describes a phenomenon where one gene masks or modifies the expression of another gene. In this case, the gullso-A25 gene prevents the expression of the GNAT1 gene, which encodes transducin. This is a classic example of epistasis, where one gene's product (or lack thereof) influences the phenotypic outcome of another gene.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 202,
@@ -2742,7 +3012,8 @@
     "explanation": "Cytoplasmic inheritance, primarily through mitochondria and chloroplasts, is almost exclusively maternal. Sperm cells typically contribute very little cytoplasm, and thus very few organelles, to the zygote during fertilization. The vast majority of cytoplasmic components come from the egg cell.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 203,
@@ -2757,7 +3028,8 @@
     "explanation": "Mitochondrial DNA (mtDNA) is inherited maternally. Since the MERRF phenotype is transmitted only through females and never males, and it's caused by a mutation in mitochondrial DNA, this points directly to the inheritance pattern of mtDNA.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 204,
@@ -2772,7 +3044,9 @@
     "explanation": "The pedigree shows that individuals II-1 and II-2 share parents (I-1 and I-2), indicating they are related by blood. There is no information to suggest they are identical twins or monozygotic. The question asks for true statements, and this is the only one supported by the visual representation of the pedigree.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 205,
@@ -2787,7 +3061,9 @@
     "explanation": "The pedigree shows that affected individuals appear in every generation, and affected individuals have at least one affected parent. This pattern, along with the fact that both males and females are affected and transmit the trait, is characteristic of autosomal dominant inheritance.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 206,
@@ -2802,7 +3078,9 @@
     "explanation": "Hypertrichosis, or excessive hair growth, can be inherited in an autosomal dominant pattern. The pedigree shows affected individuals in multiple generations, with both males and females affected and transmitting the trait, consistent with autosomal dominant inheritance. Color blindness and hemophilia are X-linked recessive, and Down syndrome is a chromosomal aneuploidy, neither of which fit the observed pattern.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": true,
+    "contextReason": "References a pedigree that is not provided."
   },
   {
     "number": 207,
@@ -2817,7 +3095,8 @@
     "explanation": "In X-linked dominant inheritance, an affected male has the condition on his X chromosome. He will pass this X chromosome to all his daughters, making them affected, but none of his sons, as they receive his Y chromosome. An affected heterozygous female (one affected X, one normal X) married to an unaffected male has a 50% chance of passing the affected X to each child, regardless of sex.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 208,
@@ -2832,7 +3111,8 @@
     "explanation": "Spindle fibers, which are crucial for chromosome segregation during cell division, are primarily composed of the protein tubulin. Tubulin polymerizes to form microtubules, the structural components of the spindle apparatus. Keratin is a structural protein found in hair and nails, while kinesin and dynein are motor proteins that utilize microtubules for transport but are not the polymer itself.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 209,
@@ -2847,7 +3127,8 @@
     "explanation": "During anaphase, the shortening of kinetochore microtubules is the primary mechanism for separating sister chromatids. These microtubules depolymerize at the kinetochore end, effectively 'pulling' the chromatids towards opposite poles of the cell. While motor proteins like dynein are involved in other aspects of cell division, the direct pulling force for chromatid separation comes from microtubule depolymerization.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 210,
@@ -2862,7 +3143,8 @@
     "explanation": "During interphase, DNA exists as chromatin, a decondensed form that is not visible as distinct chromosomes. This diffuse state prevents accurate counting and morphological analysis. Microtubules are not attached to chromosomes during interphase; they are involved in forming the spindle during mitosis. Therefore, the absence of condensed chromosomes and their visibility is why karyotypes cannot be made during interphase.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 211,
@@ -2877,7 +3159,8 @@
     "explanation": "During interphase, DNA replicates, but the chromosome number remains the same. Each chromosome now consists of two sister chromatids. Mitosis is a process of nuclear division that produces two daughter nuclei genetically identical to the parent nucleus. Therefore, each daughter cell will have the same diploid chromosome number as the parent cell.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 212,
@@ -2892,7 +3175,8 @@
     "explanation": "Prophase I of meiosis is a complex stage divided into five substages. Leptotene involves chromosome condensation. Zygotene is characterized by synapsis, the pairing of homologous chromosomes. Pachytene is when crossing over occurs. Diplotene sees the separation of homologous chromosomes, revealing chiasmata. Diakinesis is the final stage where chromosomes condense further and the nuclear envelope breaks down.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 213,
@@ -2907,7 +3191,8 @@
     "explanation": "Meiosis II separates sister chromatids. If nondisjunction occurs in meiosis II, it means that sister chromatids fail to separate in one of the daughter cells. This results in two gametes with the normal haploid number (n), one gamete with an extra chromosome (n+1), and one gamete missing a chromosome (n-1).",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 214,
@@ -2922,7 +3207,8 @@
     "explanation": "The SAC checkpoint ensures that all chromosomes are correctly attached to the spindle microtubules before anaphase begins. If this checkpoint is inhibited, chromosomes may not be properly aligned or attached. This can lead to premature separation of sister chromatids or unequal distribution of chromosomes into daughter cells, resulting in nondisjunction events and aneuploidy.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 215,
@@ -2937,7 +3223,8 @@
     "explanation": "Cyclin B1, in complex with Cdk1, is known as Maturation Promoting Factor (MPF) and is the key regulator of entry into and progression through mitosis. Its activity rises sharply at the G2/M transition and peaks during metaphase, driving the events of mitosis.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 216,
@@ -2947,7 +3234,9 @@
     "explanation": "Maturation-Promoting Factor (MPF) is the key regulator of the cell cycle, particularly the transition from G2 phase to mitosis and entry into meiosis. It's a complex of cyclin B and cyclin-dependent kinase 1 (CDK1).",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "Maturation-Promoting Factor (MPF)"
+    "gemini_answer": "Maturation-Promoting Factor (MPF)",
+    "contextMissing": true,
+    "contextReason": "References a previous question for context."
   },
   {
     "number": 217,
@@ -2962,7 +3251,8 @@
     "explanation": "In Metaphase I of meiosis, homologous chromosomes (dyads) align at the metaphase plate. Option B is incorrect as sister chromatids separate in Anaphase II, not Anaphase I. Option C is incorrect; homologous dyads pair in Prophase I. Option D is incorrect; sister chromatids become visible and form dyads in Prophase I, but they don't pair to form bivalents at that point.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 218,
@@ -2977,7 +3267,8 @@
     "explanation": "The correct order of mitosis stages is Prophase (chromosomes condense), Metaphase (chromosomes align at the metaphase plate), Anaphase (sister chromatids separate), and Telophase (new nuclei form and chromosomes decondense).",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 219,
@@ -2992,7 +3283,8 @@
     "explanation": "Random mating is crucial for Hardy-Weinberg Equilibrium. If certain genotypes preferentially mate, it directly affects allele frequencies by altering the combinations of alleles in offspring, thus violating the equilibrium. The other options correctly describe the impact of their respective conditions.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 220,
@@ -3007,7 +3299,8 @@
     "explanation": "The recessive phenotype frequency (qq) is 218/1000 = 0.218. The allele frequency of q is sqrt(0.218) ≈ 0.467. The allele frequency of p is 1 - q ≈ 1 - 0.467 = 0.533. The heterozygous frequency (2pq) is 2 * 0.533 * 0.467 ≈ 0.498. Therefore, the number of heterozygotes is 0.498 * 1000 ≈ 498.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 221,
@@ -3022,7 +3315,8 @@
     "explanation": "X1B and X1C are orthologs. Orthologs are genes in different species that evolved from a common ancestral gene by speciation. Since Species B and C diverged from Species A after the gene duplication, X1B and X1C are derived from the same ancestral gene (the original Gene X) and are present in different species.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 222,
@@ -3037,7 +3331,8 @@
     "explanation": "Stabilizing selection on codon usage is the least likely explanation for a gene tree conflicting with a species tree. While codon usage can influence gene expression, it's unlikely to cause such significant phylogenetic discrepancies compared to incomplete lineage sorting, gene duplication/loss, or horizontal gene transfer, which directly alter gene content and evolutionary history.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 223,
@@ -3052,7 +3347,8 @@
     "explanation": "The most likely explanation is that the proteins are analogs that arose through convergent evolution. Convergent evolution occurs when unrelated organisms independently evolve similar traits (in this case, protein function) due to similar environmental pressures, even if their underlying sequences have diverged significantly over time.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 224,
@@ -3067,7 +3363,8 @@
     "explanation": "A riboswitch is a regulatory segment of mRNA that binds to small molecules (metabolites). This binding causes a conformational change in the mRNA, which in turn affects gene expression, typically by controlling transcription or translation initiation.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 225,
@@ -3082,7 +3379,8 @@
     "explanation": "Griffith's experiment demonstrated bacterial transformation. The heat-killed virulent bacteria released their DNA, and the live non-virulent bacteria took up this 'naked' virulent DNA. This transformed the non-virulent bacteria into virulent ones, leading to the mouse's death.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 226,
@@ -3097,7 +3395,8 @@
     "explanation": "The backbone of a DNA molecule is formed by phosphodiester bonds linking the sugar of one nucleotide to the phosphate of the next. These are strong covalent bonds that provide structural integrity to the DNA strand.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 227,
@@ -3112,7 +3411,8 @@
     "explanation": "Complementary base pairing in DNA (A with T, and G with C) is mediated by hydrogen bonds. These are weaker bonds than covalent bonds, allowing the two strands to separate for replication and transcription.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 228,
@@ -3127,7 +3427,8 @@
     "explanation": "Cytosine deaminase catalyzes the deamination of cytosine. This reaction removes an amino group from cytosine and replaces it with a hydroxyl group, converting it into uracil. Ammonia is released as a byproduct.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 229,
@@ -3142,7 +3443,8 @@
     "explanation": "In single-stranded DNA, there are no base pairing rules like in double-stranded DNA. Therefore, the percentage of thymine does not directly dictate the percentage of guanine. We cannot determine the guanine content from the thymine content alone.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 230,
@@ -3157,7 +3459,8 @@
     "explanation": "H3K4 methylation, a function similar to the SCIO-4 protein (HMT), is generally associated with active gene transcription. Therefore, this enzyme would likely increase gene expression by promoting a more open chromatin structure.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 231,
@@ -3172,7 +3475,8 @@
     "explanation": "Enhancers are DNA sequences that bind transcription factors to increase the rate of transcription. They are often located far from the gene they regulate. A mutation in an enhancer can disrupt the binding of transcription factors, thereby reducing or eliminating gene expression in specific tissues where those factors are present.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 232,
@@ -3187,7 +3491,8 @@
     "explanation": "While a silent mutation doesn't change the amino acid sequence, it can affect protein levels. This can occur if the new codon is rare in the cell, leading to slower translation and potential mRNA degradation. Alternatively, the altered mRNA sequence can form secondary structures that impede ribosome movement or processing.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 233,
@@ -3202,7 +3507,8 @@
     "explanation": "Increasing LacI levels will strengthen repression. However, lactose still binds LacI, causing a conformational change that reduces its affinity for the operator. With significantly more LacI, a higher lactose concentration will be needed to displace enough repressor to allow for partial induction, but it won't become fully constitutive or non-inducible.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 234,
@@ -3217,7 +3523,8 @@
     "explanation": "The lac operon repressor binds to two operator sites (O1 and O2) to form a loop, blocking RNA polymerase. Moving O1 further from the promoter, while keeping O2 in place, increases the distance between the repressor binding sites. This larger loop is more thermodynamically stable, leading to stronger and more effective repression.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 235,
@@ -3232,7 +3539,8 @@
     "explanation": "In a merodiploid, the LacI- allele produces no repressor, so its associated operon will be constitutively expressed. The LacOC mutation means the operator cannot bind repressor, so its operon will also be constitutively expressed. The wild-type operator operon, however, will be repressed by the functional LacI+ protein produced in trans, as long as lactose is absent.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 236,
@@ -3247,7 +3555,8 @@
     "explanation": "Molecule X stabilizes the DNA-binding conformation of LacI, acting as an anti-inducer. Even with absent glucose (which would normally promote induction via CAP-cAMP), X forces LacI into its repressed state, preventing operon expression. This leads to stronger repression than normal.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 237,
@@ -3262,7 +3571,8 @@
     "explanation": "Sanger sequencing relies on dideoxynucleotides (ddNTPs) to terminate DNA synthesis at specific bases. Too many ddNTPs lead to frequent termination, resulting in short fragments and an unreadable ladder. Too few ddNTPs result in infrequent termination, producing very long fragments that are difficult to resolve and analyze.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 238,
@@ -3277,7 +3587,8 @@
     "explanation": "Using two different restriction enzymes (EcoRI and XhoI) to cut both the plasmid and the insert creates non-compatible sticky ends. This ensures that the insert can only ligate into the plasmid in one specific orientation, simplifying downstream cloning and expression.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 239,
@@ -3292,7 +3603,8 @@
     "explanation": "Blue colonies indicate functional lacZα, meaning the plasmid is present and the α-fragment is not disrupted. White colonies indicate disrupted lacZα. Many blue colonies and few white colonies suggest the insert failed to ligate into the vector, allowing the vector to self-ligate and produce functional lacZα, leading to blue color.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "D"
+    "gemini_answer": "D",
+    "contextMissing": false
   },
   {
     "number": 240,
@@ -3307,7 +3619,8 @@
     "explanation": "CRISPR-Cas9 creates double-strand breaks. The cell's primary repair mechanism for these breaks is Non-Homologous End Joining (NHEJ). NHEJ is error-prone and frequently introduces small insertions or deletions (indels), which can be in-frame, leading to the observed 3-bp deletions instead of frameshifts.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 241,
@@ -3322,7 +3635,8 @@
     "explanation": "Overlapping peaks in sequencing indicate the presence of two different DNA sequences at that position. This is characteristic of a heterozygous indel, where one allele has an insertion or deletion relative to the other, leading to different sequence reads downstream.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 242,
@@ -3337,7 +3651,8 @@
     "explanation": "RNAi targets mRNA for degradation, reducing protein production but not eliminating it entirely. CRISPR knockout, however, permanently alters the DNA sequence, often leading to a complete loss of gene function and a more severe phenotype.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "B"
+    "gemini_answer": "B",
+    "contextMissing": false
   },
   {
     "number": 243,
@@ -3352,7 +3667,8 @@
     "explanation": "Taq polymerase lacks proofreading activity, meaning it has a higher error rate and introduces more mutations during PCR. High-fidelity polymerases have proofreading capabilities, significantly reducing the chance of errors, which is crucial for cloning to ensure the correct gene sequence is inserted.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C"
+    "gemini_answer": "C",
+    "contextMissing": false
   },
   {
     "number": 244,
@@ -3362,7 +3678,9 @@
     "explanation": "To produce offspring with genotypes G+/G+, G+/g, and g/g, the parents must each contribute at least one G+ allele and one g allele. The combinations G+/g x G+/g and G+/g x g/g can both yield these offspring ratios.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "G+/g x G+/g\nG+/g x g/g"
+    "gemini_answer": "G+/g x G+/g\nG+/g x g/g",
+    "contextMissing": true,
+    "contextReason": "References 'these eggs' which are not provided."
   },
   {
     "number": 245,
@@ -3372,7 +3690,9 @@
     "explanation": "A blue egg implies the genotype g/g. For a 1/4 probability of a g/g offspring, both parents must be heterozygous carriers (G+/g). A cross between two G+/g individuals results in offspring genotypes G+/G+, G+/g, and g/g in a 1:2:1 ratio, making the probability of g/g exactly 1/4.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "G+/g x G+/g"
+    "gemini_answer": "G+/g x G+/g",
+    "contextMissing": true,
+    "contextReason": "References 'the same parents' and 'from #46' which are not provided."
   },
   {
     "number": 246,
@@ -3382,7 +3702,9 @@
     "explanation": "A test cross involves crossing an individual with an unknown genotype to a homozygous recessive individual. In this case, the homozygous recessive tester would have the genotype g/g (blue). If the green sibling is G+/G+, all offspring will inherit G+ and be green. If the green sibling is G+/g, half the offspring will inherit G+ (green) and half will inherit g (blue), revealing the heterozygosity.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "CROSS_WITH_BLUE_TESTER"
+    "gemini_answer": "CROSS_WITH_BLUE_TESTER",
+    "contextMissing": true,
+    "contextReason": "References 'green Ralts sibling' and 'G+ / G+' which are not defined in the text."
   },
   {
     "number": 247,
@@ -3392,7 +3714,9 @@
     "explanation": "To test if two blue Ralts mutations are allelic or non-allelic, cross a blue individual from line 1 (mutant a) with a blue individual from line 2 (mutant b). If the mutations are in different genes (non-allelic), and both are recessive, the F1 offspring will inherit a wild-type allele for each gene (e.g., A+/a and B+/b), resulting in a wild-type (green) phenotype (complementation). If the mutations are in the same gene (allelic), the F1 offspring will inherit two mutant alleles for that gene (e.g., a/a), resulting in a mutant (blue) phenotype (failure to complement).",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "COMPLEMENTATION_TEST_DESCRIPTION"
+    "gemini_answer": "COMPLEMENTATION_TEST_DESCRIPTION",
+    "contextMissing": true,
+    "contextReason": "References 'two blue Ralts' and 'mutations' which are not defined in the text."
   },
   {
     "number": 248,
@@ -3402,7 +3726,9 @@
     "explanation": "1. Both mutations are loss-of-function alleles within the same gene, leading to a complete absence of functional protein. 2. The mutations affect the same cis-acting regulatory element (like a promoter or enhancer) essential for the gene's expression, preventing its transcription regardless of the coding sequence.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "MOLECULAR_EXPLANATIONS"
+    "gemini_answer": "MOLECULAR_EXPLANATIONS",
+    "contextMissing": true,
+    "contextReason": "References 'two independent blue lines' which are not provided."
   },
   {
     "number": 249,
@@ -3412,7 +3738,8 @@
     "explanation": "Locus E: Pigment synthesis. Alleles: E+ (functional, dominant, allows pigment) and e (non-functional, recessive, no pigment). Locus T: Pigment color. Alleles: T+ (wild-type color) and t (altered color). Genotypes and Phenotypes: E+_T+_ (green), E+_t/t (blue), e/e_T+_ (white), e/e_t/t (white). This results in a 9:3:4 ratio (9 green : 3 blue : 4 white).",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "GENETIC_MODEL"
+    "gemini_answer": "GENETIC_MODEL",
+    "contextMissing": false
   },
   {
     "number": 250,
@@ -3422,7 +3749,8 @@
     "explanation": "This represents recessive epistasis because the homozygous recessive genotype at one locus (e/e) masks the expression of alleles at another locus (T+/T+ or T+/t), resulting in a white phenotype regardless of the color-determining alleles. The epistatic locus (E) is epistatic to the hypostatic locus (T).",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "RECESSIVE_EPISTASIS"
+    "gemini_answer": "RECESSIVE_EPISTASIS",
+    "contextMissing": false
   },
   {
     "number": 251,
@@ -3432,7 +3760,8 @@
     "explanation": "The provided Punnett square correctly represents a dihybrid cross between two heterozygotes (E+/e and T+/t). It shows all 16 possible genotype combinations for the F2 generation, which is essential for deriving phenotypic ratios like 9:3:4.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "E+/T+ | E+/T+ | E+/t | e/T+ | E+/T+ | E+E+/T+T+ | E+E+/T+t | E+e/T+T+ | E+e/T+t | E+/t | E+E+/T+t | E+E+/tt | E+e/T+t | E+e/tt | e/T+ | E+e/T+T+ | E+e/T+t | ee/T+T+ | ee/T+t | e/t | E+e/T+t | E+e/tt | ee/T+t | ee/tt"
+    "gemini_answer": "E+/T+ | E+/T+ | E+/t | e/T+ | E+/T+ | E+E+/T+T+ | E+E+/T+t | E+e/T+T+ | E+e/T+t | E+/t | E+E+/T+t | E+E+/tt | E+e/T+t | E+e/tt | e/T+ | E+e/T+T+ | E+e/T+t | ee/T+T+ | ee/T+t | e/t | E+e/T+t | E+e/tt | ee/T+t | ee/tt",
+    "contextMissing": false
   },
   {
     "number": 252,
@@ -3442,7 +3771,8 @@
     "explanation": "The 9:3:4 ratio is characteristic of recessive epistasis, where the homozygous recessive genotype at one locus (e/e) masks the expression of alleles at another locus (T+/t). This means that regardless of the T alleles, if the genotype is e/e, the phenotype associated with the T locus is not expressed.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "RECESSIVE EPISTASIS"
+    "gemini_answer": "RECESSIVE EPISTASIS",
+    "contextMissing": false
   },
   {
     "number": 253,
@@ -3452,7 +3782,8 @@
     "explanation": "In a cross of E+/e x E+/e, 3/4 of the offspring will have at least one E allele (E+/E+ or E+/e). Therefore, 500 offspring * 0.75 = 375 offspring are expected to carry at least one E allele.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "375"
+    "gemini_answer": "375",
+    "contextMissing": false
   },
   {
     "number": 254,
@@ -3462,7 +3793,8 @@
     "explanation": "Mega Evolution requires at least one E allele (E+/E+ or E+/e). Among the E carriers (3/4 of total offspring), the genotypes are E+/E+ (1/4) and E+/e (2/4). The T locus determines the ability to 'Mega Evolve'. If T+/t is required, then 2/3 of the E carriers (those with E+/e) will also have T+/t and thus be able to Mega Evolve.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "2/3 of E carriers"
+    "gemini_answer": "2/3 of E carriers",
+    "contextMissing": false
   },
   {
     "number": 255,
@@ -3472,7 +3804,8 @@
     "explanation": "The provided information does not suggest X-linked inheritance. The 9:3:4 ratio and the interaction between the E and T loci are consistent with autosomal inheritance patterns. X-linked traits would typically show different inheritance patterns in males and females.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "AUTOSOMAL INHERITANCE"
+    "gemini_answer": "AUTOSOMAL INHERITANCE",
+    "contextMissing": false
   },
   {
     "number": 256,
@@ -3482,7 +3815,8 @@
     "explanation": "The provided answer is incorrect. A diploid cell has two sets of chromosomes. Gametes are haploid, meaning they contain one set of chromosomes. Therefore, each gamete will have only one copy of each locus (e.g., E and C).",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "diploid, 1 copy of each loci in each gamete"
+    "gemini_answer": "diploid, 1 copy of each loci in each gamete",
+    "contextMissing": false
   },
   {
     "number": 257,
@@ -3492,7 +3826,8 @@
     "explanation": "Gametes produced from a diploid cell are haploid. When two haploid gametes fuse during fertilization, they form a diploid zygote. This is the normal process of sexual reproduction, and the resulting offspring would be expected to be fertile.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "fertile"
+    "gemini_answer": "fertile",
+    "contextMissing": false
   },
   {
     "number": 258,
@@ -3505,7 +3840,8 @@
     "explanation": "The 3' to 5' exonuclease activity is crucial for proofreading and removing incorrect nucleotides during DNA synthesis. This fidelity is essential on both leading and lagging strands to maintain the integrity of the genome, regardless of the synthesis rate difference.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 259,
@@ -3515,7 +3851,8 @@
     "explanation": "The question describes a scenario where DNA polymerase I's primer removal (5' to 3' exonuclease) is functional, but its DNA synthesis (5' to 3' polymerase) is not. This means primers will be removed, but the gaps they leave will not be filled, leading to unligated Okazaki fragments and cell death.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "The functional 5' → 3' exonuclease activity would remove RNA primers, but the non-functional 5' → 3' polymerase activity would prevent filling the gaps. This would result in a lagging strand composed of unligated Okazaki fragments separated by single-stranded DNA gaps. These persistent nicks would prevent proper DNA replication and repair, leading to cell cycle arrest and likely cell death."
+    "gemini_answer": "The functional 5' → 3' exonuclease activity would remove RNA primers, but the non-functional 5' → 3' polymerase activity would prevent filling the gaps. This would result in a lagging strand composed of unligated Okazaki fragments separated by single-stranded DNA gaps. These persistent nicks would prevent proper DNA replication and repair, leading to cell cycle arrest and likely cell death.",
+    "contextMissing": false
   },
   {
     "number": 260,
@@ -3525,7 +3862,8 @@
     "explanation": "PEV is the mechanism. HATs promote gene expression by loosening chromatin. Inhibiting HATs would lead to tighter chromatin, thus exacerbating silencing in a heterochromatic region.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "The core molecular mechanism is position effect variegation (PEV), where heterochromatin spreads and silences the translocated gene by altering its chromatin environment, blocking transcription factor access. Treatment with a histone acetyltransferase (HAT) inhibitor would exacerbate silencing. HATs add acetyl groups to histones, generally promoting euchromatin and gene expression. Inhibiting HATs would therefore favor heterochromatin formation and gene silencing."
+    "gemini_answer": "The core molecular mechanism is position effect variegation (PEV), where heterochromatin spreads and silences the translocated gene by altering its chromatin environment, blocking transcription factor access. Treatment with a histone acetyltransferase (HAT) inhibitor would exacerbate silencing. HATs add acetyl groups to histones, generally promoting euchromatin and gene expression. Inhibiting HATs would therefore favor heterochromatin formation and gene silencing.",
+    "contextMissing": false
   },
   {
     "number": 261,
@@ -3538,7 +3876,8 @@
     "explanation": "Single-base oxidation is a common form of DNA damage. Base excision repair (BER) is the primary pathway for removing and replacing oxidized bases, ensuring genomic integrity.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "A"
+    "gemini_answer": "A",
+    "contextMissing": false
   },
   {
     "number": 262,
@@ -3548,7 +3887,8 @@
     "explanation": "Plasmids are useful because they can replicate independently within a host cell, they are engineered with restriction sites for easy insertion of foreign DNA, and they carry genes that allow for selection of transformed cells.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "Self-replicating, Easy to insert foreign DNA, Possess selectable markers"
+    "gemini_answer": "Self-replicating, Easy to insert foreign DNA, Possess selectable markers",
+    "contextMissing": false
   },
   {
     "number": 263,
@@ -3558,7 +3898,8 @@
     "explanation": "The origin of replication, often abbreviated as 'ori', is a specific DNA sequence on a plasmid that serves as the starting point for DNA replication. It is recognized by initiator proteins that begin the process.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "origin of replication (ori)"
+    "gemini_answer": "origin of replication (ori)",
+    "contextMissing": false
   },
   {
     "number": 264,
@@ -3568,7 +3909,9 @@
     "explanation": "In most PCR applications, both a forward and a reverse primer are essential. They bind to opposite strands and flank the target region, allowing DNA polymerase to amplify the DNA segment exponentially.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "False"
+    "gemini_answer": "False",
+    "contextMissing": true,
+    "contextReason": "References 'this scenario specifically' which is not provided."
   },
   {
     "number": 265,
@@ -3578,7 +3921,8 @@
     "explanation": "cDNA is synthesized from mRNA and therefore lacks introns, which are non-coding regions present in genomic DNA. This makes the amplified sequence a continuous coding region, directly translatable by heterologous expression systems.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "cDNA lacks introns → amplified sequence will be contiguous coding sequence suitable for expression in heterologous cells"
+    "gemini_answer": "cDNA lacks introns → amplified sequence will be contiguous coding sequence suitable for expression in heterologous cells",
+    "contextMissing": false
   },
   {
     "number": 266,
@@ -3588,7 +3932,9 @@
     "explanation": "The stop codon normally signals the end of translation. By omitting it from the reverse primer, the ribosome continues translating the mRNA beyond the songA sequence and into the GFP sequence. This results in a single polypeptide chain containing both songA and GFP, fused at the C-terminus of songA.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "Omitting the stop codon on the reverse primer allows the songA gene to be translated continuously into the Green Fluorescent Protein (GFP) coding sequence. This creates a fusion protein where songA is fused to the C-terminus of GFP, enabling the detection of songA expression through GFP fluorescence."
+    "gemini_answer": "Omitting the stop codon on the reverse primer allows the songA gene to be translated continuously into the Green Fluorescent Protein (GFP) coding sequence. This creates a fusion protein where songA is fused to the C-terminus of GFP, enabling the detection of songA expression through GFP fluorescence.",
+    "contextMissing": true,
+    "contextReason": "References 'pGFP-Cterm' which is not defined in the question."
   },
   {
     "number": 267,
@@ -3598,7 +3944,9 @@
     "explanation": "Figure 4 displays the results of Sanger sequencing, which separates DNA fragments by size using an electric field through a gel matrix. This technique, known as gel electrophoresis, allows for the visualization of the distinct bands representing different DNA lengths, revealing the nucleotide sequence.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "GEL ELECTROPHORESIS"
+    "gemini_answer": "GEL ELECTROPHORESIS",
+    "contextMissing": true,
+    "contextReason": "References 'Figure 4' which is not provided."
   },
   {
     "number": 268,
@@ -3608,6 +3956,8 @@
     "explanation": "By carefully observing the bands in Figure 4, which represent the fluorescently labeled nucleotides at each position, and reading from the bottom (5' end) to the top (3' end), the DNA sequence can be deduced. Each color corresponds to a specific base (A, T, C, or G), and their order reveals the sequence.",
     "source": "GullSO 2026",
     "type": "Free Response",
-    "gemini_answer": "5' - TTTTTAACCCTCCAATTATTGCTCG - 3'"
+    "gemini_answer": "5' - TTTTTAACCCTCCAATTATTGCTCG - 3'",
+    "contextMissing": true,
+    "contextReason": "References 'Figure 4' which is not provided."
   }
 ]
