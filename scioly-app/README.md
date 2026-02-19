@@ -9,6 +9,17 @@ npm install
 npm run dev    # → http://localhost:3000
 ```
 
+## Deployment
+
+The app is deployed to Firebase Hosting:
+🌐 **Live URL:** https://sci-oly-quiz.web.app
+
+To re-deploy after making changes:
+```bash
+npm run build
+cd .. && firebase deploy --only hosting
+```
+
 ## Environment Variables
 
 Copy `.env.example` to `.env` and fill in your keys:
