@@ -923,10 +923,24 @@ body::before {
 
 .stat-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
   margin-bottom: 20px;
 }
+
+.mastery-level-cards .stat-card {
+  padding: 10px 6px;
+}
+
+.mastery-level-cards .stat-value {
+  font-size: 20px;
+}
+
+.mastery-level-cards .stat-name {
+  font-size: 10px;
+}
+
+
 
 .stat-card {
   background: var(--surface);

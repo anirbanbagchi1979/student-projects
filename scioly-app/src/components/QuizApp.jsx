@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import { collection, getDocs, orderBy, query, doc, setDoc, getDoc } from 'firebase/firestore'
 import { db } from '../lib/firebase'
 import { useAuth } from '../contexts/AuthContext'
+import { updateMastery, applyDecay, pickNextQuestion, createEmptyMastery } from '../lib/mastery'
 import QuestionCard from './QuestionCard'
 import ResultsScreen from './ResultsScreen'
 import Dashboard from './Dashboard'
@@ -11,7 +12,8 @@ export default function QuizApp() {
     const [allQuestions, setAllQuestions] = useState([])
     const [loading, setLoading] = useState(true)
     const [currentIdx, setCurrentIdx] = useState(0)
-    const [answers, setAnswers] = useState({})
+    const [sessionAnswers, setSessionAnswers] = useState({}) // current session answers (index → {selected, correct})
+    const [masteryMap, setMasteryMap] = useState({}) // persistent mastery (qNumber → mastery data)
     const [mode, setModeState] = useState('practice')
     const [filter, setFilterState] = useState('all')
     const [showResults, setShowResults] = useState(false)
@@ -21,8 +23,6 @@ export default function QuizApp() {
     // Spaced repetition state for practice mode
     const [practiceIdx, setPracticeIdx] = useState(0)
     const [practiceHistory, setPracticeHistory] = useState([])
-    const stepRef = useRef(0)
-    const repRef = useRef({})
 
     // Test mode timer
     const [timeLeft, setTimeLeft] = useState(60)
@@ -52,9 +52,14 @@ export default function QuizApp() {
                 const snap = await getDoc(doc(db, 'mastery', user.uid))
                 if (snap.exists()) {
                     const data = snap.data()
-                    if (data.answers) setAnswers(data.answers)
-                    if (data.repData) repRef.current = data.repData
-                    if (data.step) stepRef.current = data.step
+                    if (data.masteryMap) {
+                        // Apply time decay on load
+                        const decayed = {}
+                        for (const [k, v] of Object.entries(data.masteryMap)) {
+                            decayed[k] = applyDecay(v)
+                        }
+                        setMasteryMap(decayed)
+                    }
                 }
             } catch (err) {
                 console.error('Error loading mastery:', err)
@@ -65,15 +70,13 @@ export default function QuizApp() {
 
     // Save mastery to Firestore (debounced)
     const saveTimeoutRef = useRef(null)
-    function saveMastery(newAnswers) {
+    function saveMasteryToFirestore(newMap) {
         if (!user) return
         clearTimeout(saveTimeoutRef.current)
         saveTimeoutRef.current = setTimeout(async () => {
             try {
                 await setDoc(doc(db, 'mastery', user.uid), {
-                    answers: newAnswers,
-                    repData: repRef.current,
-                    step: stepRef.current,
+                    masteryMap: newMap,
                     updatedAt: new Date().toISOString()
                 })
             } catch (err) {
@@ -124,7 +127,7 @@ export default function QuizApp() {
     const filteredIndices = questions
         .map((_, i) => i)
         .filter(i => {
-            const a = answers[i]
+            const a = sessionAnswers[i]
             if (filter === 'wrong') return a && !a.correct
             if (filter === 'unanswered') return !a
             return true
@@ -133,28 +136,25 @@ export default function QuizApp() {
     const realIdx = filteredIndices[currentIdx] ?? 0
     const activeIdx = mode === 'practice' ? practiceIdx : realIdx
     const activeQuestion = questions[activeIdx]
-    const answeredCount = Object.keys(answers).length
-    const correctCount = Object.values(answers).filter(x => x.correct).length
+    const answeredCount = Object.keys(sessionAnswers).length
+    const correctCount = Object.values(sessionAnswers).filter(x => x.correct).length
 
     function setMode(m) {
         setModeState(m)
         setFilterState('all')
         setCurrentIdx(0)
         setShowResults(false)
-        if (m === 'test') setAnswers({})
+        // Reset session answers on mode switch (but mastery persists)
+        setSessionAnswers({})
         if (m === 'practice') {
-            // Reset practice spaced repetition
-            stepRef.current = 0
-            repRef.current = {}
             setPracticeIdx(0)
             setPracticeHistory([])
-            setAnswers({})
         }
     }
 
     function changeSource(s) {
         setSource(s)
-        setAnswers({})
+        setSessionAnswers({})
         setCurrentIdx(0)
         setFilterState('all')
         setShowResults(false)
@@ -163,7 +163,7 @@ export default function QuizApp() {
 
     function changeType(t) {
         setTypeFilter(t)
-        setAnswers({})
+        setSessionAnswers({})
         setCurrentIdx(0)
         setFilterState('all')
         setShowResults(false)
@@ -180,73 +180,39 @@ export default function QuizApp() {
         const q = questions[idx]
         const correctLetters = q.answer.split(',').map(s => s.trim())
         const isCorrect = correctLetters.length === 1 && correctLetters.includes(letter)
-        const newAnswers = { ...answers, [idx]: { selected: letter, correct: isCorrect } }
-        setAnswers(newAnswers)
 
-        // Update spaced repetition data in practice mode
-        if (mode === 'practice') {
-            const rep = repRef.current[idx] || { correctStreak: 0, lastSeenStep: 0 }
-            if (isCorrect) {
-                rep.correctStreak++
-            } else {
-                rep.correctStreak = 0
-            }
-            rep.lastSeenStep = stepRef.current
-            repRef.current[idx] = rep
-        }
+        // Update session answers
+        setSessionAnswers(prev => ({ ...prev, [idx]: { selected: letter, correct: isCorrect } }))
+
+        // Update permanent mastery (all modes contribute)
+        const key = String(q.number)
+        const current = masteryMap[key] || createEmptyMastery()
+        const updated = updateMastery(current, isCorrect)
+        const newMap = { ...masteryMap, [key]: updated }
+        setMasteryMap(newMap)
 
         // Save to Firestore
-        saveMastery(newAnswers)
+        saveMasteryToFirestore(newMap)
     }
 
-    // Pick next question for spaced repetition
+    // Pick next question for spaced repetition using mastery data
     const pickNextPractice = useCallback(() => {
-        const step = stepRef.current
-        const n = questions.length
-        if (n === 0) return 0
-
-        // Score each question: lower = higher priority
-        const scored = questions.map((_, i) => {
-            const rep = repRef.current[i]
-            const ans = answers[i]
-            if (!rep && !ans) {
-                // Never seen: high priority, ordered by index
-                return { i, score: i }
-            }
-            if (ans && !ans.correct) {
-                // Wrong: come back soon (after ~2 steps)
-                const gap = step - (rep?.lastSeenStep || 0)
-                return { i, score: gap >= 2 ? -1000 + i : 5000 + i }
-            }
-            if (rep) {
-                // Correct: push back based on streak
-                const interval = Math.pow(2, rep.correctStreak) * 3
-                const gap = step - rep.lastSeenStep
-                return { i, score: gap >= interval ? 2000 + i : 10000 + (interval - gap) * 100 + i }
-            }
-            return { i, score: i }
-        })
-
-        scored.sort((a, b) => a.score - b.score)
-        return scored[0].i
-    }, [questions, answers])
+        return pickNextQuestion(questions, masteryMap)
+    }, [questions, masteryMap])
 
     function navigate(dir) {
         if (mode === 'practice') {
             if (dir === -1) {
-                // Go back in practice history
                 if (practiceHistory.length === 0) return
                 const prev = practiceHistory[practiceHistory.length - 1]
                 setPracticeHistory(h => h.slice(0, -1))
                 setPracticeIdx(prev)
             } else {
-                // Pick next via spaced repetition
-                stepRef.current++
                 setPracticeHistory(h => [...h, practiceIdx])
                 const next = pickNextPractice()
                 setPracticeIdx(next)
-                // Clear previous answer for this question so it can be re-attempted
-                setAnswers(prev => {
+                // Clear session answer so it can be re-attempted
+                setSessionAnswers(prev => {
                     const copy = { ...prev }
                     delete copy[next]
                     return copy
@@ -268,12 +234,12 @@ export default function QuizApp() {
     }
 
     function retryWrong() {
-        const wrongIndices = Object.entries(answers)
+        const wrongIndices = Object.entries(sessionAnswers)
             .filter(([_, a]) => !a.correct)
             .map(([i]) => parseInt(i))
         if (wrongIndices.length === 0) return
         wrongIndices.forEach(i => {
-            setAnswers(prev => {
+            setSessionAnswers(prev => {
                 const copy = { ...prev }
                 delete copy[i]
                 return copy
@@ -285,7 +251,7 @@ export default function QuizApp() {
     }
 
     function resetQuiz() {
-        setAnswers({})
+        setSessionAnswers({})
         setCurrentIdx(0)
         setFilterState('all')
         setShowResults(false)
@@ -359,11 +325,11 @@ export default function QuizApp() {
             </div>
 
             {mode === 'dashboard' ? (
-                <Dashboard questions={questions} answers={answers} />
+                <Dashboard questions={questions} answers={sessionAnswers} masteryMap={masteryMap} />
             ) : showResults ? (
                 <ResultsScreen
                     questions={questions}
-                    answers={answers}
+                    answers={sessionAnswers}
                     onReview={() => setMode('review')}
                     onRetryWrong={retryWrong}
                     onReset={resetQuiz}
@@ -405,7 +371,7 @@ export default function QuizApp() {
                             </div>
                             <div className="q-grid">
                                 {questions.map((q, i) => {
-                                    const a = answers[i]
+                                    const a = sessionAnswers[i]
                                     let cls = ''
                                     if (a) cls = a.correct ? 'answered-correct' : 'answered-wrong'
                                     if (i === realIdx) cls += ' current'
@@ -434,7 +400,7 @@ export default function QuizApp() {
                     ) : activeQuestion && (
                         <QuestionCard
                             question={activeQuestion}
-                            answer={answers[activeIdx]}
+                            answer={sessionAnswers[activeIdx]}
                             mode={mode}
                             onSelectAnswer={selectAnswer}
                             timeLeft={mode === 'test' ? timeLeft : undefined}
