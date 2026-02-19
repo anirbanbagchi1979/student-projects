@@ -1,4 +1,6 @@
-export default function QuestionCard({ question, answer, mode, onSelectAnswer, timeLeft }) {
+import { MASTERY_LEVELS } from '../lib/mastery'
+
+export default function QuestionCard({ question, answer, mode, onSelectAnswer, timeLeft, masteryLevel }) {
     const isLocked = answer !== undefined || mode === 'review'
     const correctLetters = question.answer.split(',').map(s => s.trim())
 
@@ -8,15 +10,20 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
     const isMC = question.type === 'MC'
     const hasMismatch = isMC && geminiAnswer && providedAnswer && geminiAnswer !== providedAnswer
 
+    const lvl = MASTERY_LEVELS[masteryLevel ?? 0]
+
     return (
         <div className="question-card">
             <div className="q-header-row">
                 <div className="q-number">Question {question.number}</div>
-                {mode === 'test' && timeLeft !== undefined && (
-                    <div className={`timer-badge ${timeLeft <= 10 ? 'timer-danger' : timeLeft <= 30 ? 'timer-warn' : ''}`}>
-                        ⏱ {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, '0')}
-                    </div>
-                )}
+                <div className="q-header-right">
+                    <span className="mastery-badge" style={{ color: lvl.color }}>{lvl.icon} {lvl.name}</span>
+                    {mode === 'test' && timeLeft !== undefined && (
+                        <span className={`timer-badge ${timeLeft <= 10 ? 'timer-danger' : timeLeft <= 30 ? 'timer-warn' : ''}`}>
+                            ⏱ {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, '0')}
+                        </span>
+                    )}
+                </div>
             </div>
             <div className="q-text">{question.question}</div>
 

@@ -406,6 +406,7 @@ export default function QuizApp() {
                             mode={mode}
                             onSelectAnswer={selectAnswer}
                             timeLeft={mode === 'test' ? timeLeft : undefined}
+                            masteryLevel={masteryMap[String(activeQuestion?.number)]?.level ?? 0}
                         />
                     )}
 
