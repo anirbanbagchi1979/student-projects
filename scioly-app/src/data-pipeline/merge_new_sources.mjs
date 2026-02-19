@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 
 // Load existing questions (already has Designer Genes C + Purdue2026 with source field)
-const existing = JSON.parse(readFileSync('questions.json', 'utf-8'));
+const existing = JSON.parse(readFileSync('../../questions.json', 'utf-8'));
 
 // Load new sources
 const dubso = JSON.parse(readFileSync('questions_dubso2025.json', 'utf-8'));
@@ -15,7 +15,7 @@ console.log(`Unity Invite: ${unity.length}`);
 const merged = [...existing, ...dubso, ...unity];
 merged.forEach((q, i) => { q.number = i + 1; });
 
-writeFileSync('questions.json', JSON.stringify(merged, null, 2));
+writeFileSync('../../questions.json', JSON.stringify(merged, null, 2));
 console.log(`\nMerged total: ${merged.length} questions saved to questions.json`);
 
 // Stats

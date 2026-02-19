@@ -1,0 +1,906 @@
+[
+  {
+    "number": 1,
+    "question": "If eye color is a mendelian trait, what is the probability that a child of someone with brown eyes(genotype Bb) and someone with green eyes will have a child with green eyes?",
+    "options": [
+      "a. 1/4",
+      "b. 2/4",
+      "c. 3/4",
+      "d. 4/4"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 2,
+    "question": "What is the end result of meiosis",
+    "options": [
+      "a. 2 haploid cells",
+      "b. 4 haploid cells",
+      "c. 2 diploid cells",
+      "d. 4 diploid cells"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 3,
+    "question": "Assume Hardy Weinberg is met\nIn a population of 200 humans, brown eyes are dominant, and blue eyes are recessive. If 140 people are homozygous for brown eyes, approximately how many people have blue eyes?",
+    "options": [
+      "a. 5 people",
+      "b. 10 people",
+      "c. 30 people",
+      "d. 60 people"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 4,
+    "question": "Sarah wants to visualize the DNA fragments she separated using gel electrophoresis under UV light. Which stain should she choose?(Tiebreaker 3)",
+    "options": [
+      "a. Methylene Blue",
+      "b. Ethidium bromide",
+      "c. Gram's lodine",
+      "d. Trypan Blue"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 5,
+    "question": "What is the end result of mitosis?",
+    "options": [
+      "a. 2 haploid cells",
+      "b. 4 haploid cells",
+      "c. 2 diploid cells",
+      "d. 4 diploid cells"
+    ],
+    "answer": "c",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 6,
+    "question": "What is the closest common ancestor between mabeei and laterale?",
+    "options": [
+      "a. 1",
+      "b. 2",
+      "c. 3",
+      "d. 4"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 7,
+    "question": "Which organisms are most related to gracile?",
+    "options": [
+      "a. Maculatum and talpoideum",
+      "b. Jeffersonianum and tigrinum",
+      "c. Macrodactylum and maculatum",
+      "d. Talpoideum and macrodactylum"
+    ],
+    "answer": "a",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 8,
+    "question": "How many speciation events occurred in the phylogenetic tree",
+    "options": [
+      "a. 17",
+      "b. 18",
+      "c. 19",
+      "d. 20"
+    ],
+    "answer": "c",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 9,
+    "question": "What is the difference between Mitosis and meiosis?",
+    "options": [
+      "a. Meiosis occurs in somatic cells and Mitosis occurs in germline cells",
+      "b. Meiosis occurs in germline cells and Mitosis occurs in somatic cells",
+      "c. Mitosis contains metaphase while meiosis doesn't",
+      "d. Meiosis contains metaphase while Mitosis doesn't"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 10,
+    "question": "Which of these is an example of incomplete dominance?",
+    "options": [
+      "a. A white flower(rr) crossing with a red flower(RR) to make a red flower",
+      "b. A white flower(rr) crossing with a red flower(RR) to make a red and white speckled flower",
+      "c. A white flower(rr) crossing with a red flower(RR) to make a white flower",
+      "d. A white flower(rr) crossing with a red flower(RR) to make a pink flower"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 11,
+    "question": "Why are men impacted by X linked traits more often?",
+    "options": [
+      "a. Men have fewer chromosomes than women",
+      "b. Men have one X chromosome and one Y chromosome, so they only need one copy of the gene with the trait for the trait to be present, rather than women who need two copies of the gene",
+      "c. Men have two X chromosomes, and since all X linked traits are dominant, they are more likely to inherit the trait",
+      "d. Men need two copies of a gene with an X linked trait for it to be expressed, while women need three, making it more likely that men will be affected by x linked traits when compared to women."
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 12,
+    "question": "The Hardy-Weinberg equation describes:",
+    "options": [
+      "A. Mutation rates in a population",
+      "B. Genotype frequencies under no evolutionary forces",
+      "C. Gene flow between two populations",
+      "D. Differences in fitness"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 13,
+    "question": "What are homologous chromosomes",
+    "options": [
+      "a. Matching pairs of chromosomes that are similar but have differences in DNA",
+      "b. Matching pairs of chromosomes with identical DNA",
+      "c. Chromosomes 1 and 2 on a karyotype",
+      "d. Another word for allosomal chromosomes"
+    ],
+    "answer": "a",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 14,
+    "question": "Brown eyes are dominant to green eyes and brown hair is dominant to red hair. What is the probability that a person who is heterozygous for brown eyes and has red hair and a person with green eyes and is heterozygous for brown hair will have a child with green eyes and red hair?",
+    "options": [
+      "a. 1/16",
+      "b. 4/16",
+      "c. 8/16",
+      "d. 12/16"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 15,
+    "question": "What type of inheritance is shown by the pedigree?",
+    "options": [
+      "a. Autosomal recessive",
+      "b. Autosomal dominant",
+      "c. X-linked recessive",
+      "d. Two of the above"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 16,
+    "question": "What is the genotype of individual 4?",
+    "options": [
+      "a. AA",
+      "b. Aa",
+      "c. Aa"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 17,
+    "question": "Flowers exhibit incomplete dominance, where red is homozygous dominant and white is homozygous recessive. What will the phenotype of a Rr genotype be?",
+    "options": [
+      "a. Red flowers",
+      "b. White flowers",
+      "c. Red and white speckled flowers",
+      "d. Pink flowers"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 18,
+    "question": "In a population, the frequency of allele a is 0.3. Assuming Hardy-Weinberg equilibrium, what is the expected frequency of heterozygotes? (Tiebreaker 2)",
+    "options": [
+      "A. 0.21",
+      "B. 0.30",
+      "C. 0.42",
+      "D. 0.493."
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 19,
+    "question": "If individual 12 has a child with a person who is heterozygous for this trait, what is the probability that their child does NOT have the trait?",
+    "options": [
+      "a. 0/4 if individual 12 is Aa, 2/4 if they are AA",
+      "b. 1/4 if individual 12 is Aa, 0/4 if they are AA",
+      "c. 3/4 if individual 12 is Aa, 1/4 if they are AA",
+      "d. 2/4 if individual 12 is Aa, 4/4 if they are AA"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 20,
+    "question": "On a pedigree, what does it mean if the shape is shaded in?",
+    "options": [
+      "a. The individual has the trait",
+      "b. The individual doesn't have the trait",
+      "c. The individual is a carrier for the trait",
+      "d. The individual is male"
+    ],
+    "answer": "a",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 21,
+    "question": "What did Gregor Mendel use to conduct his experiments on inheritance?",
+    "options": [
+      "a. Bees",
+      "b. Pea plants",
+      "c. Wild flowers",
+      "d. Rabbits"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 22,
+    "question": "Which of the following statements about euchromatin is incorrect?",
+    "options": [
+      "a. Euchromatin is less densely packed",
+      "b. Euchromatin allows DNA to actively be transcribed",
+      "c. DNA can be converted to euchromatin through histone acetylation",
+      "d. DNA can be converted to euchromatin through histone methylation"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 23,
+    "question": "In which set of chromosomes is the abnormality present?",
+    "options": [
+      "a. Chromosome 5",
+      "b. Chromosome 11",
+      "c. Chromosome 20",
+      "d. Chromosome 21"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 24,
+    "question": "What is the cause of this abnormality?",
+    "options": [
+      "a. Frameshift mutation",
+      "b. Nondisjunction",
+      "c. Deletion",
+      "d. Translocation"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 25,
+    "question": "What disorder is commonly associated with this abnormality?",
+    "options": [
+      "a. Klinefelter syndrome",
+      "b. Turner syndrome",
+      "c. Triple X syndrome",
+      "d. Down syndrome"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 26,
+    "question": "Which of the following correctly describes the founder effect?",
+    "options": [
+      "A group isolated from a larger population that has more genetic diversity than the original population",
+      "A group isolated from a larger population that has less genetic diversity than the original population",
+      "A group being added to an existing population, where the new population has more genetic diversity",
+      "A group being added to an existing population, where the new population has less genetic diversity"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 27,
+    "question": "In a population of chinchillas, brown fur is dominant and white fur is recessive. If 36 out of 100 chinchillas have white fur, what is the frequency of heterozygotes if Hardy Weinberg is met?",
+    "options": [
+      "16/100",
+      "28/100",
+      "46/100",
+      "52/100"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 1,
+    "question": "What are the 5 conditions for Hardy Weinberg Equilibrium",
+    "options": [],
+    "answer": "No mutation, Random mating, No natural selection, No genetic drift/large population size, No gene flow/no migration",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 2,
+    "question": "Labrador coat colors can be influenced by epistatic genes. What are epistatic genes?",
+    "options": [],
+    "answer": "Epistatic genes are genes that inhibit or suppress the expression of another/different genes.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 2,
+    "question": "If a black lab with the genotype BbEe and a brown lab with the genotype bbEe are bred together, what is the probability that they will produce a yellow puppy? (Show the entire dihybrid cross for full credit)",
+    "options": [],
+    "answer": "4/16 or 1/4",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 2,
+    "question": "What is the probability that they produce a brown lab?",
+    "options": [],
+    "answer": "6/16 or 3/8",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 3,
+    "question": "Mix and match the following terms relating to transcription to their correct definitions or functions (1-8)",
+    "options": [],
+    "answer": "1-c, 2-h, 3-f, 4-b, 5-g, 6-e, 7-d, 8-a",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 4,
+    "question": "Describe two different ways in which RNA polymerase is terminated from continuing to code for mRNA.",
+    "options": [],
+    "answer": "The DNA sequence codes for a \"hairpin” in the mRNA that encourages the RNA polymerase to detach; A specific sequence in the DNA is recognized by the RNA polymerase, encouraging it to be removed from the DNA; (in the case of RNA polymerase II), the remaining (unused) RNA is cleaved and degraded from the main strand; (in the case of RNA polymerase I and III), termination factors bind to the enzyme and signal termination",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 5,
+    "question": "Draw and label a simple diagram of all the main phases in meiosis 1 and 2. It is not necessary to show crossing over.",
+    "options": [],
+    "answer": "",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 5,
+    "question": "Draw a box around the phase where crossing over occurs.",
+    "options": [],
+    "answer": "Prophase 1",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 6,
+    "question": "Describe the major Illumina NGS platforms (e.g., MiSeq, NextSeq, NovaSeq) and explain the core sequencing-by-synthesis workflow they share.",
+    "options": [],
+    "answer": "MiSeq – lower throughput; ideal for small genomes, amplicon sequencing, targeted panels. NextSeq – mid-range throughput for RNA-seq, exomes, and medium-scale projects. NovaSeq – ultra-high throughput used for large-scale whole-genome sequencing and population studies. The core workflow involves DNA fragmentation and ligation to adapters, binding to a flow cell, bridge amplification to form clusters, and cyclic reversible terminator chemistry with fluorescently labeled nucleotides.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 6,
+    "question": "What is the Core Illumina workflow (sequencing-by-synthesis):",
+    "options": [],
+    "answer": "DNA is fragmented and ligated to adapters. Fragments bind to a flow cell and undergo bridge amplification, forming dense clusters of identical DNA copies. Sequencing occurs through cyclic reversible terminator chemistry: fluorescently labeled nucleotides are added one base at a time.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 6,
+    "question": "Compare Illumina sequencing with Oxford Nanopore sequencing in terms of (i) how the sequencing reaction is performed, (ii) the type and length of data each produces, and (iii) the kinds of biological questions or research applications each is best suited for.",
+    "options": [],
+    "answer": "Illumina: Uses sequencing-by-synthesis, requires DNA fragmentation and amplification, generates short reads through fluorescent imaging. Nanopore: Single long DNA molecules pass through biological nanopores, changes in electrical current are measured, no amplification required, real-time sequencing. Illumina produces short reads (75-300 bp) with extremely high accuracy (>99.9%), outputting massive quantities of precise sequences. Nanopore produces ultra-long reads (10 kb-100 kb+, some >1 Mb) with lower raw accuracy (90-98%), outputting long stretches of DNA. Illumina is best for variant calling (SNPs, small indels), RNA-seq, exome sequencing, microbiome sequencing, and high-accuracy population genomics. Nanopore is best for de novo genome assembly, detecting structural variants and repeat regions, full-length transcript sequencing, rapid field sequencing or clinical diagnostics, and methylation detection directly from raw signal.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 6,
+    "question": "If the company's primary goal is to assemble a highly repetitive plant genome, which platform would be more appropriate? Justify your answer.",
+    "options": [],
+    "answer": "Oxford Nanopore is the better choice. Repetitive plant genomes contain long repeat elements that are extremely difficult to assemble using Illumina's short reads. Nanopore's long-read sequencing can span entire repeat regions, producing more contiguous assemblies. It resolves structural variants and complex genome architecture better than short-read NGS.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 7,
+    "question": "What is the genotype of individual 5V?",
+    "options": [],
+    "answer": "Bb",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 7,
+    "question": "What possible genotype(s) could individual 4V have?",
+    "options": [],
+    "answer": "BB or Bb",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 7,
+    "question": "If individual 5V has a child with a brown haired person, what is the probability that they have a homozygous recessive child? Make sure to show your work",
+    "options": [],
+    "answer": "0% chance",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 7,
+    "question": "If individual 5V also has a widows peak(pp), and they have a child with a blond haired person who doesn't have a widow's peak(Pp), what is the probability that the child has blond hair and a widows peak. Fill in the entire punnet square below for full credit.",
+    "options": [],
+    "answer": "4/16 or 1/4",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 5,
+    "question": "What is the end result of mitosis?",
+    "options": [
+      "A) 2 haploid cells",
+      "B) 4 haploid cells",
+      "C) 2 diploid cells",
+      "D) 4 diploid cells"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 6,
+    "question": "What is the closest common ancestor between mabeei and laterale?",
+    "options": [
+      "A) 1",
+      "B) 2",
+      "C) 3",
+      "D) 4"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 7,
+    "question": "Which organisms are most related to gracile?",
+    "options": [
+      "A) Maculatum and talpoideum",
+      "B) Jeffersonianum and tigrinum",
+      "C) Macrodactylum and maculatum",
+      "D) Talpoideum and macrodactylum"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 8,
+    "question": "How many speciation events occurred in the phylogenetic tree",
+    "options": [
+      "A) 17",
+      "B) 18",
+      "C) 19",
+      "D) 20"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 9,
+    "question": "What is the difference between Mitosis and meiosis?",
+    "options": [
+      "A) Meiosis occurs in somatic cells and Mitosis occurs in germline cells",
+      "B) Meiosis occurs in germline cells and Mitosis occurs in somatic cells",
+      "C) Mitosis contains metaphase while meiosis doesn't",
+      "D) Meiosis contains metaphase while Mitosis doesn't"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 10,
+    "question": "Which of these is an example of incomplete dominance?",
+    "options": [
+      "A) A white flower(rr) crossing with a red flower(RR) to make a red flower",
+      "B) A white flower(rr) crossing with a red flower(RR) to make a red and white speckled flower",
+      "C) A white flower(rr) crossing with a red flower(RR) to make a white flower",
+      "D) A white flower(rr) crossing with a red flower(RR) to make a pink flower"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 11,
+    "question": "Why are men impacted by X linked traits more often?",
+    "options": [
+      "A) Men have fewer chromosomes than women",
+      "B) Men have one X chromosome and one Y chromosome, so they only need one copy of the gene with the trait for the trait to be present, rather than women who need two copies of the gene",
+      "C) Men have two X chromosomes, and since all X linked traits are dominant, they are more likely to inherit the trait",
+      "D) Men need two copies of a gene with an X linked trait for it to be expressed, while women need three, making it more likely that men will be affected by x linked traits when compared to women."
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 12,
+    "question": "The Hardy-Weinberg equation describes:",
+    "options": [
+      "A) Mutation rates in a population",
+      "B) Genotype frequencies under no evolutionary forces",
+      "C) Gene flow between two populations",
+      "D) Differences in fitness"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 13,
+    "question": "What are homologous chromosomes",
+    "options": [
+      "A) Matching pairs of chromosomes that are similar but have differences in DNA",
+      "B) Matching pairs of chromosomes with identical DNA",
+      "C) Chromosomes 1 and 2 on a karyotype",
+      "D) Another word for allosomal chromosomes"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 14,
+    "question": "Brown eyes are dominant to green eyes and brown hair is dominant to red hair. What is the probability that a person who is heterozygous for brown eyes and has red hair and a person with green eyes and is heterozygous for brown hair will have a child with green eyes and red hair?",
+    "options": [
+      "A) 1/16",
+      "B) 4/16",
+      "C) 8/16",
+      "D) 12/16"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 15,
+    "question": "What type of inheritance is shown by the pedigree?",
+    "options": [
+      "A) Autosomal recessive",
+      "B) Autosomal dominant",
+      "C) X-linked recessive",
+      "D) Two of the above"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 16,
+    "question": "What is the genotype of individual 4?",
+    "options": [
+      "A) AA",
+      "B) Aa",
+      "C) Aa"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 17,
+    "question": "Flowers exhibit incomplete dominance, where red is homozygous dominant and white is homozygous recessive. What will the phenotype of a Rr genotype be?",
+    "options": [
+      "A) Red flowers",
+      "B) White flowers",
+      "C) Red and white speckled flowers",
+      "D) Pink flowers"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 18,
+    "question": "In a population, the frequency of allele a is 0.3. Assuming Hardy-Weinberg equilibrium, what is the expected frequency of heterozygotes? (Tiebreaker 2)",
+    "options": [
+      "A) 0.21",
+      "B) 0.30",
+      "C) 0.42",
+      "D) 0.493."
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 19,
+    "question": "If individual 12 has a child with a person who is heterozygous for this trait, what is the probability that their child does NOT have the trait?",
+    "options": [
+      "A) 0/4 if individual 12 is Aa, 2/4 if they are AA",
+      "B) 1/4 if individual 12 is Aa, 0/4 if they are AA",
+      "C) 3/4 if individual 12 is Aa, 1/4 if they are AA",
+      "D) 2/4 if individual 12 is Aa, 4/4 if they are AA"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 20,
+    "question": "On a pedigree, what does it mean if the shape is shaded in?",
+    "options": [
+      "A) The individual has the trait",
+      "B) The individual doesn't have the trait",
+      "C) The individual is a carrier for the trait",
+      "D) The individual is male"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 21,
+    "question": "What did Gregor Mendel use to conduct his experiments on inheritance?",
+    "options": [
+      "A) Bees",
+      "B) Pea plants",
+      "C) Wild flowers",
+      "D) Rabbits"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 22,
+    "question": "Which of the following statements about euchromatin is incorrect?",
+    "options": [
+      "A) Euchromatin is less densely packed",
+      "B) Euchromatin allows DNA to actively be transcribed",
+      "C) DNA can be converted to euchromatin through histone acetylation",
+      "D) DNA can be converted to euchromatin through histone methylation"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 23,
+    "question": "In which set of chromosomes is the abnormality present?",
+    "options": [
+      "A) Chromosome 5",
+      "B) Chromosome 11",
+      "C) Chromosome 20",
+      "D) Chromosome 21"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 24,
+    "question": "What is the cause of this abnormality?",
+    "options": [
+      "A) Frameshift mutation",
+      "B) Nondisjunction",
+      "C) Deletion",
+      "D) Translocation"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 25,
+    "question": "What disorder is commonly associated with this abnormality?",
+    "options": [
+      "A) Klinefelter syndrome",
+      "B) Turner syndrome",
+      "C) Triple X syndrome",
+      "D) Down syndrome"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 26,
+    "question": "Which of the following correctly describes the founder effect?",
+    "options": [
+      "A) A group isolated from a larger population that has more genetic diversity than the original population",
+      "B) A group isolated from a larger population that has less genetic diversity than the original population",
+      "C) A group being added to an existing population, where the new population has more genetic diversity",
+      "D) A group being added to an existing population, where the new population has less genetic diversity"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 27,
+    "question": "In a population of chinchillas, brown fur is dominant and white fur is recessive. If 36 out of 100 chinchillas have white fur, what is the frequency of heterozygotes if Hardy Weinberg is met?",
+    "options": [
+      "A) 16/100",
+      "B) 28/100",
+      "C) 46/100",
+      "D) 52/100"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 1,
+    "question": "What are the 5 conditions for Hardy Weinberg Equilibrium",
+    "options": [],
+    "answer": "No mutation, Random mating, No natural selection, No genetic drift/large population size, No gene flow/no migration",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 2,
+    "question": "Labrador coat colors can be influenced by epistatic genes. What are epistatic genes?",
+    "options": [],
+    "answer": "Epistatic genes are genes that inhibit or suppress the expression of another/different genes.",
+    "explanation": "Partial Credit: +1 point: include the word inhibit/suppress +1 point: reference that it is other genes that are being inhibited.",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 2,
+    "question": "If a black lab with the genotype BbEe and a brown lab with the genotype bbEe are bred together, what is the probability that they will produce a yellow puppy? (Show the entire dihybrid cross for full credit)",
+    "options": [],
+    "answer": "4/16 or 1/4",
+    "explanation": "Partial credit: +1 correct headings for the cross(BE, Be, etc)-can be in any order, however all must be present and correct +3 correct dihybrid cross",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 2,
+    "question": "What is the probability that they produce a brown lab?",
+    "options": [],
+    "answer": "6/16 or 3/8",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 3,
+    "question": "Mix and match the following terms relating to transcription to their correct definitions or functions (1-8)",
+    "options": [],
+    "answer": "1-c, 2-h, 3-f, 4-b, 5-g, 6-e, 7-d, 8-a",
+    "explanation": ".5 points for every correct selection, Maximum of 4 total points for this set:",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 4,
+    "question": "Describe two different ways in which RNA polymerase is terminated from continuing to code for mRNA.",
+    "options": [],
+    "answer": "The DNA sequence codes for a \"hairpin” in the mRNA that encourages the RNA polymerase to detach OR A specific sequence in the DNA is recognized by the RNA polymerase, encouraging it to be removed from the DNA OR (in the case of RNA polymerase II), the remaining (unused) RNA is cleaved and degraded from the main strand OR (in the case of RNA polymerase I and III), termination factors bind to the enzyme and signal termination",
+    "explanation": "One point is awarded [max 2 points] for each correctly identified answer of the following:",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 5,
+    "question": "Draw and label a simple diagram of all the main phases in meiosis 1 and 2.It is not necessary to show crossing over.",
+    "options": [],
+    "answer": "",
+    "explanation": "Partial Credit: +0.5 point for every phase(prophase 1-telaphase 2) drawn correctly(4 points total) +1 point for showing 4 haploid cells at the end(last column of cells) +3 points for correct labeling(3 points total) -2 points for correct names but incorrect order.",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 5,
+    "question": "Draw a box around the phase where crossing over occurs.",
+    "options": [],
+    "answer": "Box around prophase 1",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 6,
+    "question": "Describe the major Illumina NGS platforms (e.g., MiSeq, NextSeq, NovaSeq) and explain the core sequencing-by-synthesis workflow they share.",
+    "options": [],
+    "answer": "Major Illumina platforms: MiSeq – lower throughput; ideal for small genomes, amplicon sequencing, targeted panels. NextSeq – mid-range throughput for RNA-seq, exomes, and medium-scale projects. NovaSeq – ultra-high throughput used for large-scale whole-genome sequencing and population studies. Core workflow: DNA is fragmented and ligated to adapters. Fragments bind to a flow cell and undergo bridge amplification, forming dense clusters of identical DNA copies. Sequencing occurs through cyclic reversible terminator chemistry: fluorescently labeled nucleotides are added one base at a time. A camera captures fluorescence signals after each cycle, revealing the base sequence. Millions to billions of clusters are sequenced in parallel → high accuracy and short reads.",
+    "explanation": "0.5pts- 1.5 pts for writing name of each of each major platform(given in question)-0.5 points each Max [3.5pts] for description of platforms",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 6,
+    "question": "What is the Core Illumina workflow (sequencing-by-synthesis):",
+    "options": [],
+    "answer": "DNA is fragmented and ligated to adapters. Fragments bind to a flow cell and undergo bridge amplification, forming dense clusters of identical DNA copies. Sequencing occurs through cyclic reversible terminator chemistry: fluorescently labeled nucleotides are added one base at a time.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 6,
+    "question": "Compare Illumina sequencing with Oxford Nanopore sequencing in terms of (i) how the sequencing reaction is performed, (ii) the type and length of data each produces, and (iii) the kinds of biological questions or research applications each is best suited for.",
+    "options": [],
+    "answer": "i. Illumina (Next-gen): Uses sequencing-by-synthesis. Requires DNA fragmentation and amplification. Short reads are generated through fluorescent imaging. Nanopore (Third-gen): Single long DNA molecules pass through biological nanopores embedded in a membrane. Changes in electrical current across the pore are measured to identify bases. No amplification required; real-time sequencing. ii. Illumina: Read length: Short reads (75–300 bp). Data quality: Extremely high accuracy (>99.9%) Output: Massive quantity of short, precise sequences. Nanopore: Read length: Ultra-long reads (10 kb–100 kb+, some >1 Mb). Data quality: Lower raw accuracy (90–98%) but improving with updated chemistry and software. Output: Long stretches of DNA ideal for structural variants and assembly. iii. Illumina best for: Variant calling (SNPs, small indels), RNA-seq, Exome sequencing, Microbiome sequencing, High-accuracy population genomics. Nanopore best for: De novo genome assembly, Detecting structural variants and repeat regions, Full-length transcript sequencing, Rapid field sequencing or clinical diagnostics, Methylation detection directly from raw signal.",
+    "explanation": "i. [3pts] Answer needs to include AT LEAST 1 bullet pt to earn full points. ii. [3pts] iii. [3pts] Should include AT LEAST 1 reasonings for each to get full pts If only 1 application is answered max pts given is 1.5",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 6,
+    "question": "If the company's primary goal is to assemble a highly repetitive plant genome, which platform would be more appropriate? Justify your answer.",
+    "options": [],
+    "answer": "Oxford Nanopore is the better choice. Repetitive plant genomes contain long repeat elements that are extremely difficult to assemble using Illumina's short reads. Nanopore's long-read sequencing can span entire repeat regions, producing more contiguous assemblies. It resolves structural variants and complex genome architecture better than short-read NGS.",
+    "explanation": "[3 pts]",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 7,
+    "question": "What is the genotype of individual 5V?",
+    "options": [],
+    "answer": "Bb",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 7,
+    "question": "What possible genotype(s) could individual 4V have?",
+    "options": [],
+    "answer": "BB or Bb",
+    "explanation": "One point per correct genotype",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 7,
+    "question": "If individual 5V has a child with a brown haired person, what is the probability that they have a homozygous recessive child? Make sure to show your work",
+    "options": [],
+    "answer": "0% chance",
+    "explanation": "Partial credit: +1 correct headings for the cross-can be in any order, however all must be present and correct +1 correct cross +2 correct answer Half credit if no punnet square was shown",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 7,
+    "question": "If individual 5V also has a widows peak(pp), and they have a child with a blond haired person who doesn't have a widow's peak(Pp), what is the probability that the child has blond hair and a widows peak. Fill in the entire punnet square below for full credit.",
+    "options": [],
+    "answer": "4/16 or 1/4",
+    "explanation": "Partial credit: +1 correct headings for the cross(Bp, bp, etc)-can be in any order, however all must be present and correct +3 correct dihybrid cross +2 correct answer",
+    "source": "Purdue2026"
+  }
+]

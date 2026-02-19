@@ -1,18 +1,13 @@
 import { readFileSync, writeFileSync } from 'fs';
 
-// Load API key from .env
-const envContent = readFileSync('.env', 'utf-8');
-const apiKeyMatch = envContent.match(/GEMINI_API_KEY=(.+)/);
-if (!apiKeyMatch) { console.error('GEMINI_API_KEY not found in .env'); process.exit(1); }
-const API_KEY = apiKeyMatch[1].trim();
+const API_KEY = process.env.GEMINI_API_KEY;
 
+// Use gemini-2.5-flash-lite for faster, non-thinking responses
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${API_KEY}`;
 
-// Read Purdue2026 PDFs as base64
-const examPdf = readFileSync('input_quiz/Purdue2026_DesignerGenesC_Exam.pdf').toString('base64');
-const answerKeyPdf = readFileSync('input_quiz/Purdue2026_DesignerGenesC_AnswerKey.pdf').toString('base64');
-
-const SOURCE = 'Purdue2026';
+// Read PDFs as base64
+const testPdf = readFileSync('../../input_quiz/Designer Genes C-TEST.pdf').toString('base64');
+const answerKeyPdf = readFileSync('../../input_quiz/Designer Genes C - ANSWER_KEY.pdf').toString('base64');
 
 async function extractBatch(startQ, endQ) {
     console.log(`Extracting questions ${startQ}-${endQ}...`);
@@ -26,7 +21,7 @@ async function extractBatch(startQ, endQ) {
                     {
                         inlineData: {
                             mimeType: 'application/pdf',
-                            data: examPdf
+                            data: testPdf
                         }
                     },
                     {
@@ -47,8 +42,7 @@ Output the result as a JSON array with this exact format:
     "question": "Full question text here",
     "options": ["A) option text", "B) option text", "C) option text", "D) option text"],
     "answer": "B",
-    "explanation": "Brief explanation if available from answer key, otherwise empty string",
-    "source": "${SOURCE}"
+    "explanation": "Brief explanation if available from answer key, otherwise empty string"
   }
 ]
 
@@ -58,7 +52,6 @@ Rules:
 - For fill-in-the-blank or short answer: set options to empty array []
 - "answer" should be the correct answer letter(s) or full text for non-multiple-choice
 - Include any explanations from the answer key
-- Always include "source": "${SOURCE}" in every object
 - Output ONLY valid JSON, no markdown, no code blocks`
                     }
                 ]
@@ -95,15 +88,17 @@ Rules:
         console.log(`  Got ${questions.length} questions from batch ${startQ}-${endQ}`);
         return questions;
     } catch (e) {
-        writeFileSync(`questions_raw_purdue_${startQ}_${endQ}.txt`, text);
+        writeFileSync(`questions_raw_${startQ}_${endQ}.txt`, text);
         console.error(`  Parse error for Q${startQ}-${endQ}: ${e.message}`);
-        console.error(`  Raw saved to questions_raw_purdue_${startQ}_${endQ}.txt`);
+        console.error(`  Raw saved to questions_raw_${startQ}_${endQ}.txt`);
         return null;
     }
 }
 
-console.log('Sending Purdue2026 PDFs to Gemini API in batches...\n');
+// First, figure out how many questions there are
+console.log('Sending PDFs to Gemini API in batches...\n');
 
+// Extract in batches
 const batch1 = await extractBatch(1, 25);
 const batch2 = await extractBatch(26, 50);
 const batch3 = await extractBatch(51, 80);
@@ -114,8 +109,8 @@ if (batch2) allQuestions.push(...batch2);
 if (batch3) allQuestions.push(...batch3);
 
 if (allQuestions.length > 0) {
-    writeFileSync('questions_purdue2026.json', JSON.stringify(allQuestions, null, 2));
-    console.log(`\nTotal: ${allQuestions.length} questions extracted and saved to questions_purdue2026.json`);
+    writeFileSync('../../questions.json', JSON.stringify(allQuestions, null, 2));
+    console.log(`\nTotal: ${allQuestions.length} questions extracted and saved to questions.json`);
 } else {
     console.error('\nFailed to extract any questions.');
 }

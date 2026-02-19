@@ -4,7 +4,7 @@ const API_KEY = process.env.VITE_FIREBASE_API_KEY;
 const PROJECT_ID = 'sci-oly-quiz';
 const FIRESTORE_URL = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents`;
 
-const questions = JSON.parse(readFileSync('questions.json', 'utf-8'));
+const questions = JSON.parse(readFileSync('../../questions.json', 'utf-8'));
 // Filter to only MC questions
 const mcQuestions = questions.filter(q => q.options && q.options.length > 0);
 

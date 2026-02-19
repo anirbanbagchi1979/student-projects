@@ -10,7 +10,8 @@
       "E) B and i"
     ],
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 2,
@@ -23,7 +24,8 @@
       "E) Polygenic inheritance"
     ],
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 3,
@@ -36,7 +38,8 @@
       "E) 1/64"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 4,
@@ -49,7 +52,8 @@
       "E) 0"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 5,
@@ -62,7 +66,8 @@
       "E) No introduction of new alleles"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 6,
@@ -75,7 +80,8 @@
       "E) All of the above"
     ],
     "answer": "E",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 7,
@@ -88,7 +94,8 @@
       "E) The population of all homozygotes in the model"
     ],
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 8,
@@ -101,7 +108,8 @@
       "E) More than one of the above"
     ],
     "answer": "E",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 9,
@@ -114,7 +122,8 @@
       "E) More than one of the above"
     ],
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 10,
@@ -127,7 +136,8 @@
       "E) 3/4"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 11,
@@ -140,7 +150,8 @@
       "E) 1/4"
     ],
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 12,
@@ -153,14 +164,16 @@
       "E) 0.24"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 13,
     "question": "Write out the Hardy-Weinberg equation for the ABO blood group model with respect to the variables A, B, and i. Then identify which term(s) correspond to each phenotype and use them to complete the table. [3.5 points]",
     "options": [],
     "answer": "Equation: (A + B + i)² = 1 OR A² + B² + i² + 2AB + 2Ai + 2Bi = 1\nPhenotype | Hardy-Weinberg Terms\n---|---\nBlood Type A | A² + 2Ai\nBlood Type B | B² + 2Bi\nBlood Type AB | 2AB\nBlood Type O | i²",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 14,
@@ -173,7 +186,8 @@
       "E) One recessive allele from either of the two genes is needed for the blood type A"
     ],
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 15,
@@ -186,7 +200,8 @@
       "E) Recessive epistasis"
     ],
     "answer": "E",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 16,
@@ -199,7 +214,8 @@
       "E) AAHH"
     ],
     "answer": "A, B, D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 17,
@@ -212,7 +228,8 @@
       "E) 12:3:1"
     ],
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 18,
@@ -225,7 +242,8 @@
       "E) Y-linked"
     ],
     "answer": "A, B, C, D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 19,
@@ -238,7 +256,8 @@
       "E) Y-linked"
     ],
     "answer": "A, C",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 20,
@@ -251,7 +270,8 @@
       "E) Y-linked"
     ],
     "answer": "B, D, E",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 21,
@@ -264,7 +284,8 @@
       "E) X'Y"
     ],
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 22,
@@ -277,7 +298,8 @@
       "E) The pedigree cannot be following an autosomal recessive inheritance pattern"
     ],
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 23,
@@ -290,7 +312,8 @@
       "E) 1"
     ],
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 24,
@@ -303,7 +326,8 @@
       "E) 1/2"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 25,
@@ -316,7 +340,8 @@
       "E) 1/2"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 26,
@@ -329,14 +354,16 @@
       "E) 7%"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 27,
     "question": "A diploid organism has three pairs of chromosomes (2n=6). Fill in the following table using the information about this organism. Format your answer as a number (e.g. 6). [6 points]",
     "options": [],
     "answer": "Phase of Mitosis: Prophase (# Chromosomes: 6, # Chromatids: 12), Metaphase (# Chromosomes: 6, # Chromatids: 12), Anaphase (# Chromosomes: 12, # Chromatids: 12), Telophase (# Chromosomes: 12, # Chromatids: 12), End of Mitosis (# Chromosomes: 6, # Chromatids: 6)\nPhase of Meiosis I: Prophase I (# Chromosomes: 6, # Chromatids: 12), Metaphase I (# Chromosomes: 6, # Chromatids: 12), Anaphase I (# Chromosomes: 6, # Chromatids: 12), Telophase I (# Chromosomes: 6, # Chromatids: 12), End of Meiosis I (# Chromosomes: 3, # Chromatids: 6)\nPhase of Meiosis II: Prophase II (# Chromosomes: 3, # Chromatids: 6), Metaphase II (# Chromosomes: 3, # Chromatids: 6), Anaphase II (# Chromosomes: 6, # Chromatids: 6), Telophase II (# Chromosomes: 6, # Chromatids: 6), End of Meiosis II (# Chromosomes: 3, # Chromatids: 3)",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 28,
@@ -349,7 +376,8 @@
       "E) Anaphase II"
     ],
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 29,
@@ -362,7 +390,8 @@
       "E) Anaphase II"
     ],
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 30,
@@ -375,7 +404,8 @@
       "E) Anaphase II"
     ],
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 31,
@@ -388,7 +418,8 @@
       "E) Meiosis I and II"
     ],
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 32,
@@ -401,7 +432,8 @@
       "E) None of these choices"
     ],
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 33,
@@ -414,7 +446,8 @@
       "E) Multiple of these choices"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 34,
@@ -427,7 +460,8 @@
       "E) 50%"
     ],
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 35,
@@ -440,7 +474,8 @@
       "E) Number of strands"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 36,
@@ -453,7 +488,8 @@
       "E) More than one of the above"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 37,
@@ -466,7 +502,8 @@
       "E) 15"
     ],
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 38,
@@ -479,7 +516,8 @@
       "E) None of the above"
     ],
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 39,
@@ -492,7 +530,8 @@
       "E) Thr"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 40,
@@ -505,7 +544,8 @@
       "E) None of the above"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 41,
@@ -518,7 +558,8 @@
       "E) None of the above"
     ],
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 42,
@@ -531,7 +572,8 @@
       "E) TATA box"
     ],
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 43,
@@ -544,7 +586,8 @@
       "E) TATA box"
     ],
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 44,
@@ -557,7 +600,8 @@
       "E) The gene has three introns and 0 exons"
     ],
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 45,
@@ -570,14 +614,16 @@
       "E) C→B→A"
     ],
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 46,
     "question": "Another important role of the aforementioned 5' cap in eukaryotes is for facilitating export from the nucleus. Do bacteria export their mRNA from a nucleus? Why or why not? Provide an evolutionary explanation for why bacterial mRNA is or is not exported before translation. [3 points]",
     "options": [],
     "answer": "No, bacteria do not export their mRNA [+0.5] because they do not have a nucleus OR 5' cap [+0.5]\nViable evolutionary explanation such as any of the following [+2]\n• Allows for faster response to environmental stimuli\n• Allows for coupled transcription and translation (polysomes)\n• No selective pressure or benefit from adding increased complexity\n• Bacterial mRNA is short lived\n• Eukaryotes gained mRNA export only after internal membranes developed",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 47,
@@ -590,7 +636,8 @@
       "E) Primer annealing is not a step"
     ],
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 48,
@@ -603,7 +650,8 @@
       "E) An incorrect primer was used"
     ],
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 49,
@@ -616,7 +664,8 @@
       "E) The higher annealing temperature allows the primer to dissociate better"
     ],
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 50,
@@ -629,7 +678,8 @@
       "E) Lentiviral transduction"
     ],
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 51,
@@ -641,48 +691,2388 @@
       "D) Neither"
     ],
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 52,
     "question": "Why? Explain with proportions.",
     "options": [],
     "answer": "A consistent majority OR 60% of aligned reads contain A at position 15 OR 40% contain G [+1]\nConsistent majority indicates same mismatch, unlikely to be random error [+1]",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 53,
     "question": "What might the internal gaps (denoted by dashes -) tell us about the relationship between the reads and reference?",
     "options": [],
     "answer": "indel/mutation [+1.5]",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 54,
     "question": "Before inserting Gene X into the plasmid, we must choose appropriate restriction enzymes and the correct DNA fragment. For each of the three candidate DNA fragments below (A-C), identify the corresponding restriction enzyme pair. Then, determine which fragment is the best choice for cloning into the plasmid and explain why the other options are less suitable. Explain.",
     "options": [],
     "answer": "Fragment A is BamHI and HindIII [+1], and is the ideal choice because it orients Gene X in the correct position about the promoter AND allows for overhang overlap with plasmid for ligation [+2].\nFragment B is HindIII and EcoRI [+1], but incorrectly orients the Gene about the plasmid [+0.5].\nFragment C is PvuII and SmaI [+1], but blunt end digestion prevents overlap or poor insertion efficiency [+0.5].\nMisidentifications cancel out a correct answer",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 55,
     "question": "After digesting our insert and plasmid, we purify both using gel electrophoresis. After gel electrophoresis, the following bands are visualized. What factors determine the movement of DNA through an agarose gel? Based on these factors, which DNA band(s) should we excise and purify for ligation? Why?",
     "options": [],
     "answer": "In gel electrophoresis, negative charges flow towards the positive end of the gel [+0.5] and smaller sizes travel faster [+0.5]\nFragment D [+1] because it is the cut insert [+0.5]\nFragment E [+1] because it is the plasmid backbone [+0.5]\nMisidentifications cancel out a correct answer",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 56,
     "question": "What is the name of this procedure, and how does it work? What is the purpose of LB, ampicillin, X-gal, and IPTG, and how do these components interact with components of our plasmid?",
     "options": [],
     "answer": "Blue-white colony screening [+1]\nLB is the media that bacteria grow on [+1]\nAmpicillin is an antibiotic, bacteria with ampicillin resistance gene can grow [+1]\nX-gal is cleaved by B-galactosidase, producing a blue color [+1]\nIPTG binds to and inhibits LacI repressor, allowing transcription of downstream genes [+1]",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
   },
   {
     "number": 57,
     "question": "What do the blue colonies and white colonies indicate? What do these outcomes suggest regarding the success of our transformation and/or plasmid cloning? What are the limitations of this screening, and how could we further validate the success of our cloning?",
     "options": [],
     "answer": "Blue colonies indicate successful uptake of an (ampR) plasmid working lacZ [+0.5]\nWhite colonies indicate successful uptake of an (ampR) plasmid without lacZ [+0.5]\nTransformation was successful in allowing growth compared to the control [+1.5]\nOur cloning successfully interrupted LacZ gene [+0.75], but we do not know how well we inserted the DNA fragment into the plasmid. [+0.75]\nViable explanation to validate our results [+1]\nPCR and Gel electrophoresis to confirm size of the plasmid\nDNA sequencing\nAny other reasonable answer",
-    "explanation": ""
+    "explanation": "",
+    "source": "Designer Genes C"
+  },
+  {
+    "number": 58,
+    "question": "If eye color is a mendelian trait, what is the probability that a child of someone with brown eyes(genotype Bb) and someone with green eyes will have a child with green eyes?",
+    "options": [
+      "a. 1/4",
+      "b. 2/4",
+      "c. 3/4",
+      "d. 4/4"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 59,
+    "question": "What is the end result of meiosis",
+    "options": [
+      "a. 2 haploid cells",
+      "b. 4 haploid cells",
+      "c. 2 diploid cells",
+      "d. 4 diploid cells"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 60,
+    "question": "Assume Hardy Weinberg is met\nIn a population of 200 humans, brown eyes are dominant, and blue eyes are recessive. If 140 people are homozygous for brown eyes, approximately how many people have blue eyes?",
+    "options": [
+      "a. 5 people",
+      "b. 10 people",
+      "c. 30 people",
+      "d. 60 people"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 61,
+    "question": "Sarah wants to visualize the DNA fragments she separated using gel electrophoresis under UV light. Which stain should she choose?(Tiebreaker 3)",
+    "options": [
+      "a. Methylene Blue",
+      "b. Ethidium bromide",
+      "c. Gram's lodine",
+      "d. Trypan Blue"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 62,
+    "question": "What is the end result of mitosis?",
+    "options": [
+      "a. 2 haploid cells",
+      "b. 4 haploid cells",
+      "c. 2 diploid cells",
+      "d. 4 diploid cells"
+    ],
+    "answer": "c",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 63,
+    "question": "What is the closest common ancestor between mabeei and laterale?",
+    "options": [
+      "a. 1",
+      "b. 2",
+      "c. 3",
+      "d. 4"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 64,
+    "question": "Which organisms are most related to gracile?",
+    "options": [
+      "a. Maculatum and talpoideum",
+      "b. Jeffersonianum and tigrinum",
+      "c. Macrodactylum and maculatum",
+      "d. Talpoideum and macrodactylum"
+    ],
+    "answer": "a",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 65,
+    "question": "How many speciation events occurred in the phylogenetic tree",
+    "options": [
+      "a. 17",
+      "b. 18",
+      "c. 19",
+      "d. 20"
+    ],
+    "answer": "c",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 66,
+    "question": "What is the difference between Mitosis and meiosis?",
+    "options": [
+      "a. Meiosis occurs in somatic cells and Mitosis occurs in germline cells",
+      "b. Meiosis occurs in germline cells and Mitosis occurs in somatic cells",
+      "c. Mitosis contains metaphase while meiosis doesn't",
+      "d. Meiosis contains metaphase while Mitosis doesn't"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 67,
+    "question": "Which of these is an example of incomplete dominance?",
+    "options": [
+      "a. A white flower(rr) crossing with a red flower(RR) to make a red flower",
+      "b. A white flower(rr) crossing with a red flower(RR) to make a red and white speckled flower",
+      "c. A white flower(rr) crossing with a red flower(RR) to make a white flower",
+      "d. A white flower(rr) crossing with a red flower(RR) to make a pink flower"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 68,
+    "question": "Why are men impacted by X linked traits more often?",
+    "options": [
+      "a. Men have fewer chromosomes than women",
+      "b. Men have one X chromosome and one Y chromosome, so they only need one copy of the gene with the trait for the trait to be present, rather than women who need two copies of the gene",
+      "c. Men have two X chromosomes, and since all X linked traits are dominant, they are more likely to inherit the trait",
+      "d. Men need two copies of a gene with an X linked trait for it to be expressed, while women need three, making it more likely that men will be affected by x linked traits when compared to women."
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 69,
+    "question": "The Hardy-Weinberg equation describes:",
+    "options": [
+      "A. Mutation rates in a population",
+      "B. Genotype frequencies under no evolutionary forces",
+      "C. Gene flow between two populations",
+      "D. Differences in fitness"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 70,
+    "question": "What are homologous chromosomes",
+    "options": [
+      "a. Matching pairs of chromosomes that are similar but have differences in DNA",
+      "b. Matching pairs of chromosomes with identical DNA",
+      "c. Chromosomes 1 and 2 on a karyotype",
+      "d. Another word for allosomal chromosomes"
+    ],
+    "answer": "a",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 71,
+    "question": "Brown eyes are dominant to green eyes and brown hair is dominant to red hair. What is the probability that a person who is heterozygous for brown eyes and has red hair and a person with green eyes and is heterozygous for brown hair will have a child with green eyes and red hair?",
+    "options": [
+      "a. 1/16",
+      "b. 4/16",
+      "c. 8/16",
+      "d. 12/16"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 72,
+    "question": "What type of inheritance is shown by the pedigree?",
+    "options": [
+      "a. Autosomal recessive",
+      "b. Autosomal dominant",
+      "c. X-linked recessive",
+      "d. Two of the above"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 73,
+    "question": "What is the genotype of individual 4?",
+    "options": [
+      "a. AA",
+      "b. Aa",
+      "c. Aa"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 74,
+    "question": "Flowers exhibit incomplete dominance, where red is homozygous dominant and white is homozygous recessive. What will the phenotype of a Rr genotype be?",
+    "options": [
+      "a. Red flowers",
+      "b. White flowers",
+      "c. Red and white speckled flowers",
+      "d. Pink flowers"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 75,
+    "question": "In a population, the frequency of allele a is 0.3. Assuming Hardy-Weinberg equilibrium, what is the expected frequency of heterozygotes? (Tiebreaker 2)",
+    "options": [
+      "A. 0.21",
+      "B. 0.30",
+      "C. 0.42",
+      "D. 0.493."
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 76,
+    "question": "If individual 12 has a child with a person who is heterozygous for this trait, what is the probability that their child does NOT have the trait?",
+    "options": [
+      "a. 0/4 if individual 12 is Aa, 2/4 if they are AA",
+      "b. 1/4 if individual 12 is Aa, 0/4 if they are AA",
+      "c. 3/4 if individual 12 is Aa, 1/4 if they are AA",
+      "d. 2/4 if individual 12 is Aa, 4/4 if they are AA"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 77,
+    "question": "On a pedigree, what does it mean if the shape is shaded in?",
+    "options": [
+      "a. The individual has the trait",
+      "b. The individual doesn't have the trait",
+      "c. The individual is a carrier for the trait",
+      "d. The individual is male"
+    ],
+    "answer": "a",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 78,
+    "question": "What did Gregor Mendel use to conduct his experiments on inheritance?",
+    "options": [
+      "a. Bees",
+      "b. Pea plants",
+      "c. Wild flowers",
+      "d. Rabbits"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 79,
+    "question": "Which of the following statements about euchromatin is incorrect?",
+    "options": [
+      "a. Euchromatin is less densely packed",
+      "b. Euchromatin allows DNA to actively be transcribed",
+      "c. DNA can be converted to euchromatin through histone acetylation",
+      "d. DNA can be converted to euchromatin through histone methylation"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 80,
+    "question": "In which set of chromosomes is the abnormality present?",
+    "options": [
+      "a. Chromosome 5",
+      "b. Chromosome 11",
+      "c. Chromosome 20",
+      "d. Chromosome 21"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 81,
+    "question": "What is the cause of this abnormality?",
+    "options": [
+      "a. Frameshift mutation",
+      "b. Nondisjunction",
+      "c. Deletion",
+      "d. Translocation"
+    ],
+    "answer": "b",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 82,
+    "question": "What disorder is commonly associated with this abnormality?",
+    "options": [
+      "a. Klinefelter syndrome",
+      "b. Turner syndrome",
+      "c. Triple X syndrome",
+      "d. Down syndrome"
+    ],
+    "answer": "d",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 83,
+    "question": "Which of the following correctly describes the founder effect?",
+    "options": [
+      "A group isolated from a larger population that has more genetic diversity than the original population",
+      "A group isolated from a larger population that has less genetic diversity than the original population",
+      "A group being added to an existing population, where the new population has more genetic diversity",
+      "A group being added to an existing population, where the new population has less genetic diversity"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 84,
+    "question": "In a population of chinchillas, brown fur is dominant and white fur is recessive. If 36 out of 100 chinchillas have white fur, what is the frequency of heterozygotes if Hardy Weinberg is met?",
+    "options": [
+      "16/100",
+      "28/100",
+      "46/100",
+      "52/100"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 85,
+    "question": "What are the 5 conditions for Hardy Weinberg Equilibrium",
+    "options": [],
+    "answer": "No mutation, Random mating, No natural selection, No genetic drift/large population size, No gene flow/no migration",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 86,
+    "question": "Labrador coat colors can be influenced by epistatic genes. What are epistatic genes?",
+    "options": [],
+    "answer": "Epistatic genes are genes that inhibit or suppress the expression of another/different genes.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 87,
+    "question": "If a black lab with the genotype BbEe and a brown lab with the genotype bbEe are bred together, what is the probability that they will produce a yellow puppy? (Show the entire dihybrid cross for full credit)",
+    "options": [],
+    "answer": "4/16 or 1/4",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 88,
+    "question": "What is the probability that they produce a brown lab?",
+    "options": [],
+    "answer": "6/16 or 3/8",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 89,
+    "question": "Mix and match the following terms relating to transcription to their correct definitions or functions (1-8)",
+    "options": [],
+    "answer": "1-c, 2-h, 3-f, 4-b, 5-g, 6-e, 7-d, 8-a",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 90,
+    "question": "Describe two different ways in which RNA polymerase is terminated from continuing to code for mRNA.",
+    "options": [],
+    "answer": "The DNA sequence codes for a \"hairpin” in the mRNA that encourages the RNA polymerase to detach; A specific sequence in the DNA is recognized by the RNA polymerase, encouraging it to be removed from the DNA; (in the case of RNA polymerase II), the remaining (unused) RNA is cleaved and degraded from the main strand; (in the case of RNA polymerase I and III), termination factors bind to the enzyme and signal termination",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 91,
+    "question": "Draw and label a simple diagram of all the main phases in meiosis 1 and 2. It is not necessary to show crossing over.",
+    "options": [],
+    "answer": "",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 92,
+    "question": "Draw a box around the phase where crossing over occurs.",
+    "options": [],
+    "answer": "Prophase 1",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 93,
+    "question": "Describe the major Illumina NGS platforms (e.g., MiSeq, NextSeq, NovaSeq) and explain the core sequencing-by-synthesis workflow they share.",
+    "options": [],
+    "answer": "MiSeq – lower throughput; ideal for small genomes, amplicon sequencing, targeted panels. NextSeq – mid-range throughput for RNA-seq, exomes, and medium-scale projects. NovaSeq – ultra-high throughput used for large-scale whole-genome sequencing and population studies. The core workflow involves DNA fragmentation and ligation to adapters, binding to a flow cell, bridge amplification to form clusters, and cyclic reversible terminator chemistry with fluorescently labeled nucleotides.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 94,
+    "question": "What is the Core Illumina workflow (sequencing-by-synthesis):",
+    "options": [],
+    "answer": "DNA is fragmented and ligated to adapters. Fragments bind to a flow cell and undergo bridge amplification, forming dense clusters of identical DNA copies. Sequencing occurs through cyclic reversible terminator chemistry: fluorescently labeled nucleotides are added one base at a time.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 95,
+    "question": "Compare Illumina sequencing with Oxford Nanopore sequencing in terms of (i) how the sequencing reaction is performed, (ii) the type and length of data each produces, and (iii) the kinds of biological questions or research applications each is best suited for.",
+    "options": [],
+    "answer": "Illumina: Uses sequencing-by-synthesis, requires DNA fragmentation and amplification, generates short reads through fluorescent imaging. Nanopore: Single long DNA molecules pass through biological nanopores, changes in electrical current are measured, no amplification required, real-time sequencing. Illumina produces short reads (75-300 bp) with extremely high accuracy (>99.9%), outputting massive quantities of precise sequences. Nanopore produces ultra-long reads (10 kb-100 kb+, some >1 Mb) with lower raw accuracy (90-98%), outputting long stretches of DNA. Illumina is best for variant calling (SNPs, small indels), RNA-seq, exome sequencing, microbiome sequencing, and high-accuracy population genomics. Nanopore is best for de novo genome assembly, detecting structural variants and repeat regions, full-length transcript sequencing, rapid field sequencing or clinical diagnostics, and methylation detection directly from raw signal.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 96,
+    "question": "If the company's primary goal is to assemble a highly repetitive plant genome, which platform would be more appropriate? Justify your answer.",
+    "options": [],
+    "answer": "Oxford Nanopore is the better choice. Repetitive plant genomes contain long repeat elements that are extremely difficult to assemble using Illumina's short reads. Nanopore's long-read sequencing can span entire repeat regions, producing more contiguous assemblies. It resolves structural variants and complex genome architecture better than short-read NGS.",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 97,
+    "question": "What is the genotype of individual 5V?",
+    "options": [],
+    "answer": "Bb",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 98,
+    "question": "What possible genotype(s) could individual 4V have?",
+    "options": [],
+    "answer": "BB or Bb",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 99,
+    "question": "If individual 5V has a child with a brown haired person, what is the probability that they have a homozygous recessive child? Make sure to show your work",
+    "options": [],
+    "answer": "0% chance",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 100,
+    "question": "If individual 5V also has a widows peak(pp), and they have a child with a blond haired person who doesn't have a widow's peak(Pp), what is the probability that the child has blond hair and a widows peak. Fill in the entire punnet square below for full credit.",
+    "options": [],
+    "answer": "4/16 or 1/4",
+    "explanation": "",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 101,
+    "question": "Draw and label a simple diagram of all the main phases in meiosis 1 and 2.It is not necessary to show crossing over.",
+    "options": [],
+    "answer": "",
+    "explanation": "Partial Credit: +0.5 point for every phase(prophase 1-telaphase 2) drawn correctly(4 points total) +1 point for showing 4 haploid cells at the end(last column of cells) +3 points for correct labeling(3 points total) -2 points for correct names but incorrect order.",
+    "source": "Purdue2026"
+  },
+  {
+    "number": 102,
+    "question": "Which of the following are all enzymes in the prokaryotic replisome?",
+    "options": [
+      "A) DNA polymerase III, primase, helicase",
+      "B) DNA polymerase I, DNA polymerase III, ligase",
+      "C) DNA polymerase III, primase, Taq polymerase, topoisomerase",
+      "D) DNA polymerase II, topoisomerase, helicase, DNase",
+      "E) DNA polymerase I, DNase, Taq polymerase, endonuclease"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 103,
+    "question": "GloFish exhibits incomplete dominance for scale brightness: BB = bright, Bb = dim glow, bb = no glow. If two dim glowing fish mate, what is the probability that 2 out of 4 offspring have no glow?",
+    "options": [
+      "A) 0.25",
+      "B) 0.19",
+      "C) 0.14",
+      "D) 0.38",
+      "E) 0.21"
+    ],
+    "answer": "E",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 104,
+    "question": "A tumor biopsy reveals cells with 92 chromosomes and identical allelic composition to the original 46 chromosome line. Which statement best explains this observation?",
+    "options": [
+      "A) The cell underwent meiosis without cytokinesis",
+      "B) The cell underwent mitosis but duplicated DNA",
+      "C) The cell underwent mitosis without cytokinesis",
+      "D) The cell experienced nondisjunction during meiosis II"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 105,
+    "question": "Genes A and B are 12 map units apart on the same chromosome. A heterozygous Ab/aB individual is then test-crossed with an aB/aB individual. What percentage of offspring are expected to be recombinant?",
+    "options": [
+      "A) 50%",
+      "B) 88%",
+      "C) 0%",
+      "D) 12%",
+      "E) 100%"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 106,
+    "question": "On which strand of DNA are Okazaki fragments formed on?",
+    "options": [
+      "A) Leading strand",
+      "B) Lagging strand",
+      "C) Template strand",
+      "D) Coding strand"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 107,
+    "question": "In eukaryotes, DNA is typically organized into units called nucleosomes, which consist of \n bp of DNA wrapped around each histone",
+    "options": [
+      "A) 150, tetramer",
+      "B) 147, octamer",
+      "C) 360, pentamer",
+      "D) 10.4, monomer",
+      "E) 360, tetramer"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 108,
+    "question": "In pea plants, the allele for tall plants (T) is dominant over the allele for short plants (t). Therefore, plants with genotypes TT and Tt are tall, while tt results in a short plant. Two heterozygous tall plants are crossed. If an offspring is known to be tall, what is the probability that it has genotype Tt?",
+    "options": [
+      "A) 1/4",
+      "B) 1/2",
+      "C) 3/4",
+      "D) 2/3"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 109,
+    "question": "Multiple crucial processes play a significant role in regulating the expression of genes. Which of the following activating sequences is exclusive to prokaryotes?",
+    "options": [
+      "A) TATA box",
+      "B) Shine Dalgarno",
+      "C) Kozak sequence",
+      "D) Downstream promoter elements (DPE)"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 110,
+    "question": "Michael was running late to his meeting and asked Sarah to finish up a DNA amplification he was running. He left his messy notes on the bench table for Sarah to decipher but she could only make out the words “Final Extension - Done.” The next step, however, was much harder for Sarah to read. What is she most likely supposed to be doing next?",
+    "options": [
+      "A) Run a gel electrophoresis to visualize DNA product",
+      "B) Elongate the new DNA strands with DNA polymerase",
+      "C) Allow the primers to bind their complementary sequences on the DNA",
+      "D) Separate double-stranded DNA into single-stranded DNA"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 111,
+    "question": "All of the following processes are a part of the eukaryotic central dogma. Which of these does not apply to prokaryotes?",
+    "options": [
+      "A) Ligation of Okazaki fragments using ATP",
+      "B) Genetic regulation of transcription",
+      "C) Synthesize mRNA using RNA polymerase",
+      "D) mRNA splicing into introns and exons"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 112,
+    "question": "Ms. Spring is a pet cat that has a litter of six kittens, but one of her kittens does not survive. On average, other cats from Ms. Spring's species have a litter of 3 kittens. What is Ms. Spring's relative fitness?",
+    "options": [
+      "A) 0.5",
+      "B) 0.6",
+      "C) 1.6",
+      "D) 2.0"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 113,
+    "question": "A rare eye color appears only in males. If a phenotypically normal female and male mate, what fraction of offspring are expected to show the trait?",
+    "options": [
+      "A) 0%",
+      "B) 25%",
+      "C) 50%",
+      "D) 75%",
+      "E) 100%"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 114,
+    "question": "In a rare species of rodents, two genes influence fur coloration: A/a: pigment production (A = pigment, a = no pigment) B/b: pigment type (B = black, b = brown) Rules: Gene A is epistatic to B Two fully heterozygous rodents are crossed Which of the following represents the correct phenotypic ratio among the offspring?",
+    "options": [
+      "A) 9 black: 3 brown: 4 albino",
+      "B) 12 black: 3 brown : 1 albino",
+      "C) 9 black: 6 brown : 1 albino",
+      "D) 9 black: 3 brown : 3 albino",
+      "E) 9 black: 6 brown : 4 albino"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 115,
+    "question": "Based on the figure below, what is the paralog of a-Gene 2 (boxed)?",
+    "options": [
+      "A) Species a",
+      "B) α-Gene 1",
+      "C) ß-Gene 1",
+      "D) ß-Gene 2"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 116,
+    "question": "What is the material used to perform the gel separation of proteins?",
+    "options": [
+      "A) Starch",
+      "B) Collagen",
+      "C) Polyacrylamide",
+      "D) Agarose"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 117,
+    "question": "During sample preparation for next-generation DNA sequencing, it is possible to \"index\" the DNA fragments. How are indexes added to the samples and what is the purpose of this indexing step?",
+    "options": [
+      "A) Indexes are added by ligating sample fragments together, ensuring fragments are long enough to be properly sequenced",
+      "B) Indexes are added by fluorescent labeling of the nucleotides, allowing the sequencer to more accurately read the sequences of the bases",
+      "C) Indexes are added using PCR and allows multiple sequencing libraries to be pooled into one run",
+      "D) Indexes are added using restriction enzymes to break apart fragments, then ligated together with index fragments which introduces mutations to prevent sequencer overclustering"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 118,
+    "question": "Female calico cats show patchy fur due to",
+    "options": [
+      "A) Codominance of orange and black alleles",
+      "B) Incomplete dominance at the organism level",
+      "C) Autosomal recessive mutations",
+      "D) Gene flow from males",
+      "E) Random X-chromosome inactivation in cells"
+    ],
+    "answer": "E",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 119,
+    "question": "Suppose scientists constructed a phylogenetic tree solely based on a portion of the gene shown below. Based on the sequence alignments, which sequence (1-3) is most likely to be present in each organism (A-C)?",
+    "options": [
+      "A) 1-A, 2-B, 3-C",
+      "B) 2-A, 3-B, 1-C",
+      "C) 1-A, 3-B, 2-C",
+      "D) 3-A, 2-B, 1-C"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 120,
+    "question": "dN/dS is a measure of natural selection given by the ratio of non-synonymous to synonymous mutations within a protein coding gene. Some genes, like those that perform essential functions, have optimal sequences that can be very harmful when mutated. Thus, these genes undergo negative selection and rarely change sequence. What dN/dS value do you expect for these genes?",
+    "options": [
+      "A) dN/dS < 0",
+      "B) dN/dS = 0",
+      "C) dN/dS < 1",
+      "D) dN/dS = 1"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 121,
+    "question": "Pop Mart is developing a new Labubu series and needs your help! With the new collection, rather than \"pulling\" a random doll from a blind box, customers will be able to choose two dolls to be put into a machine (called \"The LAB\") which will generate a unique Labubu at the store.\nThe technology of these new Labubus are similar to those of Mendelian genetics, where two parent dolls can generate offspring via The LAB. During the initial production of the Labubus at the factory, scientists give each Labubu genetic material that determines their phenotype. As one of the scientists on the team, you know that the Labubus are diploid and their fur color is determined by the molecular pathway outlined below. Assume loss-of-function alleles are all recessive and that one functional copy of Gene B can inhibit all of Gene A function.\nWhite\nRed\nBlue\nGene A\nGene C\nT\nGene B\na. You decide to test out the technology using Labubus of known genotypes aaBbCc and AAbbCc. What color is each doll?\nb. Circle the correct answer(s) to complete the following statements:\nGene B is epistatic to...\nGene A\nGene C\nno other genes\nGene C is epistatic to...\nGene A\nGene B\nno other genes\nc. You put the two Labubus from part A into The LAB, producing a red Labubu. If you were to repeat the cross, what is the probability that the next Labubu is also red? Show your work.",
+    "options": [],
+    "answer": "a. aaBbCc: white, AAbbCc: blue\nb. Gene B is epistatic to Gene A, Gene C is epistatic to Gene B\nc. 1/8 or 0.125",
+    "explanation": "a. (1 pt for each phenotype) aaBbCc: white, AAbbCc: blue\nb. (1 pt) Genes A and C (1 pt) no other genes\nc. (1 pt for work, 1 pt for answer) 1/8 or 0.125 (Aabbcc is red)",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 122,
+    "question": "You observe meiosis in a Labubu cell:\n• Homologous chromosome pairs and exchange segments\n• Homologs separate\n• Sister chromatids remain together\na. Identify the stage of meiosis\nb. Contrast this with the corresponding stage in mitosis\nc. Explain how this stage contributes to genetic diversity",
+    "options": [],
+    "answer": "a. Anaphase I\nb. In mitosis, sister chromatids separate during anaphase\nc. Crossing over and independent assortment create unique allele combinations",
+    "explanation": "a. (1 pt for anaphase, 1 pt for meiosis I) Anaphase I\nb. (2 pts) In mitosis, sister chromatids separate during anaphase\nc. (2 pts) Crossing over and independent assortment create unique allele combinations",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 123,
+    "question": "A pedigree shows that a Labubu trait affects males much more frequently than the Labubu females, and affected mothers always pass it to all sons but never daughters.\na. What is the most likely mode of inheritance?\nb. What chromosomal location does this imply for the gene?",
+    "options": [],
+    "answer": "a. X-linked recessive\nb. X chromosome",
+    "explanation": "a. (2 pts) X-linked recessive\nb. (2 pts) X chromosome",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 124,
+    "question": "Below are three Labubu families with individuals affected by a rare inherited disease known as blepharospasm (BS). Affected individuals are capable of blinking and can be diagnosed as soon as they are made. Assume there are no new mutations, non-disjunction, or abnormal events that occur in any of the families.\nFamily:\nA\nB\nC\nㅁㅇ\n1\n2\n3\n4\n5\n1\n6\n2\n3\n4\n5\na. Determine the most likely mode of inheritance for each family's version of BS.\nTo study this rare disease, you decide to take a couple individuals from the families and allow them to cross, diagramed by the expanded pedigree below. To your surprise, child III-2 doesn't develop BS despite both parents being affected.\nFamily:\nA\nB\nC\n|\nㅁㅇ\n1\n2\n3\n4\n5\n6\n|| \n1\nIII\n1\n2\n3\n4\n5\n2\nb. (TB#2) Explain why the phenotypes of III-1 and III-2 differ.\nc. What is the minimum number or genes that are involved in this disease?",
+    "options": [],
+    "answer": "a. A: recessive (autosomal or X-linked), B+C: autosomal recessive\nb. The mutations are in different genes. III-1 is homozygous recessive in one gene that causes BS, III-2 has at least one functional allele of both genes that cause BS\nc. 2",
+    "explanation": "a. (3 pts - 1 pt each family) A: recessive (autosomal or X-linked), B+C: autosomal recessive\nb. (2 pts) TIEBREAKER #2 The mutations are in different genes. III-1 is homozygous recessive in one gene that causes BS, III-2 has at least one functional allele of both genes that cause BS\nc. (1 pt) 2",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 125,
+    "question": "Two heterozygous AaBb Labubus are crossed. Their offspring show phenotypes at a 2:1:1:0 ratio, rather than the typical 9:3:3:1 ratio. Recombination frequency is 0.05.\na. What does this suggest about the physical arrangement of genes A and B during meiosis?\nb. Predict the gametes of each parent.\nParent 1: \nParent 2:\nc. What would the parent gametes be if the phenotypic ratio was 3:0:0:1 instead?",
+    "options": [],
+    "answer": "a. Tightly linked on the same chromosome\nb. AB/ab x Ab/aB OR Ab/aB x Ab/aB (parents are interchangeable)\nc. AB/ab x AB/ab (parents are interchangeable)",
+    "explanation": "TIEBREAKER #1: ALL PARTS\na. (2 pts) Tightly linked on the same chromosome\nb. (3 pts) AB/ab x Ab/aB OR Ab/aB x Ab/aB (parents are interchangeable)\nc. (2 pts) AB/ab x AB/ab (parents are interchangeable)",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 126,
+    "question": "You observe two unusual Labubus: One has 3 copies of chromosome 7. One has only 1 copy of chromosome 7.\na. Name these two conditions\nb. Name the event that would cause these two conditions and describe when in meiosis this event likely occurred\nc. Explain why both errors arise from the same process",
+    "options": [],
+    "answer": "a. 3 copies = trisomy, 1 copy = monosomy\nb. Caused by nondisjunction, which occurs during anaphase I or II of meiosis\nc. Both are a failure chromosome separation, it just depends on which gamete is fertilized",
+    "explanation": "a. (2 pts) 3 copies = trisomy, 1 copy = monosomy\nb. (2 pts) Caused by nondisjunction, which occurs during anaphase I or II of meiosis\nc. (2 pts) Both are a failure chromosome separation, it just depends on which gamete is fertilized",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 127,
+    "question": "Arthur is a linguistics professor at the University of Washington, but he's recently gotten symbolic and decided genetic sequences are analogous to the vocabulary of language. Words rule society the way genes rule living things. But his biologist coworkers disagree and strongly believe that genes rule all. In language, the root “cis-” means \"same” and the root “trans-” means “different.” But in the world of genes, these two roots mean something far more significant than just \"same” or \"different.\"\na. To convince Arthur that language is only important based on the context it is used in, define the terms \"cis-” and “trans-” in the context of gene regulating elements within prokaryotic organisms.\nCis Regulatory Element:\nTrans Regulatory Elements:\nb. (TB#4) Now label the following regulatory elements as either Cis (C), Trans (T), or both (B).\nRepressor\nsRNA\nOperator\nPromoter\nActivator",
+    "options": [],
+    "answer": "a. Cis - DNA sequences on the same DNA molecule that is being regulated Trans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T",
+    "explanation": "a. (2 pts) Cis - DNA sequences on the same DNA molecule that is being regulated Trans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. (1 pt per correct answer) TIEBREAKER #4 T, B, C, C, T",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 128,
+    "question": "DNA polymerases possess exonuclease ability, both in the 5' → 3' and 3' → 5' directions. For each of the following DNA polymerases, determine which direction(s) exonuclease activity occurs in and briefly explain why activity occurs in the direction(s) you chose.\nDNA Pol I\nDNA Pol III",
+    "options": [],
+    "answer": "DNA Pol I: 5' to 3' to remove RNA primers on lagging strand of replication AND 3' to 5' for proofreading\nDNA Pol III: 3' to 5' for proofreading",
+    "explanation": "TIEBREAKER #5: ALL PARTS\n(2 pts) DNA Pol I - 5' to 3' to remove RNA primers on lagging strand of replication AND 3' to 5' for proofreading\n(2 pts) DNA Pol III - 3' to 5' for proofreading",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 129,
+    "question": "Misha just finished a Sanger Sequencing protocol and ended up with the gel shown below. However, he cannot figure out what it means. Please help him out.\na. What is the 1st nucleotide of this DNA fragment?\nb. What is the 6th nucleotide from the start of the sequence?\nc. What is the common name of the chain-terminating nucleotides?\nd. What is the entire sequence?",
+    "options": [],
+    "answer": "a. C\nb. T\nc. ddNTPs (dideoxynucleotides)\nd. 5'- CTG TAT CGC AGA TGC AGTG -3'",
+    "explanation": "a. (1 pt) C\nb. (1 pt) T\nc. (1 pt) ddNTPs (dideoxynucleotides)\nd. (3 pts) 5'- CTG TAT CGC AGA TGC AGTG -3'",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 130,
+    "question": "a. Identify the coding (C) and template (T) strands in the sequences below.\n3'- GCTTACGAGCTAGCGTAGCGTAGCTAGATT -5'\n5'- CGAATGCTCGATCGCATCGCATCGATCTAA -3'\nb. What is the sequence of the product formed after transcription?\nc. What is the sequence of the product formed after translation?",
+    "options": [],
+    "answer": "a. Top - T\nBottom - C\nb. 5'- CGA AUG CUC GAU CGC AUC GCA UCG AUC UAA -3'\nc. Met - Leu - Asp - Arg - Ile - Ala - Ser - Ile",
+    "explanation": "a. (2 pts) Top - T\nBottom - C\nb. (3 pts) 5'- CGA AUG CUC GAU CGC AUC GCA UCG AUC UAA -3'\nc. (3 pts)\nMet - Leu - Asp - Arg - Ile - Ala - Ser - Ile",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 131,
+    "question": "Match the following descriptions to the process that most aligns with them. Label as Bottleneck Effect (B), Founders Effect (F), or Gene Flow (G). These labels may be used more than once.\na. Migration of wolves between packs introduces new alleles, increasing genetic diversity and reducing differences between populations\nb. The Pennsylvania Amish community includes individuals carrying the allele for Ellis-van Crevold syndrome, which became more common after intermarriage within the community\nc. Habitat destruction reduced the Greater Prairie chicken population from millions to fewer than 50, causing a dramatic loss of genetic diversity and many alleles.\nd. Small groups of Galapagos' finches colonized the Galapagos Islands, leading to new species with unique genetic traits.\ne. The New Zealand black robin population was reduced to just five individuals, all current robins descend from a single female known as Old Blue.\nf. The mountain lion population in Southern California experiences a decline due to urban development and highways and their genetic diversity continues to decrease without connection to other populations.",
+    "options": [],
+    "answer": "a. G\nb. F\nc. B\nd. F\ne. B\nf. B",
+    "explanation": "(6 pts total, 1 pt per correct answer) TIEBREAKER #3 G, F, B, F, B, B",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 132,
+    "question": "Fill in the following statements using the word bank provided. Words may be used more than once or not at all.\nSingle, double, linear, circular, plasmids, chromosomes, nucleoid, nucleus, nucleolus\nIn prokaryotes, DNA is (a) \nand (b) \n-stranded and located in the (c) \nof the cell. In eukaryotes, DNA is (d) \n-stranded and located in the (f) \nand (e) \nof the cell. Prokaryotic cells can contain additional DNA structures called (g) \nthat eukaryotes don't.",
+    "options": [],
+    "answer": "a) double, b) circular, c) nucleoid, d) linear, e) double, f) nucleus, g) plasmids",
+    "explanation": "(7 pts total, 1 pt per correct answer) a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) plasmids",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 133,
+    "question": "Suppose you are transforming competent E. coli cells with the plasmid depicted below. The lacZ gene encodes an enzyme that can digest X-gal, which produces a blue byproduct upon digestion. If the E.coli are unable to digest X-gal, the colonies will be white. During plasmid cloning, you choose a vector containing the ampicillin gene to clone your gene of interest into. You end up plating the transformed E. coli on LB agar-ampicillin plates containing X-gal and incubating the plates overnight. To your surprise, you find no colony growth on the plates the next morning.\na. You suspect that you used the wrong enzyme for the initial restriction digest. Determine the restriction enzyme you used that would result in zero colony growth (assuming that all other steps of cloning were planned correctly and successfully carried out).\nb. Determine the best restriction enzyme that would let you select for successfully transformed colonies and what color colonies result from your choice.",
+    "options": [],
+    "answer": "a. Nhel\nb. Agel, White",
+    "explanation": "a. (1 pt) Nhel\nb. (2 pts) Agel, White",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 134,
+    "question": "In eukaryotes, DNA is typically organized into units called nucleosomes, which consist of \n_______ bp of DNA wrapped around each histone.",
+    "options": [
+      "A) 150, tetramer",
+      "B) 147, octamer",
+      "C) 360, pentamer",
+      "D) 10.4, monomer",
+      "E) 360, tetramer"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 135,
+    "question": "In a rare species of rodents, two genes influence fur coloration:\n• A/a: pigment production (A = pigment, a = no pigment)\n• B/b: pigment type (B = black, b = brown)\nRules:\n• Gene A is epistatic to B\n• Two fully heterozygous rodents are crossed\nWhich of the following represents the correct phenotypic ratio among the offspring?",
+    "options": [
+      "A) 9 black : 3 brown : 4 albino",
+      "B) 12 black : 3 brown : 1 albino",
+      "C) 9 black : 6 brown : 1 albino",
+      "D) 9 black : 3 brown : 3 albino",
+      "E) 9 black : 6 brown : 4 albino"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 136,
+    "question": "Based on the figure below, what is the paralog of α-Gene 2 (boxed)?",
+    "options": [
+      "A) Species α",
+      "B) α-Gene 1",
+      "C) β-Gene 1",
+      "D) β-Gene 2"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 137,
+    "question": "Arthur is a linguistics professor at the University of Washington, but he's recently gotten symbolic and decided genetic sequences are analogous to the vocabulary of language. Words rule society the way genes rule living things. But his biologist coworkers disagree and strongly believe that genes rule all. In language, the root “cis-” means \"same” and the root “trans-” means “different.” But in the world of genes, these two roots mean something far more significant than just \"same” or “different.”\na. To convince Arthur that language is only important based on the context it is used in, define the terms \"cis-\" and \"trans-\" in the context of gene regulating elements within prokaryotic organisms.\nCis Regulatory Element:\nTrans Regulatory Elements:\nb. (TB#4) Now label the following regulatory elements as either Cis (C), Trans (T), or both (B).\nRepressor\nsRNA\nOperator\nPromoter\nActivator",
+    "options": [],
+    "answer": "a. Cis - DNA sequences on the same DNA molecule that is being regulated\nTrans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T",
+    "explanation": "a. Cis - DNA sequences on the same DNA molecule that is being regulated\nTrans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 138,
+    "question": "Fill in the following statements using the word bank provided. Words may be used more than once or not at all.\nSingle, double, linear, circular, plasmids, chromosomes, nucleoid, nucleus, nucleolus\nIn prokaryotes, DNA is (a) \n_______-stranded and located in the (c) \n_______ of the cell. In eukaryotes, DNA is (d) \n_______-stranded and located in the (f) \n_______ and (g) \n_______ of the cell. Prokaryotic cells can contain additional DNA structures called (h) \n_______ that eukaryotes don't.",
+    "options": [],
+    "answer": "a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) nucleolus, h) plasmids",
+    "explanation": "a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) nucleolus, h) plasmids",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 139,
+    "question": "Suppose you perform a dihybrid cross with two chocolate Labrador retrievers. What is:\nThe probability of offspring with golden coat colors?\nThe probability of offspring with chocolate coat colors?\nThe probability of offspring with black coat colors?",
+    "options": [],
+    "answer": "Golden: 0/16, Chocolate: 9/16, Black: 7/16",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 140,
+    "question": "What type of inheritance pattern is this referred to as?",
+    "options": [],
+    "answer": "Epistasis",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 141,
+    "question": "Suppose you have a black Lab, and you breed it with a chocolate Lab. Some of the offspring produced are golden.\nIs the MC1R gene in your black lab homozygous, heterozygous, or are you unable to tell? Why?\nIs the TYR1 gene in your black lab homozygous, heterozygous, or are you unable to tell? Why?",
+    "options": [],
+    "answer": "MC1R: Heterozygous (Ee). If it were homozygous recessive (ee), all offspring would be golden. TYR1: Unable to tell. It could be BB or Bb.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 142,
+    "question": "Suppose that instead of the inheritance pattern you gave in question 2, the genes exhibited genetic redundancy. What would the phenotypic ratio be for black:chocolate:gold?",
+    "options": [],
+    "answer": "15:1:0",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 143,
+    "question": "TYR1 specifically encodes the protein tyrosinase. Suppose a tyrosinase inhibitor is administered in dog food to a Labrador with the genotype BbEe. What would be the expected phenotype? Justify your answer.",
+    "options": [],
+    "answer": "Black. The tyrosinase inhibitor would block the function of TYR1, preventing the deposition of eumelanin. However, the MC1R gene (Ee) would still allow for the production of eumelanin. Since the dog has at least one dominant B allele, it would be able to deposit the eumelanin, resulting in a black phenotype.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 144,
+    "question": "Based on this discovery, on what chromosome must one of the orthologs be located in the Marquette retriever?",
+    "options": [],
+    "answer": "The X chromosome.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 145,
+    "question": "You sequence the genotype of a female Marquette retriever, and it has the genotype BBEe. The dog has black and yellow stripes. Based on this analysis, is TYRI or MC1R located on the X chromosome? Justify your answer.",
+    "options": [],
+    "answer": "MC1R. The presence of stripes (black and yellow) indicates that the gene controlling pigment production (MC1R) is on the X chromosome, and the dog is heterozygous for this gene. The TYR1 gene (BB) is not on the X chromosome and is homozygous dominant, so it does not contribute to the striped phenotype.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 146,
+    "question": "Now suppose the opposite gene is located on the X chromosome. What would the expected genotype be for this dog? Justify your answer.",
+    "options": [],
+    "answer": "The genotype would be XbY or XBY, depending on whether the gene is dominant or recessive. If the gene is on the X chromosome, the male would only have one copy of the gene, and its phenotype would be determined by that single allele.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 147,
+    "question": "If you administered the same tyrosinase inhibitor as you did in question 5 for your Marquette retriever, would you expect to get the same result? Why or why not?",
+    "options": [],
+    "answer": "No. If TYR1 is on the X chromosome, then the inhibitor would affect males and females differently due to sex-linked inheritance. If MC1R is on the X chromosome, then the inhibitor would affect males and females differently.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 148,
+    "question": "You isolate the mRNA of a novel virus strain, and you want to compare its genotype to other known viruses",
+    "options": [
+      "A) PCR and Illumina sequencing",
+      "B) RT-PCR and Illumina sequencing",
+      "C) PCR and Nanopore sequencing",
+      "D) RT-PCR and Nanopore sequencing"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 149,
+    "question": "You want to sequence a fragment of a plasmid, but your lab has recently suffered from massive government budget cuts.",
+    "options": [
+      "A) Illumina sequencing",
+      "B) Nanopore sequencing",
+      "C) Sanger sequencing",
+      "D) qPCR"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 150,
+    "question": "You want to recombine a plasmid and clone another gene into it using sticky ends. Both fragments have the \"GAATTC\" restriction site.",
+    "options": [
+      "A) Cleavage with EcoRI",
+      "B) Cleavage with HindIII",
+      "C) Cleavage with Smal",
+      "D) Cleavage with BamHI"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 151,
+    "question": "You want to determine the relative expression levels of all expressed genes in cancer cells",
+    "options": [
+      "A) qPCR",
+      "B) DNA microarray",
+      "C) Western blot",
+      "D) Northern blot"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 152,
+    "question": "What are the 3 stages of PCR?",
+    "options": [],
+    "answer": "Denaturation, Annealing, Extension",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 153,
+    "question": "Why is Taq polymerase used in PCR instead of other bacterial DNA polymerases?",
+    "options": [],
+    "answer": "Taq polymerase is heat-stable and can withstand the high temperatures required for DNA denaturation during PCR.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 154,
+    "question": "What additional enzyme is required for RT-PCR? What does this enzyme generate?",
+    "options": [],
+    "answer": "Reverse transcriptase. It generates complementary DNA (cDNA).",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 155,
+    "question": "Can qPCR be performed with RT-PCR? Explain why or why not.",
+    "options": [],
+    "answer": "Yes. RT-qPCR combines reverse transcription with quantitative PCR to measure the amount of a specific RNA molecule.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 156,
+    "question": "Given the nature of RT-PCR, are there any parts of the DNA sequence which may be missing? If so, what are they? Explain your answer.",
+    "options": [],
+    "answer": "Yes, introns. RT-PCR amplifies cDNA, which is synthesized from mRNA. mRNA is processed and introns are removed, so the resulting cDNA will not contain intronic sequences.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 157,
+    "question": "Using this protein sequence, give the sequence of all valid mRNA strand used to encode this motif. Give your answer as a 5'-3' strand.",
+    "options": [],
+    "answer": "5'-GG(U/C)GA(U/C)UGG(U/C)G(U/C)G(U/C)GA(U/C)GA(U/C)-3'",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 158,
+    "question": "Using your mRNA strand, give all valid sequences of the template strand used to encode the mRNA. Give your answer as a 3'-5' strand instead of 5'-3'.",
+    "options": [],
+    "answer": "3'-CC(A/G)CT(A/G)ACC(A/G)C(A/G)CT(A/G)CT(A/G)-5'",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 159,
+    "question": "Which of the following are you not likely to encounter in mRNA?",
+    "options": [
+      "A) Poly(A)-tail",
+      "B) 5' cap",
+      "C) UMP",
+      "D) TMP"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 160,
+    "question": "One of the things that you find in another DNA strand is that it is composed of 20% A and 30% G. What are the other percentages of each nucleotide?",
+    "options": [
+      "A) 30% T, 20% C",
+      "B) 30% C, 20% T",
+      "C) 25% T, 25% C",
+      "D) Unable to determine"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 161,
+    "question": "This DNA strand also contains a coding region. What are the percentages of each nucleotide in the mRNA sequence?",
+    "options": [
+      "A) 30% U, 20% C",
+      "B) 30% C, 20% U",
+      "C) 25% U, 25% C",
+      "D) Unable to determine"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 162,
+    "question": "Which protein is the most important for the initiation of replication at oriC?",
+    "options": [
+      "A) DnaA",
+      "B) DnaB",
+      "C) DnaC",
+      "D) DnaE"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 163,
+    "question": "Which protein primarily functions as a helicase?",
+    "options": [
+      "A) DnaA",
+      "B) DnaB",
+      "C) DnaC",
+      "D) DnaE"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 164,
+    "question": "What is the Central Dogma of Molecular Biology?",
+    "options": [
+      "A) DNA → Protein → RNA",
+      "B) DNA → RNA → Protein",
+      "C) RNA → Protein → DNA",
+      "D) RNA → DNA → Protein"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 165,
+    "question": "Which of the following violates the Central Dogma of Molecular Biology?",
+    "options": [
+      "A) Coronavirus",
+      "B) Adenovirus",
+      "C) Poliovirus",
+      "D) Lentivirus"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 166,
+    "question": "Which of the following is not a stage of translation?",
+    "options": [
+      "A) Elongation",
+      "B) Propagation",
+      "C) Termination",
+      "D) Initiation"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 167,
+    "question": "Using your answer to question 3, write out the steps of translation in order",
+    "options": [],
+    "answer": "Initiation, Elongation, Termination",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 168,
+    "question": "Which of the following is not a ribosomal site?",
+    "options": [
+      "A) P",
+      "B) E",
+      "C) A",
+      "D) R"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 169,
+    "question": "Using your answer to question 5, write out the ribosomal sites in the order that tRNA would enter them.",
+    "options": [],
+    "answer": "A, P, E",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 170,
+    "question": "Other than tRNA and mRNA, name another major form of RNA.",
+    "options": [],
+    "answer": "rRNA",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 171,
+    "question": "Which of the following leads to NHEJ?",
+    "options": [
+      "A) Methylation",
+      "B) Ethylation",
+      "C) UV radiation",
+      "D) CRISPR/Cas9"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 172,
+    "question": "Which of the following does not produce sticky ends in DNA?",
+    "options": [
+      "A) EcoRI",
+      "B) KpnI",
+      "C) AfII",
+      "D) AccBSI"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 173,
+    "question": "Which of the following mutations leads to the evolution of genes?",
+    "options": [
+      "A) Insertion",
+      "B) Deletion",
+      "C) Translocation",
+      "D) Duplication"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 174,
+    "question": "What's the difference between a knockdown and a knockout?",
+    "options": [
+      "A) Knockouts completely eliminate the functionality of a gene, knockdowns make them less effective",
+      "B) Knockouts make genes less effective, while knockdowns eliminate their functionality entirely",
+      "C) Knockouts decrease expression of a gene to 0, while knockdowns reduce expression of a gene slightly",
+      "D) Knockouts slightly decrease the expression of a gene, while knockdowns reduce expression of a gene to 0."
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 175,
+    "question": "Which of the following does not make up DNA?",
+    "options": [
+      "A) Phosphate backbone",
+      "B) Nitrogenous base",
+      "C) Ribose",
+      "D) Deoxyribose"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 176,
+    "question": "In what direction is DNA read?",
+    "options": [
+      "A) 5' → 3'",
+      "B) 3' → 5'",
+      "C) 5' → 1'",
+      "D) 1' → 5'"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 177,
+    "question": "What is the first phase of mitosis?",
+    "options": [
+      "A) Prophase",
+      "B) Metaphase",
+      "C) Anaphase",
+      "D) Telophase"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 178,
+    "question": "How many (human) sperm cells are produced by meiosis?",
+    "options": [
+      "A) 8",
+      "B) 4",
+      "C) 2",
+      "D) 1"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 179,
+    "question": "How many (human) egg cells are produced by meiosis?",
+    "options": [
+      "A) 8",
+      "B) 4",
+      "C) 2",
+      "D) 1"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 180,
+    "question": "Which of the following becomes elongated in cancer cells?",
+    "options": [
+      "A) Mitosis",
+      "B) Meiosis",
+      "C) Telomeres",
+      "D) mRNA"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 181,
+    "question": "Which of the following catalyzes the elongation of the answer to question 7?",
+    "options": [
+      "A) Kinesin",
+      "B) Dynein",
+      "C) Telomerase",
+      "D) RNAPII"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 182,
+    "question": "Which of the following epigenetic markers leads to increased transcription?",
+    "options": [
+      "A) Methyl group addition",
+      "B) Ethyl group addition",
+      "C) Acetyl group addition",
+      "D) Acetal group addition"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 183,
+    "question": "What is the inheritance pattern for this pedigree?",
+    "options": [
+      "A) Autosomal dominant",
+      "B) Autosomal recessive",
+      "C) Sex-linked dominant",
+      "D) Sex-linked recessive"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 184,
+    "question": "What is the genotype of individual II-2?",
+    "options": [
+      "A) ZZ",
+      "B) Zz, recessive allele inherited from mother",
+      "C) Zz, recessive allele inherited from father",
+      "D) ZZ",
+      "E) Unable to determine"
+    ],
+    "answer": "E",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 185,
+    "question": "What is the genotype of individual II-3?",
+    "options": [
+      "A) ZZ",
+      "B) Zz",
+      "C) ZY",
+      "D) zY",
+      "E) ZZ",
+      "F) Unable to determine"
+    ],
+    "answer": "F",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 186,
+    "question": "Suppose individuals III-1 and III-6 reproduce, and their child is a female. What would the genotype of their child be?",
+    "options": [
+      "A) ZZ",
+      "B) Zz, recessive allele inherited from mother",
+      "C) Zz, recessive allele inherited from father",
+      "D) ZZ",
+      "E) Unable to determine"
+    ],
+    "answer": "E",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 187,
+    "question": "What is the inheritance pattern for this disease?",
+    "options": [
+      "A) Autosomal dominant",
+      "B) Autosomal recessive",
+      "C) Sex-linked dominant",
+      "D) Sex-linked recessive"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 188,
+    "question": "What is the genotype of individual 3?",
+    "options": [
+      "A) AA",
+      "B) Aa",
+      "C) AY",
+      "D) aY",
+      "E) aa",
+      "F) Unable to determine"
+    ],
+    "answer": "F",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 189,
+    "question": "While doing more research, you discover a new species of dog! You name your new pooch the Marquette retriever. While doing your analysis, something that puzzles you is that some female Marquette retrievers have stripes, while others do not.",
+    "options": [],
+    "answer": "",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 190,
+    "question": "If you administered the same tyrosinase inhibitor as you did in question 5 for your Marquette retriever, would you expect to get the same result? Why or why not.",
+    "options": [],
+    "answer": "No, you would not expect to get the same result. In question 5, the tyrosinase inhibitor affected the production of eumelanin (controlled by MC1R). If the Marquette retriever in this question has the opposite gene (TYR1) on the X chromosome, and the tyrosinase inhibitor is administered, it would still inhibit tyrosinase, which is the enzyme encoded by TYR1. This would prevent the deposition of eumelanin. Therefore, regardless of whether TYR1 is on an autosome or the X chromosome, the tyrosinase inhibitor would prevent eumelanin deposition, leading to a golden or yellow phenotype, assuming the MC1R gene allows for eumelanin production. The previous question focused on the genetic basis of striping, while this question focuses on the effect of an inhibitor on a specific enzyme.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 191,
+    "question": "Which of the two would travel farther in your gel electrophoresis experiment? Explain your answer.",
+    "options": [],
+    "answer": "The lane with only the plasmid would travel farther. Gel electrophoresis separates DNA fragments based on size, with smaller fragments traveling faster and farther through the gel matrix. In the second lane, the plasmid is bound by multiple proteins (DnaA, DnaB, DnaC, and IHF). These proteins increase the overall mass and potentially alter the conformation of the DNA, making the complex larger and thus slower moving. Since the proteins themselves do not significantly affect travel distance when bound to DNA (as stated in the problem), the presence of these proteins will effectively increase the size of the DNA complex, causing it to migrate slower and therefore travel less distance compared to the naked plasmid.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 192,
+    "question": "After further examination, you find that the DNA is Z-DNA of about 6360 bp. No nicks are present in the DNA, but there are 27 underwindings. Give the topology of the DNA in terms of L, AL, W, and T. Assume 12 bp/turn.",
+    "options": [],
+    "answer": "Given: DNA length = 6360 bp, bp/turn = 12, underwindings = 27.\n\n1.  **Twist (T):** The number of base pairs per turn is 12. So, T = Total bp / bp/turn = 6360 / 12 = 530 turns.\n\n2.  **Underwinding:** The DNA is underwound by 27 turns. This means the actual number of turns is less than the theoretical number of turns if it were in B-DNA form. However, the question states 'underwindings', which usually refers to a negative change in linking number. In the context of Z-DNA, it's a specific conformation. Let's interpret 'underwindings' as a reduction in the number of turns from a standard B-DNA form. If we assume a standard B-DNA has 10.5 bp/turn, then the number of turns in B-DNA would be 6360/10.5 ≈ 605.7. However, the problem states to assume 12 bp/turn for calculation. So, let's use that for the base calculation.\n\nLet's re-evaluate 'underwindings'. In topology, underwinding typically refers to a decrease in the linking number (L) from a relaxed state. If we consider the relaxed state to have a certain number of turns based on the given bp/turn, then underwinding means fewer turns. However, Z-DNA itself has a different helical structure. The question might be implying a deviation from a relaxed state. Let's assume the 'underwindings' refers to a change in the linking number. If we consider the number of turns in a relaxed state to be T = 530 (based on 12 bp/turn), and there are 27 underwindings, this means the linking number is reduced by 27.\n\nLet's assume the question implies that the DNA is underwound by 27 turns relative to a relaxed state with 12 bp/turn. So, the actual number of turns is 530 - 27 = 503 turns.\n\n3.  **Linking Number (L):** L = Number of turns. So, L = 503.\n\n4.  **Writhe (W):** The change in linking number due to supercoiling is the sum of twist and writhe. L = T + W.  If we consider the 'underwindings' as a change in the linking number, then L = T - 27.  However, the question asks for L, AL, W, and T.  Let's assume T is the number of turns in the relaxed state (530).  Then L = T + W.  If there are 27 underwindings, it means the DNA is more tightly coiled or has undergone some topological change.  Let's assume 'underwindings' refers to a negative change in the linking number relative to a relaxed state.  So, L = 530 - 27 = 503.\n\n5.  **Twist (T):** The twist is the number of helical turns.  If we assume the 12 bp/turn is the intrinsic twist, then T = 530.\n\n6.  **Writhe (W):**  W = L - T = 503 - 530 = -27.\n\n7.  **Actual Linking Number (AL):** This is the same as L, which is 503.\n\nLet's re-read the question carefully. '27 underwindings'. This usually implies a negative change in the linking number. If we consider the relaxed state to have a certain number of turns, then underwinding means fewer turns. If we assume the relaxed state has 530 turns (based on 12 bp/turn), then underwinding by 27 means the linking number is 530 - 27 = 503.\n\nSo, the values are:\n*   **L (Linking Number):** 503\n*   **AL (Actual Linking Number):** 503\n*   **W (Writhe):** L - T.  If T is the number of turns in the relaxed state (530), then W = 503 - 530 = -27.\n*   **T (Twist):** This is the number of helical turns.  If we assume the 12 bp/turn is the intrinsic twist, then T = 530.\n\nHowever, Z-DNA itself has a different twist per base pair. Z-DNA has about 12 bp per turn and a left-handed helix. The term 'underwinding' might be used loosely here. If we strictly follow the formula L = T + W, and assume T is the number of turns in the relaxed state (530), and 'underwinding' means W = -27, then L = 530 - 27 = 503.\n\nLet's consider another interpretation: 'underwinding' refers to the change in linking number. If the DNA is relaxed, L = T. If it's underwound, L < T. If it's overwound, L > T.  The problem states '27 underwindings'.  This implies that the linking number is 27 less than it would be in a relaxed state.  If we assume the relaxed state has 530 turns (based on 12 bp/turn), then L = 530 - 27 = 503.\n\nLet's assume the question is asking for the topological parameters of this specific Z-DNA molecule.\n\n*   **Twist (T):** The number of helical turns.  Given 12 bp/turn, T = 6360 bp / 12 bp/turn = 530 turns.\n*   **Linking Number (L):**  The linking number is the number of times one strand of DNA winds around the other.  It is related to the twist and writhe by L = T + W.  The problem states '27 underwindings'.  This implies that the linking number is reduced.  If we consider the relaxed state to have T turns, then underwinding by 27 means L = T - 27.  So, L = 530 - 27 = 503.\n*   **Writhe (W):**  W = L - T = 503 - 530 = -27.\n*   **AL (Actual Linking Number):** This is the same as L, so AL = 503.\n\nTherefore, the topology is:\n*   **L = 503**\n*   **AL = 503**\n*   **W = -27**\n*   **T = 530**",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 193,
+    "question": "What elements of the DNA topology would change if the DNA was nicked? What would their new values be?",
+    "options": [],
+    "answer": "If the DNA was nicked (a break in one strand), the DNA would become relaxed, and the writhe (W) would become zero. The linking number (L) would become equal to the twist (T) of the relaxed DNA. The twist (T) would remain the same as the number of helical turns in the relaxed state (530 turns, assuming 12 bp/turn). The actual linking number (AL) would also become equal to the twist.\n\nSo, if the DNA was nicked:\n*   **L:** Would become equal to T (530).\n*   **AL:** Would become equal to T (530).\n*   **W:** Would become 0.\n*   **T:** Would remain 530 (assuming the nick allows it to relax to this state).",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 194,
+    "question": "What genetic disorder is associated with the above karyotype?",
+    "options": [
+      "A) Stockholm syndrome",
+      "B) Turner syndrome",
+      "C) Kessler syndrome",
+      "D) Ehlers-Danlos syndrome"
+    ],
+    "answer": "B",
+    "explanation": "The question refers to a karyotype, but the karyotype itself is not provided in the text. However, the options are genetic disorders. Turner syndrome is a genetic disorder in females caused by the absence of one X chromosome (karyotype XO). The other options are not typically associated with a specific karyotype abnormality in this context.",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 195,
+    "question": "In the karyotype given, would any Barr bodies be present? Explain why or why not.",
+    "options": [],
+    "answer": "Assuming the karyotype refers to Turner syndrome (XO), there would be no Barr bodies present. Barr bodies are inactivated X chromosomes. In females with a normal karyotype (XX), one X chromosome is inactivated to form a Barr body. In Turner syndrome (XO), there is only one X chromosome, and it is active, so no Barr body is formed.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 196,
+    "question": "Suppose instead of having one X chromosome, the Karyotype instead had 3 X chromosomes. What is the name of this genetic disorder? How many Barr bodies would be present in each cell?",
+    "options": [],
+    "answer": "The genetic disorder is Triple X syndrome (also known as Trisomy X or XXX syndrome). In cells with three X chromosomes, the number of Barr bodies present is typically two. The rule is that the number of Barr bodies is one less than the number of X chromosomes (n-1, where n is the number of X chromosomes).",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 197,
+    "question": "Suppose instead of having only one X chromosome and no Y chromosomes, the embryo had one Y chromosome and no X chromosomes. How would this affect the development of the embryo?",
+    "options": [],
+    "answer": "An embryo with one Y chromosome and no X chromosomes (karyotype YO) would not be viable and would likely result in a miscarriage. The X chromosome contains essential genes for embryonic development that are not present on the Y chromosome. Without at least one X chromosome, the embryo cannot survive.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 198,
+    "question": "Suppose you stained your Karyotype with Giemsa stain, but all genetic material present was euchromatin. How would this affect the result of the karyotype?",
+    "options": [],
+    "answer": "Giemsa staining is used to visualize chromosomes and identify banding patterns, which are crucial for detecting chromosomal abnormalities. Euchromatin is loosely packed DNA that is transcriptionally active, while heterochromatin is densely packed and transcriptionally inactive. If all genetic material were euchromatin, the chromosomes would appear uniformly stained and would lack the distinct banding patterns that are normally visible with Giemsa staining. This would make it very difficult, if not impossible, to identify specific chromosomes, detect translocations, deletions, or other structural abnormalities. The karyotype would likely appear as a uniform, undifferentiated mass of genetic material, rendering it largely uninterpretable for diagnostic purposes.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 199,
+    "question": "Mendel's First Law of Inheritance states that \"the two members of a gene pair segregate from each other into the gametes; so half the gametes carry one member of the pair and the other half of the gametes carry the other member of the pair.” Which of the following is NOT a violation of this law?",
+    "options": [
+      "A) Meiotic Drive",
+      "B) Nondisjunction events in Meiosis II",
+      "C) Lethal Alleles",
+      "D) All of these violate Mendel's First Law"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 200,
+    "question": "In a certain species of seagulls, the allele for long beak (B) is completely dominant over the allele for short beak (b). The gene that encodes for beak length is located on an autosome. If a male with a short beak mates with a female with a long beak, what percent of their offspring will have short beaks?",
+    "options": [
+      "A) 0%",
+      "B) 25%",
+      "C) 50%",
+      "D) Not enough information"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 201,
+    "question": "Transducin is an important G protein in the eye, often activated when light particles strike the rods of the retina. The working transducin protein allele (T) is dominant to the non-working allele (t). In rods, it is naturally expressed and encoded by the gene GNAT1. Say an individual also expresses the gullso-A25 gene, which prevents the expression of GNAT1 under any circumstances. What is this effect called?",
+    "options": [
+      "A) Polygenic Inheritance",
+      "B) Epistasis",
+      "C) Transgenic Inheritance",
+      "D) Polyretinal Hypostasis"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 202,
+    "question": "Which of the following statements is true regarding cytoplasmic inheritance?",
+    "options": [
+      "A) During fertilization, sperm cells contribute virtually no cytoplasm to the zygote",
+      "B) The mitochondria and chloroplast contain their own genes and are therefore genetically independent from the rest of the cell to function",
+      "C) Cytoplasmic inheritance only occurs in certain species of haploid fungi that mainly live in dark areas",
+      "D) The larger the sperm cell is prior to fertilization, the more organelles transferred to the cytoplasm of the zygote"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 203,
+    "question": "Myoclonic epilepsy and ragged red fiber (MERRF) is a phenotype resulting from a single base change in mitochondrial DNA. Transmission of this phenotype seems to only occur through females and never males. What is the most likely cause of this inheritance pattern of MERRF?",
+    "options": [
+      "A) Mutation of a Y-linked gene",
+      "B) Mutation of mitochondrial DNA (mtDNA)",
+      "C) Mutation of an X-linked gene",
+      "D) Complete deletion of an X-chromosome in females"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 204,
+    "question": "[4, TB1] Which of the following statements below is true about the above pedigree? (Select all that apply)",
+    "options": [
+      "A) Individuals III-1 and III-2 are identical twins",
+      "B) Individuals II-1 and II-2 are related by blood",
+      "C) Individuals II-3 and II-4 are monozygotic",
+      "D) Individuals III-1 and III-2 are monozygotic"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 205,
+    "question": "Which of the following best describes the inheritance pattern shown in the pedigree?",
+    "options": [
+      "A) X-linked dominant",
+      "B) Y-linked inheritance",
+      "C) Autosomal recessive",
+      "D) Autosomal dominant"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 206,
+    "question": "Which of the following could be a possible disorder being recorded in this pedigree?",
+    "options": [
+      "A) Color Blindness",
+      "B) Hemophilia",
+      "C) Hypertrichosis",
+      "D) Down Syndrome"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 207,
+    "question": "Which of the following is true of the pedigree analysis of an X-linked dominant disorder?",
+    "options": [
+      "A) Affected males pass the condition to all their daughters but to none of their sons",
+      "B) Affected heterozygous females married to unaffected males pass the condition to half their sons and daughters",
+      "C) Both A and B are true",
+      "D) Neither A nor B are true"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 208,
+    "question": "In cell division, nuclear spindle fibers provide the motive force that pulls apart the chromosomes or chromatids. These spindle fibers are polymers of what protein?",
+    "options": [
+      "A) Tubulin",
+      "B) Keratin",
+      "C) Kinesin",
+      "D) Dynein"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 209,
+    "question": "How do microtubules bound to the kinetochores of sister chromatids separate the chromatids during anaphase?",
+    "options": [
+      "A) They act like ropes and use ATP to pull the chromatids apart",
+      "B) Dynein proteins attach to the kinetochores and use GTP hydrolysis to carry the chromatids to the poles of the cell",
+      "C) They depolymerize at the kinetochores, which shortens the microtubule and thereby pull the sister chromatids apart",
+      "D) Microtubules are actually no responsible for pulling sister chromatids apart during anaphase"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 210,
+    "question": "Karyotypes are images that neatly organize a person's complete set of chromosomes and display their size, number, and types of chromosomes. These images are typically able to be constructed only when a cell is in metaphase. Which of the following is NOT a reason why these images cannot be made during interphase?",
+    "options": [
+      "A) Microtubules attached to the chromosomes prevents the observer from accurately finding individual chromosomes",
+      "B) DNA is in the form of chromatin and has not yet condensed into chromosomes",
+      "C) Individual chromosomes cannot be distinguished",
+      "D) DNA is too diffuse to capture morphology or number"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 211,
+    "question": "The diploid chromosome number for most birds such as seagulls is around 80. During interphase these cells would have ______ chromosomes. Following mitosis, each daughter cell would have ______ chromosomes.",
+    "options": [
+      "A) 40; 80",
+      "B) 40; 40",
+      "C) 20; 40",
+      "D) 80; 80"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 212,
+    "question": "Which of the following correctly orders the steps of prophase in chronological order?",
+    "options": [
+      "A) Leptotene, Zygotene, Pachytene, Diplotene, Diakinesis",
+      "B) Zygotene, Diplotene, Diakinesis, Leptotene, Pachytene",
+      "C) Diakinesis, Leptotene, Pachytene, Diplotene, Zygotene",
+      "D) Lepotene, Pacytene, Diakinesis, Diplotene, Zygotene"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 213,
+    "question": "A nondisjunction event during meiosis II results in:",
+    "options": [
+      "A) Gametes with n, n, n, n",
+      "B) Gametes with n+1, n-1, n, n",
+      "C) Gametes with n-1, n-1, n-1, n-1",
+      "D) Gametes with n+1, n+1, n+1, n+1"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 214,
+    "question": "The SAC checkpoint is a cell cycle surveillance mechanism that prevents anaphase from occurring until all chromosomes are properly attached to the mitotic spindle. Suppose a toxin secreted by the local seagulls that inhibits the activity of the SAC checkpoint is administered to a culture of cells. What is the likely outcome?",
+    "options": [
+      "A) Inhibiting the SAC checkpoint will inhibit anaphase from ever occurring",
+      "B) Inhibiting the SAC checkpoint will degrade duplicated DNA",
+      "C) Inhibiting the SAC checkpoint will cause kinetochores to be degraded",
+      "D) Inhibiting the SAC checkpoint will likely lead to nondisjunction events"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 215,
+    "question": "Which cyclin, when in a complex with Cdk1, is the most active during mitosis?",
+    "options": [
+      "A) Cyclin A1",
+      "B) Cyclin A2",
+      "C) Cyclin B1",
+      "D) Cyclin B2"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 216,
+    "question": "What is the complex described in the previous question also known as?",
+    "options": [],
+    "answer": "Maturation-Promoting Factor (MPF)",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 217,
+    "question": "Which of the following correctly pairs a stage of meiosis with an accurate description of that stage?",
+    "options": [
+      "A) Metaphase I: Dyads move to the equatorial plane",
+      "B) Anaphase I: Each of the sister chromatids of a dyad is pulled into a different daughter nucleus as the cells divide for a second time",
+      "C) Metaphase II: homologous dyads pair to form bivalents",
+      "D) Prophase I: sister chromatids become visible and are paired to form dyads"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 218,
+    "question": "Which of the following correctly orders the steps of mitosis?",
+    "options": [
+      "A) Prophase, Metaphase, Telophase, Anaphase",
+      "B) Prophase, Anaphase, Metaphase, Telophase",
+      "C) Prophase, Telophase, Anaphase, Metaphase",
+      "D) Prophase, Metaphase, Anaphase, Telophase"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 219,
+    "question": "Which of the following incorrectly matches a condition of Hardy-Weinberg Equilibrium with the reason why it matters?",
+    "options": [
+      "A) No Gene Flow: migration introduces or removes alleles, altering the gene pool",
+      "B) Large Population Size: In small populations, random chance events cause allele frequencies to fluctuate",
+      "C) Random Mating: If certain genotypes preferentially mate, allele frequencies won't shift",
+      "D) No Natural Selection: If some alleles give a fitness advantage, they become more common over generations"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 220,
+    "question": "In a population of 1000 seagulls in Hardy-Weinberg Equilibrium, 218 of them show the recessive phenotype of extremely long necks. How many seagulls in this population are heterozygous for neck length?",
+    "options": [
+      "A) 218",
+      "B) 284",
+      "C) 498",
+      "D) 782"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 221,
+    "question": "Species A is a species containing Gene X. A gene duplication event occurs in Species A before it splits into a new species and produces two genes: X1 and X2. Species A then undergoes a speciation event forming Species B and C, each inheriting the duplicated genes. Their genes can be denoted as follows: X1B, X2B, X1C, X2C. What is the relationship between X1B and X1C?",
+    "options": [
+      "A) Analogs",
+      "B) Xenologs",
+      "C) Orthologs",
+      "D) Paralogs"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 222,
+    "question": "Phylogenetic trees and species trees are often constructed in very different ways, and as a result, often have discrepancies between them. Given a gene tree that conflicts with the species tree, which explanation is the least likely?",
+    "options": [
+      "A) Stabilizing selection on codon usage",
+      "B) Incomplete lineage sorting",
+      "C) Gene duplication followed by differential loss",
+      "D) Horizontal gene transfer"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 223,
+    "question": "You observe that two proteins have similar function but no statistically significant sequence similarity even after profile-based and structure-based alignment. What is the most likely explanation?",
+    "options": [
+      "A) They are orthologs that diverged rapidly",
+      "B) They are analogs that arose through convergent evolution",
+      "C) They are paralogs with low evolutionary constraint",
+      "D) They are homologs but are not detectable by any method"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 224,
+    "question": "Which of the following correctly describes a riboswitch?",
+    "options": [
+      "A) A ribosome in which the 30S and 50S subunits are inverted",
+      "B) A ribosome in which the 40S and 60S subunits are inverted",
+      "C) Molecules that translate mRNA in the cytoplasm under specific UV light conditions",
+      "D) Regulatory mRNA segments control gene expression by binding to small metabolites"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 225,
+    "question": "In 1928, Frederick Griffth, while experimenting with the bacterium Streptococcus pneumoniae, noticed that when a mouse was injected with a combination of heat-killed virulent bacteria and an alive batch of non-virulent bacteria, the mouse still died. Which of the following best summarizes these findings?",
+    "options": [
+      "A) The heat-killed virulent bacteria spontaneously regenerated and infected the mouse",
+      "B) The naked virulent DNA was taken up by the non-virulent bacteria which in turn, infected the mouse",
+      "C) The heat-killed virulent bacteria had DNA coated in protective proteins that allowed them to still infect the mouse",
+      "D) None of these"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 226,
+    "question": "What type of bond is responsible for linking adjacent nucleotides in the backbone of a DNA molecule?",
+    "options": [
+      "A) Hydrogen bond",
+      "B) Van der waals forces",
+      "C) Covalent bond",
+      "D) Phosphodiester bond"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 227,
+    "question": "What type of bond is responsible for pairing complementary bases in a double stranded DNA molecule?",
+    "options": [
+      "A) Hydrogen bond",
+      "B) Van der waals forces",
+      "C) Covalent bond",
+      "D) Phosphodiester bond"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 228,
+    "question": "Cytosine deaminase is an important enzyme that is (unfortunately) not found in seagulls (sad). Luckily, scientists were able to identify this enzyme on several bacterial species near seagulls' nests. This enzyme uses a water molecule to convert cytosine into what molecule along with ammonia?",
+    "options": [
+      "A) Uracil",
+      "B) Thymine",
+      "C) Adenine",
+      "D) Guanine"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 229,
+    "question": "A single stranded DNA molecule, isolated from a Canine parvovirus, was found to be composed of 28% thymine. What percent of this molecule does guanine make up?",
+    "options": [
+      "A) 22%",
+      "B) 28%",
+      "C) 56%",
+      "D) Not possible to tell"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 230,
+    "question": "Scientists have recently isolated the XGULLSO-4 gene from a thriving population of seagulls flying over Baker Beach. By comparing DNA sequences, they determined that this gene encoded for the SCIO-4 protein, an HMT that functions similar to H3K4. How would this enzyme affect gene expression in these seagulls?",
+    "options": [
+      "A) Increase gene expression",
+      "B) Decrease gene expression",
+      "C) No effect on gene expression",
+      "D) Induce mutations that signal for programmed cell death"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 231,
+    "question": "A mutation occurs not in the coding sequence of a gene, but in an enhancer region located 5 kb upstream. The coding sequence remains unchanged, but the organism shows a drastic decrease in protein expression in specific tissues. What is the explanation for this phenomenon?",
+    "options": [
+      "A) Enhancers are required to splice out introns, so mutation alters mRNA processing globally",
+      "B) Enhancers control ribosome binding, so mutation disrupts translation directly",
+      "C) Enhancers are translated into regulatory peptides, so mutation removes these peptides",
+      "D) Enhancers regulate transcription initiation by interacting with transcription factors; mutation alters this interaction in certain cell types"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 232,
+    "question": "A silent mutation is introduced into the coding region of a gene. Surprisingly, protein levels drop significantly. Which of the following best explains the mechanism behind this effect?",
+    "options": [
+      "A) Silent mutations always disrupt the peptide sequence because wobble pairing is unreliable",
+      "B) Silent mutations can alter mRNA secondary structure or rare codon usage, slowing translation",
+      "C) Silent mutations eliminate transcription factors needed for promoter recognition",
+      "D) Silent mutations cause ribosomes to incorrectly choose a different start codon"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 233,
+    "question": "You engineer an E. coli strain in which the lacI promoter is replaced with the strong constitutive promoter from the trp operon, leading to ~20× higher LacI protein levels than wild-type. All other sequences are unchanged. Assuming glucose is absent, which outcome is most consistent with this change?",
+    "options": [
+      "A) Lac operon transcription remains fully inducible by lactose but requires a much higher lactose concentration for partial induction due to mass-action titration of LacI",
+      "B) The operon becomes completely non-inducible, because the elevated LacI concentration will bind both operators O1 and O2 simultaneously and permanently",
+      "C) Induction fails only when cAMP-CAP is bound, because elevated LacI prevents DNA looping required for positive regulation",
+      "D) The operon is constitutively active, because the increased LacI level interferes with cAMP synthesis and thereby eliminates repression"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 234,
+    "question": "You create a strain where operator O1 is moved 40 bp downstream, while O2 remains in its original position. Binding affinities are unchanged. Assume normal lactose/glucose physiology. Which effect is most likely?",
+    "options": [
+      "A) Repression becomes weaker because the repressor can no longer block RNAP binding or early elongation efficiently, even though looping to O2 is still possible",
+      "B) Repression becomes stronger because the longer DNA segment makes the O1–O2 loop more thermodynamically favorable",
+      "C) Repression becomes constitutive because RNAP binds to the shifted promoter more tightly",
+      "D) Expression becomes independent of CAP-CAMP because the shifted O1 interferes with CAP binding"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 235,
+    "question": "You cross 2 lac mutants: Strain A is LacI- (cannot produce a functional LacI repressor protein); Strain B carries a LacOC mutation (operator does not bind repressor), but has normal LacI+ elsewhere in the chromosome. You generate a merodiploid with one copy of each allele. Which pattern of operon expression would be expected in the absence of lactose?",
+    "options": [
+      "A) Normal repression of both operons because LacI+ in trans can repress both copies unless lactose is present",
+      "B) Constitutive expression from the Oº operon but repression of the wild-type operator operon",
+      "C) Constitutive expression from the wild-type operator operon but repression of the Oº operon",
+      "D) Constitutive expression of both operons because LacI- in cis disrupts all repression"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 236,
+    "question": "A synthetic molecule X binds LacI with the same affinity as allolactose but stabilizes the DNA-binding conformation instead of inhibiting it. CAP–cAMP signaling is unchanged. Glucose is absent. Which outcome is most likely upon addition of molecule X?",
+    "options": [
+      "A) Full induction of the lac operon because CAP-cAMP is present and LacI is sequestered by X",
+      "B) Partial induction because X competes with native allolactose, weakening the ability of lactose to trigger LacI release",
+      "C) Stronger repression than normal because X pushes LacI toward its high-affinity DNA-bound conformation even when lactose is present",
+      "D) Normal induction because anti-inducers cannot replace allolactose binding"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 237,
+    "question": "Which of the following best explains why the ratio of ddNTP to dNTP is critical in Sanger Sequencing?",
+    "options": [
+      "A) Too many ddNTPs cause read lengths to become too long",
+      "B) Too few ddNTPs randomly deletes bases from the final sequence",
+      "C) Too many ddNTPs cause early termination; too few fail to produce a ladder of fragment lengths",
+      "D) Too few ddNTPs prevent primer annealing"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 238,
+    "question": "While cloning a gene in the local Gullbacteriae species, you cut a plasmid with EcoRI and Xhol and ligate an insert with the same enzymes. What is the primary advantage of this approach?",
+    "options": [
+      "A) It increases plasmid copy number",
+      "B) It ensures the insert ligates in only one orientation",
+      "C) It prevents the insert from being degraded by host nucleases",
+      "D) It eliminates the need for DNA ligase"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 239,
+    "question": "You perform blue–white screening using a plasmid with a lacZ α-fragment. You observe many blue colonies but almost no white colonies. Why is this?",
+    "options": [
+      "A) Insert successfully disrupted lacZ in most cells",
+      "B) Cells failed to take up the plasmid",
+      "C) IPTG concentration was too low for blue color to form",
+      "D) The insert did not ligate into the vector, and the vector self-ligated"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 240,
+    "question": "A CRISPR-Cas9 experiment is intended to knock out a gene by inducing a frameshift. Sequencing reveals that many alleles contain in-frame 3-bp deletions instead. What is the best explanation?",
+    "options": [
+      "A) Cas9 preferentially generates 3-bp deletions",
+      "B) Non-homologous end joining (NHEJ) often repairs breaks with small in-frame indels",
+      "C) Guide RNA prevents frameshift formation",
+      "D) In-frame deletions are required for cell survival"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 241,
+    "question": "A sequencing reaction gives overlapping peaks starting 50 bp into the read. Which scenario best explains this?",
+    "options": [
+      "A) The template contains a heterozygous indel",
+      "B) The polymerase is skipping bases",
+      "C) Sequencing reactions cannot proceed past 50 bp",
+      "D) The primer concentration is too high"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 242,
+    "question": "Why might RNAi knockdown of a gene produce a milder phenotype than a CRISPR knockout of the same gene?",
+    "options": [
+      "A) RNAi degrades the gene's DNA, eliminating transcription entirely",
+      "B) RNAi only reduces mRNA levels rather than eliminating the gene",
+      "C) RNAi causes frameshift mutations that are easier to repair",
+      "D) Knockdowns always target only one allele"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 243,
+    "question": "You are amplifying a gene for cloning into an expression vector. Why is a high-fidelity polymerase preferred over Taq?",
+    "options": [
+      "A) Taq cannot extend DNA at temperatures above 50°C",
+      "B) High-fidelity polymerases incorporate dideoxynucleotides more efficiently",
+      "C) Taq lacks proofreading activity and introduces more mutations",
+      "D) High-fidelity polymerases cannot denature double-stranded DNA"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 244,
+    "question": "[2 pts] List all of the possible genotype combinations of the 2 parents that could have produced these eggs.",
+    "options": [],
+    "answer": "G+/g x G+/g\nG+/g x g/g",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 245,
+    "question": "[2 pts] After thorough research of the eggs, Clement claims that the probability that a new egg from the same parents will hatch blue is 1/4. Under which parental genotype combination from #46 is this claim correct?",
+    "options": [],
+    "answer": "G+/g x G+/g",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 246,
+    "question": "[4 pts] Design a test cross that would unambiguously identify whether a green Ralts sibling is homozygous G+ / G+ or heterozygous G+ / g and explain the expected outcomes.",
+    "options": [],
+    "answer": "Cross the green Ralts sibling with a blue tester (g/g).\nIf green parent = G+/G+: all progeny will be green.\nIf green parent = G+/g: half of the progeny will be green and half of the progeny will be blue. If any blue offspring are created, the parent was heterozygous.",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 247,
+    "question": "[6 pts, TB2] Describe a complementation test using crosses between the two blue Ralts (and appropriate controls). Explicitly state the cross/genotypes you would set up and the phenotypic outcome that indicates the mutations are allelic (same gene) or (ii) non-allelic (different genes).",
+    "options": [],
+    "answer": "Cross a blue individual from line 1 to a blue individual from line 2. If the mutations are on different genes (non-allelic), each parent supplies the wild-type allele for the other gene. Phenotype will be green if mutations are recessive and in different genes. Successful Complementation. If the mutations are on the same gene (allelic), the F₁ inherits 2 different mutant alleles at the same locus. If both are loss-of-function recessives, F₁ remains blue. Failure to Complement.",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 248,
+    "question": "[2 pts] If the two independent blue lines fail to complement and produce only blue offspring when crossed to each other, what are two molecular explanations consistent with “same gene” failure to complement?",
+    "options": [],
+    "answer": "1. Both mutations are loss-of-function alleles in the same gene OR production of nonfunctional protein.\n2. The mutations affect the same regulatory element/promoter required in cis.",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 249,
+    "question": "Propose a 2-locus genetic model (give locus names and allele symbols) that explain the observed 9 : 3 : 4 F2 ratio. Use E+/e for epistatic locus and T+/t for the other locus.",
+    "options": [],
+    "answer": "Let locus E control pigment synthesis with E+ being functional/dominant and e being loss of function, recessive. Let locus T control pigment color with T+ being wild type and t changing pigment color when homozygous. E+_T+_ will be green (The 9 in the 9:3:4). E+_t/t will be blue (The 3 in 9:3:4). e/e will always result in a white phenotype (The 4 in 9:3:4).",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 250,
+    "question": "Identify what type of epistasis this represents.",
+    "options": [],
+    "answer": "recessive epistasis",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 251,
+    "question": "For your model, create a punnett square for the production of the F2 generation to show how the 9:3:4 ratio is produced. The square should have 16 resultant genotypes.",
+    "options": [],
+    "answer": "E+/T+ | E+/T+ | E+/t | e/T+ | E+/T+ | E+E+/T+T+ | E+E+/T+t | E+e/T+T+ | E+e/T+t | E+/t | E+E+/T+t | E+E+/tt | E+e/T+t | E+e/tt | e/T+ | E+e/T+T+ | E+e/T+t | ee/T+T+ | ee/T+t | e/t | E+e/T+t | E+e/tt | ee/T+t | ee/tt",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 252,
+    "question": "What type of epistasis best describes the relationship between the 2 loci (E and C)?",
+    "options": [],
+    "answer": "complementary epistasis",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 253,
+    "question": "If 500 offspring are produced from the given cross, how many are expected to carry at least one E allele?",
+    "options": [],
+    "answer": "350",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 254,
+    "question": "What proportion of these E carriers are expected to also be able to Mega Evolve?",
+    "options": [],
+    "answer": "all offspring would be able to Mega Evolve",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 255,
+    "question": "Based on these observations, identify the most likely inheritance pattern of Mega Evolution capability.",
+    "options": [],
+    "answer": "locus E is X-linked",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 256,
+    "question": "Predict whether the chromosomal result is diploid or haploid and how many copies each gamete will have of the E and C loci.",
+    "options": [],
+    "answer": "diploid, 2 copies of each loci in each gamete",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 257,
+    "question": "Would you expect gametes produced from such a cell to likely be fertile or sterile? Explain.",
+    "options": [],
+    "answer": "sterile. fertilization would leave to triploid offspring, fertile failure, meiotic instability, or aneuploidy",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 258,
+    "question": "Deoxys's primary DNA polymerase (Deo-Pol) has a structural feature that forces it to synthesize DNA at a slower rate on the leading strand compared to the lagging strand.",
+    "options": [
+      "A) Explain why, despite this rate difference, the 3 → 5 exonuclease proofreading activity must still maintain the same high level of fidelity on both strands.",
+      "B) If the Deo-Pol could synthesize 3 → 5, explain the catastrophic molecular consequence of trying to correct an error on a growing chain using a 5 → 3 exonuclease activity."
+    ],
+    "answer": "A",
+    "explanation": "The biological consequences of mutations are identical regardless of which strand they occur on. A single point mutation, once fixed in the genome, has the same potential to disrupt gene function or regulation whether it originated on the leading or lagging template.",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 259,
+    "question": "You isolate a mutant Deoxys line where the DNase activity of its equivalent to DNA polymerase I is functional, but its 5 → 3 polymerase activity is non-functional. Analyze and predict the cumulative molecular consequences of this single enzyme defect on the final state of the newly synthesized lagging strand DNA, detailing the specific chemical structure that would accumulate and prevent cell division.",
+    "options": [],
+    "answer": "The functional 5' → 3' exonuclease activity would successfully remove the RNA primers from the 5' ends of the Okazaki fragments, making the enzyme unable to synthesize new DNA to fill the resulting single-strand gaps between the Okazaki fragments. Instead of a continuous DNA strand, the lagging strand would consist of adjacent Okazaki fragments separated by persistent single-stranded gaps (nicks) in the sugar-phosphate backbone. The specific structure that would accumulate and ultimately prevent cell division, leading to cell death (apoptosis) or inability to do mitosis.",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 260,
+    "question": "A gene critical for Deoxys form change, Form-Shift, is accidentally translocated from an active euchromatin region to a pericentromeric region dominated by constitutive heterochromatin. Subsequent analysis shows only a small fraction of cells retain Form-Shift expression (position effect variegation). Analyze the core molecular mechanism responsible for silencing, and predict whether treatment with a histone acetyltransferase (HAT) inhibitor would exacerbate or alleviate the silencing effect.",
+    "options": [],
+    "answer": "The core molecular mechanism responsible for the silencing of the Form-Shift gene in the pericentromeric region is position effect variegation (PEV), driven by the spreading of constitutive heterochromatin. As the heterochromatin spreads, the Form-Shift gene is incorporated into a physically dense structure which blocks the access of transcription factors and the transcriptional machinery (like RNA polymerase) to the gene's promoter, turning off gene expression. Treatment with a histone acetyltransferase (HAT) inhibitor would exacerbate the silencing effect.",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 261,
+    "question": "During its travel through space, Deoxys's genome sustains two types of damage: i) a single-base oxidation and ii) an interstrand cross-link (ICL).",
+    "options": [
+      "A) Explain what type of repair should be used for damage i",
+      "B) Explain what type of repair should be used for damage ii"
+    ],
+    "answer": "A",
+    "explanation": "base excision repair (BER)",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 262,
+    "question": "First, why is a plasmid useful for molecular cloning techniques in laboratories? List 3 reasons.",
+    "options": [],
+    "answer": "Self-replicating, Easy to insert foreign DNA, Possess selectable markers, High copy number, Small and stable",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 263,
+    "question": "What is the name of the point on the plasmid where replication begins?",
+    "options": [],
+    "answer": "origin of replication (ori)",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 264,
+    "question": "True or False: In this scenario specifically, having a forward and a reverse primer is redundant",
+    "options": [],
+    "answer": "False",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 265,
+    "question": "Why would it be advantageous for the researcher to use cDNA rather than genomic DNA as the template for amplifying songA when making the expression constructs?",
+    "options": [],
+    "answer": "cDNA lacks introns → amplified sequence will be contiguous coding sequence suitable for expression in heterologous cells",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 266,
+    "question": "The reverse primer (R) intentionally omits the stop codon of songA. Knowing that the songA gene is being combined with other plasmid sequences, explain the reason behind this choice when cloning into pGFP-Cterm.",
+    "options": [],
+    "answer": "Omitting the stop allows translation to continue into the GFP coding sequence, producing an in-frame C-terminal GFP fusion rather than terminating before GFP.",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 267,
+    "question": "What is the name of the technique used to display the Sanger sequencing results as pictured in Figure 4?",
+    "options": [],
+    "answer": "Gel Electrophoresis",
+    "explanation": "",
+    "source": "GullSO 2026"
+  },
+  {
+    "number": 268,
+    "question": "Write out the full DNA sequence from Figure 4 from 5' to 3'. Assume 5' starts at the black line labeled \"A\" and the 3' end is the black line labeled \"B\".",
+    "options": [],
+    "answer": "5' - TTTTTAACCCTCCAATTATTGCTCG - 3'",
+    "explanation": "",
+    "source": "GullSO 2026"
   }
 ]

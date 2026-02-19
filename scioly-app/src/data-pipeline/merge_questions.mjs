@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 
 // Load existing questions and add source field
-const existing = JSON.parse(readFileSync('questions.json', 'utf-8'));
+const existing = JSON.parse(readFileSync('../../questions.json', 'utf-8'));
 existing.forEach(q => { q.source = 'Designer Genes C'; });
 
 // Load Purdue2026 questions
@@ -26,7 +26,7 @@ console.log(`Purdue2026 deduped: ${dedupedPurdue.length}`);
 const merged = [...existing, ...dedupedPurdue];
 merged.forEach((q, i) => { q.number = i + 1; });
 
-writeFileSync('questions.json', JSON.stringify(merged, null, 2));
+writeFileSync('../../questions.json', JSON.stringify(merged, null, 2));
 console.log(`\nMerged total: ${merged.length} questions saved to questions.json`);
 
 // Count MC vs free-response

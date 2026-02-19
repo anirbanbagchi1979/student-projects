@@ -1,0 +1,417 @@
+[
+  {
+    "number": 1,
+    "question": "Which of the following are all enzymes in the prokaryotic replisome?",
+    "options": [
+      "A) DNA polymerase III, primase, helicase",
+      "B) DNA polymerase I, DNA polymerase III, ligase",
+      "C) DNA polymerase III, primase, Taq polymerase, topoisomerase",
+      "D) DNA polymerase II, topoisomerase, helicase, DNase",
+      "E) DNA polymerase I, DNase, Taq polymerase, endonuclease"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 2,
+    "question": "GloFish exhibits incomplete dominance for scale brightness: BB = bright, Bb = dim glow, bb = no glow. If two dim glowing fish mate, what is the probability that 2 out of 4 offspring have no glow?",
+    "options": [
+      "A) 0.25",
+      "B) 0.19",
+      "C) 0.14",
+      "D) 0.38",
+      "E) 0.21"
+    ],
+    "answer": "E",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 3,
+    "question": "A tumor biopsy reveals cells with 92 chromosomes and identical allelic composition to the original 46 chromosome line. Which statement best explains this observation?",
+    "options": [
+      "A) The cell underwent meiosis without cytokinesis",
+      "B) The cell underwent mitosis but duplicated DNA",
+      "C) The cell underwent mitosis without cytokinesis",
+      "D) The cell experienced nondisjunction during meiosis II"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 4,
+    "question": "Genes A and B are 12 map units apart on the same chromosome. A heterozygous Ab/aB individual is then test-crossed with an aB/aB individual. What percentage of offspring are expected to be recombinant?",
+    "options": [
+      "A) 50%",
+      "B) 88%",
+      "C) 0%",
+      "D) 12%",
+      "E) 100%"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 5,
+    "question": "On which strand of DNA are Okazaki fragments formed on?",
+    "options": [
+      "A) Leading strand",
+      "B) Lagging strand",
+      "C) Template strand",
+      "D) Coding strand"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 6,
+    "question": "In eukaryotes, DNA is typically organized into units called nucleosomes, which consist of \n bp of DNA wrapped around each histone",
+    "options": [
+      "A) 150, tetramer",
+      "B) 147, octamer",
+      "C) 360, pentamer",
+      "D) 10.4, monomer",
+      "E) 360, tetramer"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 7,
+    "question": "In pea plants, the allele for tall plants (T) is dominant over the allele for short plants (t). Therefore, plants with genotypes TT and Tt are tall, while tt results in a short plant. Two heterozygous tall plants are crossed. If an offspring is known to be tall, what is the probability that it has genotype Tt?",
+    "options": [
+      "A) 1/4",
+      "B) 1/2",
+      "C) 3/4",
+      "D) 2/3"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 8,
+    "question": "Multiple crucial processes play a significant role in regulating the expression of genes. Which of the following activating sequences is exclusive to prokaryotes?",
+    "options": [
+      "A) TATA box",
+      "B) Shine Dalgarno",
+      "C) Kozak sequence",
+      "D) Downstream promoter elements (DPE)"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 9,
+    "question": "Michael was running late to his meeting and asked Sarah to finish up a DNA amplification he was running. He left his messy notes on the bench table for Sarah to decipher but she could only make out the words “Final Extension - Done.” The next step, however, was much harder for Sarah to read. What is she most likely supposed to be doing next?",
+    "options": [
+      "A) Run a gel electrophoresis to visualize DNA product",
+      "B) Elongate the new DNA strands with DNA polymerase",
+      "C) Allow the primers to bind their complementary sequences on the DNA",
+      "D) Separate double-stranded DNA into single-stranded DNA"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 10,
+    "question": "All of the following processes are a part of the eukaryotic central dogma. Which of these does not apply to prokaryotes?",
+    "options": [
+      "A) Ligation of Okazaki fragments using ATP",
+      "B) Genetic regulation of transcription",
+      "C) Synthesize mRNA using RNA polymerase",
+      "D) mRNA splicing into introns and exons"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 11,
+    "question": "Ms. Spring is a pet cat that has a litter of six kittens, but one of her kittens does not survive. On average, other cats from Ms. Spring's species have a litter of 3 kittens. What is Ms. Spring's relative fitness?",
+    "options": [
+      "A) 0.5",
+      "B) 0.6",
+      "C) 1.6",
+      "D) 2.0"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 12,
+    "question": "A rare eye color appears only in males. If a phenotypically normal female and male mate, what fraction of offspring are expected to show the trait?",
+    "options": [
+      "A) 0%",
+      "B) 25%",
+      "C) 50%",
+      "D) 75%",
+      "E) 100%"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 13,
+    "question": "In a rare species of rodents, two genes influence fur coloration: A/a: pigment production (A = pigment, a = no pigment) B/b: pigment type (B = black, b = brown) Rules: Gene A is epistatic to B Two fully heterozygous rodents are crossed Which of the following represents the correct phenotypic ratio among the offspring?",
+    "options": [
+      "A) 9 black: 3 brown: 4 albino",
+      "B) 12 black: 3 brown : 1 albino",
+      "C) 9 black: 6 brown : 1 albino",
+      "D) 9 black: 3 brown : 3 albino",
+      "E) 9 black: 6 brown : 4 albino"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 14,
+    "question": "Based on the figure below, what is the paralog of a-Gene 2 (boxed)?",
+    "options": [
+      "A) Species a",
+      "B) α-Gene 1",
+      "C) ß-Gene 1",
+      "D) ß-Gene 2"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 15,
+    "question": "What is the material used to perform the gel separation of proteins?",
+    "options": [
+      "A) Starch",
+      "B) Collagen",
+      "C) Polyacrylamide",
+      "D) Agarose"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 16,
+    "question": "During sample preparation for next-generation DNA sequencing, it is possible to \"index\" the DNA fragments. How are indexes added to the samples and what is the purpose of this indexing step?",
+    "options": [
+      "A) Indexes are added by ligating sample fragments together, ensuring fragments are long enough to be properly sequenced",
+      "B) Indexes are added by fluorescent labeling of the nucleotides, allowing the sequencer to more accurately read the sequences of the bases",
+      "C) Indexes are added using PCR and allows multiple sequencing libraries to be pooled into one run",
+      "D) Indexes are added using restriction enzymes to break apart fragments, then ligated together with index fragments which introduces mutations to prevent sequencer overclustering"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 17,
+    "question": "Female calico cats show patchy fur due to",
+    "options": [
+      "A) Codominance of orange and black alleles",
+      "B) Incomplete dominance at the organism level",
+      "C) Autosomal recessive mutations",
+      "D) Gene flow from males",
+      "E) Random X-chromosome inactivation in cells"
+    ],
+    "answer": "E",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 18,
+    "question": "Suppose scientists constructed a phylogenetic tree solely based on a portion of the gene shown below. Based on the sequence alignments, which sequence (1-3) is most likely to be present in each organism (A-C)?",
+    "options": [
+      "A) 1-A, 2-B, 3-C",
+      "B) 2-A, 3-B, 1-C",
+      "C) 1-A, 3-B, 2-C",
+      "D) 3-A, 2-B, 1-C"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 19,
+    "question": "dN/dS is a measure of natural selection given by the ratio of non-synonymous to synonymous mutations within a protein coding gene. Some genes, like those that perform essential functions, have optimal sequences that can be very harmful when mutated. Thus, these genes undergo negative selection and rarely change sequence. What dN/dS value do you expect for these genes?",
+    "options": [
+      "A) dN/dS < 0",
+      "B) dN/dS = 0",
+      "C) dN/dS < 1",
+      "D) dN/dS = 1"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 1,
+    "question": "Pop Mart is developing a new Labubu series and needs your help! With the new collection, rather than \"pulling\" a random doll from a blind box, customers will be able to choose two dolls to be put into a machine (called \"The LAB\") which will generate a unique Labubu at the store.\nThe technology of these new Labubus are similar to those of Mendelian genetics, where two parent dolls can generate offspring via The LAB. During the initial production of the Labubus at the factory, scientists give each Labubu genetic material that determines their phenotype. As one of the scientists on the team, you know that the Labubus are diploid and their fur color is determined by the molecular pathway outlined below. Assume loss-of-function alleles are all recessive and that one functional copy of Gene B can inhibit all of Gene A function.\nWhite\nRed\nBlue\nGene A\nGene C\nT\nGene B\na. You decide to test out the technology using Labubus of known genotypes aaBbCc and AAbbCc. What color is each doll?\nb. Circle the correct answer(s) to complete the following statements:\nGene B is epistatic to...\nGene A\nGene C\nno other genes\nGene C is epistatic to...\nGene A\nGene B\nno other genes\nc. You put the two Labubus from part A into The LAB, producing a red Labubu. If you were to repeat the cross, what is the probability that the next Labubu is also red? Show your work.",
+    "options": [],
+    "answer": "a. aaBbCc: white, AAbbCc: blue\nb. Gene B is epistatic to Gene A, Gene C is epistatic to Gene B\nc. 1/8 or 0.125",
+    "explanation": "a. (1 pt for each phenotype) aaBbCc: white, AAbbCc: blue\nb. (1 pt) Genes A and C (1 pt) no other genes\nc. (1 pt for work, 1 pt for answer) 1/8 or 0.125 (Aabbcc is red)",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 2,
+    "question": "You observe meiosis in a Labubu cell:\n• Homologous chromosome pairs and exchange segments\n• Homologs separate\n• Sister chromatids remain together\na. Identify the stage of meiosis\nb. Contrast this with the corresponding stage in mitosis\nc. Explain how this stage contributes to genetic diversity",
+    "options": [],
+    "answer": "a. Anaphase I\nb. In mitosis, sister chromatids separate during anaphase\nc. Crossing over and independent assortment create unique allele combinations",
+    "explanation": "a. (1 pt for anaphase, 1 pt for meiosis I) Anaphase I\nb. (2 pts) In mitosis, sister chromatids separate during anaphase\nc. (2 pts) Crossing over and independent assortment create unique allele combinations",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 3,
+    "question": "A pedigree shows that a Labubu trait affects males much more frequently than the Labubu females, and affected mothers always pass it to all sons but never daughters.\na. What is the most likely mode of inheritance?\nb. What chromosomal location does this imply for the gene?",
+    "options": [],
+    "answer": "a. X-linked recessive\nb. X chromosome",
+    "explanation": "a. (2 pts) X-linked recessive\nb. (2 pts) X chromosome",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 4,
+    "question": "Below are three Labubu families with individuals affected by a rare inherited disease known as blepharospasm (BS). Affected individuals are capable of blinking and can be diagnosed as soon as they are made. Assume there are no new mutations, non-disjunction, or abnormal events that occur in any of the families.\nFamily:\nA\nB\nC\nㅁㅇ\n1\n2\n3\n4\n5\n1\n6\n2\n3\n4\n5\na. Determine the most likely mode of inheritance for each family's version of BS.\nTo study this rare disease, you decide to take a couple individuals from the families and allow them to cross, diagramed by the expanded pedigree below. To your surprise, child III-2 doesn't develop BS despite both parents being affected.\nFamily:\nA\nB\nC\n|\nㅁㅇ\n1\n2\n3\n4\n5\n6\n|| \n1\nIII\n1\n2\n3\n4\n5\n2\nb. (TB#2) Explain why the phenotypes of III-1 and III-2 differ.\nc. What is the minimum number or genes that are involved in this disease?",
+    "options": [],
+    "answer": "a. A: recessive (autosomal or X-linked), B+C: autosomal recessive\nb. The mutations are in different genes. III-1 is homozygous recessive in one gene that causes BS, III-2 has at least one functional allele of both genes that cause BS\nc. 2",
+    "explanation": "a. (3 pts - 1 pt each family) A: recessive (autosomal or X-linked), B+C: autosomal recessive\nb. (2 pts) TIEBREAKER #2 The mutations are in different genes. III-1 is homozygous recessive in one gene that causes BS, III-2 has at least one functional allele of both genes that cause BS\nc. (1 pt) 2",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 5,
+    "question": "Two heterozygous AaBb Labubus are crossed. Their offspring show phenotypes at a 2:1:1:0 ratio, rather than the typical 9:3:3:1 ratio. Recombination frequency is 0.05.\na. What does this suggest about the physical arrangement of genes A and B during meiosis?\nb. Predict the gametes of each parent.\nParent 1: \nParent 2:\nc. What would the parent gametes be if the phenotypic ratio was 3:0:0:1 instead?",
+    "options": [],
+    "answer": "a. Tightly linked on the same chromosome\nb. AB/ab x Ab/aB OR Ab/aB x Ab/aB (parents are interchangeable)\nc. AB/ab x AB/ab (parents are interchangeable)",
+    "explanation": "TIEBREAKER #1: ALL PARTS\na. (2 pts) Tightly linked on the same chromosome\nb. (3 pts) AB/ab x Ab/aB OR Ab/aB x Ab/aB (parents are interchangeable)\nc. (2 pts) AB/ab x AB/ab (parents are interchangeable)",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 6,
+    "question": "You observe two unusual Labubus: One has 3 copies of chromosome 7. One has only 1 copy of chromosome 7.\na. Name these two conditions\nb. Name the event that would cause these two conditions and describe when in meiosis this event likely occurred\nc. Explain why both errors arise from the same process",
+    "options": [],
+    "answer": "a. 3 copies = trisomy, 1 copy = monosomy\nb. Caused by nondisjunction, which occurs during anaphase I or II of meiosis\nc. Both are a failure chromosome separation, it just depends on which gamete is fertilized",
+    "explanation": "a. (2 pts) 3 copies = trisomy, 1 copy = monosomy\nb. (2 pts) Caused by nondisjunction, which occurs during anaphase I or II of meiosis\nc. (2 pts) Both are a failure chromosome separation, it just depends on which gamete is fertilized",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 7,
+    "question": "Arthur is a linguistics professor at the University of Washington, but he's recently gotten symbolic and decided genetic sequences are analogous to the vocabulary of language. Words rule society the way genes rule living things. But his biologist coworkers disagree and strongly believe that genes rule all. In language, the root “cis-” means \"same” and the root “trans-” means “different.” But in the world of genes, these two roots mean something far more significant than just \"same” or \"different.\"\na. To convince Arthur that language is only important based on the context it is used in, define the terms \"cis-” and “trans-” in the context of gene regulating elements within prokaryotic organisms.\nCis Regulatory Element:\nTrans Regulatory Elements:\nb. (TB#4) Now label the following regulatory elements as either Cis (C), Trans (T), or both (B).\nRepressor\nsRNA\nOperator\nPromoter\nActivator",
+    "options": [],
+    "answer": "a. Cis - DNA sequences on the same DNA molecule that is being regulated Trans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T",
+    "explanation": "a. (2 pts) Cis - DNA sequences on the same DNA molecule that is being regulated Trans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. (1 pt per correct answer) TIEBREAKER #4 T, B, C, C, T",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 8,
+    "question": "DNA polymerases possess exonuclease ability, both in the 5' → 3' and 3' → 5' directions. For each of the following DNA polymerases, determine which direction(s) exonuclease activity occurs in and briefly explain why activity occurs in the direction(s) you chose.\nDNA Pol I\nDNA Pol III",
+    "options": [],
+    "answer": "DNA Pol I: 5' to 3' to remove RNA primers on lagging strand of replication AND 3' to 5' for proofreading\nDNA Pol III: 3' to 5' for proofreading",
+    "explanation": "TIEBREAKER #5: ALL PARTS\n(2 pts) DNA Pol I - 5' to 3' to remove RNA primers on lagging strand of replication AND 3' to 5' for proofreading\n(2 pts) DNA Pol III - 3' to 5' for proofreading",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 9,
+    "question": "Misha just finished a Sanger Sequencing protocol and ended up with the gel shown below. However, he cannot figure out what it means. Please help him out.\na. What is the 1st nucleotide of this DNA fragment?\nb. What is the 6th nucleotide from the start of the sequence?\nc. What is the common name of the chain-terminating nucleotides?\nd. What is the entire sequence?",
+    "options": [],
+    "answer": "a. C\nb. T\nc. ddNTPs (dideoxynucleotides)\nd. 5'- CTG TAT CGC AGA TGC AGTG -3'",
+    "explanation": "a. (1 pt) C\nb. (1 pt) T\nc. (1 pt) ddNTPs (dideoxynucleotides)\nd. (3 pts) 5'- CTG TAT CGC AGA TGC AGTG -3'",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 10,
+    "question": "a. Identify the coding (C) and template (T) strands in the sequences below.\n3'- GCTTACGAGCTAGCGTAGCGTAGCTAGATT -5'\n5'- CGAATGCTCGATCGCATCGCATCGATCTAA -3'\nb. What is the sequence of the product formed after transcription?\nc. What is the sequence of the product formed after translation?",
+    "options": [],
+    "answer": "a. Top - T\nBottom - C\nb. 5'- CGA AUG CUC GAU CGC AUC GCA UCG AUC UAA -3'\nc. Met - Leu - Asp - Arg - Ile - Ala - Ser - Ile",
+    "explanation": "a. (2 pts) Top - T\nBottom - C\nb. (3 pts) 5'- CGA AUG CUC GAU CGC AUC GCA UCG AUC UAA -3'\nc. (3 pts)\nMet - Leu - Asp - Arg - Ile - Ala - Ser - Ile",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 11,
+    "question": "Match the following descriptions to the process that most aligns with them. Label as Bottleneck Effect (B), Founders Effect (F), or Gene Flow (G). These labels may be used more than once.\na. Migration of wolves between packs introduces new alleles, increasing genetic diversity and reducing differences between populations\nb. The Pennsylvania Amish community includes individuals carrying the allele for Ellis-van Crevold syndrome, which became more common after intermarriage within the community\nc. Habitat destruction reduced the Greater Prairie chicken population from millions to fewer than 50, causing a dramatic loss of genetic diversity and many alleles.\nd. Small groups of Galapagos' finches colonized the Galapagos Islands, leading to new species with unique genetic traits.\ne. The New Zealand black robin population was reduced to just five individuals, all current robins descend from a single female known as Old Blue.\nf. The mountain lion population in Southern California experiences a decline due to urban development and highways and their genetic diversity continues to decrease without connection to other populations.",
+    "options": [],
+    "answer": "a. G\nb. F\nc. B\nd. F\ne. B\nf. B",
+    "explanation": "(6 pts total, 1 pt per correct answer) TIEBREAKER #3 G, F, B, F, B, B",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 12,
+    "question": "Fill in the following statements using the word bank provided. Words may be used more than once or not at all.\nSingle, double, linear, circular, plasmids, chromosomes, nucleoid, nucleus, nucleolus\nIn prokaryotes, DNA is (a) \nand (b) \n-stranded and located in the (c) \nof the cell. In eukaryotes, DNA is (d) \n-stranded and located in the (f) \nand (e) \nof the cell. Prokaryotic cells can contain additional DNA structures called (g) \nthat eukaryotes don't.",
+    "options": [],
+    "answer": "a) double, b) circular, c) nucleoid, d) linear, e) double, f) nucleus, g) plasmids",
+    "explanation": "(7 pts total, 1 pt per correct answer) a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) plasmids",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 13,
+    "question": "Suppose you are transforming competent E. coli cells with the plasmid depicted below. The lacZ gene encodes an enzyme that can digest X-gal, which produces a blue byproduct upon digestion. If the E.coli are unable to digest X-gal, the colonies will be white. During plasmid cloning, you choose a vector containing the ampicillin gene to clone your gene of interest into. You end up plating the transformed E. coli on LB agar-ampicillin plates containing X-gal and incubating the plates overnight. To your surprise, you find no colony growth on the plates the next morning.\na. You suspect that you used the wrong enzyme for the initial restriction digest. Determine the restriction enzyme you used that would result in zero colony growth (assuming that all other steps of cloning were planned correctly and successfully carried out).\nb. Determine the best restriction enzyme that would let you select for successfully transformed colonies and what color colonies result from your choice.",
+    "options": [],
+    "answer": "a. Nhel\nb. Agel, White",
+    "explanation": "a. (1 pt) Nhel\nb. (2 pts) Agel, White",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 6,
+    "question": "In eukaryotes, DNA is typically organized into units called nucleosomes, which consist of \n_______ bp of DNA wrapped around each histone.",
+    "options": [
+      "A) 150, tetramer",
+      "B) 147, octamer",
+      "C) 360, pentamer",
+      "D) 10.4, monomer",
+      "E) 360, tetramer"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 13,
+    "question": "In a rare species of rodents, two genes influence fur coloration:\n• A/a: pigment production (A = pigment, a = no pigment)\n• B/b: pigment type (B = black, b = brown)\nRules:\n• Gene A is epistatic to B\n• Two fully heterozygous rodents are crossed\nWhich of the following represents the correct phenotypic ratio among the offspring?",
+    "options": [
+      "A) 9 black : 3 brown : 4 albino",
+      "B) 12 black : 3 brown : 1 albino",
+      "C) 9 black : 6 brown : 1 albino",
+      "D) 9 black : 3 brown : 3 albino",
+      "E) 9 black : 6 brown : 4 albino"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 14,
+    "question": "Based on the figure below, what is the paralog of α-Gene 2 (boxed)?",
+    "options": [
+      "A) Species α",
+      "B) α-Gene 1",
+      "C) β-Gene 1",
+      "D) β-Gene 2"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 7,
+    "question": "Arthur is a linguistics professor at the University of Washington, but he's recently gotten symbolic and decided genetic sequences are analogous to the vocabulary of language. Words rule society the way genes rule living things. But his biologist coworkers disagree and strongly believe that genes rule all. In language, the root “cis-” means \"same” and the root “trans-” means “different.” But in the world of genes, these two roots mean something far more significant than just \"same” or “different.”\na. To convince Arthur that language is only important based on the context it is used in, define the terms \"cis-\" and \"trans-\" in the context of gene regulating elements within prokaryotic organisms.\nCis Regulatory Element:\nTrans Regulatory Elements:\nb. (TB#4) Now label the following regulatory elements as either Cis (C), Trans (T), or both (B).\nRepressor\nsRNA\nOperator\nPromoter\nActivator",
+    "options": [],
+    "answer": "a. Cis - DNA sequences on the same DNA molecule that is being regulated\nTrans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T",
+    "explanation": "a. Cis - DNA sequences on the same DNA molecule that is being regulated\nTrans - genes that encode other products (protein or RNA) that regulate expression of genes on different DNA molecules\nb. T, B, C, C, T",
+    "source": "DubSO 2025"
+  },
+  {
+    "number": 12,
+    "question": "Fill in the following statements using the word bank provided. Words may be used more than once or not at all.\nSingle, double, linear, circular, plasmids, chromosomes, nucleoid, nucleus, nucleolus\nIn prokaryotes, DNA is (a) \n_______-stranded and located in the (c) \n_______ of the cell. In eukaryotes, DNA is (d) \n_______-stranded and located in the (f) \n_______ and (g) \n_______ of the cell. Prokaryotic cells can contain additional DNA structures called (h) \n_______ that eukaryotes don't.",
+    "options": [],
+    "answer": "a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) nucleolus, h) plasmids",
+    "explanation": "a) circular, b) double, c) nucleoid, d) linear, e) double, f) nucleus, g) nucleolus, h) plasmids",
+    "source": "DubSO 2025"
+  }
+]

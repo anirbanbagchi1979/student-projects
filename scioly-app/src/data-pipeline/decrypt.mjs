@@ -7,7 +7,7 @@ if (!password) {
     process.exit(1);
 }
 
-const input = fs.readFileSync('questions.json.enc');
+const input = fs.readFileSync('../../questions.json.enc');
 
 const algorithm = 'aes-256-cbc';
 const salt = input.subarray(0, 16);
@@ -19,5 +19,5 @@ const decipher = crypto.createDecipheriv(algorithm, key, iv);
 
 const decrypted = Buffer.concat([decipher.update(encrypted), decipher.final()]);
 
-fs.writeFileSync('questions.json.decrypted', decrypted);
+fs.writeFileSync('../../questions.json.decrypted', decrypted);
 console.log('Successfully decrypted questions.json.enc to questions.json.decrypted');

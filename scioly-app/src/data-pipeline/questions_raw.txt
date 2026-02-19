@@ -1,0 +1,250 @@
+```json
+[
+  {
+    "number": 1,
+    "question": "What allele(s) are recessive under this system?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) i",
+      "D) A and B",
+      "E) B and i"
+    ],
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "number": 2,
+    "question": "Blood type AB demonstrates what non-Mendelian inheritance pattern?",
+    "options": [
+      "A) Codominance",
+      "B) Complementation",
+      "C) Incomplete dominance",
+      "D) Linkage",
+      "E) Polygenic inheritance"
+    ],
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "number": 3,
+    "question": "A man heterozygous for blood type A marries a woman heterozygous for blood type B. If they are to have three children, what is the probability that none of the three children are blood type O?",
+    "options": [
+      "A) 1",
+      "B) 3/4",
+      "C) 8/27",
+      "D) 27/64",
+      "E) 1/64"
+    ],
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "number": 4,
+    "question": "A man of blood type B marries a woman of blood type O. Their first child is blood type O. They plan to have five children. Assuming they will have five children total, what is the probability that three of the children have blood type O and two of the children have blood type B?",
+    "options": [
+      "A) 1/2",
+      "B) 3/8",
+      "C) 5/16",
+      "D) 5/32",
+      "E) 0"
+    ],
+    "answer": "E",
+    "explanation": ""
+  },
+  {
+    "number": 5,
+    "question": "Which of the following population traits would cause a shift from Hardy-Weinberg equilibrium?",
+    "options": [
+      "A) No mutation",
+      "B) Random mating",
+      "C) Infinitely large population",
+      "D) Natural selection",
+      "E) No introduction of new alleles"
+    ],
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "number": 6,
+    "question": "Which of the following could cause increased frequency of recessive disorders?",
+    "options": [
+      "A) Genetic drift",
+      "B) Geographic isolation",
+      "C) Reproductive Isolation",
+      "D) Heterozygote advantage selection",
+      "E) All of the above"
+    ],
+    "answer": "E",
+    "explanation": ""
+  },
+  {
+    "number": 7,
+    "question": "For a two allele system, the Hardy-Weinberg equation can be written as: p² + 2pq + q² = 1. What does the term 2pq represent in the Hardy-Weinberg equation?",
+    "options": [
+      "A) The population of heterozygotes",
+      "B) Double the population of heterozygotes",
+      "C) The frequency of heterozygotes",
+      "D) Double the frequency of heterozygotes",
+      "E) The population of all homozygotes in the model"
+    ],
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "number": 8,
+    "question": "Based solely on the phylogenetic tree to the right, which of the following animals is/are most closely related to the bald eagle?",
+    "options": [
+      "A) Alligator",
+      "B) Antelope",
+      "C) Sea bass",
+      "D) Lamprey",
+      "E) More than one of the above"
+    ],
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "number": 9,
+    "question": "Based solely on the phylogenetic tree to the right, which of the following animals is/are most closely related to the antelope?",
+    "options": [
+      "A) Alligator",
+      "B) Bald eagle",
+      "C) Sea bass",
+      "D) Lamprey",
+      "E) More than one of the above"
+    ],
+    "answer": "E",
+    "explanation": ""
+  },
+  {
+    "number": 10,
+    "question": "Assuming Hardy-Weinberg equilibrium, what must the sum of the alleles, A, B, and i, be equal to?",
+    "options": [
+      "A) 27/16",
+      "B) 9/4",
+      "C) 5/4",
+      "D) 1",
+      "E) 3/4"
+    ],
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "number": 11,
+    "question": "Assuming Hardy-Weinberg equilibrium, if 1/9 of the population has blood type O and the frequency of B alleles is 1/4. What fraction of the population has blood type AB?",
+    "options": [
+      "A) 5/12",
+      "B) 7/12",
+      "C) 5/24",
+      "D) 7/36",
+      "E) 1/4"
+    ],
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "number": 12,
+    "question": "If the allele frequencies of allele for a population is A is 0.6, B is 0.2, and O is 0.2, assuming Hardy-Weinberg equilibrium, calculate the percentage of individuals with type A blood?",
+    "options": [
+      "A) 0.72",
+      "B) 0.6",
+      "C) 0.48",
+      "D) 0.36",
+      "E) 0.24"
+    ],
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "number": 13,
+    "question": "Write out the Hardy-Weinberg equation for the ABO blood group model with respect to the variables A, B, and i. Then identify which term(s) correspond to each phenotype and use them to complete the table. [3.5 points]",
+    "options": [],
+    "answer": "Equation: (A + B + i)2 = 1 OR A2 + B2 + i2 + 2AB + 2Ai + 2Bi = 1\nPhenotype | Hardy-Weinberg Equation Terms\nBlood Type A | A² + 2Ai\nBlood Type B | B² + 2Bi\nBlood Type AB | 2AB\nBlood Type O | i²",
+    "explanation": "Equation: (A + B + i)2 = 1 OR A2 + B2 + i2 + 2AB + 2Ai + 2Bi = 1 [+2.5 points]\nBlood Type A: A² + 2Ai [+0.25 points]\nBlood Type B: B² + 2Bi [+0.25 points]\nBlood Type AB: 2AB [+0.25 points]\nBlood Type O: i² [+0.25 points]"
+  },
+  {
+    "number": 14,
+    "question": "What is the best explanation for the observed ratios for the progeny's phenotype?",
+    "options": [
+      "A) The dominant allele of Gene H masks expression of A blood type",
+      "B) At least one recessive allele from each of the two genes is needed for the blood type A phenotype",
+      "C) The homozygous recessive genotype of Gene H masks the expression of A blood type",
+      "D) One dominant allele from either of the two genes is needed for the blood type A",
+      "E) One recessive allele from either of the two genes is needed for the blood type A"
+    ],
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "number": 15,
+    "question": "What gene interaction best describes this pattern of inheritance?",
+    "options": [
+      "A) Additive",
+      "B) Dominant epistasis",
+      "C) Duplicate genes",
+      "D) Non-complementary",
+      "E) Recessive epistasis"
+    ],
+    "answer": "E",
+    "explanation": ""
+  },
+  {
+    "number": 16,
+    "question": "A member of the F2 progeny has children with an individual with genotype iihh. Some of their children have blood type A while others have blood type O. Which of the following are possible genotypes for this member of the F2 progeny? Select all that apply.",
+    "options": [
+      "A) AiHh",
+      "B) AiHH",
+      "C) AAhh",
+      "D) AAHh",
+      "E) AAHH"
+    ],
+    "answer": "A, B, D",
+    "explanation": ""
+  },
+  {
+    "number": 17,
+    "question": "For a standard dihybrid cross between two individuals heterozygous for two unlinked, non-interacting genes, which of the following is the classic phenotypic ratio?",
+    "options": [
+      "A) 1:2:1",
+      "B) 9:3:3:1",
+      "C) 9:7",
+      "D) 9:3:4",
+      "E) 12:3:1"
+    ],
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "number": 18,
+    "question": "Based on the pedigree above, what inheritance pattern(s) is/are possible? Select all that apply.",
+    "options": [
+      "A) Autosomal dominant",
+      "B) Autosomal recessive",
+      "C) X-linked dominant",
+      "D) X-linked recessive",
+      "E) Y-linked"
+    ],
+    "answer": "A, B, D",
+    "explanation": ""
+  },
+  {
+    "number": 19,
+    "question": "If individual IV-1 is born and expressed the disease, which inheritance pattern(s) is/are possible? Select all that apply.",
+    "options": [
+      "A) Autosomal dominant",
+      "B) Autosomal recessive",
+      "C) X-linked dominant",
+      "D) X-linked recessive",
+      "E) Y-linked"
+    ],
+    "answer": "A, B",
+    "explanation": ""
+  },
+  {
+    "number": 20,
+    "question": "If individual IV-1 is born and does not express the disease, which inheritance pattern(s) is/are possible? Select all that apply.",
+    "options": [
+      "A) Autosomal dominant",
+      "B) Autosomal recessive",
+      "C) X-linked

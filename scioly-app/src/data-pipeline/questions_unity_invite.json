@@ -1,0 +1,648 @@
+[
+  {
+    "number": 1,
+    "question": "Suppose you perform a dihybrid cross with two chocolate Labrador retrievers. What is:\nThe probability of offspring with golden coat colors?\nThe probability of offspring with chocolate coat colors?\nThe probability of offspring with black coat colors?",
+    "options": [],
+    "answer": "Golden: 0/16, Chocolate: 9/16, Black: 7/16",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 2,
+    "question": "What type of inheritance pattern is this referred to as?",
+    "options": [],
+    "answer": "Epistasis",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 3,
+    "question": "Suppose you have a black Lab, and you breed it with a chocolate Lab. Some of the offspring produced are golden.\nIs the MC1R gene in your black lab homozygous, heterozygous, or are you unable to tell? Why?\nIs the TYR1 gene in your black lab homozygous, heterozygous, or are you unable to tell? Why?",
+    "options": [],
+    "answer": "MC1R: Heterozygous (Ee). If it were homozygous recessive (ee), all offspring would be golden. TYR1: Unable to tell. It could be BB or Bb.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 4,
+    "question": "Suppose that instead of the inheritance pattern you gave in question 2, the genes exhibited genetic redundancy. What would the phenotypic ratio be for black:chocolate:gold?",
+    "options": [],
+    "answer": "15:1:0",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 5,
+    "question": "TYR1 specifically encodes the protein tyrosinase. Suppose a tyrosinase inhibitor is administered in dog food to a Labrador with the genotype BbEe. What would be the expected phenotype? Justify your answer.",
+    "options": [],
+    "answer": "Black. The tyrosinase inhibitor would block the function of TYR1, preventing the deposition of eumelanin. However, the MC1R gene (Ee) would still allow for the production of eumelanin. Since the dog has at least one dominant B allele, it would be able to deposit the eumelanin, resulting in a black phenotype.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 6,
+    "question": "Based on this discovery, on what chromosome must one of the orthologs be located in the Marquette retriever?",
+    "options": [],
+    "answer": "The X chromosome.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 7,
+    "question": "You sequence the genotype of a female Marquette retriever, and it has the genotype BBEe. The dog has black and yellow stripes. Based on this analysis, is TYRI or MC1R located on the X chromosome? Justify your answer.",
+    "options": [],
+    "answer": "MC1R. The presence of stripes (black and yellow) indicates that the gene controlling pigment production (MC1R) is on the X chromosome, and the dog is heterozygous for this gene. The TYR1 gene (BB) is not on the X chromosome and is homozygous dominant, so it does not contribute to the striped phenotype.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 8,
+    "question": "Now suppose the opposite gene is located on the X chromosome. What would the expected genotype be for this dog? Justify your answer.",
+    "options": [],
+    "answer": "The genotype would be XbY or XBY, depending on whether the gene is dominant or recessive. If the gene is on the X chromosome, the male would only have one copy of the gene, and its phenotype would be determined by that single allele.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 9,
+    "question": "If you administered the same tyrosinase inhibitor as you did in question 5 for your Marquette retriever, would you expect to get the same result? Why or why not?",
+    "options": [],
+    "answer": "No. If TYR1 is on the X chromosome, then the inhibitor would affect males and females differently due to sex-linked inheritance. If MC1R is on the X chromosome, then the inhibitor would affect males and females differently.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 10,
+    "question": "You isolate the mRNA of a novel virus strain, and you want to compare its genotype to other known viruses",
+    "options": [
+      "A) PCR and Illumina sequencing",
+      "B) RT-PCR and Illumina sequencing",
+      "C) PCR and Nanopore sequencing",
+      "D) RT-PCR and Nanopore sequencing"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 11,
+    "question": "You want to sequence a fragment of a plasmid, but your lab has recently suffered from massive government budget cuts.",
+    "options": [
+      "A) Illumina sequencing",
+      "B) Nanopore sequencing",
+      "C) Sanger sequencing",
+      "D) qPCR"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 12,
+    "question": "You want to recombine a plasmid and clone another gene into it using sticky ends. Both fragments have the \"GAATTC\" restriction site.",
+    "options": [
+      "A) Cleavage with EcoRI",
+      "B) Cleavage with HindIII",
+      "C) Cleavage with Smal",
+      "D) Cleavage with BamHI"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 13,
+    "question": "You want to determine the relative expression levels of all expressed genes in cancer cells",
+    "options": [
+      "A) qPCR",
+      "B) DNA microarray",
+      "C) Western blot",
+      "D) Northern blot"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 14,
+    "question": "What are the 3 stages of PCR?",
+    "options": [],
+    "answer": "Denaturation, Annealing, Extension",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 15,
+    "question": "Why is Taq polymerase used in PCR instead of other bacterial DNA polymerases?",
+    "options": [],
+    "answer": "Taq polymerase is heat-stable and can withstand the high temperatures required for DNA denaturation during PCR.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 16,
+    "question": "What additional enzyme is required for RT-PCR? What does this enzyme generate?",
+    "options": [],
+    "answer": "Reverse transcriptase. It generates complementary DNA (cDNA).",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 17,
+    "question": "Can qPCR be performed with RT-PCR? Explain why or why not.",
+    "options": [],
+    "answer": "Yes. RT-qPCR combines reverse transcription with quantitative PCR to measure the amount of a specific RNA molecule.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 18,
+    "question": "Given the nature of RT-PCR, are there any parts of the DNA sequence which may be missing? If so, what are they? Explain your answer.",
+    "options": [],
+    "answer": "Yes, introns. RT-PCR amplifies cDNA, which is synthesized from mRNA. mRNA is processed and introns are removed, so the resulting cDNA will not contain intronic sequences.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 19,
+    "question": "Using this protein sequence, give the sequence of all valid mRNA strand used to encode this motif. Give your answer as a 5'-3' strand.",
+    "options": [],
+    "answer": "5'-GG(U/C)GA(U/C)UGG(U/C)G(U/C)G(U/C)GA(U/C)GA(U/C)-3'",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 20,
+    "question": "Using your mRNA strand, give all valid sequences of the template strand used to encode the mRNA. Give your answer as a 3'-5' strand instead of 5'-3'.",
+    "options": [],
+    "answer": "3'-CC(A/G)CT(A/G)ACC(A/G)C(A/G)CT(A/G)CT(A/G)-5'",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 21,
+    "question": "Which of the following are you not likely to encounter in mRNA?",
+    "options": [
+      "A) Poly(A)-tail",
+      "B) 5' cap",
+      "C) UMP",
+      "D) TMP"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 22,
+    "question": "One of the things that you find in another DNA strand is that it is composed of 20% A and 30% G. What are the other percentages of each nucleotide?",
+    "options": [
+      "A) 30% T, 20% C",
+      "B) 30% C, 20% T",
+      "C) 25% T, 25% C",
+      "D) Unable to determine"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 23,
+    "question": "This DNA strand also contains a coding region. What are the percentages of each nucleotide in the mRNA sequence?",
+    "options": [
+      "A) 30% U, 20% C",
+      "B) 30% C, 20% U",
+      "C) 25% U, 25% C",
+      "D) Unable to determine"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 24,
+    "question": "Which protein is the most important for the initiation of replication at oriC?",
+    "options": [
+      "A) DnaA",
+      "B) DnaB",
+      "C) DnaC",
+      "D) DnaE"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 25,
+    "question": "Which protein primarily functions as a helicase?",
+    "options": [
+      "A) DnaA",
+      "B) DnaB",
+      "C) DnaC",
+      "D) DnaE"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 26,
+    "question": "What is the Central Dogma of Molecular Biology?",
+    "options": [
+      "A) DNA → Protein → RNA",
+      "B) DNA → RNA → Protein",
+      "C) RNA → Protein → DNA",
+      "D) RNA → DNA → Protein"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 27,
+    "question": "Which of the following violates the Central Dogma of Molecular Biology?",
+    "options": [
+      "A) Coronavirus",
+      "B) Adenovirus",
+      "C) Poliovirus",
+      "D) Lentivirus"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 28,
+    "question": "Which of the following is not a stage of translation?",
+    "options": [
+      "A) Elongation",
+      "B) Propagation",
+      "C) Termination",
+      "D) Initiation"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 29,
+    "question": "Using your answer to question 3, write out the steps of translation in order",
+    "options": [],
+    "answer": "Initiation, Elongation, Termination",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 30,
+    "question": "Which of the following is not a ribosomal site?",
+    "options": [
+      "A) P",
+      "B) E",
+      "C) A",
+      "D) R"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 31,
+    "question": "Using your answer to question 5, write out the ribosomal sites in the order that tRNA would enter them.",
+    "options": [],
+    "answer": "A, P, E",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 32,
+    "question": "Other than tRNA and mRNA, name another major form of RNA.",
+    "options": [],
+    "answer": "rRNA",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 33,
+    "question": "Which of the following leads to NHEJ?",
+    "options": [
+      "A) Methylation",
+      "B) Ethylation",
+      "C) UV radiation",
+      "D) CRISPR/Cas9"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 34,
+    "question": "Which of the following does not produce sticky ends in DNA?",
+    "options": [
+      "A) EcoRI",
+      "B) KpnI",
+      "C) AfII",
+      "D) AccBSI"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 35,
+    "question": "Which of the following mutations leads to the evolution of genes?",
+    "options": [
+      "A) Insertion",
+      "B) Deletion",
+      "C) Translocation",
+      "D) Duplication"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 36,
+    "question": "What's the difference between a knockdown and a knockout?",
+    "options": [
+      "A) Knockouts completely eliminate the functionality of a gene, knockdowns make them less effective",
+      "B) Knockouts make genes less effective, while knockdowns eliminate their functionality entirely",
+      "C) Knockouts decrease expression of a gene to 0, while knockdowns reduce expression of a gene slightly",
+      "D) Knockouts slightly decrease the expression of a gene, while knockdowns reduce expression of a gene to 0."
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 37,
+    "question": "Which of the following does not make up DNA?",
+    "options": [
+      "A) Phosphate backbone",
+      "B) Nitrogenous base",
+      "C) Ribose",
+      "D) Deoxyribose"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 38,
+    "question": "In what direction is DNA read?",
+    "options": [
+      "A) 5' → 3'",
+      "B) 3' → 5'",
+      "C) 5' → 1'",
+      "D) 1' → 5'"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 39,
+    "question": "What is the first phase of mitosis?",
+    "options": [
+      "A) Prophase",
+      "B) Metaphase",
+      "C) Anaphase",
+      "D) Telophase"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 40,
+    "question": "How many (human) sperm cells are produced by meiosis?",
+    "options": [
+      "A) 8",
+      "B) 4",
+      "C) 2",
+      "D) 1"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 41,
+    "question": "How many (human) egg cells are produced by meiosis?",
+    "options": [
+      "A) 8",
+      "B) 4",
+      "C) 2",
+      "D) 1"
+    ],
+    "answer": "D",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 42,
+    "question": "Which of the following becomes elongated in cancer cells?",
+    "options": [
+      "A) Mitosis",
+      "B) Meiosis",
+      "C) Telomeres",
+      "D) mRNA"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 43,
+    "question": "Which of the following catalyzes the elongation of the answer to question 7?",
+    "options": [
+      "A) Kinesin",
+      "B) Dynein",
+      "C) Telomerase",
+      "D) RNAPII"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 44,
+    "question": "Which of the following epigenetic markers leads to increased transcription?",
+    "options": [
+      "A) Methyl group addition",
+      "B) Ethyl group addition",
+      "C) Acetyl group addition",
+      "D) Acetal group addition"
+    ],
+    "answer": "C",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 45,
+    "question": "What is the inheritance pattern for this pedigree?",
+    "options": [
+      "A) Autosomal dominant",
+      "B) Autosomal recessive",
+      "C) Sex-linked dominant",
+      "D) Sex-linked recessive"
+    ],
+    "answer": "A",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 46,
+    "question": "What is the genotype of individual II-2?",
+    "options": [
+      "A) ZZ",
+      "B) Zz, recessive allele inherited from mother",
+      "C) Zz, recessive allele inherited from father",
+      "D) ZZ",
+      "E) Unable to determine"
+    ],
+    "answer": "E",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 47,
+    "question": "What is the genotype of individual II-3?",
+    "options": [
+      "A) ZZ",
+      "B) Zz",
+      "C) ZY",
+      "D) zY",
+      "E) ZZ",
+      "F) Unable to determine"
+    ],
+    "answer": "F",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 48,
+    "question": "Suppose individuals III-1 and III-6 reproduce, and their child is a female. What would the genotype of their child be?",
+    "options": [
+      "A) ZZ",
+      "B) Zz, recessive allele inherited from mother",
+      "C) Zz, recessive allele inherited from father",
+      "D) ZZ",
+      "E) Unable to determine"
+    ],
+    "answer": "E",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 49,
+    "question": "What is the inheritance pattern for this disease?",
+    "options": [
+      "A) Autosomal dominant",
+      "B) Autosomal recessive",
+      "C) Sex-linked dominant",
+      "D) Sex-linked recessive"
+    ],
+    "answer": "B",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 50,
+    "question": "What is the genotype of individual 3?",
+    "options": [
+      "A) AA",
+      "B) Aa",
+      "C) AY",
+      "D) aY",
+      "E) aa",
+      "F) Unable to determine"
+    ],
+    "answer": "F",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 52,
+    "question": "While doing more research, you discover a new species of dog! You name your new pooch the Marquette retriever. While doing your analysis, something that puzzles you is that some female Marquette retrievers have stripes, while others do not.",
+    "options": [],
+    "answer": "",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 56,
+    "question": "If you administered the same tyrosinase inhibitor as you did in question 5 for your Marquette retriever, would you expect to get the same result? Why or why not.",
+    "options": [],
+    "answer": "No, you would not expect to get the same result. In question 5, the tyrosinase inhibitor affected the production of eumelanin (controlled by MC1R). If the Marquette retriever in this question has the opposite gene (TYR1) on the X chromosome, and the tyrosinase inhibitor is administered, it would still inhibit tyrosinase, which is the enzyme encoded by TYR1. This would prevent the deposition of eumelanin. Therefore, regardless of whether TYR1 is on an autosome or the X chromosome, the tyrosinase inhibitor would prevent eumelanin deposition, leading to a golden or yellow phenotype, assuming the MC1R gene allows for eumelanin production. The previous question focused on the genetic basis of striping, while this question focuses on the effect of an inhibitor on a specific enzyme.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 73,
+    "question": "Which of the two would travel farther in your gel electrophoresis experiment? Explain your answer.",
+    "options": [],
+    "answer": "The lane with only the plasmid would travel farther. Gel electrophoresis separates DNA fragments based on size, with smaller fragments traveling faster and farther through the gel matrix. In the second lane, the plasmid is bound by multiple proteins (DnaA, DnaB, DnaC, and IHF). These proteins increase the overall mass and potentially alter the conformation of the DNA, making the complex larger and thus slower moving. Since the proteins themselves do not significantly affect travel distance when bound to DNA (as stated in the problem), the presence of these proteins will effectively increase the size of the DNA complex, causing it to migrate slower and therefore travel less distance compared to the naked plasmid.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 74,
+    "question": "After further examination, you find that the DNA is Z-DNA of about 6360 bp. No nicks are present in the DNA, but there are 27 underwindings. Give the topology of the DNA in terms of L, AL, W, and T. Assume 12 bp/turn.",
+    "options": [],
+    "answer": "Given: DNA length = 6360 bp, bp/turn = 12, underwindings = 27.\n\n1.  **Twist (T):** The number of base pairs per turn is 12. So, T = Total bp / bp/turn = 6360 / 12 = 530 turns.\n\n2.  **Underwinding:** The DNA is underwound by 27 turns. This means the actual number of turns is less than the theoretical number of turns if it were in B-DNA form. However, the question states 'underwindings', which usually refers to a negative change in linking number. In the context of Z-DNA, it's a specific conformation. Let's interpret 'underwindings' as a reduction in the number of turns from a standard B-DNA form. If we assume a standard B-DNA has 10.5 bp/turn, then the number of turns in B-DNA would be 6360/10.5 ≈ 605.7. However, the problem states to assume 12 bp/turn for calculation. So, let's use that for the base calculation.\n\nLet's re-evaluate 'underwindings'. In topology, underwinding typically refers to a decrease in the linking number (L) from a relaxed state. If we consider the relaxed state to have a certain number of turns based on the given bp/turn, then underwinding means fewer turns. However, Z-DNA itself has a different helical structure. The question might be implying a deviation from a relaxed state. Let's assume the 'underwindings' refers to a change in the linking number. If we consider the number of turns in a relaxed state to be T = 530 (based on 12 bp/turn), and there are 27 underwindings, this means the linking number is reduced by 27.\n\nLet's assume the question implies that the DNA is underwound by 27 turns relative to a relaxed state with 12 bp/turn. So, the actual number of turns is 530 - 27 = 503 turns.\n\n3.  **Linking Number (L):** L = Number of turns. So, L = 503.\n\n4.  **Writhe (W):** The change in linking number due to supercoiling is the sum of twist and writhe. L = T + W.  If we consider the 'underwindings' as a change in the linking number, then L = T - 27.  However, the question asks for L, AL, W, and T.  Let's assume T is the number of turns in the relaxed state (530).  Then L = T + W.  If there are 27 underwindings, it means the DNA is more tightly coiled or has undergone some topological change.  Let's assume 'underwindings' refers to a negative change in the linking number relative to a relaxed state.  So, L = 530 - 27 = 503.\n\n5.  **Twist (T):** The twist is the number of helical turns.  If we assume the 12 bp/turn is the intrinsic twist, then T = 530.\n\n6.  **Writhe (W):**  W = L - T = 503 - 530 = -27.\n\n7.  **Actual Linking Number (AL):** This is the same as L, which is 503.\n\nLet's re-read the question carefully. '27 underwindings'. This usually implies a negative change in the linking number. If we consider the relaxed state to have a certain number of turns, then underwinding means fewer turns. If we assume the relaxed state has 530 turns (based on 12 bp/turn), then underwinding by 27 means the linking number is 530 - 27 = 503.\n\nSo, the values are:\n*   **L (Linking Number):** 503\n*   **AL (Actual Linking Number):** 503\n*   **W (Writhe):** L - T.  If T is the number of turns in the relaxed state (530), then W = 503 - 530 = -27.\n*   **T (Twist):** This is the number of helical turns.  If we assume the 12 bp/turn is the intrinsic twist, then T = 530.\n\nHowever, Z-DNA itself has a different twist per base pair. Z-DNA has about 12 bp per turn and a left-handed helix. The term 'underwinding' might be used loosely here. If we strictly follow the formula L = T + W, and assume T is the number of turns in the relaxed state (530), and 'underwinding' means W = -27, then L = 530 - 27 = 503.\n\nLet's consider another interpretation: 'underwinding' refers to the change in linking number. If the DNA is relaxed, L = T. If it's underwound, L < T. If it's overwound, L > T.  The problem states '27 underwindings'.  This implies that the linking number is 27 less than it would be in a relaxed state.  If we assume the relaxed state has 530 turns (based on 12 bp/turn), then L = 530 - 27 = 503.\n\nLet's assume the question is asking for the topological parameters of this specific Z-DNA molecule.\n\n*   **Twist (T):** The number of helical turns.  Given 12 bp/turn, T = 6360 bp / 12 bp/turn = 530 turns.\n*   **Linking Number (L):**  The linking number is the number of times one strand of DNA winds around the other.  It is related to the twist and writhe by L = T + W.  The problem states '27 underwindings'.  This implies that the linking number is reduced.  If we consider the relaxed state to have T turns, then underwinding by 27 means L = T - 27.  So, L = 530 - 27 = 503.\n*   **Writhe (W):**  W = L - T = 503 - 530 = -27.\n*   **AL (Actual Linking Number):** This is the same as L, so AL = 503.\n\nTherefore, the topology is:\n*   **L = 503**\n*   **AL = 503**\n*   **W = -27**\n*   **T = 530**",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 75,
+    "question": "What elements of the DNA topology would change if the DNA was nicked? What would their new values be?",
+    "options": [],
+    "answer": "If the DNA was nicked (a break in one strand), the DNA would become relaxed, and the writhe (W) would become zero. The linking number (L) would become equal to the twist (T) of the relaxed DNA. The twist (T) would remain the same as the number of helical turns in the relaxed state (530 turns, assuming 12 bp/turn). The actual linking number (AL) would also become equal to the twist.\n\nSo, if the DNA was nicked:\n*   **L:** Would become equal to T (530).\n*   **AL:** Would become equal to T (530).\n*   **W:** Would become 0.\n*   **T:** Would remain 530 (assuming the nick allows it to relax to this state).",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 76,
+    "question": "What genetic disorder is associated with the above karyotype?",
+    "options": [
+      "A) Stockholm syndrome",
+      "B) Turner syndrome",
+      "C) Kessler syndrome",
+      "D) Ehlers-Danlos syndrome"
+    ],
+    "answer": "B",
+    "explanation": "The question refers to a karyotype, but the karyotype itself is not provided in the text. However, the options are genetic disorders. Turner syndrome is a genetic disorder in females caused by the absence of one X chromosome (karyotype XO). The other options are not typically associated with a specific karyotype abnormality in this context.",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 77,
+    "question": "In the karyotype given, would any Barr bodies be present? Explain why or why not.",
+    "options": [],
+    "answer": "Assuming the karyotype refers to Turner syndrome (XO), there would be no Barr bodies present. Barr bodies are inactivated X chromosomes. In females with a normal karyotype (XX), one X chromosome is inactivated to form a Barr body. In Turner syndrome (XO), there is only one X chromosome, and it is active, so no Barr body is formed.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 78,
+    "question": "Suppose instead of having one X chromosome, the Karyotype instead had 3 X chromosomes. What is the name of this genetic disorder? How many Barr bodies would be present in each cell?",
+    "options": [],
+    "answer": "The genetic disorder is Triple X syndrome (also known as Trisomy X or XXX syndrome). In cells with three X chromosomes, the number of Barr bodies present is typically two. The rule is that the number of Barr bodies is one less than the number of X chromosomes (n-1, where n is the number of X chromosomes).",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 79,
+    "question": "Suppose instead of having only one X chromosome and no Y chromosomes, the embryo had one Y chromosome and no X chromosomes. How would this affect the development of the embryo?",
+    "options": [],
+    "answer": "An embryo with one Y chromosome and no X chromosomes (karyotype YO) would not be viable and would likely result in a miscarriage. The X chromosome contains essential genes for embryonic development that are not present on the Y chromosome. Without at least one X chromosome, the embryo cannot survive.",
+    "explanation": "",
+    "source": "Unity Invite"
+  },
+  {
+    "number": 80,
+    "question": "Suppose you stained your Karyotype with Giemsa stain, but all genetic material present was euchromatin. How would this affect the result of the karyotype?",
+    "options": [],
+    "answer": "Giemsa staining is used to visualize chromosomes and identify banding patterns, which are crucial for detecting chromosomal abnormalities. Euchromatin is loosely packed DNA that is transcriptionally active, while heterochromatin is densely packed and transcriptionally inactive. If all genetic material were euchromatin, the chromosomes would appear uniformly stained and would lack the distinct banding patterns that are normally visible with Giemsa staining. This would make it very difficult, if not impossible, to identify specific chromosomes, detect translocations, deletions, or other structural abnormalities. The karyotype would likely appear as a uniform, undifferentiated mass of genetic material, rendering it largely uninterpretable for diagnostic purposes.",
+    "explanation": "",
+    "source": "Unity Invite"
+  }
+]

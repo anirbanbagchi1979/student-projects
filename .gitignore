@@ -30,4 +30,4 @@ nle-app/firebase-config.js
 .vite/
 \n# Encrypted Data
 scioly-app/questions.json
-scioly-app/encryption_password.txt
+scioly-app/src/data-pipeline/encryption_password.txt

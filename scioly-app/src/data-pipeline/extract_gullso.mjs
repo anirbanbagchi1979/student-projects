@@ -1,14 +1,14 @@
 import { readFileSync, writeFileSync } from 'fs';
 
-const envContent = readFileSync('.env', 'utf-8');
+const envContent = readFileSync('../../.env', 'utf-8');
 const apiKeyMatch = envContent.match(/GEMINI_API_KEY=(.+)/);
 if (!apiKeyMatch) { console.error('GEMINI_API_KEY not found in .env'); process.exit(1); }
 const API_KEY = apiKeyMatch[1].trim();
 
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${API_KEY}`;
 
-const examData = readFileSync('input_quiz/GullSO 2026 Designer Genes C TEST.pdf').toString('base64');
-const keyData = readFileSync('input_quiz/GullSO 2026 Designer Genes C KEY.pdf').toString('base64');
+const examData = readFileSync('../../input_quiz/GullSO 2026 Designer Genes C TEST.pdf').toString('base64');
+const keyData = readFileSync('../../input_quiz/GullSO 2026 Designer Genes C KEY.pdf').toString('base64');
 const SOURCE = 'GullSO 2026';
 
 async function extractBatch(startQ, endQ) {
