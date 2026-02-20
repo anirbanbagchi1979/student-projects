@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..');
 
 const API_KEY = process.env.VITE_FIREBASE_API_KEY;
-const PROJECT_ID = 'sci-oly-quiz';
+const PROJECT_ID = process.env.FIREBASE_PROJECT_ID || 'sci-oly-quiz';
 const FIRESTORE_URL = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents`;
 
 const questions = JSON.parse(readFileSync(join(ROOT, 'questions.json'), 'utf-8'));
