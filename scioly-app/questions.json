@@ -98,7 +98,7 @@
     "explanation": "Genetic drift, especially in small populations, can lead to random fluctuations in allele frequencies. This can cause rare recessive alleles to become more common by chance, increasing the frequency of recessive disorders. Geographic and reproductive isolation can also contribute by limiting gene flow, but genetic drift is a direct mechanism for random increases in allele frequency.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A",
+    "gemini_answer": "E",
     "contextMissing": false
   },
   {
@@ -132,7 +132,7 @@
     "explanation": "The phylogenetic tree shows that the bald eagle shares a most recent common ancestor with the alligator. They are both within the Archosauria clade, which is a sister group to the Lepidosauria (represented by the lizard, though not an option). The other options are more distantly related.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "A",
+    "gemini_answer": "E",
     "contextMissing": true,
     "contextReason": "References a phylogenetic tree that is not provided."
   },
@@ -202,7 +202,7 @@
     "explanation": "In Hardy-Weinberg equilibrium, the frequency of the A allele is given as 0.6.  Individuals with type A blood can have genotypes AA or AO.  The frequency of AA is p², and the frequency of AO is 2pq, where p is the frequency of allele A and q is the frequency of allele O.  Therefore, the frequency of type A blood is p² + 2pq = (0.6)² + 2(0.6)(0.2) = 0.36 + 0.24 = 0.60.  However, the question asks for the percentage of individuals with type A blood, and the provided answer is D (0.36). This implies the question might be interpreted as asking for the frequency of the homozygous AA genotype, which is p² = (0.6)² = 0.36.  Given the options and the provided answer, it's likely the question is implicitly asking for the frequency of the AA genotype, or there's a misunderstanding in the question's phrasing or the provided answer's context.  Assuming the provided answer is correct and refers to the homozygous AA genotype, the calculation is (0.6)^2 = 0.36.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C",
+    "gemini_answer": "D",
     "contextMissing": false
   },
   {
@@ -606,7 +606,7 @@
     "explanation": "The bottom strand of DNA, when read in the 5' to 3' direction, is the template strand for transcription. It is also referred to as the antisense strand because it is complementary to the mRNA sequence (which is similar to the coding strand). The coding strand is the one that resembles the mRNA sequence.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "E",
+    "gemini_answer": "D",
     "contextMissing": false
   },
   {
@@ -658,7 +658,7 @@
     "explanation": "mRNA codons are read in the 5' to 3' direction. The codon is given as 3' ACU 5'. Reversing this to the standard 5' to 3' direction gives 5' UCA 3'. Looking up UCA on a codon chart, it codes for Serine (Ser).",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "E",
+    "gemini_answer": "D",
     "contextMissing": false
   },
   {
@@ -844,7 +844,7 @@
     "explanation": "To test for decreased gene expression, you need to reduce the amount of mRNA or its translation without completely eliminating the gene product. Partial CRISPR interference (CRISPRi) specifically targets the promoter region to block transcription, effectively reducing gene expression without creating a knockout.",
     "source": "Designer Genes C",
     "type": "MC",
-    "gemini_answer": "C",
+    "gemini_answer": "B",
     "contextMissing": false
   },
   {
@@ -1159,7 +1159,7 @@
     "explanation": "Let B be the allele for brown eyes and b for green eyes. Let H be the allele for brown hair and h for red hair. The parents' genotypes are Bbhh and bbHh. The probability of a child having green eyes (bb) is 1/2 (from Bb x bb). The probability of a child having red hair (hh) is 1/2 (from hh x Hh). The combined probability is (1/2) * (1/2) = 1/4 or 4/16.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "A",
+    "gemini_answer": "b",
     "contextMissing": false
   },
   {
@@ -1240,7 +1240,7 @@
     "explanation": "If individual 12 is AA (homozygous dominant), they will always pass on an 'A' allele. A heterozygous partner (Aa) will pass on 'A' or 'a'. Thus, all offspring will be AA or Aa, and none will have the recessive trait (aa). If individual 12 is Aa, then a cross with Aa yields AA, Aa, and aa. The probability of NOT having the trait (AA or Aa) is 3/4. The question asks for the probability of NOT having the trait. If individual 12 is AA, the probability is 4/4 (or 1). If individual 12 is Aa, the probability is 3/4. The provided answer 'd' is incorrect. Re-evaluating the options, option 'a' states '0/4 if individual 12 is Aa, 2/4 if they are AA'. This is also incorrect. Let's assume the question implies the recessive trait is 'aa'. If individual 12 is AA, and the partner is Aa, offspring genotypes are AA and Aa. None have the recessive trait. Probability of NOT having the trait is 4/4. If individual 12 is Aa, and the partner is Aa, offspring genotypes are AA, Aa, aa. Probability of NOT having the trait (AA or Aa) is 3/4. None of the options perfectly match this. However, if we interpret '2/4' as '2 out of 4 possible combinations' and '4/4' as 'all 4 possible combinations', and if the question is asking for the probability of NOT having the trait, and the provided answer is 'd', let's re-examine. If individual 12 is AA, and partner is Aa, offspring are AA, Aa. All do not have the trait (4/4). If individual 12 is Aa, and partner is Aa, offspring are AA, Aa, aa. Those not having the trait are AA, Aa (3/4). The provided answer 'd' is '2/4 if individual 12 is Aa, 4/4 if they are AA'. This implies a specific interpretation of the pedigree or trait that is not fully provided. Assuming the provided answer 'd' is correct, it suggests a scenario where if individual 12 is Aa, the probability of not having the trait is 2/4, and if AA, it's 4/4. This is inconsistent with standard Mendelian inheritance for a simple dominant/recessive trait. Given the constraint to provide the answer based on the provided answer, and acknowledging the discrepancy, I will select 'd' as per the prompt's instruction to use the provided answer. However, based on standard genetics, this is problematic.",
     "source": "Purdue2026",
     "type": "MC",
-    "gemini_answer": "A",
+    "gemini_answer": "d",
     "contextMissing": true,
     "contextReason": "References an individual by number without providing a pedigree."
   },
@@ -2393,7 +2393,7 @@
     "explanation": "The question asks for the nucleotide percentages in the mRNA sequence. The provided information only gives a DNA strand and states it contains a coding region. Without knowing the specific DNA sequence of the coding region or the transcription process details (like which strand is the template), we cannot determine the mRNA sequence and thus its nucleotide percentages.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "D",
+    "gemini_answer": "A",
     "contextMissing": true,
     "contextReason": "The question asks for percentages of nucleotides in an mRNA sequence, but the DNA strand sequence or its composition is not provided."
   },
@@ -2589,7 +2589,7 @@
     "explanation": "A knockout completely eliminates the functionality of a gene, typically by deleting or inactivating it. A knockdown, on the other hand, reduces the expression or activity of a gene, making it less effective but not entirely absent. Therefore, knockouts are a complete loss of function, while knockdowns are a partial reduction in function.",
     "source": "Unity Invite",
     "type": "MC",
-    "gemini_answer": "A",
+    "gemini_answer": "C",
     "contextMissing": false
   },
   {
@@ -3395,7 +3395,7 @@
     "explanation": "The backbone of a DNA molecule is formed by phosphodiester bonds linking the sugar of one nucleotide to the phosphate of the next. These are strong covalent bonds that provide structural integrity to the DNA strand.",
     "source": "GullSO 2026",
     "type": "MC",
-    "gemini_answer": "C",
+    "gemini_answer": "D",
     "contextMissing": false
   },
   {
