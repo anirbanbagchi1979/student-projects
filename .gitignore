@@ -4,8 +4,7 @@ node_modules/
 # Build output
 dist/
 
-# Environment / secrets
-.env
+# Environment / secrets (only .env.local is gitignored; .env is tracked per branch)
 .env.local
 
 # OS
