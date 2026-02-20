@@ -7,6 +7,7 @@ import { updateStreak, createEmptyStreak, computeBadgeStats, checkBadges, BADGES
 import QuestionCard from './QuestionCard'
 import ResultsScreen from './ResultsScreen'
 import Dashboard from './Dashboard'
+import AdminPanel from './AdminPanel'
 
 export default function QuizApp() {
     const { user, signOut } = useAuth()
@@ -441,18 +442,20 @@ export default function QuizApp() {
 
             {/* Mode bar */}
             <div className="mode-bar">
-                {['practice', 'test', 'review', 'dashboard'].map(m => (
+                {['practice', 'test', 'review', 'dashboard', 'admin'].map(m => (
                     <button
                         key={m}
                         className={`mode-btn ${mode === m ? 'active' : ''}`}
                         onClick={() => setMode(m)}
                     >
-                        {m === 'practice' ? '🧠 Grind' : m === 'test' ? '⏱ Blitz' : m === 'review' ? '📖 Review' : '🏠 Hub'}
+                        {m === 'practice' ? '🧠 Grind' : m === 'test' ? '⏱ Blitz' : m === 'review' ? '📖 Review' : m === 'dashboard' ? '🏠 Hub' : '📄 Upload'}
                     </button>
                 ))}
             </div>
 
-            {mode === 'dashboard' ? (
+            {mode === 'admin' ? (
+                <AdminPanel />
+            ) : mode === 'dashboard' ? (
                 <Dashboard questions={questions} allQuestions={allQuestions} answers={sessionAnswers} masteryMap={masteryMap} allUsersMastery={allUsersMastery} currentUser={user} streakData={streakData} earnedBadges={earnedBadges} />
             ) : showResults ? (
                 <ResultsScreen
