@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "sci-oly-quiz"
-  }
+  },
+  "targets": {
+    "sci-oly-quiz": {
+      "hosting": {
+        "prod": [
+          "sci-oly-quiz"
+        ],
+        "dev": [
+          "sci-oly-quiz-dev"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
