@@ -13,6 +13,7 @@ export default function QuizApp() {
     const { user, signOut } = useAuth()
     const [allQuestions, setAllQuestions] = useState([])
     const [loading, setLoading] = useState(true)
+    const [topTab, setTopTab] = useState('quiz')
     const [currentIdx, setCurrentIdx] = useState(0)
     const [sessionAnswers, setSessionAnswers] = useState({}) // current session answers (index → {selected, correct})
     const [masteryMap, setMasteryMap] = useState({}) // persistent mastery (qNumber → mastery data)
@@ -391,6 +392,12 @@ export default function QuizApp() {
                 </p>
             </div>
 
+            {/* Top-level tab bar */}
+            <div className="top-tab-bar">
+                <button className={`top-tab ${topTab === 'quiz' ? 'active' : ''}`} onClick={() => setTopTab('quiz')}>🧬 Quiz</button>
+                <button className={`top-tab ${topTab === 'admin' ? 'active' : ''}`} onClick={() => setTopTab('admin')}>⚙️ Admin</button>
+            </div>
+
             {/* Badge toast */}
             {badgeToast && (
                 <div className="badge-toast">
@@ -402,159 +409,163 @@ export default function QuizApp() {
                 </div>
             )}
 
-            {/* Source & type selector */}
-            <div className="source-bar">
-                <label className="source-label" htmlFor="source-select">🗂 Pick Your Pack</label>
-                <select
-                    id="source-select"
-                    className="source-select"
-                    value={source}
-                    onChange={e => changeSource(e.target.value)}
-                >
-                    {sources.map(s => (
-                        <option key={s} value={s}>
-                            {s === 'all' ? 'All Packs' : s}
-                        </option>
-                    ))}
-                </select>
-            </div>
-            <div className="type-bar">
-                {['MC', 'Free Response', 'all'].map(t => (
-                    <button
-                        key={t}
-                        className={`type-btn ${typeFilter === t ? 'active' : ''}`}
-                        onClick={() => changeType(t)}
-                    >
-                        {t === 'all' ? 'Everything' : t === 'MC' ? 'MC Only' : 'Written'}
-                    </button>
-                ))}
-            </div>
-
-            {/* Context filter toggle */}
-            <div className="context-filter-bar">
-                <button
-                    className={`context-filter-btn ${hideContextMissing ? 'active' : ''}`}
-                    onClick={() => setHideContextMissing(!hideContextMissing)}
-                >
-                    📎 {hideContextMissing ? 'Skipping incomplete Qs' : 'All Qs (even incomplete)'}
-                </button>
-            </div>
-
-            {/* Mode bar */}
-            <div className="mode-bar">
-                {['practice', 'test', 'review', 'dashboard', 'admin'].map(m => (
-                    <button
-                        key={m}
-                        className={`mode-btn ${mode === m ? 'active' : ''}`}
-                        onClick={() => setMode(m)}
-                    >
-                        {m === 'practice' ? '🧠 Grind' : m === 'test' ? '⏱ Blitz' : m === 'review' ? '📖 Review' : m === 'dashboard' ? '🏠 Hub' : '📄 Upload'}
-                    </button>
-                ))}
-            </div>
-
-            {mode === 'admin' ? (
+            {topTab === 'admin' ? (
                 <AdminPanel />
-            ) : mode === 'dashboard' ? (
-                <Dashboard questions={questions} allQuestions={allQuestions} answers={sessionAnswers} masteryMap={masteryMap} allUsersMastery={allUsersMastery} currentUser={user} streakData={streakData} earnedBadges={earnedBadges} />
-            ) : showResults ? (
-                <ResultsScreen
-                    questions={questions}
-                    answers={sessionAnswers}
-                    onReview={() => setMode('review')}
-                    onRetryWrong={retryWrong}
-                    onReset={resetQuiz}
-                />
             ) : (
                 <>
-                    {/* Progress */}
-                    <div className="progress-wrap">
-                        <div className="progress-stats">
-                            <span>
-                                {mode === 'practice'
-                                    ? `Step ${practiceHistory.length + 1} · Q${activeQuestion?.number ?? '?'}`
-                                    : `Question ${currentIdx + 1} of ${filteredIndices.length}`
-                                }
-                            </span>
-                            <span className="score">Score: {correctCount}/{answeredCount}</span>
-                        </div>
-                        <div className="progress-bar">
-                            <div
-                                className="progress-fill"
-                                style={{ width: `${questions.length > 0 ? (answeredCount / questions.length) * 100 : 0}%` }}
-                            />
-                        </div>
+                    {/* Source & type selector */}
+                    <div className="source-bar">
+                        <label className="source-label" htmlFor="source-select">🗂 Pick Your Pack</label>
+                        <select
+                            id="source-select"
+                            className="source-select"
+                            value={source}
+                            onChange={e => changeSource(e.target.value)}
+                        >
+                            {sources.map(s => (
+                                <option key={s} value={s}>
+                                    {s === 'all' ? 'All Packs' : s}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="type-bar">
+                        {['MC', 'Free Response', 'all'].map(t => (
+                            <button
+                                key={t}
+                                className={`type-btn ${typeFilter === t ? 'active' : ''}`}
+                                onClick={() => changeType(t)}
+                            >
+                                {t === 'all' ? 'Everything' : t === 'MC' ? 'MC Only' : 'Written'}
+                            </button>
+                        ))}
                     </div>
 
-                    {/* Question grid (review mode) */}
-                    {mode === 'review' && (
+                    {/* Context filter toggle */}
+                    <div className="context-filter-bar">
+                        <button
+                            className={`context-filter-btn ${hideContextMissing ? 'active' : ''}`}
+                            onClick={() => setHideContextMissing(!hideContextMissing)}
+                        >
+                            📎 {hideContextMissing ? 'Skipping incomplete Qs' : 'All Qs (even incomplete)'}
+                        </button>
+                    </div>
+
+                    {/* Mode bar */}
+                    <div className="mode-bar">
+                        {['practice', 'test', 'review', 'dashboard'].map(m => (
+                            <button
+                                key={m}
+                                className={`mode-btn ${mode === m ? 'active' : ''}`}
+                                onClick={() => setMode(m)}
+                            >
+                                {m === 'practice' ? '🧠 Grind' : m === 'test' ? '⏱ Blitz' : m === 'review' ? '📖 Review' : '🏠 Hub'}
+                            </button>
+                        ))}
+                    </div>
+
+                    {mode === 'dashboard' ? (
+                        <Dashboard questions={questions} allQuestions={allQuestions} answers={sessionAnswers} masteryMap={masteryMap} allUsersMastery={allUsersMastery} currentUser={user} streakData={streakData} earnedBadges={earnedBadges} />
+                    ) : showResults ? (
+                        <ResultsScreen
+                            questions={questions}
+                            answers={sessionAnswers}
+                            onReview={() => setMode('review')}
+                            onRetryWrong={retryWrong}
+                            onReset={resetQuiz}
+                        />
+                    ) : (
                         <>
-                            <div className="filter-bar">
-                                {['all', 'wrong', 'unanswered'].map(f => (
-                                    <button
-                                        key={f}
-                                        className={`filter-btn ${filter === f ? 'active' : ''}`}
-                                        onClick={() => setFilter(f)}
-                                    >
-                                        {f === 'all' ? 'All' : f === 'wrong' ? '❌ Wrong' : '⬜ Unanswered'}
-                                    </button>
-                                ))}
+                            {/* Progress */}
+                            <div className="progress-wrap">
+                                <div className="progress-stats">
+                                    <span>
+                                        {mode === 'practice'
+                                            ? `Step ${practiceHistory.length + 1} · Q${activeQuestion?.number ?? '?'}`
+                                            : `Question ${currentIdx + 1} of ${filteredIndices.length}`
+                                        }
+                                    </span>
+                                    <span className="score">Score: {correctCount}/{answeredCount}</span>
+                                </div>
+                                <div className="progress-bar">
+                                    <div
+                                        className="progress-fill"
+                                        style={{ width: `${questions.length > 0 ? (answeredCount / questions.length) * 100 : 0}%` }}
+                                    />
+                                </div>
                             </div>
-                            <div className="q-grid">
-                                {questions.map((q, i) => {
-                                    const a = sessionAnswers[i]
-                                    let cls = ''
-                                    if (a) cls = a.correct ? 'answered-correct' : 'answered-wrong'
-                                    if (i === realIdx) cls += ' current'
-                                    return (
-                                        <button
-                                            key={i}
-                                            className={`q-grid-btn ${cls}`}
-                                            onClick={() => {
-                                                const fIdx = filteredIndices.indexOf(i)
-                                                if (fIdx !== -1) setCurrentIdx(fIdx)
-                                            }}
-                                        >
-                                            {q.number}
-                                        </button>
-                                    )
-                                })}
+
+                            {/* Question grid (review mode) */}
+                            {mode === 'review' && (
+                                <>
+                                    <div className="filter-bar">
+                                        {['all', 'wrong', 'unanswered'].map(f => (
+                                            <button
+                                                key={f}
+                                                className={`filter-btn ${filter === f ? 'active' : ''}`}
+                                                onClick={() => setFilter(f)}
+                                            >
+                                                {f === 'all' ? 'All' : f === 'wrong' ? '❌ Wrong' : '⬜ Unanswered'}
+                                            </button>
+                                        ))}
+                                    </div>
+                                    <div className="q-grid">
+                                        {questions.map((q, i) => {
+                                            const a = sessionAnswers[i]
+                                            let cls = ''
+                                            if (a) cls = a.correct ? 'answered-correct' : 'answered-wrong'
+                                            if (i === realIdx) cls += ' current'
+                                            return (
+                                                <button
+                                                    key={i}
+                                                    className={`q-grid-btn ${cls}`}
+                                                    onClick={() => {
+                                                        const fIdx = filteredIndices.indexOf(i)
+                                                        if (fIdx !== -1) setCurrentIdx(fIdx)
+                                                    }}
+                                                >
+                                                    {q.number}
+                                                </button>
+                                            )
+                                        })}
+                                    </div>
+                                </>
+                            )}
+
+                            {/* Question */}
+                            {(mode !== 'practice' && filteredIndices.length === 0) ? (
+                                <div className="question-card" style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
+                                    <p>No questions match this filter.</p>
+                                </div>
+                            ) : activeQuestion && (
+                                <QuestionCard
+                                    question={activeQuestion}
+                                    answer={sessionAnswers[activeIdx]}
+                                    mode={mode}
+                                    onSelectAnswer={selectAnswer}
+                                    timeLeft={mode === 'test' ? timeLeft : undefined}
+                                    masteryLevel={masteryMap[String(activeQuestion?.number)]?.level ?? 0}
+                                />
+                            )}
+
+                            {/* Navigation */}
+                            <div className="nav-row">
+                                <button
+                                    className="nav-btn"
+                                    disabled={mode === 'practice' ? practiceHistory.length === 0 : currentIdx === 0}
+                                    onClick={() => navigate(-1)}
+                                >
+                                    ← Prev
+                                </button>
+                                <button
+                                    className="nav-btn primary-btn"
+                                    onClick={() => navigate(1)}
+                                >
+                                    {mode === 'practice' ? 'Next →' : (currentIdx >= filteredIndices.length - 1 ? '🏁 Finish' : 'Next →')}
+                                </button>
                             </div>
                         </>
                     )}
-
-                    {/* Question */}
-                    {(mode !== 'practice' && filteredIndices.length === 0) ? (
-                        <div className="question-card" style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
-                            <p>No questions match this filter.</p>
-                        </div>
-                    ) : activeQuestion && (
-                        <QuestionCard
-                            question={activeQuestion}
-                            answer={sessionAnswers[activeIdx]}
-                            mode={mode}
-                            onSelectAnswer={selectAnswer}
-                            timeLeft={mode === 'test' ? timeLeft : undefined}
-                            masteryLevel={masteryMap[String(activeQuestion?.number)]?.level ?? 0}
-                        />
-                    )}
-
-                    {/* Navigation */}
-                    <div className="nav-row">
-                        <button
-                            className="nav-btn"
-                            disabled={mode === 'practice' ? practiceHistory.length === 0 : currentIdx === 0}
-                            onClick={() => navigate(-1)}
-                        >
-                            ← Prev
-                        </button>
-                        <button
-                            className="nav-btn primary-btn"
-                            onClick={() => navigate(1)}
-                        >
-                            {mode === 'practice' ? 'Next →' : (currentIdx >= filteredIndices.length - 1 ? '🏁 Finish' : 'Next →')}
-                        </button>
-                    </div>
                 </>
             )}
         </div>
