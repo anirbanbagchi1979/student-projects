@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import { MASTERY_LEVELS } from '../lib/mastery'
 
 // Seeded shuffle using question number for stability across re-renders
@@ -25,6 +25,20 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
     const hasMismatch = isMC && geminiAnswer && providedAnswer && geminiAnswer !== providedAnswer
 
     const lvl = MASTERY_LEVELS[masteryLevel ?? 0]
+
+    // Multi-answer detection
+    const isMultiAnswer = useMemo(() => {
+        const answers = question.answer.split(',').map(s => s.trim())
+        return answers.length > 1
+    }, [question.answer])
+
+    // Multi-select state (only used for multi-answer questions)
+    const [selected, setSelected] = useState(new Set())
+
+    // Reset selection when question changes
+    useEffect(() => {
+        setSelected(new Set())
+    }, [question.number])
 
     // Shuffle options with a stable seed based on question number
     const { shuffledOptions, correctNewLetters, originalCorrectLetters } = useMemo(() => {
@@ -58,6 +72,23 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
         }
     }, [question.number, question.options, question.answer])
 
+    function toggleOption(letter) {
+        setSelected(prev => {
+            const next = new Set(prev)
+            if (next.has(letter)) next.delete(letter)
+            else next.add(letter)
+            return next
+        })
+    }
+
+    function submitMultiAnswer() {
+        const selectedLetters = Array.from(selected).sort()
+        const correctLetters = [...correctNewLetters].sort()
+        const isCorrect = selectedLetters.length === correctLetters.length &&
+            selectedLetters.every((l, i) => l === correctLetters[i])
+        onSelectAnswer(selectedLetters.join(', '), isCorrect)
+    }
+
     return (
         <div className="question-card">
             <div className="q-header-row">
@@ -73,6 +104,13 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
             </div>
             <div className="q-text">{question.question}</div>
 
+            {/* Multi-answer hint */}
+            {isMultiAnswer && !isLocked && (
+                <div className="multi-answer-hint">
+                    ☑️ Select all that apply ({correctNewLetters.length} correct answers)
+                </div>
+            )}
+
             {question.contextMissing && (
                 <div className="context-missing-banner">
                     <span className="context-missing-icon">📎</span>
@@ -86,17 +124,34 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
             <div className="options">
                 {shuffledOptions.map((opt, i) => {
                     let cls = ''
-                    if (answer) {
+                    if (isMultiAnswer && !isLocked) {
+                        // Multi-select: highlight toggled options
+                        if (selected.has(opt.letter)) cls = 'selected'
+                    } else if (answer) {
+                        // Locked state: show correct/wrong
                         if (opt.isCorrect) cls = 'correct'
-                        if (answer.selected === opt.letter && !answer.correct) cls = 'wrong'
-                        if (answer.selected === opt.letter && answer.correct) cls = 'correct'
+                        if (isMultiAnswer) {
+                            // Multi-answer locked: show which selected answers were wrong
+                            const selectedLetters = answer.selected?.split(',').map(s => s.trim()) || []
+                            if (selectedLetters.includes(opt.letter) && !opt.isCorrect) cls = 'wrong'
+                        } else {
+                            if (answer.selected === opt.letter && !answer.correct) cls = 'wrong'
+                            if (answer.selected === opt.letter && answer.correct) cls = 'correct'
+                        }
                     }
 
                     return (
                         <button
                             key={i}
                             className={`option-btn ${cls} ${isLocked ? 'locked' : ''}`}
-                            onClick={() => !isLocked && onSelectAnswer(opt.letter, opt.isCorrect)}
+                            onClick={() => {
+                                if (isLocked) return
+                                if (isMultiAnswer) {
+                                    toggleOption(opt.letter)
+                                } else {
+                                    onSelectAnswer(opt.letter, opt.isCorrect)
+                                }
+                            }}
                         >
                             <span className="option-letter">{opt.letter}</span>
                             <span className="option-text">{opt.text}</span>
@@ -104,6 +159,17 @@ export default function QuestionCard({ question, answer, mode, onSelectAnswer, t
                     )
                 })}
             </div>
+
+            {/* Submit button for multi-answer */}
+            {isMultiAnswer && !isLocked && (
+                <button
+                    className="multi-submit-btn"
+                    onClick={submitMultiAnswer}
+                    disabled={selected.size === 0}
+                >
+                    ✅ Submit Answer ({selected.size} selected)
+                </button>
+            )}
 
             {(answer || mode === 'review') && (
                 <div className="explanation-box">

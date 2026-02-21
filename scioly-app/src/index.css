@@ -587,6 +587,44 @@ body::before {
   white-space: pre-wrap;
 }
 
+/* ===== Multi-Answer ===== */
+.multi-answer-hint {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(108, 92, 231, 0.1);
+  border: 1px solid rgba(108, 92, 231, 0.3);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.multi-submit-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), #a29bfe);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.multi-submit-btn:active {
+  transform: scale(0.97);
+}
+
+.multi-submit-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
 /* ===== Options ===== */
 .options {
   display: flex;
