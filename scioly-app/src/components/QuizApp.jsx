@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import { collection, getDocs, orderBy, query, doc, setDoc, getDoc } from 'firebase/firestore'
 import { db } from '../lib/firebase'
 import { useAuth } from '../contexts/AuthContext'
-import { updateMastery, applyDecay, pickNextQuestion, createEmptyMastery } from '../lib/mastery'
+import { updateMastery, applyDecay, pickNextQuestion, createEmptyMastery, MASTERY_LEVELS } from '../lib/mastery'
 import { updateStreak, createEmptyStreak, computeBadgeStats, checkBadges, BADGES } from '../lib/gamification'
 import { EVENTS, DEFAULT_EVENT, getEvent } from '../lib/events'
 import QuestionCard from './QuestionCard'
@@ -14,10 +14,16 @@ export default function QuizApp() {
     const { user, signOut } = useAuth()
     const [allQuestions, setAllQuestions] = useState([])
     const [loading, setLoading] = useState(true)
-    const [topTab, setTopTab] = useState('quiz')
+
+    // Screen navigation: 'home' | 'event' | 'playing'
+    const [screen, setScreen] = useState('home')
+    const [showProfileMenu, setShowProfileMenu] = useState(false)
+    const [showSettings, setShowSettings] = useState(false)
+    const [showAdmin, setShowAdmin] = useState(false)
+
     const [currentIdx, setCurrentIdx] = useState(0)
     const [sessionAnswers, setSessionAnswers] = useState({})
-    const [mode, setModeState] = useState('dashboard')
+    const [mode, setModeState] = useState('practice') // practice | test | review
     const [filter, setFilterState] = useState('all')
     const [showResults, setShowResults] = useState(false)
     const [source, setSource] = useState('all')
@@ -208,7 +214,7 @@ export default function QuizApp() {
 
     // Timer for test mode
     useEffect(() => {
-        if (mode !== 'test') {
+        if (mode !== 'test' || screen !== 'playing') {
             clearInterval(timerRef.current)
             return
         }
@@ -225,7 +231,7 @@ export default function QuizApp() {
             })
         }, 1000)
         return () => clearInterval(timerRef.current)
-    }, [mode, currentIdx])
+    }, [mode, currentIdx, screen])
 
     // Filter questions by event first, then by source/type
     const eventQuestions = useMemo(() => {
@@ -273,7 +279,9 @@ export default function QuizApp() {
     const answeredCount = Object.keys(sessionAnswers).length
     const correctCount = Object.values(sessionAnswers).filter(x => x.correct).length
 
-    function changeEvent(slug) {
+    // ── Navigation helpers ──
+
+    function selectEvent(slug) {
         setEventState(slug)
         setSessionAnswers({})
         setCurrentIdx(0)
@@ -281,12 +289,43 @@ export default function QuizApp() {
         setShowResults(false)
         setSource('all')
         setTypeFilter('MC')
-        setModeState('dashboard')
         setPracticeIdx(0)
         setPracticeHistory([])
         setSessionCorrectStreak(0)
         setSessionMaxStreak(0)
         setSessionMasteries(0)
+        setScreen('event')
+        setShowSettings(false)
+    }
+
+    function startPlay(m) {
+        setModeState(m)
+        setFilterState('all')
+        setCurrentIdx(0)
+        setShowResults(false)
+        setSessionAnswers({})
+        setSessionCorrectStreak(0)
+        setSessionMaxStreak(0)
+        setSessionMasteries(0)
+        if (m === 'practice') {
+            setPracticeIdx(0)
+            setPracticeHistory([])
+        }
+        setScreen('playing')
+        setShowSettings(false)
+    }
+
+    function goHome() {
+        setScreen('home')
+        setShowResults(false)
+        setShowSettings(false)
+        setShowAdmin(false)
+    }
+
+    function goBackToEvent() {
+        setScreen('event')
+        setShowResults(false)
+        clearInterval(timerRef.current)
     }
 
     function setMode(m) {
@@ -307,7 +346,6 @@ export default function QuizApp() {
         setCurrentIdx(0)
         setFilterState('all')
         setShowResults(false)
-        setModeState('practice')
     }
 
     function changeType(t) {
@@ -316,7 +354,6 @@ export default function QuizApp() {
         setCurrentIdx(0)
         setFilterState('all')
         setShowResults(false)
-        setModeState('practice')
     }
 
     function selectAnswer(letter, isCorrect) {
@@ -474,6 +511,35 @@ export default function QuizApp() {
         setShowResults(false)
     }
 
+    // ── Compute per-event stats for home page event cards ──
+    function getEventStats(slug) {
+        const evtQuestions = allQuestions.filter(q => (q.event || DEFAULT_EVENT) === slug)
+        const mcQuestions = evtQuestions.filter(q => q.type === 'MC' && !q.contextMissing)
+        const total = mcQuestions.length
+        const mm = eventsMastery[slug]?.masteryMap || {}
+        const mastered = Object.values(mm).filter(m => m.level >= 4).length
+        const pct = total > 0 ? Math.round((mastered / total) * 100) : 0
+        return { total, mastered, pct, totalQuestions: evtQuestions.length }
+    }
+
+    // ── Global stats for home page ──
+    const globalStreak = globalData?.dailyStreak?.currentStreak || 0
+    const totalMasteredAll = Object.keys(eventsMastery).reduce((sum, slug) => {
+        const mm = eventsMastery[slug]?.masteryMap || {}
+        return sum + Object.values(mm).filter(m => m.level >= 5).length
+    }, 0)
+    const totalBadgesAll = Object.keys(eventsMastery).reduce((sum, slug) => {
+        return sum + (eventsMastery[slug]?.earnedBadges?.length || 0)
+    }, 0)
+
+    // Close profile menu on outside click
+    useEffect(() => {
+        if (!showProfileMenu) return
+        function handleClick() { setShowProfileMenu(false) }
+        document.addEventListener('click', handleClick)
+        return () => document.removeEventListener('click', handleClick)
+    }, [showProfileMenu])
+
     if (loading) {
         return (
             <div className="app">
@@ -485,52 +551,13 @@ export default function QuizApp() {
         )
     }
 
+    // ═══════════════════════════════════════════════════
+    // RENDER
+    // ═══════════════════════════════════════════════════
+
     return (
-        <div className="app" data-mode={mode}>
-            {/* Header */}
-            <div className="header">
-                <div className="header-top">
-                    <div className="badge">SciOly Grind 🧬</div>
-                    <button className="user-btn" onClick={signOut}>
-                        <img src={user.photoURL} alt="" className="user-avatar" />
-                        <span className="signout-text">Sign Out</span>
-                    </button>
-                </div>
-                <h1 className="app-title">{currentEvent.icon} {currentEvent.name}</h1>
-                <p className="app-subtitle">
-                    Hey {user.displayName?.split(' ')[0] || 'there'}! · {questions.length} Qs loaded
-                    {streakData.currentStreak > 0 && (
-                        <span className="streak-display"> · 🔥{streakData.currentStreak}</span>
-                    )}
-                    {streakData.streakShields > 0 && (
-                        <span className="shield-display"> · 🛡️{streakData.streakShields}</span>
-                    )}
-                </p>
-            </div>
-
-            {/* Event selector */}
-            <div className="event-bar">
-                {EVENTS.map(e => (
-                    <button
-                        key={e.slug}
-                        className={`event-btn ${event === e.slug ? 'active' : ''}`}
-                        onClick={() => changeEvent(e.slug)}
-                    >
-                        <span className="event-icon">{e.icon}</span>
-                        <span className="event-name">{e.name}</span>
-                    </button>
-                ))}
-            </div>
-
-            {/* Top-level tab bar */}
-            {user.email === 'anirban.bagchi@gmail.com' && (
-                <div className="top-tab-bar">
-                    <button className={`top-tab ${topTab === 'quiz' ? 'active' : ''}`} onClick={() => setTopTab('quiz')}>🧬 Quiz</button>
-                    <button className={`top-tab ${topTab === 'admin' ? 'active' : ''}`} onClick={() => setTopTab('admin')}>⚙️ Admin</button>
-                </div>
-            )}
-
-            {/* Badge toast */}
+        <div className="app" data-mode={mode} data-screen={screen}>
+            {/* Badge toast (global) */}
             {badgeToast && (
                 <div className="badge-toast">
                     <span className="badge-toast-icon">{badgeToast.icon}</span>
@@ -541,18 +568,173 @@ export default function QuizApp() {
                 </div>
             )}
 
-            {topTab === 'admin' ? (
-                <AdminPanel onQuestionsUploaded={reloadQuestions} />
-            ) : (
+            {/* ── ADMIN PANEL (full-screen overlay) ── */}
+            {showAdmin && (
+                <div className="admin-overlay">
+                    <div className="admin-overlay-header">
+                        <button className="back-btn" onClick={() => setShowAdmin(false)}>← Back</button>
+                        <h2>⚙️ Admin Panel</h2>
+                    </div>
+                    <AdminPanel onQuestionsUploaded={reloadQuestions} />
+                </div>
+            )}
+
+            {/* ── SCREEN: HOME ── */}
+            {!showAdmin && screen === 'home' && (
                 <>
-                    {/* Collapsible filters — auto-collapse when playing */}
-                    {mode === 'dashboard' ? (
-                        <>
-                            <div className="source-bar">
-                                <label className="source-label" htmlFor="source-select">🗂 Pick Your Pack</label>
+                    {/* Header */}
+                    <div className="header">
+                        <div className="header-top">
+                            <div className="badge">Multiple Choice Grind 🧬</div>
+                            <div className="profile-wrap" onClick={e => { e.stopPropagation(); setShowProfileMenu(!showProfileMenu) }}>
+                                <img src={user.photoURL} alt="" className="user-avatar" />
+                                {showProfileMenu && (
+                                    <div className="profile-dropdown">
+                                        <div className="profile-dropdown-name">{user.displayName}</div>
+                                        {user.email === 'anirban.bagchi@gmail.com' && (
+                                            <button className="profile-dropdown-item" onClick={() => { setShowAdmin(true); setShowProfileMenu(false) }}>
+                                                ⚙️ Admin Panel
+                                            </button>
+                                        )}
+                                        <button className="profile-dropdown-item" onClick={signOut}>
+                                            🚪 Sign Out
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                        <p className="app-subtitle home-greeting">
+                            Hey {user.displayName?.split(' ')[0] || 'there'}! 👋
+                        </p>
+                    </div>
+
+                    {/* Global laurels */}
+                    <div className="home-laurels">
+                        <div className="laurel-card">
+                            <div className="laurel-icon">🔥</div>
+                            <div className="laurel-value">{globalStreak}</div>
+                            <div className="laurel-label">Day Streak</div>
+                        </div>
+                        <div className="laurel-card">
+                            <div className="laurel-icon">⭐</div>
+                            <div className="laurel-value">{totalMasteredAll}</div>
+                            <div className="laurel-label">Mastered</div>
+                        </div>
+                        <div className="laurel-card">
+                            <div className="laurel-icon">🏆</div>
+                            <div className="laurel-value">{totalBadgesAll}</div>
+                            <div className="laurel-label">Trophies</div>
+                        </div>
+                        <div className="laurel-card">
+                            <div className="laurel-icon">📚</div>
+                            <div className="laurel-value">{Object.keys(eventsMastery).filter(s => {
+                                const mm = eventsMastery[s]?.masteryMap || {}
+                                return Object.values(mm).some(m => m.level >= 1)
+                            }).length}/{EVENTS.length}</div>
+                            <div className="laurel-label">Events</div>
+                        </div>
+                    </div>
+
+                    {/* Event cards */}
+                    <h2 className="section-title">Choose Your Event</h2>
+                    <div className="event-cards-grid">
+                        {EVENTS.map(e => {
+                            const stats = getEventStats(e.slug)
+                            return (
+                                <button
+                                    key={e.slug}
+                                    className="event-card"
+                                    onClick={() => selectEvent(e.slug)}
+                                >
+                                    <div className="event-card-icon">{e.icon}</div>
+                                    <div className="event-card-name">{e.name}</div>
+                                    <div className="event-card-stats">
+                                        {stats.totalQuestions > 0 ? (
+                                            <>
+                                                <div className="event-card-progress-bar">
+                                                    <div className="event-card-progress-fill" style={{ width: `${stats.pct}%` }} />
+                                                </div>
+                                                <span className="event-card-count">{stats.mastered}/{stats.total} · {stats.pct}%</span>
+                                            </>
+                                        ) : (
+                                            <span className="event-card-count">No questions yet</span>
+                                        )}
+                                    </div>
+                                </button>
+                            )
+                        })}
+                    </div>
+                </>
+            )}
+
+            {/* ── SCREEN: EVENT ── */}
+            {!showAdmin && screen === 'event' && (
+                <>
+                    {/* Header */}
+                    <div className="header event-header">
+                        <div className="header-top">
+                            <button className="back-btn" onClick={goHome}>← Home</button>
+                            <div className="event-header-right">
+                                <button
+                                    className={`settings-btn ${showSettings ? 'active' : ''}`}
+                                    onClick={() => setShowSettings(!showSettings)}
+                                    title="Settings"
+                                >⚙️</button>
+                                <div className="profile-wrap" onClick={e => { e.stopPropagation(); setShowProfileMenu(!showProfileMenu) }}>
+                                    <img src={user.photoURL} alt="" className="user-avatar" />
+                                    {showProfileMenu && (
+                                        <div className="profile-dropdown">
+                                            <div className="profile-dropdown-name">{user.displayName}</div>
+                                            {user.email === 'anirban.bagchi@gmail.com' && (
+                                                <button className="profile-dropdown-item" onClick={() => { setShowAdmin(true); setShowProfileMenu(false) }}>
+                                                    ⚙️ Admin Panel
+                                                </button>
+                                            )}
+                                            <button className="profile-dropdown-item" onClick={signOut}>
+                                                🚪 Sign Out
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                        <h1 className="app-title">{currentEvent.icon} {currentEvent.name}</h1>
+                        <p className="app-subtitle">
+                            {questions.length} Qs loaded
+                            {streakData.currentStreak > 0 && (
+                                <span className="streak-display"> · 🔥{streakData.currentStreak}</span>
+                            )}
+                            {streakData.streakShields > 0 && (
+                                <span className="shield-display"> · 🛡️{streakData.streakShields}</span>
+                            )}
+                        </p>
+                    </div>
+
+                    {/* Settings panel (slide-down) */}
+                    {showSettings && (
+                        <div className="settings-panel">
+                            <div className="settings-panel-header">
+                                <h3>⚙️ Settings</h3>
+                                <button className="settings-close" onClick={() => setShowSettings(false)}>✕</button>
+                            </div>
+                            <div className="settings-group">
+                                <label className="settings-label">Question Type</label>
+                                <div className="settings-options">
+                                    {['MC', 'Free Response', 'all'].map(t => (
+                                        <button
+                                            key={t}
+                                            className={`settings-opt-btn ${typeFilter === t ? 'active' : ''}`}
+                                            onClick={() => changeType(t)}
+                                        >
+                                            {t === 'all' ? 'All' : t === 'MC' ? 'MC Only' : 'Written'}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="settings-group">
+                                <label className="settings-label">📦 Pack</label>
                                 <select
-                                    id="source-select"
-                                    className="source-select"
+                                    className="settings-select"
                                     value={source}
                                     onChange={e => changeSource(e.target.value)}
                                 >
@@ -563,102 +745,88 @@ export default function QuizApp() {
                                     ))}
                                 </select>
                             </div>
-                            <div className="type-bar">
-                                {['MC', 'Free Response', 'all'].map(t => (
-                                    <button
-                                        key={t}
-                                        className={`type-btn ${typeFilter === t ? 'active' : ''}`}
-                                        onClick={() => changeType(t)}
-                                    >
-                                        {t === 'all' ? 'Everything' : t === 'MC' ? 'MC Only' : 'Written'}
-                                    </button>
-                                ))}
+                            <div className="settings-group">
+                                <label className="settings-toggle-row">
+                                    <input
+                                        type="checkbox"
+                                        checked={hideContextMissing}
+                                        onChange={() => setHideContextMissing(!hideContextMissing)}
+                                    />
+                                    <span>Skip incomplete questions</span>
+                                </label>
                             </div>
-                            <div className="context-filter-bar">
+                            <div className="settings-group">
                                 <button
-                                    className={`context-filter-btn ${hideContextMissing ? 'active' : ''}`}
-                                    onClick={() => setHideContextMissing(!hideContextMissing)}
+                                    className="settings-review-btn"
+                                    onClick={() => startPlay('review')}
                                 >
-                                    📎 {hideContextMissing ? 'Skipping incomplete Qs' : 'All Qs (even incomplete)'}
+                                    📖 Review Mode
                                 </button>
                             </div>
-                        </>
-                    ) : (
-                        <details className="filters-collapse">
-                            <summary className="filters-toggle">
-                                🎛 {source === 'all' ? 'All Packs' : source} · {typeFilter === 'all' ? 'All Types' : typeFilter === 'MC' ? 'MC Only' : 'Written'} · {questions.length} Qs
-                            </summary>
-                            <div className="filters-content">
-                                <div className="source-bar">
-                                    <label className="source-label" htmlFor="source-select">🗂 Pick Your Pack</label>
-                                    <select
-                                        id="source-select"
-                                        className="source-select"
-                                        value={source}
-                                        onChange={e => changeSource(e.target.value)}
-                                    >
-                                        {sources.map(s => (
-                                            <option key={s} value={s}>
-                                                {s === 'all' ? 'All Packs' : s}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
-                                <div className="type-bar">
-                                    {['MC', 'Free Response', 'all'].map(t => (
-                                        <button
-                                            key={t}
-                                            className={`type-btn ${typeFilter === t ? 'active' : ''}`}
-                                            onClick={() => changeType(t)}
-                                        >
-                                            {t === 'all' ? 'Everything' : t === 'MC' ? 'MC Only' : 'Written'}
-                                        </button>
-                                    ))}
-                                </div>
-                                <div className="context-filter-bar">
-                                    <button
-                                        className={`context-filter-btn ${hideContextMissing ? 'active' : ''}`}
-                                        onClick={() => setHideContextMissing(!hideContextMissing)}
-                                    >
-                                        📎 {hideContextMissing ? 'Skipping incomplete Qs' : 'All Qs (even incomplete)'}
-                                    </button>
-                                </div>
-                            </div>
-                        </details>
+                        </div>
                     )}
 
-                    {/* Mode bar */}
-                    <div className="mode-bar">
-                        {['practice', 'test', 'review', 'dashboard'].map(m => (
-                            <button
-                                key={m}
-                                className={`mode-btn ${mode === m ? 'active' : ''}`}
-                                onClick={() => setMode(m)}
-                            >
-                                {m === 'practice' ? '🧠 Grind' : m === 'test' ? '⏱ Blitz' : m === 'review' ? '📖 Review' : '🏠 Hub'}
-                            </button>
-                        ))}
+                    {/* Play buttons */}
+                    <div className="play-buttons">
+                        <button className="play-btn play-btn-grind" onClick={() => startPlay('practice')}>
+                            <span className="play-btn-icon">🍳</span>
+                            <span className="play-btn-label">Grind</span>
+                            <span className="play-btn-desc">Spaced repetition</span>
+                        </button>
+                        <button className="play-btn play-btn-blitz" onClick={() => startPlay('test')}>
+                            <span className="play-btn-icon">⏱</span>
+                            <span className="play-btn-label">Blitz</span>
+                            <span className="play-btn-desc">60s per question</span>
+                        </button>
                     </div>
 
-                    {mode === 'dashboard' ? (
-                        <Dashboard
-                            questions={questions}
-                            allQuestions={eventQuestions}
-                            answers={sessionAnswers}
-                            masteryMap={masteryMap}
-                            allUsersMastery={allUsersMastery}
-                            currentUser={user}
-                            streakData={streakData}
-                            earnedBadges={earnedBadges}
-                            currentEvent={event}
-                            globalData={globalData}
-                            eventsMastery={eventsMastery}
-                        />
-                    ) : showResults ? (
+                    {/* Event Dashboard (stats, badges, leaderboard) */}
+                    <Dashboard
+                        questions={questions}
+                        allQuestions={eventQuestions}
+                        answers={sessionAnswers}
+                        masteryMap={masteryMap}
+                        allUsersMastery={allUsersMastery}
+                        currentUser={user}
+                        streakData={streakData}
+                        earnedBadges={earnedBadges}
+                        currentEvent={event}
+                        globalData={globalData}
+                        eventsMastery={eventsMastery}
+                    />
+                </>
+            )}
+
+            {/* ── SCREEN: PLAYING ── */}
+            {!showAdmin && screen === 'playing' && (
+                <>
+                    {/* Minimal play header */}
+                    <div className="play-header">
+                        <button className="back-btn" onClick={goBackToEvent}>← Back</button>
+                        <div className="play-header-info">
+                            <span className="play-header-event">{currentEvent.icon} {currentEvent.name}</span>
+                            <span className="play-header-progress">
+                                {mode === 'practice'
+                                    ? `Step ${practiceHistory.length + 1}`
+                                    : `Q ${currentIdx + 1}/${filteredIndices.length}`
+                                }
+                            </span>
+                            {mode === 'test' && (
+                                <span className={`play-header-timer ${timeLeft <= 10 ? 'danger' : ''}`}>
+                                    ⏱ {timeLeft}s
+                                </span>
+                            )}
+                        </div>
+                        <span className="play-header-score">
+                            {correctCount}/{answeredCount}
+                        </span>
+                    </div>
+
+                    {showResults ? (
                         <ResultsScreen
                             questions={questions}
                             answers={sessionAnswers}
-                            onReview={() => setMode('review')}
+                            onReview={() => { setMode('review'); setShowResults(false) }}
                             onRetryWrong={retryWrong}
                             onReset={resetQuiz}
                             mode={mode}
@@ -666,17 +834,8 @@ export default function QuizApp() {
                         />
                     ) : (
                         <>
-                            {/* Progress */}
+                            {/* Progress bar */}
                             <div className="progress-wrap">
-                                <div className="progress-header">
-                                    <span className="q-counter">
-                                        {mode === 'practice'
-                                            ? `Step ${practiceHistory.length + 1} · Q${activeQuestion?.number ?? '?'}`
-                                            : `Question ${currentIdx + 1} of ${filteredIndices.length}`
-                                        }
-                                    </span>
-                                    <span className="score">Score: {correctCount}/{answeredCount}</span>
-                                </div>
                                 <div className="progress-bar">
                                     <div
                                         className="progress-fill"
@@ -693,7 +852,7 @@ export default function QuizApp() {
                                             <button
                                                 key={f}
                                                 className={`filter-btn ${filter === f ? 'active' : ''}`}
-                                                onClick={() => setFilter(f)}
+                                                onClick={() => setFilterState(f)}
                                             >
                                                 {f === 'all' ? 'All' : f === 'wrong' ? '❌ Wrong' : '⬜ Unanswered'}
                                             </button>

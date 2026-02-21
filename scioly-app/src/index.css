@@ -2098,3 +2098,592 @@ body::before {
     flex-wrap: wrap;
   }
 }
+
+/* ═══════════════════════════════════════════════
+   NEW UI: Home → Event → Play Navigation
+   ═══════════════════════════════════════════════ */
+
+/* ── Profile Avatar & Dropdown ── */
+.profile-wrap {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.user-avatar:hover {
+  border-color: var(--primary);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 0;
+  min-width: 180px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  animation: slideDown 0.15s ease;
+}
+
+.profile-dropdown-name {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+
+.profile-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.profile-dropdown-item:hover {
+  background: var(--surface-hover);
+}
+
+/* ── Back Button ── */
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 0;
+  transition: opacity 0.2s;
+}
+
+.back-btn:hover {
+  opacity: 0.8;
+}
+
+/* ── Home Page ── */
+.home-greeting {
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+.home-laurels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 16px 0 24px;
+}
+
+.laurel-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 8px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.laurel-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+.laurel-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.laurel-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.laurel-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.event-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.event-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 8px 24px var(--primary-glow);
+}
+
+.event-card:active {
+  transform: scale(0.97);
+}
+
+.event-card-icon {
+  font-size: 40px;
+  margin-bottom: 4px;
+}
+
+.event-card-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.event-card-stats {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.event-card-progress-bar {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.event-card-progress-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.event-card-count {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ── Event Page ── */
+.event-header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settings-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.settings-btn:hover,
+.settings-btn.active {
+  border-color: var(--primary);
+  background: var(--primary-glow);
+}
+
+/* ── Settings Panel ── */
+.settings-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.settings-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.settings-panel-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.settings-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.settings-close:hover {
+  color: var(--text);
+}
+
+.settings-group {
+  margin-bottom: 14px;
+}
+
+.settings-group:last-child {
+  margin-bottom: 0;
+}
+
+.settings-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.settings-options {
+  display: flex;
+  gap: 6px;
+}
+
+.settings-opt-btn {
+  flex: 1;
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.settings-opt-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.settings-opt-btn:not(.active):hover {
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+.settings-select {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.settings-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.settings-toggle-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+.settings-review-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.settings-review-btn:hover {
+  border-color: #00cec9;
+  background: rgba(0, 206, 201, 0.1);
+  color: #00cec9;
+}
+
+/* ── Play Buttons ── */
+.play-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.play-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 24px 16px;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.play-btn:hover {
+  transform: translateY(-3px);
+}
+
+.play-btn:active {
+  transform: scale(0.97);
+}
+
+.play-btn-grind {
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.15), rgba(108, 92, 231, 0.05));
+  border-color: rgba(108, 92, 231, 0.4);
+}
+
+.play-btn-grind:hover {
+  border-color: #6c5ce7;
+  box-shadow: 0 8px 24px rgba(108, 92, 231, 0.3);
+}
+
+.play-btn-blitz {
+  background: linear-gradient(135deg, rgba(225, 112, 85, 0.15), rgba(225, 112, 85, 0.05));
+  border-color: rgba(225, 112, 85, 0.4);
+}
+
+.play-btn-blitz:hover {
+  border-color: #e17055;
+  box-shadow: 0 8px 24px rgba(225, 112, 85, 0.3);
+}
+
+.play-btn-icon {
+  font-size: 36px;
+}
+
+.play-btn-label {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.play-btn-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── Play Header (minimal during quiz) ── */
+.play-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 12px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.play-header-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+
+.play-header-event {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.play-header-progress {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.play-header-timer {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e17055;
+  padding: 3px 8px;
+  background: rgba(225, 112, 85, 0.15);
+  border-radius: 6px;
+}
+
+.play-header-timer.danger {
+  color: #ff6b6b;
+  animation: pulse 0.5s ease infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+.play-header-score {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  min-width: 48px;
+  text-align: right;
+}
+
+/* ── Admin Overlay ── */
+.admin-overlay {
+  position: relative;
+}
+
+.admin-overlay-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-overlay-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 480px) {
+  .home-laurels {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .event-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .event-card {
+    padding: 16px 10px;
+  }
+
+  .event-card-icon {
+    font-size: 32px;
+  }
+
+  .event-card-name {
+    font-size: 13px;
+  }
+
+  .play-btn {
+    padding: 20px 12px;
+  }
+
+  .play-btn-icon {
+    font-size: 28px;
+  }
+
+  .play-btn-label {
+    font-size: 16px;
+  }
+
+  .play-header-info {
+    gap: 6px;
+  }
+
+  .play-header-event {
+    font-size: 12px;
+  }
+
+  .settings-options {
+    flex-wrap: wrap;
+  }
+
+  .laurel-value {
+    font-size: 18px;
+  }
+}
+
+/* Large screens: 3-column event grid */
+@media (min-width: 768px) {
+  .event-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home-laurels {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
