@@ -166,6 +166,52 @@ body::before {
 }
 
 /* ===== Source Selector ===== */
+/* ===== Collapsible Filters ===== */
+.filters-collapse {
+  margin-bottom: 10px;
+}
+
+.filters-toggle {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  list-style: none;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filters-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.filters-toggle::before {
+  content: '▸';
+  margin-right: 8px;
+  transition: transform 0.2s;
+  font-size: 11px;
+}
+
+.filters-collapse[open] .filters-toggle::before {
+  transform: rotate(90deg);
+}
+
+.filters-toggle:hover {
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+.filters-content {
+  padding-top: 10px;
+  animation: fadeSlideIn 0.2s ease;
+}
+
 .source-bar {
   display: flex;
   align-items: center;

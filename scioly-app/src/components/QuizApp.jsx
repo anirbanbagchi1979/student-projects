@@ -415,43 +415,87 @@ export default function QuizApp() {
                 <AdminPanel />
             ) : (
                 <>
-                    {/* Source & type selector */}
-                    <div className="source-bar">
-                        <label className="source-label" htmlFor="source-select">🗂 Pick Your Pack</label>
-                        <select
-                            id="source-select"
-                            className="source-select"
-                            value={source}
-                            onChange={e => changeSource(e.target.value)}
-                        >
-                            {sources.map(s => (
-                                <option key={s} value={s}>
-                                    {s === 'all' ? 'All Packs' : s}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                    <div className="type-bar">
-                        {['MC', 'Free Response', 'all'].map(t => (
-                            <button
-                                key={t}
-                                className={`type-btn ${typeFilter === t ? 'active' : ''}`}
-                                onClick={() => changeType(t)}
-                            >
-                                {t === 'all' ? 'Everything' : t === 'MC' ? 'MC Only' : 'Written'}
-                            </button>
-                        ))}
-                    </div>
-
-                    {/* Context filter toggle */}
-                    <div className="context-filter-bar">
-                        <button
-                            className={`context-filter-btn ${hideContextMissing ? 'active' : ''}`}
-                            onClick={() => setHideContextMissing(!hideContextMissing)}
-                        >
-                            📎 {hideContextMissing ? 'Skipping incomplete Qs' : 'All Qs (even incomplete)'}
-                        </button>
-                    </div>
+                    {/* Collapsible filters — auto-collapse when playing */}
+                    {mode === 'dashboard' ? (
+                        <>
+                            <div className="source-bar">
+                                <label className="source-label" htmlFor="source-select">🗂 Pick Your Pack</label>
+                                <select
+                                    id="source-select"
+                                    className="source-select"
+                                    value={source}
+                                    onChange={e => changeSource(e.target.value)}
+                                >
+                                    {sources.map(s => (
+                                        <option key={s} value={s}>
+                                            {s === 'all' ? 'All Packs' : s}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="type-bar">
+                                {['MC', 'Free Response', 'all'].map(t => (
+                                    <button
+                                        key={t}
+                                        className={`type-btn ${typeFilter === t ? 'active' : ''}`}
+                                        onClick={() => changeType(t)}
+                                    >
+                                        {t === 'all' ? 'Everything' : t === 'MC' ? 'MC Only' : 'Written'}
+                                    </button>
+                                ))}
+                            </div>
+                            <div className="context-filter-bar">
+                                <button
+                                    className={`context-filter-btn ${hideContextMissing ? 'active' : ''}`}
+                                    onClick={() => setHideContextMissing(!hideContextMissing)}
+                                >
+                                    📎 {hideContextMissing ? 'Skipping incomplete Qs' : 'All Qs (even incomplete)'}
+                                </button>
+                            </div>
+                        </>
+                    ) : (
+                        <details className="filters-collapse">
+                            <summary className="filters-toggle">
+                                🎛 {source === 'all' ? 'All Packs' : source} · {typeFilter === 'all' ? 'All Types' : typeFilter === 'MC' ? 'MC Only' : 'Written'} · {questions.length} Qs
+                            </summary>
+                            <div className="filters-content">
+                                <div className="source-bar">
+                                    <label className="source-label" htmlFor="source-select">🗂 Pick Your Pack</label>
+                                    <select
+                                        id="source-select"
+                                        className="source-select"
+                                        value={source}
+                                        onChange={e => changeSource(e.target.value)}
+                                    >
+                                        {sources.map(s => (
+                                            <option key={s} value={s}>
+                                                {s === 'all' ? 'All Packs' : s}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div className="type-bar">
+                                    {['MC', 'Free Response', 'all'].map(t => (
+                                        <button
+                                            key={t}
+                                            className={`type-btn ${typeFilter === t ? 'active' : ''}`}
+                                            onClick={() => changeType(t)}
+                                        >
+                                            {t === 'all' ? 'Everything' : t === 'MC' ? 'MC Only' : 'Written'}
+                                        </button>
+                                    ))}
+                                </div>
+                                <div className="context-filter-bar">
+                                    <button
+                                        className={`context-filter-btn ${hideContextMissing ? 'active' : ''}`}
+                                        onClick={() => setHideContextMissing(!hideContextMissing)}
+                                    >
+                                        📎 {hideContextMissing ? 'Skipping incomplete Qs' : 'All Qs (even incomplete)'}
+                                    </button>
+                                </div>
+                            </div>
+                        </details>
+                    )}
 
                     {/* Mode bar */}
                     <div className="mode-bar">
