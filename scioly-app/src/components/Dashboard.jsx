@@ -1,7 +1,8 @@
 import { MASTERY_LEVELS } from '../lib/mastery'
 import { BADGES } from '../lib/gamification'
+import { EVENTS, DEFAULT_EVENT, getEvent } from '../lib/events'
 
-export default function Dashboard({ questions, allQuestions, answers, masteryMap, allUsersMastery = [], currentUser, streakData = {}, earnedBadges = [] }) {
+export default function Dashboard({ questions, allQuestions, answers, masteryMap, allUsersMastery = [], currentUser, streakData = {}, earnedBadges = [], currentEvent, globalData = {}, eventsMastery = {} }) {
     // Only count MC + non-context-missing questions toward mastery
     const masteryQuestions = (allQuestions || questions).filter(q =>
         q.type === 'MC' && !q.contextMissing
@@ -32,13 +33,15 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
     const sessionAnswered = Object.keys(answers).length
     const sessionCorrect = Object.values(answers).filter(a => a.correct).length
 
-    // Leaderboard: compute stats for each user
+    // Leaderboard: scoped to current event
     const leaderboard = allUsersMastery.map(u => {
+        const evtData = u.events?.[currentEvent || DEFAULT_EVENT]
+        const userMasteryMap = evtData?.masteryMap || {}
         let userMastered = 0
         let userAttempted = 0
         masteryQuestions.forEach(q => {
             const key = String(q.number)
-            const m = u.masteryMap[key]
+            const m = userMasteryMap[key]
             if (m && m.level > 0) userAttempted++
             if (m && m.level >= 4) userMastered++
         })
@@ -54,6 +57,22 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
 
     const earnedSet = new Set(earnedBadges)
 
+    // Cross-event global stats
+    const evtSlugs = Object.keys(eventsMastery)
+    const totalMasteredAllEvents = evtSlugs.reduce((sum, slug) => {
+        const mm = eventsMastery[slug]?.masteryMap || {}
+        return sum + Object.values(mm).filter(m => m.level >= 5).length
+    }, 0)
+    const eventsWithMastery = evtSlugs.filter(slug => {
+        const mm = eventsMastery[slug]?.masteryMap || {}
+        const masteredCount = Object.values(mm).filter(m => m.level >= 5).length
+        return masteredCount > 0
+    }).length
+    const eventsTodayCount = globalData?.eventsToday?.events?.length || 0
+    const globalStreak = globalData?.dailyStreak?.currentStreak || 0
+
+    const eventInfo = getEvent(currentEvent || DEFAULT_EVENT)
+
     return (
         <div className="dashboard">
             {/* Mastery ring */}
@@ -62,7 +81,7 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
                     <circle cx="60" cy="60" r="52" fill="none" stroke="var(--border)" strokeWidth="10" />
                     <circle
                         cx="60" cy="60" r="52" fill="none"
-                        stroke="var(--primary)" strokeWidth="10"
+                        stroke="var(--mode-accent)" strokeWidth="10"
                         strokeLinecap="round"
                         strokeDasharray={`${masteryPct * 3.267} 326.7`}
                         transform="rotate(-90 60 60)"
@@ -129,9 +148,36 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
                 </div>
             </div>
 
+            {/* Cross-Event Global Stats */}
+            <div className="cross-event-section">
+                <h3 className="breakdown-title">🌍 Across All Events</h3>
+                <div className="stat-cards cross-event-cards">
+                    <div className="stat-card" style={{ borderColor: '#6c5ce7' + '50' }}>
+                        <div className="stat-icon">🌟</div>
+                        <div className="stat-value">{totalMasteredAllEvents}</div>
+                        <div className="stat-name">Total Mastered</div>
+                    </div>
+                    <div className="stat-card" style={{ borderColor: '#00cec9' + '50' }}>
+                        <div className="stat-icon">📚</div>
+                        <div className="stat-value">{eventsWithMastery}/{EVENTS.length}</div>
+                        <div className="stat-name">Polymath</div>
+                    </div>
+                    <div className="stat-card" style={{ borderColor: '#fdcb6e' + '50' }}>
+                        <div className="stat-icon">🔥</div>
+                        <div className="stat-value">{globalStreak}</div>
+                        <div className="stat-name">Daily Streak</div>
+                    </div>
+                    <div className="stat-card" style={{ borderColor: '#e17055' + '50' }}>
+                        <div className="stat-icon">🎯</div>
+                        <div className="stat-value">{eventsTodayCount}</div>
+                        <div className="stat-name">Events Today</div>
+                    </div>
+                </div>
+            </div>
+
             {/* Achievement Badges */}
             <div className="badges-section">
-                <h3 className="breakdown-title">🏆 Trophies ({earnedBadges.length}/{BADGES.length})</h3>
+                <h3 className="breakdown-title">🏆 {eventInfo.icon} {eventInfo.name} Trophies ({earnedBadges.length}/{BADGES.length})</h3>
                 <div className="badges-grid">
                     {BADGES.map(b => {
                         const isEarned = earnedSet.has(b.id)
@@ -149,7 +195,7 @@ export default function Dashboard({ questions, allQuestions, answers, masteryMap
             {/* Leaderboard */}
             {leaderboard.length > 0 && (
                 <div className="leaderboard">
-                    <h3 className="breakdown-title">💯 Scoreboard</h3>
+                    <h3 className="breakdown-title">💯 {eventInfo.icon} Scoreboard</h3>
                     {leaderboard.map((u, rank) => {
                         const isMe = currentUser && u.uid === currentUser.uid
                         return (

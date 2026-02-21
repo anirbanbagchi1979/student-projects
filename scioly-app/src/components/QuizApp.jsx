@@ -4,6 +4,7 @@ import { db } from '../lib/firebase'
 import { useAuth } from '../contexts/AuthContext'
 import { updateMastery, applyDecay, pickNextQuestion, createEmptyMastery } from '../lib/mastery'
 import { updateStreak, createEmptyStreak, computeBadgeStats, checkBadges, BADGES } from '../lib/gamification'
+import { EVENTS, DEFAULT_EVENT, getEvent } from '../lib/events'
 import QuestionCard from './QuestionCard'
 import ResultsScreen from './ResultsScreen'
 import Dashboard from './Dashboard'
@@ -15,9 +16,7 @@ export default function QuizApp() {
     const [loading, setLoading] = useState(true)
     const [topTab, setTopTab] = useState('quiz')
     const [currentIdx, setCurrentIdx] = useState(0)
-    const [sessionAnswers, setSessionAnswers] = useState({}) // current session answers (index → {selected, correct})
-    const [masteryMap, setMasteryMap] = useState({}) // persistent mastery (qNumber → mastery data)
-    const [allUsersMastery, setAllUsersMastery] = useState([]) // all users' mastery for leaderboard
+    const [sessionAnswers, setSessionAnswers] = useState({})
     const [mode, setModeState] = useState('dashboard')
     const [filter, setFilterState] = useState('all')
     const [showResults, setShowResults] = useState(false)
@@ -25,17 +24,35 @@ export default function QuizApp() {
     const [typeFilter, setTypeFilter] = useState('MC')
     const [hideContextMissing, setHideContextMissing] = useState(true)
 
-    // Gamification state
-    const [streakData, setStreakData] = useState(createEmptyStreak())
-    const [earnedBadges, setEarnedBadges] = useState([])
+    // Event state
+    const [event, setEventState] = useState(DEFAULT_EVENT)
+    const currentEvent = getEvent(event)
+
+    // Per-event mastery/gamification state (scoped to current event)
+    const [eventsMastery, setEventsMastery] = useState({}) // { slug: { masteryMap, streakData, earnedBadges } }
+    const [allUsersMastery, setAllUsersMastery] = useState([])
+
+    // Global cross-event state
+    const [globalData, setGlobalData] = useState({
+        dailyStreak: createEmptyStreak(),
+        eventsToday: [],
+    })
+
+    // Derive current event's mastery/streak/badges from the events map
+    const eventData = eventsMastery[event] || { masteryMap: {}, streakData: createEmptyStreak(), earnedBadges: [] }
+    const masteryMap = eventData.masteryMap
+    const streakData = eventData.streakData
+    const earnedBadges = eventData.earnedBadges
+
+    // Session gamification
     const [sessionCorrectStreak, setSessionCorrectStreak] = useState(0)
     const [sessionMaxStreak, setSessionMaxStreak] = useState(0)
     const [sessionMasteries, setSessionMasteries] = useState(0)
     const [badgeToast, setBadgeToast] = useState(null)
 
     // Combo & feedback state
-    const [comboFeedback, setComboFeedback] = useState(null) // {type: 'correct'|'wrong', combo: n, key: unique}
-    const [bonusTime, setBonusTime] = useState(null) // {amount, key}
+    const [comboFeedback, setComboFeedback] = useState(null)
+    const [bonusTime, setBonusTime] = useState(null)
 
     // Spaced repetition state for practice mode
     const [practiceIdx, setPracticeIdx] = useState(0)
@@ -62,7 +79,7 @@ export default function QuizApp() {
         load()
     }, [])
 
-    // Load mastery data from Firestore when user and questions are ready
+    // Load mastery data from Firestore — handles migration from old flat format
     useEffect(() => {
         if (!user || allQuestions.length === 0) return
         async function loadMastery() {
@@ -70,17 +87,68 @@ export default function QuizApp() {
                 const snap = await getDoc(doc(db, 'mastery', user.uid))
                 if (snap.exists()) {
                     const data = snap.data()
-                    if (data.masteryMap) {
+
+                    if (data.events) {
+                        // New multi-event format
+                        const loaded = {}
+                        for (const [slug, evtData] of Object.entries(data.events)) {
+                            const decayed = {}
+                            if (evtData.masteryMap) {
+                                for (const [k, v] of Object.entries(evtData.masteryMap)) {
+                                    decayed[k] = applyDecay(v)
+                                }
+                            }
+                            loaded[slug] = {
+                                masteryMap: decayed,
+                                streakData: evtData.streakData || createEmptyStreak(),
+                                earnedBadges: evtData.earnedBadges || [],
+                            }
+                        }
+                        setEventsMastery(loaded)
+                        console.log('Loaded multi-event mastery for', Object.keys(loaded).length, 'events')
+                    } else if (data.masteryMap) {
+                        // OLD flat format — migrate to designer-genes event
+                        console.log('Migrating old flat mastery to multi-event format...')
                         const decayed = {}
                         for (const [k, v] of Object.entries(data.masteryMap)) {
                             decayed[k] = applyDecay(v)
                         }
-                        setMasteryMap(decayed)
-                        console.log('Loaded mastery for', Object.keys(decayed).length, 'questions')
+                        const migrated = {
+                            [DEFAULT_EVENT]: {
+                                masteryMap: decayed,
+                                streakData: data.streakData || createEmptyStreak(),
+                                earnedBadges: data.earnedBadges || [],
+                            }
+                        }
+                        setEventsMastery(migrated)
+                        // Save migrated format back to Firestore
+                        await setDoc(doc(db, 'mastery', user.uid), {
+                            events: {
+                                [DEFAULT_EVENT]: {
+                                    masteryMap: decayed,
+                                    streakData: data.streakData || createEmptyStreak(),
+                                    earnedBadges: data.earnedBadges || [],
+                                }
+                            },
+                            global: {
+                                dailyStreak: data.streakData || createEmptyStreak(),
+                                eventsToday: [],
+                            },
+                            displayName: user.displayName || '',
+                            email: user.email || '',
+                            photoURL: user.photoURL || '',
+                            updatedAt: new Date().toISOString()
+                        })
+                        console.log('Migration complete')
                     }
-                    // Load gamification data
-                    if (data.streakData) setStreakData(data.streakData)
-                    if (data.earnedBadges) setEarnedBadges(data.earnedBadges)
+
+                    // Load global data
+                    if (data.global) {
+                        setGlobalData({
+                            dailyStreak: data.global.dailyStreak || createEmptyStreak(),
+                            eventsToday: data.global.eventsToday || [],
+                        })
+                    }
                 }
             } catch (err) {
                 console.error('Error loading mastery:', err)
@@ -98,15 +166,15 @@ export default function QuizApp() {
                 const users = []
                 snap.forEach(d => {
                     const data = d.data()
-                    if (data.masteryMap) {
-                        users.push({
-                            uid: d.id,
-                            name: (data.displayName || data.email || d.id.slice(0, 8)).split(' ')[0],
-                            photoURL: data.photoURL || null,
-                            masteryMap: data.masteryMap,
-                            updatedAt: data.updatedAt
-                        })
-                    }
+                    // Support both old and new format
+                    const eventsData = data.events || (data.masteryMap ? { [DEFAULT_EVENT]: { masteryMap: data.masteryMap } } : {})
+                    users.push({
+                        uid: d.id,
+                        name: (data.displayName || data.email || d.id.slice(0, 8)).split(' ')[0],
+                        photoURL: data.photoURL || null,
+                        events: eventsData,
+                        updatedAt: data.updatedAt
+                    })
                 })
                 setAllUsersMastery(users)
             } catch (err) {
@@ -118,15 +186,14 @@ export default function QuizApp() {
 
     // Save mastery to Firestore (debounced)
     const saveTimeoutRef = useRef(null)
-    function saveMasteryToFirestore(newMap, newStreak = streakData, newBadges = earnedBadges) {
+    function saveMasteryToFirestore(newEventsMastery, newGlobal = globalData) {
         if (!user) return
         clearTimeout(saveTimeoutRef.current)
         saveTimeoutRef.current = setTimeout(async () => {
             try {
                 await setDoc(doc(db, 'mastery', user.uid), {
-                    masteryMap: newMap,
-                    streakData: newStreak,
-                    earnedBadges: newBadges,
+                    events: newEventsMastery,
+                    global: newGlobal,
                     displayName: user.displayName || '',
                     email: user.email || '',
                     photoURL: user.photoURL || '',
@@ -144,14 +211,12 @@ export default function QuizApp() {
             clearInterval(timerRef.current)
             return
         }
-        // Reset timer on question change
         setTimeLeft(60)
         clearInterval(timerRef.current)
         timerRef.current = setInterval(() => {
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(timerRef.current)
-                    // Auto-advance when time runs out
                     navigate(1)
                     return 60
                 }
@@ -161,21 +226,25 @@ export default function QuizApp() {
         return () => clearInterval(timerRef.current)
     }, [mode, currentIdx])
 
-    // Derive unique sources
+    // Filter questions by event first, then by source/type
+    const eventQuestions = useMemo(() => {
+        return allQuestions.filter(q => (q.event || DEFAULT_EVENT) === event)
+    }, [allQuestions, event])
+
+    // Derive unique sources for the current event
     const sources = useMemo(() => {
-        const s = new Set(allQuestions.map(q => q.source).filter(Boolean))
+        const s = new Set(eventQuestions.map(q => q.source).filter(Boolean))
         return ['all', ...Array.from(s).sort()]
-    }, [allQuestions])
+    }, [eventQuestions])
 
     // Filter and shuffle questions by source and type
     const questions = useMemo(() => {
-        const filtered = allQuestions.filter(q => {
+        const filtered = eventQuestions.filter(q => {
             if (source !== 'all' && q.source !== source) return false
             if (typeFilter !== 'all' && q.type !== typeFilter) return false
             if (hideContextMissing && q.contextMissing) return false
             return true
         })
-        // Shuffle questions with a seed based on filter combo
         const seed = (source + typeFilter).split('').reduce((a, c) => a + c.charCodeAt(0), 0) * 31
         const shuffled = [...filtered]
         let s = seed || 1
@@ -185,7 +254,7 @@ export default function QuizApp() {
                 ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
         }
         return shuffled
-    }, [allQuestions, source, typeFilter, hideContextMissing])
+    }, [eventQuestions, source, typeFilter, hideContextMissing])
 
     // Compute filtered indices (for review mode filters)
     const filteredIndices = questions
@@ -203,12 +272,27 @@ export default function QuizApp() {
     const answeredCount = Object.keys(sessionAnswers).length
     const correctCount = Object.values(sessionAnswers).filter(x => x.correct).length
 
+    function changeEvent(slug) {
+        setEventState(slug)
+        setSessionAnswers({})
+        setCurrentIdx(0)
+        setFilterState('all')
+        setShowResults(false)
+        setSource('all')
+        setTypeFilter('MC')
+        setModeState('dashboard')
+        setPracticeIdx(0)
+        setPracticeHistory([])
+        setSessionCorrectStreak(0)
+        setSessionMaxStreak(0)
+        setSessionMasteries(0)
+    }
+
     function setMode(m) {
         setModeState(m)
         setFilterState('all')
         setCurrentIdx(0)
         setShowResults(false)
-        // Reset session answers on mode switch (but mastery persists)
         setSessionAnswers({})
         if (m === 'practice') {
             setPracticeIdx(0)
@@ -234,24 +318,23 @@ export default function QuizApp() {
         setModeState('practice')
     }
 
-    function setFilter(f) {
-        setFilterState(f)
-        setCurrentIdx(0)
-    }
-
     function selectAnswer(letter, isCorrect) {
         const idx = mode === 'practice' ? practiceIdx : realIdx
         const q = questions[idx]
 
-        // Update session answers
         setSessionAnswers(prev => ({ ...prev, [idx]: { selected: letter, correct: isCorrect } }))
 
-        // Update permanent mastery (all modes contribute)
+        // Update permanent mastery (per event)
         const key = String(q.number)
         const current = masteryMap[key] || createEmptyMastery()
         const updated = updateMastery(current, isCorrect)
-        const newMap = { ...masteryMap, [key]: updated }
-        setMasteryMap(newMap)
+        const newMasteryMap = { ...masteryMap, [key]: updated }
+
+        // Update event mastery
+        const newEventData = {
+            ...eventData,
+            masteryMap: newMasteryMap,
+        }
 
         // Track session correct streak
         let newSessionStreak = sessionCorrectStreak
@@ -269,7 +352,6 @@ export default function QuizApp() {
         const feedbackKey = Date.now()
         if (isCorrect) {
             setComboFeedback({ type: 'correct', combo: newSessionStreak, key: feedbackKey })
-            // Blitz bonus time
             if (mode === 'test') {
                 const bonus = newSessionStreak >= 5 ? 5 : 3
                 setTimeLeft(t => t + bonus)
@@ -292,34 +374,45 @@ export default function QuizApp() {
             setSessionMasteries(newSessionMasteries)
         }
 
-        // Update streak
-        const newStreak = updateStreak(streakData)
-        // Award streak shield every 5 masteries in a session
+        // Update per-event streak
+        const newStreak = updateStreak(eventData.streakData)
         if (newSessionMasteries > 0 && newSessionMasteries % 5 === 0 && newSessionMasteries > sessionMasteries) {
             newStreak.streakShields = (newStreak.streakShields || 0) + 1
             newStreak.totalShieldsEarned = (newStreak.totalShieldsEarned || 0) + 1
         }
-        setStreakData(newStreak)
+        newEventData.streakData = newStreak
 
-        // Check badges
-        const stats = computeBadgeStats(newMap, allQuestions, newStreak, { maxCorrectStreak: newMaxStreak })
-        const newlyEarned = checkBadges(stats, earnedBadges)
-        let newBadges = earnedBadges
+        // Check per-event badges
+        const stats = computeBadgeStats(newMasteryMap, eventQuestions, newStreak, { maxCorrectStreak: newMaxStreak })
+        const newlyEarned = checkBadges(stats, eventData.earnedBadges)
+        let newBadges = eventData.earnedBadges
         if (newlyEarned.length > 0) {
-            newBadges = [...earnedBadges, ...newlyEarned.map(b => b.id)]
-            setEarnedBadges(newBadges)
-            // Show toast for the first newly earned badge
+            newBadges = [...eventData.earnedBadges, ...newlyEarned.map(b => b.id)]
+            newEventData.earnedBadges = newBadges
             setBadgeToast(newlyEarned[0])
             setTimeout(() => setBadgeToast(null), 3000)
         }
 
-        // Save to Firestore
-        saveMasteryToFirestore(newMap, newStreak, newBadges)
+        // Update events mastery state
+        const newEventsMastery = { ...eventsMastery, [event]: newEventData }
+        setEventsMastery(newEventsMastery)
+
+        // Update global data
+        const newGlobal = { ...globalData }
+        newGlobal.dailyStreak = updateStreak(globalData.dailyStreak)
+        const today = new Date().toISOString().split('T')[0]
+        if (!newGlobal.eventsToday || newGlobal.eventsToday._date !== today) {
+            newGlobal.eventsToday = { _date: today, events: [event] }
+        } else if (!newGlobal.eventsToday.events.includes(event)) {
+            newGlobal.eventsToday = { ...newGlobal.eventsToday, events: [...newGlobal.eventsToday.events, event] }
+        }
+        setGlobalData(newGlobal)
+
+        saveMasteryToFirestore(newEventsMastery, newGlobal)
     }
 
     // Pick next question for spaced repetition using mastery data
     const pickNextPractice = useCallback(() => {
-        // Random cooldown of 1-4 recent questions to skip
         const cooldown = Math.floor(Math.random() * 4) + 1
         const recent = [...practiceHistory.slice(-cooldown), practiceIdx]
         return pickNextQuestion(questions, masteryMap, recent)
@@ -336,7 +429,6 @@ export default function QuizApp() {
                 setPracticeHistory(h => [...h, practiceIdx])
                 const next = pickNextPractice()
                 setPracticeIdx(next)
-                // Clear session answer so it can be re-attempted
                 setSessionAnswers(prev => {
                     const copy = { ...prev }
                     delete copy[next]
@@ -347,7 +439,6 @@ export default function QuizApp() {
             return
         }
 
-        // Non-practice modes: sequential navigation
         const next = currentIdx + dir
         if (next < 0) return
         if (next >= filteredIndices.length) {
@@ -404,7 +495,7 @@ export default function QuizApp() {
                         <span className="signout-text">Sign Out</span>
                     </button>
                 </div>
-                <h1 className="app-title">Designer Genes C ⚡</h1>
+                <h1 className="app-title">{currentEvent.icon} {currentEvent.name}</h1>
                 <p className="app-subtitle">
                     Hey {user.displayName?.split(' ')[0] || 'there'}! · {questions.length} Qs loaded
                     {streakData.currentStreak > 0 && (
@@ -414,6 +505,20 @@ export default function QuizApp() {
                         <span className="shield-display"> · 🛡️{streakData.streakShields}</span>
                     )}
                 </p>
+            </div>
+
+            {/* Event selector */}
+            <div className="event-bar">
+                {EVENTS.map(e => (
+                    <button
+                        key={e.slug}
+                        className={`event-btn ${event === e.slug ? 'active' : ''}`}
+                        onClick={() => changeEvent(e.slug)}
+                    >
+                        <span className="event-icon">{e.icon}</span>
+                        <span className="event-name">{e.name}</span>
+                    </button>
+                ))}
             </div>
 
             {/* Top-level tab bar */}
@@ -535,7 +640,19 @@ export default function QuizApp() {
                     </div>
 
                     {mode === 'dashboard' ? (
-                        <Dashboard questions={questions} allQuestions={allQuestions} answers={sessionAnswers} masteryMap={masteryMap} allUsersMastery={allUsersMastery} currentUser={user} streakData={streakData} earnedBadges={earnedBadges} />
+                        <Dashboard
+                            questions={questions}
+                            allQuestions={eventQuestions}
+                            answers={sessionAnswers}
+                            masteryMap={masteryMap}
+                            allUsersMastery={allUsersMastery}
+                            currentUser={user}
+                            streakData={streakData}
+                            earnedBadges={earnedBadges}
+                            currentEvent={event}
+                            globalData={globalData}
+                            eventsMastery={eventsMastery}
+                        />
                     ) : showResults ? (
                         <ResultsScreen
                             questions={questions}
@@ -550,8 +667,8 @@ export default function QuizApp() {
                         <>
                             {/* Progress */}
                             <div className="progress-wrap">
-                                <div className="progress-stats">
-                                    <span>
+                                <div className="progress-header">
+                                    <span className="q-counter">
                                         {mode === 'practice'
                                             ? `Step ${practiceHistory.length + 1} · Q${activeQuestion?.number ?? '?'}`
                                             : `Question ${currentIdx + 1} of ${filteredIndices.length}`
@@ -604,7 +721,6 @@ export default function QuizApp() {
                                 </>
                             )}
 
-                            {/* Question */}
                             {/* Combo feedback overlay */}
                             {comboFeedback && (
                                 <div className={`combo-toast combo-${comboFeedback.type}`} key={comboFeedback.key}>

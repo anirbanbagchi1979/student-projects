@@ -183,6 +183,64 @@ body::before {
   color: var(--wrong);
 }
 
+/* ===== Event Selector ===== */
+.event-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.event-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.event-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+}
+
+.event-btn:active {
+  transform: scale(0.97);
+}
+
+.event-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 12px var(--primary-glow);
+}
+
+.event-btn:not(.active):hover {
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+.event-icon {
+  font-size: 14px;
+}
+
+.event-name {
+  font-size: 12px;
+}
+
 /* ===== Source Selector ===== */
 /* ===== Collapsible Filters ===== */
 .filters-collapse {

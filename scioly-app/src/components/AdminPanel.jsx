@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { collection, getDocs, doc, setDoc, orderBy, query } from 'firebase/firestore'
 import { db } from '../lib/firebase'
+import { EVENTS, DEFAULT_EVENT } from '../lib/events'
 
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${GEMINI_API_KEY}`
@@ -132,6 +133,7 @@ export default function AdminPanel() {
     const [progress, setProgress] = useState('')
     const [error, setError] = useState('')
     const [sourceName, setSourceName] = useState('')
+    const [eventSlug, setEventSlug] = useState(DEFAULT_EVENT)
     const [questions, setQuestions] = useState([])
     const [stats, setStats] = useState(null)
     const examRef = useRef(null)
@@ -274,6 +276,7 @@ export default function AdminPanel() {
             setProgress(`Uploading ${mcQuestions.length} new MC questions...`)
             let uploaded = 0
             for (const q of mcQuestions) {
+                q.event = eventSlug
                 await setDoc(doc(db, 'questions', `q${q.number}`), q)
                 uploaded++
                 if (uploaded % 10 === 0) setProgress(`Uploaded ${uploaded}/${mcQuestions.length}...`)
@@ -293,6 +296,7 @@ export default function AdminPanel() {
         setProgress('')
         setError('')
         setSourceName('')
+        setEventSlug(DEFAULT_EVENT)
         setQuestions([])
         setStats(null)
         if (examRef.current) examRef.current.value = ''
@@ -312,6 +316,19 @@ export default function AdminPanel() {
             {/* Upload Form */}
             {(stage === 'idle' || stage === 'error') && (
                 <div className="admin-form">
+                    <div className="admin-field">
+                        <label htmlFor="event-select">🎯 Event</label>
+                        <select
+                            id="event-select"
+                            value={eventSlug}
+                            onChange={e => setEventSlug(e.target.value)}
+                            className="admin-input"
+                        >
+                            {EVENTS.map(ev => (
+                                <option key={ev.slug} value={ev.slug}>{ev.icon} {ev.name}</option>
+                            ))}
+                        </select>
+                    </div>
                     <div className="admin-field">
                         <label htmlFor="source-name">📝 Source Name</label>
                         <input
