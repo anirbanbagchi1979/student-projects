@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react'
-import { collection, getDocs, doc, setDoc, orderBy, query } from 'firebase/firestore'
+import { useState, useRef, useEffect } from 'react'
+import { collection, getDocs, doc, setDoc, deleteDoc, orderBy, query } from 'firebase/firestore'
 import { db } from '../lib/firebase'
 import { EVENTS, DEFAULT_EVENT } from '../lib/events'
 
@@ -187,6 +187,55 @@ export default function AdminPanel({ onQuestionsUploaded }) {
     const [stats, setStats] = useState(null)
     const examRef = useRef(null)
     const keyRef = useRef(null)
+
+    // Per-event question counts for management
+    const [eventCounts, setEventCounts] = useState({})
+    const [deleteLoading, setDeleteLoading] = useState(null)
+
+    // Load question counts per event
+    useEffect(() => {
+        loadEventCounts()
+    }, [])
+
+    async function loadEventCounts() {
+        try {
+            const snap = await getDocs(collection(db, 'questions'))
+            const counts = {}
+            snap.forEach(d => {
+                const evt = d.data().event || 'designer-genes'
+                counts[evt] = (counts[evt] || 0) + 1
+            })
+            setEventCounts(counts)
+        } catch (err) {
+            console.error('Error loading counts:', err)
+        }
+    }
+
+    async function handleDeleteEvent(slug) {
+        const evtName = EVENTS.find(e => e.slug === slug)?.name || slug
+        const count = eventCounts[slug] || 0
+        if (!window.confirm(`Delete ALL ${count} questions for ${evtName}? This cannot be undone.`)) return
+
+        setDeleteLoading(slug)
+        try {
+            const snap = await getDocs(collection(db, 'questions'))
+            let deleted = 0
+            for (const d of snap.docs) {
+                const evt = d.data().event || 'designer-genes'
+                if (evt === slug) {
+                    await deleteDoc(doc(db, 'questions', d.id))
+                    deleted++
+                }
+            }
+            console.log(`Deleted ${deleted} questions for ${evtName}`)
+            await loadEventCounts()
+            if (onQuestionsUploaded) onQuestionsUploaded()
+        } catch (err) {
+            console.error('Error deleting:', err)
+            alert('Error deleting questions: ' + err.message)
+        }
+        setDeleteLoading(null)
+    }
 
     async function fileToBase64(file) {
         return new Promise((resolve, reject) => {
@@ -479,6 +528,34 @@ export default function AdminPanel({ onQuestionsUploaded }) {
                     <button className="admin-btn primary-btn" onClick={handleReset}>Upload More</button>
                 </div>
             )}
+
+            {/* Manage Question Banks */}
+            <div className="admin-manage">
+                <h3>🗑️ Manage Question Banks</h3>
+                <div className="admin-event-list">
+                    {EVENTS.map(e => {
+                        const count = eventCounts[e.slug] || 0
+                        return (
+                            <div key={e.slug} className="admin-event-row">
+                                <div className="admin-event-info">
+                                    <span className="admin-event-icon">{e.icon}</span>
+                                    <span className="admin-event-name">{e.name}</span>
+                                    <span className="admin-event-count">{count} Qs</span>
+                                </div>
+                                {count > 0 && (
+                                    <button
+                                        className="admin-delete-btn"
+                                        onClick={() => handleDeleteEvent(e.slug)}
+                                        disabled={deleteLoading === e.slug}
+                                    >
+                                        {deleteLoading === e.slug ? '⏳ Deleting...' : '🗑️ Delete All'}
+                                    </button>
+                                )}
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
         </div>
     )
 }
