@@ -63,20 +63,21 @@ export default function QuizApp() {
     const timerRef = useRef(null)
 
     // Load questions from Firestore
-    useEffect(() => {
-        async function load() {
-            try {
-                const q = query(collection(db, 'questions'), orderBy('number'))
-                const snap = await getDocs(q)
-                const data = snap.docs.map(d => d.data())
-                console.log('Loaded', data.length, 'questions from Firestore')
-                setAllQuestions(data)
-            } catch (err) {
-                console.error('Error loading questions:', err)
-            }
-            setLoading(false)
+    async function reloadQuestions() {
+        try {
+            const q = query(collection(db, 'questions'), orderBy('number'))
+            const snap = await getDocs(q)
+            const data = snap.docs.map(d => d.data())
+            console.log('Loaded', data.length, 'questions from Firestore')
+            setAllQuestions(data)
+        } catch (err) {
+            console.error('Error loading questions:', err)
         }
-        load()
+        setLoading(false)
+    }
+
+    useEffect(() => {
+        reloadQuestions()
     }, [])
 
     // Load mastery data from Firestore — handles migration from old flat format
@@ -541,7 +542,7 @@ export default function QuizApp() {
             )}
 
             {topTab === 'admin' ? (
-                <AdminPanel />
+                <AdminPanel onQuestionsUploaded={reloadQuestions} />
             ) : (
                 <>
                     {/* Collapsible filters — auto-collapse when playing */}

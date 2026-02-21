@@ -128,7 +128,7 @@ ${questionsText}`
 }
 
 // ── Main Component ──
-export default function AdminPanel() {
+export default function AdminPanel({ onQuestionsUploaded }) {
     const [stage, setStage] = useState('idle')
     const [progress, setProgress] = useState('')
     const [error, setError] = useState('')
@@ -285,6 +285,7 @@ export default function AdminPanel() {
 
             setStats(prev => ({ ...prev, uploaded: mcQuestions.length, skippedDups: newQuestions.length - mcQuestions.length + (questions.length - newQuestions.length) }))
             setStage('done')
+            if (onQuestionsUploaded) onQuestionsUploaded()
             setProgress('')
         } catch (e) {
             setError(e.message)
