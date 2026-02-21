@@ -370,7 +370,7 @@ export default function QuizApp() {
     }
 
     return (
-        <div className="app">
+        <div className="app" data-mode={mode}>
             {/* Header */}
             <div className="header">
                 <div className="header-top">

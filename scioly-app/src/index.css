@@ -24,6 +24,24 @@
   --wrong-border: rgba(255, 107, 107, 0.4);
   --accent: #fd79a8;
   --radius: 12px;
+  --mode-accent: var(--primary);
+  --mode-glow: var(--primary-glow);
+}
+
+/* Mode-specific color themes */
+.app[data-mode="practice"] {
+  --mode-accent: #6c5ce7;
+  --mode-glow: rgba(108, 92, 231, 0.25);
+}
+
+.app[data-mode="test"] {
+  --mode-accent: #e17055;
+  --mode-glow: rgba(225, 112, 85, 0.25);
+}
+
+.app[data-mode="review"] {
+  --mode-accent: #00cec9;
+  --mode-glow: rgba(0, 206, 201, 0.25);
 }
 
 body {
@@ -413,10 +431,10 @@ body::before {
 }
 
 .mode-btn.active {
-  background: var(--primary);
-  border-color: var(--primary);
+  background: var(--mode-accent);
+  border-color: var(--mode-accent);
   color: #fff;
-  box-shadow: 0 4px 20px var(--primary-glow);
+  box-shadow: 0 4px 20px var(--mode-glow);
 }
 
 /* ===== Progress Bar ===== */
@@ -450,7 +468,7 @@ body::before {
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+  background: linear-gradient(90deg, var(--mode-accent), var(--accent));
   border-radius: 3px;
   transition: width 0.4s ease;
 }
@@ -539,6 +557,7 @@ body::before {
 .question-card {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-top: 3px solid var(--mode-accent);
   border-radius: var(--radius);
   padding: 20px 16px;
   margin-bottom: 12px;
@@ -746,14 +765,14 @@ body::before {
 }
 
 .option-btn.selected {
-  border-color: var(--primary);
+  border-color: var(--mode-accent);
   background: rgba(108, 92, 231, 0.1);
 }
 
 .option-btn.selected .option-letter {
-  background: var(--primary);
+  background: var(--mode-accent);
   color: #fff;
-  border-color: var(--primary);
+  border-color: var(--mode-accent);
 }
 
 .option-btn.locked {
