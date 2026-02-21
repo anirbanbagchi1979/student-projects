@@ -33,6 +33,10 @@ export default function QuizApp() {
     const [sessionMasteries, setSessionMasteries] = useState(0)
     const [badgeToast, setBadgeToast] = useState(null)
 
+    // Combo & feedback state
+    const [comboFeedback, setComboFeedback] = useState(null) // {type: 'correct'|'wrong', combo: n, key: unique}
+    const [bonusTime, setBonusTime] = useState(null) // {amount, key}
+
     // Spaced repetition state for practice mode
     const [practiceIdx, setPracticeIdx] = useState(0)
     const [practiceHistory, setPracticeHistory] = useState([])
@@ -260,6 +264,26 @@ export default function QuizApp() {
         }
         setSessionCorrectStreak(newSessionStreak)
         setSessionMaxStreak(newMaxStreak)
+
+        // Combo feedback toast
+        const feedbackKey = Date.now()
+        if (isCorrect) {
+            setComboFeedback({ type: 'correct', combo: newSessionStreak, key: feedbackKey })
+            // Blitz bonus time
+            if (mode === 'test') {
+                const bonus = newSessionStreak >= 5 ? 5 : 3
+                setTimeLeft(t => t + bonus)
+                setBonusTime({ amount: bonus, key: feedbackKey })
+                setTimeout(() => setBonusTime(null), 1200)
+            }
+        } else {
+            if (sessionCorrectStreak >= 2) {
+                setComboFeedback({ type: 'broken', combo: sessionCorrectStreak, key: feedbackKey })
+            } else {
+                setComboFeedback({ type: 'wrong', combo: 0, key: feedbackKey })
+            }
+        }
+        setTimeout(() => setComboFeedback(null), 1500)
 
         // Track session masteries for streak shield
         let newSessionMasteries = sessionMasteries
@@ -519,6 +543,8 @@ export default function QuizApp() {
                             onReview={() => setMode('review')}
                             onRetryWrong={retryWrong}
                             onReset={resetQuiz}
+                            mode={mode}
+                            maxStreak={sessionMaxStreak}
                         />
                     ) : (
                         <>
@@ -579,6 +605,26 @@ export default function QuizApp() {
                             )}
 
                             {/* Question */}
+                            {/* Combo feedback overlay */}
+                            {comboFeedback && (
+                                <div className={`combo-toast combo-${comboFeedback.type}`} key={comboFeedback.key}>
+                                    {comboFeedback.type === 'correct' ? (
+                                        comboFeedback.combo >= 10 ? `💎 ${comboFeedback.combo}x UNSTOPPABLE` :
+                                            comboFeedback.combo >= 5 ? `⚡ ${comboFeedback.combo}x ON FIRE` :
+                                                comboFeedback.combo >= 3 ? `🔥 ${comboFeedback.combo}x COMBO` :
+                                                    comboFeedback.combo >= 2 ? `✨ ${comboFeedback.combo}x STREAK` :
+                                                        '✅ Correct!'
+                                    ) : comboFeedback.type === 'broken' ? (
+                                        `💥 ${comboFeedback.combo}x COMBO BROKEN`
+                                    ) : '❌ Wrong'}
+                                </div>
+                            )}
+
+                            {/* Blitz bonus time */}
+                            {bonusTime && (
+                                <div className="bonus-time" key={bonusTime.key}>+{bonusTime.amount}s ⚡</div>
+                            )}
+
                             {(mode !== 'practice' && filteredIndices.length === 0) ? (
                                 <div className="question-card" style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
                                     <p>No questions match this filter.</p>
