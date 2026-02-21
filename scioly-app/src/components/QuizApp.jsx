@@ -393,10 +393,12 @@ export default function QuizApp() {
             </div>
 
             {/* Top-level tab bar */}
-            <div className="top-tab-bar">
-                <button className={`top-tab ${topTab === 'quiz' ? 'active' : ''}`} onClick={() => setTopTab('quiz')}>🧬 Quiz</button>
-                <button className={`top-tab ${topTab === 'admin' ? 'active' : ''}`} onClick={() => setTopTab('admin')}>⚙️ Admin</button>
-            </div>
+            {user.email === 'anirban.bagchi@gmail.com' && (
+                <div className="top-tab-bar">
+                    <button className={`top-tab ${topTab === 'quiz' ? 'active' : ''}`} onClick={() => setTopTab('quiz')}>🧬 Quiz</button>
+                    <button className={`top-tab ${topTab === 'admin' ? 'active' : ''}`} onClick={() => setTopTab('admin')}>⚙️ Admin</button>
+                </div>
+            )}
 
             {/* Badge toast */}
             {badgeToast && (
