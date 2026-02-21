@@ -9,6 +9,10 @@ const API_KEY = process.env.VITE_FIREBASE_API_KEY;
 const PROJECT_ID = process.env.FIREBASE_PROJECT_ID || 'sci-oly-quiz';
 const FIRESTORE_URL = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents`;
 
+// Accept event slug as CLI argument: node upload_to_firebase.mjs designer-genes
+const EVENT_SLUG = process.argv[2] || 'designer-genes';
+console.log(`Event: ${EVENT_SLUG}\n`);
+
 const questions = JSON.parse(readFileSync(join(ROOT, 'questions.json'), 'utf-8'));
 // Filter to only MC questions
 const mcQuestions = questions.filter(q => q.options && q.options.length > 0);
@@ -31,6 +35,9 @@ function toFirestoreValue(val) {
 }
 
 for (const q of mcQuestions) {
+    // Tag each question with the event slug
+    q.event = EVENT_SLUG;
+
     const docId = `q${q.number}`;
     const fields = {};
     for (const [k, v] of Object.entries(q)) {
@@ -50,7 +57,7 @@ for (const q of mcQuestions) {
             const err = await res.text();
             console.error(`❌ Q${q.number}: ${res.status} - ${err}`);
         } else {
-            console.log(`✅ Q${q.number} uploaded`);
+            console.log(`✅ Q${q.number} uploaded (event: ${EVENT_SLUG})`);
         }
     } catch (e) {
         console.error(`❌ Q${q.number}: ${e.message}`);

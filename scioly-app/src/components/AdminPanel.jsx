@@ -32,14 +32,14 @@ async function callGemini(body) {
     return text
 }
 
-async function extractBatch(examData, keyData, sourceName, startQ, endQ) {
+async function extractBatch(examData, keyData, sourceName, startQ, endQ, eventName) {
     const text = await callGemini({
         contents: [{
             parts: [
                 { inlineData: { mimeType: 'application/pdf', data: examData } },
                 { inlineData: { mimeType: 'application/pdf', data: keyData } },
                 {
-                    text: `You are given two PDFs: a Science Olympiad "Designer Genes" test and its answer key.
+                    text: `You are given two PDFs: a Science Olympiad "${eventName}" test and its answer key.
 
 Extract ONLY questions ${startQ} through ${endQ} from the test and match them with the correct answers from the answer key.
 
@@ -169,7 +169,8 @@ export default function AdminPanel() {
             for (const [start, end] of [[1, 25], [26, 50], [51, 80]]) {
                 setProgress(`Extracting questions ${start}-${end}...`)
                 try {
-                    const batch = await extractBatch(examData, keyData, sourceName.trim(), start, end)
+                    const evtName = EVENTS.find(e => e.slug === eventSlug)?.name || eventSlug
+                    const batch = await extractBatch(examData, keyData, sourceName.trim(), start, end, evtName)
                     allQuestions.push(...batch)
                     setProgress(`Got ${allQuestions.length} questions so far...`)
                 } catch (e) {
