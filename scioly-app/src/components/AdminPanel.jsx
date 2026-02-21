@@ -192,6 +192,7 @@ export default function AdminPanel({ onQuestionsUploaded }) {
     // Structure: { 'designer-genes': { 'MIT Invite 2026': 20, 'Purdue 2026': 15 }, ... }
     const [packCounts, setPackCounts] = useState({})
     const [deleteLoading, setDeleteLoading] = useState(null)
+    const [confirmModal, setConfirmModal] = useState(null) // { message, onConfirm }
 
     // Load question counts per event + source
     useEffect(() => {
@@ -218,30 +219,35 @@ export default function AdminPanel({ onQuestionsUploaded }) {
     async function handleDeletePack(eventSlugToDelete, sourceName) {
         const evtName = EVENTS.find(e => e.slug === eventSlugToDelete)?.name || eventSlugToDelete
         const count = packCounts[eventSlugToDelete]?.[sourceName] || 0
-        if (!window.confirm(`Delete all ${count} questions from "${sourceName}" in ${evtName}? This cannot be undone.`)) return
 
-        const key = `${eventSlugToDelete}:${sourceName}`
-        setDeleteLoading(key)
-        try {
-            const snap = await getDocs(collection(db, 'questions'))
-            let deleted = 0
-            for (const d of snap.docs) {
-                const data = d.data()
-                const evt = data.event || 'designer-genes'
-                const src = data.source || 'Unknown'
-                if (evt === eventSlugToDelete && src === sourceName) {
-                    await deleteDoc(doc(db, 'questions', d.id))
-                    deleted++
+        setConfirmModal({
+            message: `Delete all ${count} questions from "${sourceName}" in ${evtName}?`,
+            subtitle: 'This cannot be undone.',
+            onConfirm: async () => {
+                setConfirmModal(null)
+                const key = `${eventSlugToDelete}:${sourceName}`
+                setDeleteLoading(key)
+                try {
+                    const snap = await getDocs(collection(db, 'questions'))
+                    let deleted = 0
+                    for (const d of snap.docs) {
+                        const data = d.data()
+                        const evt = data.event || 'designer-genes'
+                        const src = data.source || 'Unknown'
+                        if (evt === eventSlugToDelete && src === sourceName) {
+                            await deleteDoc(doc(db, 'questions', d.id))
+                            deleted++
+                        }
+                    }
+                    console.log(`Deleted ${deleted} questions from "${sourceName}" in ${evtName}`)
+                    await loadPackCounts()
+                    if (onQuestionsUploaded) onQuestionsUploaded()
+                } catch (err) {
+                    console.error('Error deleting:', err)
                 }
+                setDeleteLoading(null)
             }
-            console.log(`Deleted ${deleted} questions from "${sourceName}" in ${evtName}`)
-            await loadPackCounts()
-            if (onQuestionsUploaded) onQuestionsUploaded()
-        } catch (err) {
-            console.error('Error deleting:', err)
-            alert('Error deleting questions: ' + err.message)
-        }
-        setDeleteLoading(null)
+        })
     }
 
     async function fileToBase64(file) {
@@ -587,6 +593,21 @@ export default function AdminPanel({ onQuestionsUploaded }) {
                     })}
                 </div>
             </div>
+
+            {/* Confirmation Modal */}
+            {confirmModal && (
+                <div className="confirm-overlay" onClick={() => setConfirmModal(null)}>
+                    <div className="confirm-modal" onClick={e => e.stopPropagation()}>
+                        <div className="confirm-icon">⚠️</div>
+                        <p className="confirm-message">{confirmModal.message}</p>
+                        {confirmModal.subtitle && <p className="confirm-subtitle">{confirmModal.subtitle}</p>}
+                        <div className="confirm-actions">
+                            <button className="confirm-btn confirm-cancel" onClick={() => setConfirmModal(null)}>Cancel</button>
+                            <button className="confirm-btn confirm-delete" onClick={confirmModal.onConfirm}>Delete</button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
