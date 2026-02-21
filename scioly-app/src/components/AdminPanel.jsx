@@ -32,14 +32,56 @@ async function callGemini(body) {
     return text
 }
 
-async function extractBatch(examData, keyData, sourceName, startQ, endQ, eventName) {
-    const text = await callGemini({
-        contents: [{
-            parts: [
-                { inlineData: { mimeType: 'application/pdf', data: examData } },
-                { inlineData: { mimeType: 'application/pdf', data: keyData } },
-                {
-                    text: `You are given two PDFs: a Science Olympiad "${eventName}" test and its answer key.
+// Map NLE event slugs to their answer key column headers
+const NLE_KEY_COLUMNS = {
+    'nle-intro': 'Intro',
+    'nle-beginner': 'Begin',
+    'nle-level1': 'Interm',
+}
+
+function isNLEEvent(slug) {
+    return slug in NLE_KEY_COLUMNS
+}
+
+async function extractBatch(examData, keyData, sourceName, startQ, endQ, eventName, eventSlug) {
+    // Build event-specific prompt
+    let promptText
+    if (isNLEEvent(eventSlug)) {
+        const keyColumn = NLE_KEY_COLUMNS[eventSlug]
+        promptText = `You are given two PDFs: a National Latin Exam (NLE) "${eventName}" test and its answer key.
+
+The answer key PDF has a table with columns for multiple exam levels (Intro, Begin, Interm, Int RC, Adv Pro, Adv Poe, Adv RC).
+Use ONLY the "${keyColumn}" column to determine correct answers.
+
+Extract ONLY standalone multiple-choice questions ${startQ} through ${endQ} from the test.
+
+IMPORTANT RULES FOR NLE:
+- SKIP any question that references a reading passage, story, or Latin paragraph (e.g. "Read the passage above", "In the story", "lines 1-3")
+- SKIP any question that requires looking at an image, map, illustration, or picture
+- ONLY extract self-contained questions that can be answered independently
+- Use the "${keyColumn}" column from the answer key for correct answers
+
+Output the result as a JSON array with this exact format:
+[
+  {
+    "number": 1,
+    "question": "Full question text here",
+    "options": ["A) option text", "B) option text", "C) option text", "D) option text"],
+    "answer": "B",
+    "explanation": "Brief explanation if available, otherwise empty string",
+    "source": "${sourceName}",
+    "type": "MC"
+  }
+]
+
+Rules:
+- Include all 4 options (A/B/C/D), prefix each with the letter like "A) ..."
+- "answer" should be the correct answer letter from the "${keyColumn}" column
+- Always include "source": "${sourceName}" and "type": "MC" in every object
+- If NO questions in the range ${startQ}-${endQ} are standalone, return an empty array []
+- Output ONLY valid JSON, no markdown, no code blocks`
+    } else {
+        promptText = `You are given two PDFs: a Science Olympiad "${eventName}" test and its answer key.
 
 Extract ONLY questions ${startQ} through ${endQ} from the test and match them with the correct answers from the answer key.
 
@@ -64,7 +106,14 @@ Rules:
 - Include any explanations from the answer key
 - Always include "source": "${sourceName}" and appropriate "type" in every object
 - Output ONLY valid JSON, no markdown, no code blocks`
-                }
+    }
+
+    const text = await callGemini({
+        contents: [{
+            parts: [
+                { inlineData: { mimeType: 'application/pdf', data: examData } },
+                { inlineData: { mimeType: 'application/pdf', data: keyData } },
+                { text: promptText }
             ]
         }],
         generationConfig: { temperature: 0.1, maxOutputTokens: 65536 }
@@ -170,7 +219,7 @@ export default function AdminPanel({ onQuestionsUploaded }) {
                 setProgress(`Extracting questions ${start}-${end}...`)
                 try {
                     const evtName = EVENTS.find(e => e.slug === eventSlug)?.name || eventSlug
-                    const batch = await extractBatch(examData, keyData, sourceName.trim(), start, end, evtName)
+                    const batch = await extractBatch(examData, keyData, sourceName.trim(), start, end, evtName, eventSlug)
                     allQuestions.push(...batch)
                     setProgress(`Got ${allQuestions.length} questions so far...`)
                 } catch (e) {
