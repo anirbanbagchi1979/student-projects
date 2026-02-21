@@ -2175,6 +2175,59 @@ body::before {
   cursor: not-allowed;
 }
 
+.admin-event-group {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-event-summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.admin-event-summary::-webkit-details-marker {
+  display: none;
+}
+
+.admin-expand-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+
+details[open] .admin-expand-hint {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.admin-pack-list {
+  padding: 0 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-pack-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--surface);
+  border-radius: 8px;
+}
+
+.admin-pack-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-pack-name {
+  font-size: 13px;
+  color: var(--text);
+}
+
 /* ═══════════════════════════════════════════════
    NEW UI: Home → Event → Play Navigation
    ═══════════════════════════════════════════════ */

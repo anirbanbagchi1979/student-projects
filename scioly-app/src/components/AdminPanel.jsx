@@ -188,47 +188,54 @@ export default function AdminPanel({ onQuestionsUploaded }) {
     const examRef = useRef(null)
     const keyRef = useRef(null)
 
-    // Per-event question counts for management
-    const [eventCounts, setEventCounts] = useState({})
+    // Per-event + per-pack question counts for management
+    // Structure: { 'designer-genes': { 'MIT Invite 2026': 20, 'Purdue 2026': 15 }, ... }
+    const [packCounts, setPackCounts] = useState({})
     const [deleteLoading, setDeleteLoading] = useState(null)
 
-    // Load question counts per event
+    // Load question counts per event + source
     useEffect(() => {
-        loadEventCounts()
+        loadPackCounts()
     }, [])
 
-    async function loadEventCounts() {
+    async function loadPackCounts() {
         try {
             const snap = await getDocs(collection(db, 'questions'))
             const counts = {}
             snap.forEach(d => {
-                const evt = d.data().event || 'designer-genes'
-                counts[evt] = (counts[evt] || 0) + 1
+                const data = d.data()
+                const evt = data.event || 'designer-genes'
+                const src = data.source || 'Unknown'
+                if (!counts[evt]) counts[evt] = {}
+                counts[evt][src] = (counts[evt][src] || 0) + 1
             })
-            setEventCounts(counts)
+            setPackCounts(counts)
         } catch (err) {
             console.error('Error loading counts:', err)
         }
     }
 
-    async function handleDeleteEvent(slug) {
-        const evtName = EVENTS.find(e => e.slug === slug)?.name || slug
-        const count = eventCounts[slug] || 0
-        if (!window.confirm(`Delete ALL ${count} questions for ${evtName}? This cannot be undone.`)) return
+    async function handleDeletePack(eventSlugToDelete, sourceName) {
+        const evtName = EVENTS.find(e => e.slug === eventSlugToDelete)?.name || eventSlugToDelete
+        const count = packCounts[eventSlugToDelete]?.[sourceName] || 0
+        if (!window.confirm(`Delete all ${count} questions from "${sourceName}" in ${evtName}? This cannot be undone.`)) return
 
-        setDeleteLoading(slug)
+        const key = `${eventSlugToDelete}:${sourceName}`
+        setDeleteLoading(key)
         try {
             const snap = await getDocs(collection(db, 'questions'))
             let deleted = 0
             for (const d of snap.docs) {
-                const evt = d.data().event || 'designer-genes'
-                if (evt === slug) {
+                const data = d.data()
+                const evt = data.event || 'designer-genes'
+                const src = data.source || 'Unknown'
+                if (evt === eventSlugToDelete && src === sourceName) {
                     await deleteDoc(doc(db, 'questions', d.id))
                     deleted++
                 }
             }
-            console.log(`Deleted ${deleted} questions for ${evtName}`)
-            await loadEventCounts()
+            console.log(`Deleted ${deleted} questions from "${sourceName}" in ${evtName}`)
+            await loadPackCounts()
             if (onQuestionsUploaded) onQuestionsUploaded()
         } catch (err) {
             console.error('Error deleting:', err)
@@ -534,24 +541,48 @@ export default function AdminPanel({ onQuestionsUploaded }) {
                 <h3>🗑️ Manage Question Banks</h3>
                 <div className="admin-event-list">
                     {EVENTS.map(e => {
-                        const count = eventCounts[e.slug] || 0
-                        return (
+                        const packs = packCounts[e.slug] || {}
+                        const totalForEvent = Object.values(packs).reduce((s, n) => s + n, 0)
+                        if (totalForEvent === 0) return (
                             <div key={e.slug} className="admin-event-row">
                                 <div className="admin-event-info">
                                     <span className="admin-event-icon">{e.icon}</span>
                                     <span className="admin-event-name">{e.name}</span>
-                                    <span className="admin-event-count">{count} Qs</span>
+                                    <span className="admin-event-count">0 Qs</span>
                                 </div>
-                                {count > 0 && (
-                                    <button
-                                        className="admin-delete-btn"
-                                        onClick={() => handleDeleteEvent(e.slug)}
-                                        disabled={deleteLoading === e.slug}
-                                    >
-                                        {deleteLoading === e.slug ? '⏳ Deleting...' : '🗑️ Delete All'}
-                                    </button>
-                                )}
                             </div>
+                        )
+                        return (
+                            <details key={e.slug} className="admin-event-group">
+                                <summary className="admin-event-row admin-event-summary">
+                                    <div className="admin-event-info">
+                                        <span className="admin-event-icon">{e.icon}</span>
+                                        <span className="admin-event-name">{e.name}</span>
+                                        <span className="admin-event-count">{totalForEvent} Qs</span>
+                                    </div>
+                                    <span className="admin-expand-hint">▸ {Object.keys(packs).length} packs</span>
+                                </summary>
+                                <div className="admin-pack-list">
+                                    {Object.entries(packs).sort((a, b) => a[0].localeCompare(b[0])).map(([src, count]) => {
+                                        const loadKey = `${e.slug}:${src}`
+                                        return (
+                                            <div key={src} className="admin-pack-row">
+                                                <div className="admin-pack-info">
+                                                    <span className="admin-pack-name">📦 {src}</span>
+                                                    <span className="admin-event-count">{count} Qs</span>
+                                                </div>
+                                                <button
+                                                    className="admin-delete-btn"
+                                                    onClick={() => handleDeletePack(e.slug, src)}
+                                                    disabled={deleteLoading === loadKey}
+                                                >
+                                                    {deleteLoading === loadKey ? '⏳...' : '🗑️ Delete'}
+                                                </button>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </details>
                         )
                     })}
                 </div>
