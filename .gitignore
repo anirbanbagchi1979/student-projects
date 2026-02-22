@@ -4,8 +4,9 @@ node_modules/
 # Build output
 dist/
 
-# Environment / secrets (only .env.local is gitignored; .env is tracked per branch)
-.env.local
+# Environment / secrets
+.env*
+!.env.example
 
 # OS
 .DS_Store
